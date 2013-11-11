@@ -1,0 +1,62 @@
+package ${package}.${xmlModele.getNom()}.${template.getNomSousPackage()};
+
+import java.util.List;
+
+public interface ${noeud.getNomInterface()} 
+#if($noeud.getListeNoeud().size() == 1 && $noeud.getListeNoeud().get(0).getNombre() != 0 && $noeud.getListeNoeud().get(0).getNombre() != 1)
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+	extends List<${noeudFils.getNomAvecMajuscule()}>
+#end
+#end
+{
+	
+	/** Récupération de l'élément parent */
+#if( $noeud.getReferenceNoeud() )
+#set( $noeudParent = $noeud.getReferenceNoeud() )
+	
+	public ${noeudParent.getNomInterface()} getReference${noeudParent.getNomAvecMajuscule()}();
+	
+	public void setReference${noeudParent.getNomAvecMajuscule()}(${noeudParent.getNomInterface()} reference${noeudParent.getNomAvecMajuscule()});
+#end
+	
+	/** Récupération des éléments fils */
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#if( $noeudFils.getNombre() == 0 )
+
+    public String get${noeudFils.getNomAvecMajuscule()}();
+    
+    public void set${noeudFils.getNomAvecMajuscule()}(String ${noeudFils.getNomSansMajuscule()});
+
+#elseif( $noeudFils.getNombre() == 1 )
+
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}();
+    
+    public void set${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()});
+	
+#else
+	
+#foreach( $attributNoeudFils in $noeudFils.getListeAttribut() )
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}For${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()});
+#end
+    public void add${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()});
+    public List<${noeudFils.getNomInterface()}> get${noeudFils.getNomAvecMajuscule()}s();
+    public void set${noeudFils.getNomAvecMajuscule()}s(List<${noeudFils.getNomInterface()}> ${noeudFils.getNomSansMajuscule()});
+#end
+#end
+	
+	/** Récupération des attributs de l'objet de base sans transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+	
+	public String get${attributNoeud.getNomAvecMajuscule()}AsString();
+	public void set${attributNoeud.getNomAvecMajuscule()}AsString(String ${attributNoeud.getNomSansMajuscule()}AsString);
+#end
+	
+	/** Récupération des attributs de l'objet de base avec transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+
+	public String get${attributNoeud.getNomAvecMajuscule()}();
+	public void set${attributNoeud.getNomAvecMajuscule()}(String ${attributNoeud.getNomSansMajuscule()});
+#end
+}

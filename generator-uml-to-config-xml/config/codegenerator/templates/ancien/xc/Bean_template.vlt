@@ -1,0 +1,508 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : ${classe.getJavaPackage()}.struts.action
+ * Source   : A${classe.getJavaNomClasseAvecMajuscule()}Action.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.struts.action;
+
+import java.util.Iterator;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+import fr.apriarsa.xc.intranet.commun.SessionKeys;
+import fr.apriarsa.xc.intranet.commun.struts.actions.AAbstractUpdateAction;
+import fr.apriarsa.xc.intranet.commun.struts.forms.FAbstractForm;
+import fr.apriarsa.xc.intranet.commun.util.log.Logger;
+import ${classe.getJavaPackage()}.business.Profil${classe.getJavaNomClasseAvecMajuscule()}Manager;
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()}Manager;
+import ${classe.getJavaPackage()}.business.bean.B${classe.getJavaNomClasseAvecMajuscule()}Bean;
+import ${classe.getJavaPackage()}.exception.${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException;
+import ${classe.getJavaPackage()}.struts.forms.F${classe.getJavaNomClasseAvecMajuscule()}Form;
+
+/**
+ * <b>Description : </b> <description de la classe>
+ * 
+ * @version : $Revision: 1.3 $, $Date: 2007/08/06 16:12:54 $
+ * @author : $Author: udevlch $
+ * @since : version 1.0.0
+ */
+public class A${classe.getJavaNomClasseAvecMajuscule()}Action extends AAbstractUpdateAction {
+
+    private static Logger log = Logger.getLogger(A${classe.getJavaNomClasseAvecMajuscule()}Action.class);
+    
+    protected void definirListeEnSession(HttpSession session) {
+        // Contenu des listes déroulantes
+        if(session.getAttribute(SessionKeys.BEAN_LISTE_PROFIL_UTILISATEUR)==null) {
+            List listeProfil${classe.getJavaNomClasseAvecMajuscule()} = Profil${classe.getJavaNomClasseAvecMajuscule()}Manager.getListeProfil${classe.getJavaNomClasseAvecMajuscule()}();
+            //log.debug(listeProfil${classe.getJavaNomClasseAvecMajuscule()});
+            session.setAttribute(SessionKeys.BEAN_LISTE_PROFIL_UTILISATEUR, listeProfil${classe.getJavaNomClasseAvecMajuscule()});
+        }
+    }
+
+    /**
+     * Initialisation de la page
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward init(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        // charge la liste des ${classe.getJavaNomClasseSansMajuscule()}s
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Initialisation de la page
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward executeConsult(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire du compte ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(compte${classe.getJavaNomClasseAvecMajuscule()});
+            
+            actionForm.setChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            log.debug("L'${classe.getJavaNomClasseSansMajuscule()} n'existe pas");
+        }
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+    }
+    
+    /**
+     * Supprime un ${classe.getJavaNomClasseSansMajuscule()}
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward suppr(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire du compte ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        for(Iterator iter${classe.getJavaNomClasseAvecMajuscule()} = liste${classe.getJavaNomClasseAvecMajuscule()}.iterator(); iter${classe.getJavaNomClasseAvecMajuscule()}.hasNext(); ) {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = (${classe.getJavaNomClasseAvecMajuscule()}) iter${classe.getJavaNomClasseAvecMajuscule()}.next();
+            if(compte${classe.getJavaNomClasseAvecMajuscule()}.equals(${classe.getJavaNomClasseSansMajuscule()}.getCompte${classe.getJavaNomClasseAvecMajuscule()}())) {
+                ${classe.getJavaNomClasseSansMajuscule()}.setSuppressionEnAttente(true);
+            }
+        }
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        log.end("dossier ${classe.getJavaNomClasseSansMajuscule()} suppr");
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Supprime un ${classe.getJavaNomClasseSansMajuscule()}
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward supprValid(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire du compte ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(compte${classe.getJavaNomClasseAvecMajuscule()});
+            
+            ${classe.getJavaNomClasseAvecMajuscule()}Manager.suppr${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            log.debug("L'${classe.getJavaNomClasseSansMajuscule()} n'existe pas");
+        }
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        log.end("dossier ${classe.getJavaNomClasseSansMajuscule()} suppr");
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Reinitilise le mot de passe d'un ${classe.getJavaNomClasseSansMajuscule()}
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward reinit(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire du compte ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        for(Iterator iter${classe.getJavaNomClasseAvecMajuscule()} = liste${classe.getJavaNomClasseAvecMajuscule()}.iterator(); iter${classe.getJavaNomClasseAvecMajuscule()}.hasNext(); ) {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = (${classe.getJavaNomClasseAvecMajuscule()}) iter${classe.getJavaNomClasseAvecMajuscule()}.next();
+            if(compte${classe.getJavaNomClasseAvecMajuscule()}.equals(${classe.getJavaNomClasseSansMajuscule()}.getCompte${classe.getJavaNomClasseAvecMajuscule()}())) {
+                ${classe.getJavaNomClasseSansMajuscule()}.setReinitialisationMotPasse(true);
+            }
+        }
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        log.end("dossier ${classe.getJavaNomClasseSansMajuscule()} reinit");
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Reinitialise le mot de passe d'un ${classe.getJavaNomClasseSansMajuscule()}
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward reinitValid(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String motPasse = actionForm.getMotPasse();
+        String motPasseVerif = actionForm.getMotPasseVerif();
+        
+            /** Vérification du mot de passe */
+            if( FAbstractForm.validerEstDefini( motPasse, "securite.${classe.getJavaNomClasseSansMajuscule()}.motPasse", getErrors().getActionErrors(), getMessageResources()) ) {
+                FAbstractForm.validerAlphaNumSansAccent( motPasse, "securite.${classe.getJavaNomClasseSansMajuscule()}.motPasse", getErrors().getActionErrors(), getMessageResources());
+            }
+            if( FAbstractForm.validerEstDefini( motPasseVerif, "securite.${classe.getJavaNomClasseSansMajuscule()}.motPasseVerif", getErrors().getActionErrors(), getMessageResources()) ) {
+                FAbstractForm.validerAlphaNumSansAccent( motPasseVerif, "securite.${classe.getJavaNomClasseSansMajuscule()}.motPasseVerif", getErrors().getActionErrors(), getMessageResources());
+            }
+            FAbstractForm.validerLongueurMin( motPasse, 4, "securite.${classe.getJavaNomClasseSansMajuscule()}.motPasse", getErrors().getActionErrors(), getMessageResources());
+            if( motPasse != null && ! motPasse.equals(motPasseVerif) ) {
+                addActionError("error.securite.${classe.getJavaNomClasseSansMajuscule()}.motPassePasIdentique");
+            }
+            if(getErrors().getActionErrors() != null && getErrors().getActionErrors().size() > 0 ) {
+                return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+            }
+            /** Fin de vérification du mot de passe */
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire du compte ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(compte${classe.getJavaNomClasseAvecMajuscule()});
+            
+            ${classe.getJavaNomClasseSansMajuscule()}.setMotPasse(actionForm.getMotPasse());
+            ${classe.getJavaNomClasseSansMajuscule()}.encodeMotPasseEnMD5Number();
+            
+            ${classe.getJavaNomClasseSansMajuscule()}.setCompteModifiePar(getActuelCompte${classe.getJavaNomClasseAvecMajuscule()}());
+            
+            ${classe.getJavaNomClasseAvecMajuscule()}Manager.update${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            log.debug("L'${classe.getJavaNomClasseSansMajuscule()} n'existe pas");
+        }
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        log.end("dossier ${classe.getJavaNomClasseSansMajuscule()} reinit Valid");
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Affichage du formulaire de modification
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward executeModif(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire de l'identifiant du ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(compte${classe.getJavaNomClasseAvecMajuscule()});
+            log.debug("${classe.getJavaNomClasseSansMajuscule()} : nom = "+${classe.getJavaNomClasseSansMajuscule()}.getNom${classe.getJavaNomClasseAvecMajuscule()}());
+            
+            actionForm.setChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            log.debug("L'${classe.getJavaNomClasseSansMajuscule()} n'existe pas");
+        }
+        
+        log.debug("${classe.getJavaNomClasseSansMajuscule()} modif");
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+    }
+    
+    /**
+     * Validation des modifications
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward executeModifValid(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        log.debug("Entrée méthode modifValid().");
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        /*
+        if( ! validateForm() ) {
+            return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+        }*/
+        
+        String compte${classe.getJavaNomClasseAvecMajuscule()};
+        if(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}()!=null) {
+            compte${classe.getJavaNomClasseAvecMajuscule()} = actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}();
+        } else {
+            throw new IllegalStateException("Le paramètre obligatoire de l'identifiant du ${classe.getJavaNomClasseSansMajuscule()} n'est pas défini.");
+        }
+        
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(compte${classe.getJavaNomClasseAvecMajuscule()});
+            
+            actionForm.getChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+            ${classe.getJavaNomClasseSansMajuscule()}.setCompteModifiePar(getActuelCompte${classe.getJavaNomClasseAvecMajuscule()}());
+            
+            log.debug("UPDATE : debut");
+            
+            ${classe.getJavaNomClasseAvecMajuscule()}Manager.update${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+            
+            log.debug("UPDATE : fin");
+            
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            log.debug("L'${classe.getJavaNomClasseSansMajuscule()} n'existe pas");
+        }
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Annulation des modifications
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward modifAnnul(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Affichage du formulaire de modification
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward executeAjout(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+        
+        actionForm.setChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+    }
+    
+    /**
+     * Validation des ajoutications
+     * 
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward executeAjoutValid(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        /*
+        if( ! validateForm() ) {
+            return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+        }*/
+        
+        // teste si l'${classe.getJavaNomClasseSansMajuscule()} existe ou non
+        try {
+            ${classe.getJavaNomClasseAvecMajuscule()}Manager.get${classe.getJavaNomClasseAvecMajuscule()}(actionForm.getCompte${classe.getJavaNomClasseAvecMajuscule()}());
+            log.debug("pas d'exception ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException: l'${classe.getJavaNomClasseSansMajuscule()} existe déjà");
+            // pas d'exception ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException: l'${classe.getJavaNomClasseSansMajuscule()} existe déjà
+            addActionError("error.securite.${classe.getJavaNomClasseSansMajuscule()}.existeDeja");
+            // réinitialise le mot de passe à nul
+            actionForm.reinitANulMotDePasse();
+            return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+        } catch(${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException e) {
+            // exception ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException : l'${classe.getJavaNomClasseSansMajuscule()} n'existe pas, on le crée
+            log.debug("exception ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException : l'${classe.getJavaNomClasseSansMajuscule()} n'existe pas, on le crée");
+        }
+        
+        ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+        
+        actionForm.getChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+        
+        // encode le mot de passe de l'${classe.getJavaNomClasseSansMajuscule()} au format nombre MD5
+        if( ! ${classe.getJavaNomClasseSansMajuscule()}.encodeMotPasseEnMD5Number() ) {
+            // l'encoding du mot de passe en MD5 n'a pas été réalisé correctement
+            addActionError("error.securite.${classe.getJavaNomClasseSansMajuscule()}.encodingMD5");
+            // réinitialise le mot de passe à nul
+            actionForm.reinitANulMotDePasse();
+            return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.form");
+        }
+        
+        ${classe.getJavaNomClasseSansMajuscule()}.setCompteCreePar(getActuelCompte${classe.getJavaNomClasseAvecMajuscule()}());
+        
+        log.debug("INSERT : debut");
+        
+        ${classe.getJavaNomClasseAvecMajuscule()}Manager.insert${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()});
+        
+        log.debug("INSERT : fin");
+        
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    /**
+     * Annulation des ajoutications
+     * 
+     * @param mapping  ActionMapping
+     * @param form     ActionForm
+     * @param request  ServletRequest
+     * @param response ServletResponse
+     * @return ActionForward
+     * @throws exception Exception
+     */
+    public ActionForward ajoutAnnul(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response)
+    {
+        F${classe.getJavaNomClasseAvecMajuscule()}Form actionForm = (F${classe.getJavaNomClasseAvecMajuscule()}Form) form;
+        
+        // charge la liste des ${classe.getJavaNomClasseSansMajuscule()}s
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+        getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        
+        return mapping.findForward("securite.${classe.getJavaNomClasseSansMajuscule()}.liste");
+    }
+    
+    public String getPaginerForwardName() {
+        if(getSession().getAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR) == null) {
+           List liste${classe.getJavaNomClasseAvecMajuscule()} = ${classe.getJavaNomClasseAvecMajuscule()}Manager.getListe${classe.getJavaNomClasseAvecMajuscule()}();
+           getSession().setAttribute(SessionKeys.BEAN_LISTE_UTILISATEUR, liste${classe.getJavaNomClasseAvecMajuscule()});
+        }
+        return "securite.${classe.getJavaNomClasseSansMajuscule()}.liste";
+    }
+    
+}

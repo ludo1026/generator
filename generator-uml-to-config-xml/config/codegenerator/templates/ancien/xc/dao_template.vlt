@@ -1,0 +1,53 @@
+package ${classe.getJavaPackage()}.business.dao;
+
+import java.util.List;
+
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasse()};
+import ${classe.getJavaPackage()}.exception.${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException;
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+
+/**
+ * <b>Description : </b> <description de la classe>
+ *
+ * @version : $Revision: 1.7 $, $Date: 2007/03/06 16:00:05 $
+ * @author : $Author: udevlch $
+ * @since : version 1.0.0
+ */
+public interface D${classe.getJavaNomClasse()}Dao {
+
+    /**
+     * 
+     * @param id${classe.getJavaNomClasse()}
+     * @param transaction
+     * @return
+     * @throws PersistenceException
+     * @throws ${classe.getJavaNomClasse()}NonTrouveException
+     */
+    ${classe.getJavaNomClasseAvecMajuscule()} get${classe.getJavaNomClasseAvecMajuscule()}(
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()},
+#end
+#end
+            TransactionDao transaction) throws PersistenceException, ${classe.getJavaNomClasse()}NonTrouveException;
+
+    /*
+    List getListe${classe.getJavaNomClasse()}(
+            final BCriteres${classe.getJavaNomClasse()}Bean criteres,
+            TransactionDao transaction) throws PersistenceException;
+    */
+
+    void insert${classe.getJavaNomClasse()}(
+            ${classe.getJavaNomClasse()} ${classe.getJavaNomClasse()},
+            TransactionDao transaction) throws PersistenceException;
+
+    void update${classe.getJavaNomClasse()}(
+            ${classe.getJavaNomClasse()} ${classe.getJavaNomClasse()},
+            TransactionDao transaction) throws PersistenceException;
+
+    void suppr${classe.getJavaNomClasse()}(
+            ${classe.getJavaNomClasse()} ${classe.getJavaNomClasse()},
+            TransactionDao transaction) throws PersistenceException;
+
+}

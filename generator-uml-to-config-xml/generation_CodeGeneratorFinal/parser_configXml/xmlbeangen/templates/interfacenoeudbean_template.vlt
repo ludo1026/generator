@@ -1,0 +1,51 @@
+package ${package}.${xmlModele.getNom()}.${template.getNomSousPackage()};
+
+import java.util.List;
+
+public interface ${noeud.getNomInterface()} {
+	
+	/** Récupération de l'élément parent */
+#if( $noeud.getReferenceNoeud() )
+#set( $noeudParent = $noeud.getReferenceNoeud() )
+	
+	public ${noeudParent.getNomInterface()} getReference${noeudParent.getNomAvecMajuscule()}();
+	
+	public void setReference${noeudParent.getNomAvecMajuscule()}(${noeudParent.getNomInterface()} reference${noeudParent.getNomAvecMajuscule()});
+#end
+	
+	/** Récupération des éléments fils */
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#if( $noeudFils.getNombre() == 1 )
+
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}();
+    
+    public void set${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()});
+	
+#end
+#if( $noeudFils.getNombre() != 1 )
+	
+#foreach( $attributNoeudFils in $noeudFils.getListeAttribut() )
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}By${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()});
+#end
+    public void add${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()});
+    public List<${noeudFils.getNomInterface()}> getListe${noeudFils.getNomAvecMajuscule()}();
+    public void setListe${noeudFils.getNomAvecMajuscule()}(List<${noeudFils.getNomInterface()}> liste${noeudFils.getNomAvecMajuscule()});
+#end
+#end
+	
+	/** Récupération des attributs de l'objet de base sans transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+	
+	public String get${attributNoeud.getNomAvecMajuscule()}AsString();
+	public void set${attributNoeud.getNomAvecMajuscule()}AsString(String ${attributNoeud.getNomSansMajuscule()}AsString);
+#end
+	
+	/** Récupération des attributs de l'objet de base avec transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+
+	public String get${attributNoeud.getNomAvecMajuscule()}();
+	public void set${attributNoeud.getNomAvecMajuscule()}(String ${attributNoeud.getNomSansMajuscule()});
+#end
+}

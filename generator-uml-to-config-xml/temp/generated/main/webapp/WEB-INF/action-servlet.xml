@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean
+		name="/accueil"
+		class="fr.c2rp.passvae.web.action.accueil.accueil.AccueilAction"
+	>
+	</bean>
+    
+	<bean
+		name="/authentification"
+		class="fr.c2rp.passvae.web.action.authentification.authentification.AuthentificationAction"
+	>
+	</bean>
+    
+	<bean
+		name="/recherchePassVae"
+		class="fr.c2rp.passvae.web.action.passvae.recherchepassvae.RecherchePassVaeAction"
+	>
+    	<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+    	<property name="recherchePassVaeService">
+			<ref bean="recherchePassVaeService" />
+		</property>
+	</bean>
+    
+	
+	<bean
+		name="/accueil"
+		class="fr.c2rp.passvae.web.action.accueil.AccueilAction"
+	/>
+	
+	<bean
+		name="/creationPassVae"
+		class="fr.c2rp.passvae.web.action.passvae.CreationPassVaeAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+		<property name="recherchePassVaeService">
+			<ref bean="recherchePassVaeService" />
+		</property>
+		<property name="passVaeService">
+			<ref bean="passVaeService" />
+		</property>
+		<property name="certificationService">
+			<ref bean="certificationService" />
+		</property>
+		<property name="formationService">
+			<ref bean="formationService" />
+		</property>
+		<property name="prestataireService">
+			<ref bean="prestataireService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/detailPassVae"
+		class="fr.c2rp.passvae.web.action.passvae.DetailPassVaeAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+		<property name="passVaeService">
+			<ref bean="passVaeService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/afficherFinanceur"
+		class="fr.c2rp.passvae.web.action.financeur.AfficherFinanceurAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/recherchePassVae"
+		class="fr.c2rp.passvae.web.action.passvae.RecherchePassVaeAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+		<property name="recherchePassVaeService">
+			<ref bean="recherchePassVaeService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/afficherPrestataire"
+		class="fr.c2rp.passvae.web.action.prestataire.AfficherPrestataireAction"
+	>
+		<property name="rapportService">
+			<ref bean="rapportService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/afficherBonCommande"
+		class="fr.c2rp.passvae.web.action.boncommande.AfficherBonCommandeAction"
+	>
+		<property name="rapportService">
+			<ref bean="rapportService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/afficherFacture"
+		class="fr.c2rp.passvae.web.action.facture.AfficherFactureAction"
+	>
+		<property name="rapportService">
+			<ref bean="rapportService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/afficherPassVae"
+		class="fr.c2rp.passvae.web.action.passvae.AfficherPassVaeAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/statistique"
+		class="fr.c2rp.passvae.web.action.statistique.StatistiqueAction"
+	>
+		<property name="referentielService">
+			<ref bean="referentielService" />
+		</property>
+		<property name="statistiqueService">
+			<ref bean="statistiqueService" />
+		</property>
+	</bean>
+	
+	<bean
+		name="/rechercheCommune"
+		class="fr.c2rp.passvae.web.action.commune.RechercheCommuneAction"
+	>
+		<property name="communeService">
+			<ref bean="communeService" />
+		</property>
+	</bean>
+	
+</beans>

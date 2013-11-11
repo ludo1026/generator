@@ -1,0 +1,185 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : ${classe.getJavaPackage()}.business
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.struts.forms;
+
+import java.io.Serializable;
+
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.log4j.Logger;
+import org.apache.struts.action.ActionError;
+import org.apache.struts.action.ActionErrors;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.util.MessageResources;
+
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.struts.beans.BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean;
+
+import fr.apriarsa.orias.intranet.commun.struts.forms.FAbstractForm;
+
+/**
+ * <b>Description :</b>
+ * Represente un ${classe.getJavaNomClasseSansMajuscule()} lie a une inscription
+ *
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * @author  : Chaboud
+ * @since   : version 1.0.0
+ */
+public class F${classe.getJavaNomClasseAvecMajuscule()}Form extends FAbstractForm {
+    
+    private static final Logger log = Logger.getLogger(F${classe.getJavaNomClasseAvecMajuscule()}Form.class);
+    
+#foreach( $attribut in $classe.getListeAttributs() )
+	private String ${attribut.getJavaNomAttributSansMajuscule()};
+#end
+
+#foreach( $attribut in $classe.getListeAttributs() )
+	public String get${attribut.getJavaNomAttributAvecMajuscule()}() {
+		return ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+	public void set${attribut.getJavaNomAttributAvecMajuscule()}(String ${attribut.getJavaNomAttributSansMajuscule()}) {
+		this.${attribut.getJavaNomAttributSansMajuscule()} = ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+#end
+    
+    
+    /** Gestion de la pagination */
+    private int numPageCourante = 1;
+    
+    /**
+     * @return Renvoie numPageCourante.
+     */
+    public int getNumPageCourante() {
+        return numPageCourante;
+    }
+    /**
+     * @param numPageCourante numPageCourante à définir.
+     */
+    public void setNumPageCourante(int numPageCourante) {
+        this.numPageCourante = numPageCourante;
+    }
+
+    public F${classe.getJavaNomClasseAvecMajuscule()}Form() {
+        setChampsCriteres(new BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean());
+        numPageCourante = 1;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.apache.struts.action.ActionForm#validate(org.apache.struts.action.ActionMapping,
+     *      javax.servlet.http.HttpServletRequest)
+     */
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+        log.info("validate method = " + method);
+
+        ActionErrors errors = null;
+
+        if ("init".equals(method)) {
+            return null;
+        }
+        
+        // Récupération du fichier .properties
+        MessageResources messages = MessageFactory.getMessageResources();
+
+        errors = new ActionErrors();
+
+        if ("recherche".equals(method)) {
+            if ( 
+#set($first=true)
+#foreach( $attribut in $classe.getListeAttributs() )
+              #if($first)#set($first=false)  #else&&#end ValidationFormulaire.isEmpty(this.${attribut.getJavaNomAttributSansMajuscule()})
+#end
+              ) {
+               errors.add("${classe.getJavaNomClasseSansMajuscule()}", new ActionError("errors.message",messages.getMessage("${classe.getJavaNomClasseSansMajuscule()}.recherche.indicationSaisie")));  
+            }
+            // test le type des champs
+#foreach( $attribut in $classe.getListeAttributs() )
+#if("String" != ${attribut.getJavaTypeAttribut()})
+            if(validerEstDefini(${attribut.getJavaNomAttributSansMajuscule()})) {
+                valider${attribut.getJavaTypeAttribut()}( ${attribut.getJavaNomAttributSansMajuscule()}, "${classe.getJavaNomClasseSansMajuscule()}.recherche.${attribut.getJavaNomAttributSansMajuscule()}", errors, messages);
+            }
+#end
+#end
+        }
+        
+        return errors;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.apache.struts.action.ActionForm#reset(org.apache.struts.action.ActionMapping,
+     *      javax.servlet.http.HttpServletRequest)
+     */
+    public void reset(ActionMapping arg0, HttpServletRequest arg1) {
+        log.info("reset");
+        setChampsCriteres(new BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean());
+      }
+
+    /**
+     * @return Renvoie les critères de recherche.
+     */
+    public void getChampsCriteres(BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteres) {
+#foreach( $attribut in $classe.getListeAttributs() )
+        log.debug("${attribut.getJavaNomAttributSansMajuscule()} = " + ${attribut.getJavaNomAttributSansMajuscule()} );
+#end
+#foreach( $attribut in $classe.getListeAttributs() )
+#if("String" == ${attribut.getJavaTypeAttribut()})
+        criteres.set${attribut.getJavaNomAttributAvecMajuscule()}( getUpperStringFromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#else
+        criteres.set${attribut.getJavaNomAttributAvecMajuscule()}( get${attribut.getJavaTypeAttribut()}FromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#end
+#end
+    }
+    
+    /**
+     * @param criteres critères de recherche
+     */
+    public void setChampsCriteres(BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteres) {
+#foreach( $attribut in $classe.getListeAttributs() )
+#if("String" == ${attribut.getJavaTypeAttribut()})
+        criteres.set${attribut.getJavaNomAttributAvecMajuscule()}( getUpperStringFromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#else
+        criteres.set${attribut.getJavaNomAttributAvecMajuscule()}( get${attribut.getJavaTypeAttribut()}FromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#end
+#end
+    }
+
+    /**
+     * @return Renvoie le bean ${classe.getJavaNomClasseAvecMajuscule()}.
+     */
+    public void getChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) {
+#foreach( $attribut in $classe.getListeAttributs() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()}( get${attribut.getJavaTypeAttribut()}FromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#end
+    }
+    
+    /**
+     * @param criteres critères de recherche
+     */
+    public void setChamps${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) {
+#foreach( $attribut in $classe.getListeAttributs() )
+#if("String" == ${attribut.getJavaTypeAttribut()})
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()}( getUpperStringFromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#else
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()}( get${attribut.getJavaTypeAttribut()}FromString( get${attribut.getJavaNomAttributAvecMajuscule()}()));
+#end
+#end
+    }
+    
+}

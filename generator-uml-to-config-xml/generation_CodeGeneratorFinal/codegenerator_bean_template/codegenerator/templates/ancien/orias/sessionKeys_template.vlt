@@ -1,0 +1,11 @@
+    
+    /**
+     * Variables de session pour la gestion des ${classe.getJavaNomClasseSansMajuscule()}s
+     */
+    
+    public static final String BEAN_CRIT_RECH_${classe.getJavaNomClasseToutEnMajuscule()} = "bCritRech${classe.getJavaNomClasseAvecMajuscule()}";
+    public static final String BEAN_RESULT_RECH_${classe.getJavaNomClasseToutEnMajuscule()} = "bResultRech${classe.getJavaNomClasseAvecMajuscule()}";
+    public static final String BEAN_LIST_RESULT_RECH_${classe.getJavaNomClasseToutEnMajuscule()} = "bListResultRech${classe.getJavaNomClasseAvecMajuscule()}";
+    
+    public static final String BEAN_LISTE_${classe.getJavaNomClasseToutEnMajuscule()} = "bListe${classe.getJavaNomClasseAvecMajuscule()}";
+    

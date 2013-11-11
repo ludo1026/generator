@@ -1,0 +1,21 @@
+package ${package}.${xmlModele.getNom()}.test;
+
+import ${package}.${xmlModele.getNom()}.core.bean.${noeud.getNomInterface()};
+import ${package}.${xmlModele.getNom()}.core.xmlreader.${noeud.getNomAvecMajuscule()}XmlReaderManager;
+
+public class Test${noeud.getNomAvecMajuscule()} {
+	
+	private static final String FILECONFIG_PATH = "";
+	private static final String FILECONFIG_FILENAME = "config.xml";
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		String filename = FILECONFIG_PATH + "/" + FILECONFIG_FILENAME;
+		${noeud.getNomAvecMajuscule()}XmlReaderManager m = ${noeud.getNomAvecMajuscule()}XmlReaderManager.get${noeud.getNomAvecMajuscule()}XmlReaderManager(filename);
+		${noeud.getNomInterface()} s = m.get${noeud.getNomAvecMajuscule()}();
+		filename = ""; // Point d'arrêt
+	}
+
+}

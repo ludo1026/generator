@@ -1,0 +1,667 @@
+package ${classeGeneration.getNomPackage()};
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import sun.rmi.runtime.Log;
+import __Package__.presentation.controlleur.action.AbstractDispatchAction;
+
+/**
+ * Classe action ${classeGeneration.getNomElementGenere()} :
+ *
+ * @author Auteur
+ * @version $Revision$ $Date$
+ */
+public class ${classeGeneration.getNomElementGenere()}Action
+extends AbstractDispatchAction
+{
+
+	/**
+	 * Gère les logs de la classe.
+	 */
+	private static Log log = LogFactory.getLog(${classeGeneration.getNomElementGenere()}Action.class);
+
+	/**************************************************************************
+	 * Injection des dépendances
+	 */
+
+    /**
+     * Nom de l'action défini dans struts.
+     */
+    public static final String ACTION_NAME = "creationPassVae"; //$NON-NLS-1$
+
+    /**
+     * Uri de l'action défini dans struts.
+     */
+    public static final String ACTION_PATH = "/" + ACTION_NAME; //$NON-NLS-1$
+
+    /**
+     * Le service lié à l'affichage d'un dossier passVae et aux actions de gestion.
+     */
+    private PassVaeService passVaeService = null;
+
+
+    /**
+     * Définit le service lié à l'affichage d'un dossier passVae et aux actions de gestion.
+     * @param passVaeService Le service <code>passVaeService</code>.
+     */
+    public void setPassVaeService(
+            final PassVaeService passVaeService)
+    {
+        this.passVaeService = passVaeService;
+    }
+
+
+    /**
+     * Retourne le service lié à l'affichage d'un dossier passVae et aux actions de gestion.
+     * @return Le service <code>passVaeService</code>.
+     */
+    public PassVaeService getPassVaeService()
+    {
+        return this.passVaeService;
+    }
+
+
+    /**
+     * Le service lié à la recherche de certifications.
+     */
+    private CertificationService certificationService = null;
+
+    /**
+     * Initialise la façade de service perméttant les actions de création,
+     * lecture, modification, suppression sur un objet <code>certificationService</code>.
+     * @param certificationService Le service <code>certificationService</code>.
+     */
+    public void setCertificationService(
+            final CertificationService certificationService)
+    {
+        this.certificationService = certificationService;
+    }
+
+    /**
+     * Retourne le service lié à la création d'un dossier certification.
+     * @return Le service <code>certificationService</code>.
+     */
+    public CertificationService getCertificationService()
+    {
+        return this.certificationService;
+    }
+
+
+    /**
+     * Le service lié à la recherche de formations.
+     */
+    private FormationService formationService = null;
+
+    /**
+     * Initialise la façade de service perméttant les actions de création,
+     * lecture, modification, suppression sur un objet <code>formationService</code>.
+     * @param formationService Le service <code>formationService</code>.
+     */
+    public void setFormationService(
+            final FormationService formationService)
+    {
+        this.formationService = formationService;
+    }
+
+    /**
+     * Retourne le service lié à la création d'un dossier formation.
+     * @return Le service <code>formationService</code>.
+     */
+    public FormationService getFormationService()
+    {
+        return this.formationService;
+    }
+
+
+    /**
+     * Le service lié à la recherche de prestataires.
+     */
+    private PrestataireService prestataireService = null;
+
+    /**
+     * Initialise la façade de service perméttant les actions de création,
+     * lecture, modification, suppression sur un objet <code>prestataireService</code>.
+     * @param prestataireService Le service <code>prestataireService</code>.
+     */
+    public void setPrestataireService(
+            final PrestataireService prestataireService)
+    {
+        this.prestataireService = prestataireService;
+    }
+
+    /**
+     * Retourne le service lié à la création d'un dossier prestataire.
+     * @return Le service <code>prestataireService</code>.
+     */
+    public PrestataireService getPrestataireService()
+    {
+        return this.prestataireService;
+    }
+
+    /**
+     * Le service lié à l'affichage d'un dossier passVae et aux actions de gestion.
+     */
+    private RecherchePassVaeService recherchePassVaeService = null;
+
+
+    /**
+     * Définit le service lié à l'affichage d'un dossier passVae et aux actions de gestion.
+     * @param recherchePassVaeService Le service <code>recherchePassVaeService</code>.
+     */
+    public void setRecherchePassVaeService(
+            final RecherchePassVaeService recherchePassVaeService)
+    {
+        this.recherchePassVaeService = recherchePassVaeService;
+    }
+
+
+    /**************************************************************************
+     * Noms des actions et des forwards.
+     */
+
+    /**
+     *
+     * Classe contenant la liste des noms des actions de cette classe action.
+     *
+     * @author Ludovic Chaboud
+     * @date 23 juil. 08
+     * @version $Revision$ $Date$
+     *
+     */
+    @SuppressWarnings("nls")
+    public static class ActionName
+    {
+        /** Constructeur privé. **/
+        private ActionName()
+        {
+            // Ne rien faire
+        }
+
+        /** Initialise la page de création du passVae. */
+        public static final String ACTION_INIT = "init";
+        /** Annuler. */
+        public static final String ACTION_ANNULER = "annuler";
+        /** Afficher le résultat de la recherche de passVae. */
+        public static final String ACTION_RECHERCHER_PASSVAE = "rechercherPassVae";
+        /** Afficher le résultat de la recherche de certifications. */
+        public static final String ACTION_RECHERCHER_CERTIFICATION = "rechercherCertification";
+        /** Gestion du cas où aucune certification n'a été trouvée. */
+        public static final String ACTION_CERTIFICATION_NON_TROUVE = "gererCertificationNonTrouvee";
+        /** Creer le passVae. */
+        public static final String ACTION_CREER_PASSVAE = "creerPassVae";
+        /** Afficher la liste des prestataires. */
+        public static final String ACTION_AFFICHER_LISTE_PRESTATAIRE = "afficherListePrestataire";
+    }
+
+    /**
+     *
+     * Classe contenant les noms des forwards de l'action.
+     *
+     * @author Ludovic Chaboud
+     * @date 23 juil. 08
+     * @version $Revision$ $Date$
+     */
+    @SuppressWarnings("nls")
+    private static final class ForwardName
+    {
+        /** Constructeur privé. **/
+        private ForwardName()
+        {
+            // Ne rien faire
+        }
+
+        /** vers l'écran de retour en cas d'annulation. */
+        public static final String FORWARD_ANNULER = "annuler";
+        /** vers l'écran de création du dossier Pass'Vae. */
+        public static final String FORWARD_CREATION_PASSVAE = "creation";
+        /** vers l'écran de détail du dossier Pass'Vae. */
+        public static final String FORWARD_DETAIL_PASSVAE = "detailPassVae";
+        /** vers l'écran d'affichage de la liste des prestataires. */
+        public static final String FORWARD_AFFICHER_LISTE_PRESTATAIRE = "afficherListePrestataire";
+    }
+
+    /**************************************************************************
+     * Méthodes d'actions.
+     */
+
+    /**
+     * Affiche la page de retour en cas d'annulation.
+     * @param mapping Mapping de redirection vers la couche - Vue -
+     * @param form Formulaire de données
+     * @param request Requete http d'entrée
+     * @param response Reponse http de sortie
+     * @return Forward de l'action.
+     */
+    public ActionForward annuler(
+                                final ActionMapping mapping,
+                                final ActionForm form,
+                                final HttpServletRequest request,
+                                final HttpServletResponse response)
+    {
+        setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+        creationPassVaeForm.reset(mapping, request);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_ANNULER);
+    }
+
+	/**
+	 * Affiche la page de création d'un dossier passVae avec la recherche de certifications.
+     * @param mapping Mapping de redirection vers la couche - Vue -
+     * @param form Formulaire de données
+     * @param request Requete http d'entrée
+     * @param response Reponse http de sortie
+     * @return Forward de l'action.
+     */
+	public ActionForward init(
+	                            final ActionMapping mapping,
+								final ActionForm form,
+								final HttpServletRequest request,
+								final HttpServletResponse response)
+	{
+	    setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+		creationPassVaeForm.reset(mapping, request);
+
+		/** liste des certifications recherchées */
+        creationPassVaeForm.setListeCertification(null);
+
+        /** indicateur du cas où on ne trouve pas la certification voulue */
+        creationPassVaeForm.setEstCertificationNonTrouvee(false);
+
+        /** sélection de la zone géographique */
+        creationPassVaeForm.setIdZoneGeographiqueSelection(null);
+
+        /** critères de recherche d'un ou plusieurs passVae */
+        creationPassVaeForm.setCriterePassVae(new CriteresRecherchePassVaeBean());
+
+        /**
+         * En fonction de l'utilisateur,
+         * on bloque certains critères de recherche de passVae.
+         */
+        definirCritereBloque(creationPassVaeForm);
+
+        /** charge la liste des données de référence */
+        chargerListe(creationPassVaeForm);
+
+        /** charge la liste des certifications retournées par la recherche */
+        chargerListeCertification(creationPassVaeForm);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE);
+	}
+
+    /**
+     * Affiche la liste des certifications trouvés dans la recherche.
+     * @param mapping Mapping de redirection vers la couche - Vue -
+     * @param form Formulaire de données
+     * @param request Requete http d'entrée
+     * @param response Reponse http de sortie
+     * @return Forward de l'action.
+     */
+    public ActionForward rechercherCertification(
+                                final ActionMapping mapping,
+                                final ActionForm form,
+                                final HttpServletRequest request,
+                                final HttpServletResponse response)
+    {
+        setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        AssertHelper.assertInstanceOf(form, CreationPassVaeForm.class, "formulaire"); //$NON-NLS-1$
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+        creationPassVaeForm.setIdCertificationSelection(null);
+
+        creationPassVaeForm.setListeCertification(null);
+
+        creationPassVaeForm.setEstCertificationNonTrouvee(false);
+
+        creationPassVaeForm.setIdZoneGeographiqueSelection(null);
+
+        chargerListeCertification(creationPassVaeForm);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE);
+    }
+
+    /**
+     * Gérer le cas où aucune certification non trouvée.
+     * @param mapping Mapping
+     * @param form Formulaire
+     * @param request Request
+     * @param response Response
+     * @return forward Forward
+     * @throws Exception Exception
+     */
+    public ActionForward gererCertificationNonTrouvee(
+                                final ActionMapping mapping,
+                                final ActionForm form,
+                                final HttpServletRequest request,
+                                final HttpServletResponse response)
+    throws Exception
+    {
+        setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+        chargerListeCertification(creationPassVaeForm);
+
+        /** Indique que la certification n'a pas été trouvée */
+
+        creationPassVaeForm.setEstCertificationNonTrouvee(true);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE);
+    }
+
+    /**
+     * Affiche la liste des prestataires.
+     * @param mapping Mapping
+     * @param form Formulaire
+     * @param request Request
+     * @param response Response
+     * @return forward Forward
+     * @throws Exception Exception
+     */
+    public ActionForward afficherListePrestataire(
+                                final ActionMapping mapping,
+                                final ActionForm form,
+                                final HttpServletRequest request,
+                                final HttpServletResponse response)
+    throws Exception
+    {
+        setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        AssertHelper.assertInstanceOf(form, CreationPassVaeForm.class, "formulaire"); //$NON-NLS-1$
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+        chargerListeCertification(creationPassVaeForm);
+
+        /** chargement de la liste des prestataires et mis en request */
+
+        final List<Prestataire> listePrestataire = this.getListePrestataire(creationPassVaeForm);
+        if ((listePrestataire == null) || listePrestataire.isEmpty()) {
+            throw new FunctionalException("erreur.prestataire.non.trouve"); //$NON-NLS-1$
+        }
+
+        AfficherPrestataireAction
+            .mettreListePrestataireEnRequestAttribute(
+                    request,
+                    listePrestataire);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_AFFICHER_LISTE_PRESTATAIRE);
+    }
+
+    /**
+     * Affiche la liste des certifications trouvés dans la recherche.
+     * @param mapping Mapping
+     * @param form Formulaire
+     * @param request Request
+     * @param response Response
+     * @return forward Forward
+     * @throws Exception Exception
+     */
+    public ActionForward creerPassVae(
+                                final ActionMapping mapping,
+                                final ActionForm form,
+                                final HttpServletRequest request,
+                                final HttpServletResponse response)
+    throws Exception
+    {
+        setForwardParDefaut(mapping.findForward(ForwardName.FORWARD_CREATION_PASSVAE));
+
+        AssertHelper.assertInstanceOf(form, CreationPassVaeForm.class, "formulaire"); //$NON-NLS-1$
+        final CreationPassVaeForm creationPassVaeForm = (CreationPassVaeForm) form;
+
+        chargerListeCertification(creationPassVaeForm);
+
+        final Formation formation = getFormation(creationPassVaeForm);
+        AssertHelper.assertNotNull(formation, "erreur.formation.non.trouvee"); //$NON-NLS-1$
+
+        final Set<Prestataire> listePrestataire =
+            formation.getListePrestataire();
+        if ((listePrestataire == null) || listePrestataire.isEmpty()) {
+            throw new FunctionalException("erreur.prestataire.non.trouve"); //$NON-NLS-1$
+        }
+
+        /** Créer le passVae en base de données */
+        final PassVae passVae =
+            this.passVaeService.creerPassVae(
+                formation
+            );
+        AssertHelper.assertNotNull(passVae, "le dossier passVae"); //$NON-NLS-1$
+
+        /** Met l'id du passVae en attribut de la request pour être affiché dans la page détail */
+        request.setAttribute(DetailPassVaeAction.RequestAttributeName.PASSVAE_A_CREER, passVae);
+
+        /** Initialise les données nécessaires pour le formulaire de recherche */
+        definirRecherchePassVaeForm(creationPassVaeForm);
+
+        return mapping.findForward(ForwardName.FORWARD_DETAIL_PASSVAE);
+    }
+
+
+    /*******************************************************************************
+     * Méthodes communes aux actions
+     */
+
+    /**
+     * Recherche la liste des certifications correspondant aux critères de recherche.
+     * @param creationPassVaeForm Critères de recherche
+     */
+    private void chargerListeCertification(final CreationPassVaeForm creationPassVaeForm)
+    {
+        if ((creationPassVaeForm.getCritereCertification() == null)
+         || creationPassVaeForm.getCritereCertification().getEstAucunCritereDefini())
+        {
+            creationPassVaeForm.setListeCertification(null);
+            creationPassVaeForm.setListeLigneCertificationDisplay(null);
+        }
+        else
+        {
+            final CriteresRechercheCertificationBean criteresRechercheCertification =
+                creationPassVaeForm.getCritereCertification();
+            AssertHelper.assertNotNull(
+                    criteresRechercheCertification,
+                    "critères de recherche des certifications"); //$NON-NLS-1$
+
+            final Long idCertificationSelection =
+                creationPassVaeForm.getIdCertificationSelection();
+
+            final List<Certification> listeCertification =
+                getCertificationService().rechercherCertification(
+                    criteresRechercheCertification
+                );
+            AssertHelper.assertNotNull(
+                    listeCertification,
+                    "liste des certifications"); //$NON-NLS-1$
+
+            creationPassVaeForm.setListeCertification(listeCertification);
+
+            final List<LigneCertificationDisplayBean> listeLigneCertificationDisplay =
+                LigneCertificationDisplayBean.Manager
+                    .getListeLigneCertificationFromListeCertification(
+                         listeCertification,
+                         idCertificationSelection
+                    );
+            AssertHelper.assertNotNull(
+                listeLigneCertificationDisplay,
+                "liste des lignes d'affichage des certifications" //$NON-NLS-1$
+            );
+
+            creationPassVaeForm.setListeLigneCertificationDisplay(listeLigneCertificationDisplay);
+        }
+    }
+
+    /**
+     * Retourne la formation correspondant à la certification
+     * et à la zone géographique sélectionnées.
+     * @param creationPassVaeForm Formulaire de création
+     * @return Retourne la formation.
+     */
+    private Formation getFormation(
+            final CreationPassVaeForm creationPassVaeForm)
+    {
+        AssertHelper.assertNotNull(
+                creationPassVaeForm,
+                "formulaire creationPassVaeForm"); //$NON-NLS-1$
+
+        log.debug("Certification sélectionnée : " //$NON-NLS-1$
+              + creationPassVaeForm.getIdCertificationSelection());
+        log.debug("Zone géographique sélectionnée : "//$NON-NLS-1$
+              + creationPassVaeForm.getIdZoneGeographiqueSelection());
+
+        Formation formation = null;
+
+        if ((creationPassVaeForm.getIdCertificationSelection() != null)
+         && (creationPassVaeForm.getIdZoneGeographiqueSelection() != null))
+        {
+            formation =
+                this.formationService
+                    .getFormationParCertificationEtZoneGeographique(
+                        creationPassVaeForm.getIdCertificationSelection(),
+                        creationPassVaeForm.getIdZoneGeographiqueSelection()
+                    );
+
+            log.debug("Formation : " + formation.getNom()); //$NON-NLS-1$
+        }
+
+        if (formation == null) {
+            throw new FunctionalException("erreur.formation.non.trouvee"); //$NON-NLS-1$
+        }
+        return formation;
+    }
+
+    /**
+     * Retourne la formation correspondant à la certification
+     * et à la zone géographique sélectionnées.
+     * @param creationPassVaeForm Formulaire de création
+     * @return Retourne la formation.
+     */
+    @SuppressWarnings("unchecked")
+    private List<Prestataire> getListePrestataire(
+            final CreationPassVaeForm creationPassVaeForm)
+    {
+        AssertHelper.assertNotNull(
+                creationPassVaeForm,
+                "formulaire creationPassVaeForm"); //$NON-NLS-1$
+
+        log.debug("Certification sélectionnée : " //$NON-NLS-1$
+              + creationPassVaeForm.getIdCertificationSelection());
+
+        List<Prestataire> listePrestataire = null;
+
+        if (creationPassVaeForm.getEstCertificationNonTrouvee())
+        {
+            /** Cas où aucune certification n'a été trouvée */
+
+            // On charge la liste des prestataires par défaut
+
+            listePrestataire =
+                this.prestataireService.getListePrestataireParDefaut();
+            AssertHelper.assertNotNull(listePrestataire, "listePrestataire"); //$NON-NLS-1$
+
+        }
+        else {
+            /** Cas où une certification a été trouvée */
+
+            if (creationPassVaeForm.getIdCertificationSelection() == null)
+            {
+                throw new FunctionalException(
+                        "erreur.liste.prestataire.certification.non.selectionne"); //$NON-NLS-1$
+            }
+            final Formation formation =
+                this.formationService
+                    .getFormationParCertificationEtZoneGeographique(
+                        creationPassVaeForm.getIdCertificationSelection(),
+                        creationPassVaeForm.getIdZoneGeographiqueSelection()
+                    );
+            AssertHelper.assertNotNull(formation, "formation"); //$NON-NLS-1$
+            AssertHelper.assertNotNull(formation.getListePrestataire(),
+                    "liste de prestataires de la formation"); //$NON-NLS-1$
+            listePrestataire = new ArrayList();
+            listePrestataire.addAll(formation.getListePrestataire());
+            AssertHelper.assertNotNull(listePrestataire, "listePrestataire"); //$NON-NLS-1$
+
+        }
+
+        if (listePrestataire == null) {
+            throw new FunctionalException("erreur.prestataire.non.trouve"); //$NON-NLS-1$
+        }
+
+        return listePrestataire;
+    }
+
+    /*******************************************************************************
+     * Méthodes utilitaires.
+     */
+
+    /**
+     * Définir les critères de recherche bloqués dans la page de recherche
+     * et initialise l'objet formulaire.
+     * @param creationPassVaeForm Formulaire de recherche.
+     */
+    private void definirRecherchePassVaeForm(final CreationPassVaeForm creationPassVaeForm)
+    {
+        if (creationPassVaeForm.getRecherchePassVaeForm() == null) {
+            creationPassVaeForm.setRecherchePassVaeForm(new RecherchePassVaeForm());
+        }
+
+        final RecherchePassVaeForm recherchePassVaeForm =
+            creationPassVaeForm.getRecherchePassVaeForm();
+
+        /** Définit la liste des types de statuts visibles */
+        final List<TypeStatut> listeTypeStatut =
+            this.recherchePassVaeService
+                .getListeStatutPassVaeVisiblePourUtilisateur();
+
+        /** Définit le formulaire de recherche du passVae */
+        RecherchePassVaeAction.definirRecherchePassVaeForm(
+            recherchePassVaeForm,
+            listeTypeStatut
+        );
+    }
+
+    /**
+     * Définir les critères de recherche bloqués dnas la page de recherche.
+     * @param creationPassVaeForm Formulaire de recherche.
+     */
+    private static void definirCritereBloque(final CreationPassVaeForm creationPassVaeForm)
+    {
+        /**
+         * En fonction de l'utilisateur,
+         * on bloque certains critères de recherche.
+         */
+        final
+        Utilisateur utilisateur = SessionApplicativeHelper.getSessionCourante().getUtilisateur();
+
+        final CriteresRecherchePassVaeBean criteresRecherchePassVae =
+            creationPassVaeForm.getCriterePassVae();
+
+        CriteresRecherchePassVaeBean.Manager
+            .definirCritereBloque(
+                    criteresRecherchePassVae,
+                    utilisateur
+                );
+
+    }
+
+}

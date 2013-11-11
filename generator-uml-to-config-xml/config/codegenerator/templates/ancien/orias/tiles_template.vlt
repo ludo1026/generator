@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE component-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+   "./tiles-config.dtd" >
+
+<component-definitions>
+
+	<definition name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.liste" extends="page.base.contenu">
+		<put name="contenu" value="/jsp/${classe.getModule()}/J${classe.getJavaNomClasseAvecMajuscule()}Liste.jsp" />
+	</definition>
+
+	<definition name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.form" extends="page.base.contenu">
+		<put name="contenu" value="/jsp/${classe.getModule()}/J${classe.getJavaNomClasseAvecMajuscule()}AjoutModif.jsp" />
+	</definition>
+
+	<definition name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.modif" extends="page.base.contenu">
+		<put name="contenu" value="/jsp/${classe.getModule()}/J${classe.getJavaNomClasseAvecMajuscule()}AjoutModif.jsp" />
+	</definition>
+
+	<definition name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.ajout" extends="page.base.contenu">
+		<put name="contenu" value="/jsp/${classe.getModule()}/J${classe.getJavaNomClasseAvecMajuscule()}AjoutModif.jsp" />
+	</definition>
+	
+</component-definitions>

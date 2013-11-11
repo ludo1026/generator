@@ -1,0 +1,32 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : fr.apriarsa.orias.intranet.commun.business.dao.impl.jdbc.nom
+ * Source   : SQL.java
+ * Création : CHABOUD   Date : 4 janv. 2007
+ * Copyright (C) 2007   Apria RSA
+ *
+ * --------------- Dernière mise à jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.1 $, $Date: 2007/02/05 14:27:30 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package fr.apriarsa.orias.intranet.reference.business.dao.impl.jdbc.nom;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.1 $, $Date: 2007/02/05 14:27:30 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public interface SQLRef${classe.getJavaNomClasseAvecMajuscule()} {                                 
+
+public static final String SQL_NOM_TABLE                         = "${classe.getSqlNomTable()}";
+#foreach( $attribut in $classe.getListeAttributs() )
+public static final String SQL_${attribut.getJavaNomAttributAvecMajuscule()} = "${attribut.getSqlNomColonne()}";
+#end
+
+}                                                                             

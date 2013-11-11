@@ -1,0 +1,8 @@
+package ${package}.${xmlModele.getNom()}.${template.getNomSousPackage()};
+
+import ${package}.${xmlModele.getNom()}.core.bean.${noeud.getNomInterface()};
+import ${package}.${xmlModele.getNom()}.core.bean.impl.${noeud.getNomAbstract()};
+
+public class ${noeud.getNomBean()} extends ${noeud.getNomAbstract()} {
+	
+}

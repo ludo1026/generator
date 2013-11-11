@@ -1,0 +1,21 @@
+
+############################################
+# Liste et détails d'un ${classe.getJavaNomClasseSansMajuscule()}
+############################################
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.titre=Liste des ${classe.getJavaNomClasseSansMajuscule()}s
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.titre.court=${classe.getJavaNomClasseAvecMajuscule()}s
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.consult.titre=Consulter un ${classe.getJavaNomClasseSansMajuscule()}
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.modif.titre=Modifier un ${classe.getJavaNomClasseSansMajuscule()}
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.ajout.titre=Ajouter un ${classe.getJavaNomClasseSansMajuscule()}
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.suppr=Supprimer
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.modif=Modifier
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.entete.suppr=Supprimer
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.entete.modif=Modifier
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.modif.valid=Valider
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.modif.annul=Annuler
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.ajout=Ajouter
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.ajout.valid=Valider
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.bouton.ajout.annul=Annuler
+#foreach( $attribut in $classe.getListeAttributs() )
+${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.${attribut.getJavaNomAttributSansMajuscule()}=       ${attribut.getJavaNomAttributAvecMajuscule()}
+#end

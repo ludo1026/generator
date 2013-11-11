@@ -1,0 +1,22 @@
+#set( $dao = ${templateGenerationMap.getByClasseGenId("dao_template",${classe.getGenId()})} )
+#set( $bean = ${templateGenerationMap.getByClasseGenId("bean_template",${classe.getGenId()})} )
+/*
+ * Package  : ${dao.getNomPackage()}
+ * Source   : ${dao.getNomGenere()}.java
+ */
+package ${dao.getNomPackage()};
+
+import ${bean.getNomPackage()}.${bean.getNomGenere()};
+
+/* @zone-debut:{import} */
+/* @zone-fin:{import} */
+
+/**
+ * <b>Description :</b>
+ */
+public class ${dao.getNomGenere()} {
+
+/* @zone-debut:{${dao.getNomGenere()}} */
+/* @zone-fin:{${dao.getNomGenere()}} */
+
+}

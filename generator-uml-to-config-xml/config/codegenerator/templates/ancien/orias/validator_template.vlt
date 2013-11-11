@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form-validation>
+	<global>
+		<constant>
+			<constant-name>minPrenom</constant-name>
+			<constant-value>2</constant-value>
+		</constant>		
+		<constant>
+			<constant-name>passwordMinLength</constant-name>
+			<constant-value>8</constant-value>
+		</constant>
+		<constant>
+			<constant-name>passwordMaxLength</constant-name>
+			<constant-value>15</constant-value>
+		</constant>
+	</global>
+
+	<formset>
+		<form name="fRechercheMultiForm">
+			<field property="nom" depends="required">
+				<arg0 key="FRechercheMultiForm.nom" />
+			</field>
+			<field property="codePostal" >
+				<arg0 key="FRechercheMultiForm.codePostal" />
+			</field>
+			<field property="ville">
+				<arg0 key="FRechercheMultiForm.ville" />
+			</field>
+		</form>
+	
+		<form name="fRechercheImmatForm">
+			<field property="immatriculation" depends="required">
+				<arg0 key="FRechercheImmatForm.nom" />
+			</field>
+		</form>
+
+	</formset>
+</form-validation>

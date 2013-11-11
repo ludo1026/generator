@@ -1,0 +1,78 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : ${classe.getPackageJava()}.business
+ * Source   : ${StringUtils.capitalize(${classe.getNomJava()})}.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${nomPackage};
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+import ${classe.getPackageJava()}.business.${StringUtils.capitalize(${classe.getNomJava()})};
+
+/**
+ * <b>Description :</b>
+ * Represente un ${StringUtils.uncapitalize(${classe.getNomJava()})} lie a une inscription
+ *
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * @author  : Chaboud
+ * @since   : version 1.0.0
+ */
+public class ${StringUtils.capitalize(${classe.getNomJava()})}ServiceImpl implements Serializable {
+
+#if( $classe.getGenAttributs() )
+#foreach( $attribut in $classe.getGenAttributs().getListeGenAttribut() )
+    private ${attribut.getTypeJava()} ${StringUtils.uncapitalize(${attribut.getNomJava()})};
+#end
+#end
+
+#if( $classe.getGenAttributs() )
+#foreach( $attribut in $classe.getGenAttributs().getListeGenAttribut() )
+    public ${attribut.getTypeJava()} get${StringUtils.capitalize(${attribut.getNomJava()})}() {
+        return ${StringUtils.uncapitalize(${attribut.getNomJava()})};
+    }
+    
+    public void set${StringUtils.capitalize(${attribut.getNomJava()})}(${attribut.getTypeJava()} ${StringUtils.capitalize(${attribut.getNomJava()})}) {
+        this.${StringUtils.uncapitalize(${attribut.getNomJava()})} = ${StringUtils.uncapitalize(${attribut.getNomJava()})};
+    }
+	
+#end
+#end
+
+#if( $classe.getGenMethodes() )
+#foreach( $methode in $classe.getGenMethodes().getListeGenMethode() )
+	public ${methode.getRetourTypeJava()} ${methode.getNomJava()}(
+#set( $premierParametre = true )
+#if( $methode.getGeneratorParametres() )
+#foreach( $parametre in $methode.getGenParametres().getListeGenParametre() )
+#if( $premierParametre )#set( $premierParametre = false ) #else,#end
+				${parametre.getTypeJava()} ${parametre.getNomJava()}
+#end
+#end
+				)
+	{
+		
+	}
+
+#end
+#end
+
+    private boolean suppressionEnAttente = false; 
+    
+    public boolean getSuppressionEnAttente() {
+        return this.suppressionEnAttente;
+    }
+    public void setSuppressionEnAttente(boolean suppressionEnAttente) {
+        this.suppressionEnAttente = suppressionEnAttente;
+    }
+    
+}

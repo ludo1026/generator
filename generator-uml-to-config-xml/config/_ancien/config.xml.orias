@@ -1,0 +1,137 @@
+<config>
+  <templates inDir="templates" outDir="C:\eclipse\workspace\Generator\test">
+    <template nom="action_template" file="Action_template.vlt"
+              outDir="struts/action" outFile="AXXXAction.java" 
+              package="struts.action" />
+    <template nom="manager_template" file="Manager_template.vlt"
+              outDir="business" outFile="XXXManager.java" 
+              package="business" />
+    <template nom="dao_template" file="Dao_template.vlt"
+              outDir="business/dao" outFile="DXXXDao.java" 
+              package="business.dao" />
+    <template nom="daoImpl_template" file="DaoImpl_template.vlt" 
+              outDir="business/dao/impl/jdbc" outFile="IXXXDaoImpl.java" 
+              package="business.dao.impl.jdbc"/>
+    <template nom="SQL_template" file="SQL_template.vlt" 
+              outDir="business/dao/impl/jdbc/nom" outFile="SQLXXX.java" 
+              package="business.dao.impl.jdbc.nom"/>
+    <template nom="SQLTab_template" file="SQLTab_template.vlt" 
+              outDir="business/dao/impl/jdbc/nom" outFile="SQLTabXXX.java" 
+              package="business.dao.impl.jdbc.nom"/>
+    <template nom="SQLVue_template" file="SQLVue_template.vlt" 
+              outDir="business/dao/impl/jdbc/nom" outFile="SQLVueXXX.java" 
+              package="business.dao.impl.jdbc.nom"/>
+    <template nom="SQLVueRecherche_template" file="SQLVueRecherche_template.vlt" 
+              outDir="business/dao/impl/jdbc/nom" outFile="SQLVueRechercheXXX.java" 
+              package="business.dao.impl.jdbc.nom"/>
+    <template nom="Bean_template" file="Bean_template.vlt" 
+              outDir="business/bean" outFile="BXXXBean.java" 
+              package="business.bean"/>
+    <template nom="BeanInterface_template" file="BeanInterface_template.vlt" 
+              outDir="business" outFile="XXX.java" 
+              package="business"/>
+    <template nom="BeanInterfaceReadOnly_template" file="BeanInterfaceReadOnly_template.vlt" 
+              outDir="business" outFile="XXXReadOnly.java" 
+              package="business"/>
+    <template nom="nonTrouveException_template" file="NonTrouveException_template.vlt" 
+              outDir="exception" outFile="XXXNonTrouveException.java" 
+              package="exception"/>
+    <template nom="Form_template" file="Form_template.vlt" 
+              outDir="struts/forms" outFile="FXXXForm.java" 
+              package="struts.forms"/>
+    <template nom="criteres_template" file="CriteresBean_template.vlt" 
+              outDir="struts/beans" outFile="BCriteresXXXBean.java" 
+              package="struts.beans"/>
+    <template nom="decorator_template" file="Decorator_template.vlt" 
+              outDir="decorator" outFile="XXXDecorator.java" 
+              package="decorator"/>
+    <template nom="jspListe_template" file="JSP_Liste_template.vlt" 
+              outDir="jsp" outFile="JXXXListe.jsp" 
+              package=""/>
+    <template nom="jspForm_template" file="JSP_Form_template.vlt" 
+              outDir="jsp" outFile="JXXXAjoutModif.jsp" 
+              package=""/>
+    <template nom="jspRechercheForm_template" file="JSP_Recherche_Form_template.vlt" 
+              outDir="jsp" outFile="JXXXRechercheForm.jsp" 
+              package=""/>
+    <template nom="struts_template" file="struts_template.vlt" 
+              outDir="WEB-INF/struts/XXX" outFile="struts-XXX.xml" 
+              package=""/>
+    <template nom="tiles_template" file="tiles_template.vlt" 
+              outDir="WEB-INF/struts/XXX" outFile="tiles-XXX.xml" 
+              package=""/>
+    <template nom="validator_template" file="validator_template.vlt" 
+              outDir="WEB-INF/struts/XXX" outFile="validator-XXX.xml" 
+              package=""/>
+    <template nom="messages_template" file="messages_template.vlt" 
+              outDir="ressources" outFile="ApplicationRessources-XXX.properties" 
+              package=""/>
+    <template nom="web_template" file="web_template.vlt" 
+              outDir="WEB-INF" outFile="web-XXX.xml" 
+              package=""/>
+    <template nom="sessionKeys_template" file="sessionKeys_template.vlt"
+              outDir="commun" outFile="sessionKeys-XXX.java" 
+              package="commun" />
+  </templates>
+  <classes packageBase="fr.apriarsa.xc.intranet">
+   <classe nomJava = "ExtranetUser"                                package = "test"                            nomTable = "UTILISATEUR"                     nomVue = ""                               >
+      <attribut nomJava = "agenceRattachement"              typeJava = "Integer"                         nomSQL = "AGENCE_RATTACHEMENT"             typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "codePaysAdresse"                 typeJava = "String"                          nomSQL = "CODE_PAYS_ADR"                   typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "codePostalEuropeen"              typeJava = "String"                          nomSQL = "CODE_POSTAL_EUROPEEN"            typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "codeUrl"                         typeJava = "String"                          nomSQL = "CODE_URL"                        typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "complementAdresse1"              typeJava = "String"                          nomSQL = "COMP_ADR_1"                      typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "complementAdresse2"              typeJava = "String"                          nomSQL = "COMP_ADR_2"                      typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "dateFinSuspension"               typeJava = "Integer"                         nomSQL = "DATE_FIN_SUSPENSION"             typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "dateSuppression"                 typeJava = "Integer"                         nomSQL = "DATE_SUPPRESSION"                typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "dateSuspension"                  typeJava = "Integer"                         nomSQL = "DATE_SUSPENSION"                 typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form1"                           typeJava = "String"                          nomSQL = "FORM1"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form10"                          typeJava = "String"                          nomSQL = "FORM10"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form11"                          typeJava = "String"                          nomSQL = "FORM11"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form12"                          typeJava = "String"                          nomSQL = "FORM12"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form13"                          typeJava = "String"                          nomSQL = "FORM13"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form14"                          typeJava = "String"                          nomSQL = "FORM14"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form15"                          typeJava = "String"                          nomSQL = "FORM15"                          typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form2"                           typeJava = "String"                          nomSQL = "FORM2"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form3"                           typeJava = "String"                          nomSQL = "FORM3"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form4"                           typeJava = "String"                          nomSQL = "FORM4"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form5"                           typeJava = "String"                          nomSQL = "FORM5"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form6"                           typeJava = "String"                          nomSQL = "FORM6"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form7"                           typeJava = "String"                          nomSQL = "FORM7"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form8"                           typeJava = "String"                          nomSQL = "FORM8"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "form9"                           typeJava = "String"                          nomSQL = "FORM9"                           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "identifiantSociete"              typeJava = "Integer"                         nomSQL = "IDENTIFIANT_SOCIETE"             typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "identifiantEntiteJuridique"      typeJava = "String"                          nomSQL = "IDENT_ENTITE_JUR"                typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "indicateurInclusionAssuranceConvention"                        typeJava = "String"                          nomSQL = "INC_ASS_CONV"                    typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "indicateurDaccesEnAnomalie"      typeJava = "String"                          nomSQL = "IND_ACCES_ANOMALIE"              typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "indicateurJuridictionExceptionnelle"                           typeJava = "String"                          nomSQL = "IND_JUR_EXCEPT"                  typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "loginExtranet"                   typeJava = "String"                          nomSQL = "LOGIN_EXTRANET"                  typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "true"                            estCleIncrementee = "false"                          />
+      <attribut nomJava = "logoSpecifiqueAcces"             typeJava = "String"                          nomSQL = "LOGO_SPECIFIQUE_ACCES"           typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "adresseMail"                     typeJava = "String"                          nomSQL = "MAIL"                            typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "motDePasseAReinitialiser"        typeJava = "String"                          nomSQL = "MOT_DE_PASSE_A_REINITIALISER"    typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "montantFraisDossierConvention"   typeJava = "Integer"                         nomSQL = "MT_FRAIS_DOSSIER_CONV"           typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nbCnPere"                        typeJava = "Integer"                         nomSQL = "NB_CN_PERE"                      typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nbEnseigneRattachement"          typeJava = "Integer"                         nomSQL = "NB_ENSEIGNE_RATTACHEMENT"        typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nbOrganismePere"                 typeJava = "Integer"                         nomSQL = "NB_ORGANISME_PERE"               typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nbVendeur"                       typeJava = "Integer"                         nomSQL = "NB__VENDEUR"                     typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nomBureauDistributeurEuropeen"   typeJava = "String"                          nomSQL = "NOM_BUR_DIST_EUR"                typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nomPhysiqueAcces"                typeJava = "String"                          nomSQL = "NOM_PHYSIQUE_ACCES"              typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nomVendeur"                      typeJava = "String"                          nomSQL = "NOM_VENDEUR"                     typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nomVoie"                         typeJava = "String"                          nomSQL = "NOM_VOIE"                        typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "numeroFax"                       typeJava = "String"                          nomSQL = "NUM_FAX"                         typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "numeroTelephone"                 typeJava = "String"                          nomSQL = "NUM_TELEPHONE"                   typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "numeroTelephonePortable"         typeJava = "String"                          nomSQL = "NUM_TELEPHONE_PORT"              typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "numeroVendeur"                   typeJava = "Integer"                         nomSQL = "NUM_VENDEUR"                     typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "nTiersSiel2"                     typeJava = "Integer"                         nomSQL = "N__TIERS_SIEL2"                  typeSQL = "NUMBER"                          estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "raisonSociale"                   typeJava = "String"                          nomSQL = "RAISON_SOCIALE"                  typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "topAgenceRattachement"           typeJava = "String"                          nomSQL = "TOP_AGENCE_RATTACHEMENT"         typeSQL = "VARCHAR2"                        estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+      <attribut nomJava = "typeAcces"                       typeJava = "String"                          nomSQL = "TYPE_ACCES"                      typeSQL = "CHAR"                            estDansTable = "true"                            estClePrimaire = "false"                           estCleIncrementee = "false"                          />
+   </classe>
+
+  </classes>
+  <generation>
+    <generer nomClasse="ExtranetUser">
+	    <pattern nomTemplate="bean_template"/>
+	    <pattern nomTemplate="hibernate_template"/>
+    </generer>
+  </generation>
+</config>

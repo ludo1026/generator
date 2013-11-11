@@ -1,0 +1,46 @@
+	<ul class="form">
+
+#foreach( $attribut in $classe.getListeAttributs() )
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+#if( ! ${attribut.estDansTable()} )
+		<html:select property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1">
+			<html:option value=""><bean:message key="liste.selectionner"/></html:option>
+			<html:options collection="bListe${attribut.getJavaNomAttributSansMajucule()}" labelProperty="libelle" property="${attribut.getJavaNomAttributSansMajucule()}" />
+		</html:select>
+#else
+#if( "Date" == ${attribut.getJavaTypeAtrribut()} )
+		<table>
+		<tr><td>
+			<html:text property="${attribut.getJavaNomAttributSansMajucule()}" size="10" readonly="true" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"
+			style="width:85px;"/>
+		</td>
+		<td>
+			<img src="/intranet/images/generiques/bt_calendrier.gif" id="b_${attribut.getJavaNomAttributSansMajucule()}"/>
+        </td></tr></table>
+<script type="text/javascript">
+    Calendar.setup({
+        inputField     :    "${attribut.getJavaNomAttributSansMajucule()}Form1",     // id of the input field
+        ifFormat       :    "%d/%m/%Y",      // format of the input field
+        button         :    "b_${attribut.getJavaNomAttributSansMajucule()}",  // trigger button (well, IMG in our case)
+        singleClick    :    true
+    });
+</script>
+#else
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+#end
+#end
+	</li>
+
+#end
+		
+	</li>
+	<li>
+		<input type="button" class="bt-button" value="<bean:message key="bouton.reset"/>"
+		onclick="resetF${classe.getJavaNomClasseAvecMajucule()}form()"/>
+	</li>
+	<li>
+		<html:submit styleClass="bt-button"><bean:message key="bouton.rechercher"/></html:submit>
+	</li>
+
+	</ul>

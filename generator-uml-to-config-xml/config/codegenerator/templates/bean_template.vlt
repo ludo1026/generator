@@ -1,0 +1,24 @@
+/*
+ * Package  : ${classe.getNomPackage()}
+ * Source   : ${classe.getNom()}.java
+ */
+package ${templateGeneration.getNomPackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+#set( $beanAbstractTemplateGeneration = ${templateGenerationMap.getByClasseGenId("beanabstract_template",${classe.getGenId()})} )
+import ${beanAbstractTemplateGeneration.getNomPackage()}.${beanAbstractTemplateGeneration.getNomElementGenere()};
+#set( $beanInterfaceTemplateGeneration = ${templateGenerationMap.getByClasseGenId("beaninterface_template",${classe.getGenId()})} )
+import ${beanInterfaceTemplateGeneration.getNomPackage()}.${beanInterfaceTemplateGeneration.getNomElementGenere()};
+
+/**
+ * <b>Description :</b>
+ */
+public class ${templateGeneration.getNomElementGenere()} extends ${beanAbstractTemplateGeneration.getNomElementGenere()} implements ${beanInterfaceTemplateGeneration.getNomElementGenere()}, Serializable {
+
+
+
+}

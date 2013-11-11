@@ -1,0 +1,929 @@
+2013-06-09 20:12:33,719 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:12:33,719 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:12:33,719 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:12:33,719 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:12:33,724 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:12:33,729 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:12:33,729 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:12:33,736 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:12:33,749 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:33,755 - Do unicode file recognition:  false
+2013-06-09 20:12:33,755 - FileResourceLoader : adding path '.'
+2013-06-09 20:12:33,797 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:12:33,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:12:33,816 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:12:33,827 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:12:33,837 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:12:33,839 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:12:33,901 - Created '20' parsers.
+2013-06-09 20:12:33,954 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:12:33,954 - Velocimacro : Default library not found.
+2013-06-09 20:12:33,956 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:12:33,956 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:12:33,956 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:12:33,956 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:12:34,048 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,090 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 34, column 1]
+2013-06-09 20:12:34,094 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 58, column 1]
+2013-06-09 20:12:34,116 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,119 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 34, column 1]
+2013-06-09 20:12:34,120 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 58, column 1]
+2013-06-09 20:12:34,136 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,158 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,161 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,226 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,228 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,233 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,234 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,237 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,242 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,247 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:12:34,247 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:12:34,247 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:12:34,248 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:12:34,258 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:12:34,259 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:12:34,259 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:12:34,259 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:12:34,259 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:13:52,964 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:13:52,964 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:13:52,964 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:13:52,964 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:13:52,970 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:13:52,974 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:13:52,974 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:13:52,983 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:13:53,006 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,017 - Do unicode file recognition:  false
+2013-06-09 20:13:53,017 - FileResourceLoader : adding path '.'
+2013-06-09 20:13:53,089 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:13:53,098 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:13:53,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:13:53,118 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:13:53,124 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:13:53,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:13:53,212 - Created '20' parsers.
+2013-06-09 20:13:53,252 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:13:53,253 - Velocimacro : Default library not found.
+2013-06-09 20:13:53,253 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:13:53,253 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:13:53,253 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:13:53,253 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:13:53,356 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,468 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 37, column 1]
+2013-06-09 20:13:53,471 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 61, column 1]
+2013-06-09 20:13:53,490 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,492 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 37, column 1]
+2013-06-09 20:13:53,494 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 61, column 1]
+2013-06-09 20:13:53,507 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,528 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,532 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,536 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,538 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,542 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,543 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,546 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,552 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,553 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:13:53,553 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:13:53,553 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:13:53,553 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:13:53,564 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:13:53,565 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:13:53,565 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:13:53,565 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:13:53,565 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:14:33,489 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:14:33,490 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:14:33,490 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:14:33,490 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:14:33,499 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:14:33,506 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:14:33,506 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:14:33,514 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:14:33,527 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,532 - Do unicode file recognition:  false
+2013-06-09 20:14:33,532 - FileResourceLoader : adding path '.'
+2013-06-09 20:14:33,568 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:14:33,575 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:14:33,585 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:14:33,592 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:14:33,597 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:14:33,599 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:14:33,667 - Created '20' parsers.
+2013-06-09 20:14:33,704 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:14:33,704 - Velocimacro : Default library not found.
+2013-06-09 20:14:33,704 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:14:33,704 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:14:33,704 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:14:33,704 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:14:33,808 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,908 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:14:33,915 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:14:33,932 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,934 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:14:33,935 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:14:33,955 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,972 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,975 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,979 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,981 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,986 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,988 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,991 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,996 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:33,997 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:14:33,998 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:14:33,998 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:14:33,998 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:14:34,006 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:14:34,006 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:14:34,006 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:14:34,006 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:14:34,006 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:03,759 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:15:03,760 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:15:03,760 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:15:03,760 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:15:03,764 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:15:03,769 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:15:03,769 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:15:03,777 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:15:03,789 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:03,794 - Do unicode file recognition:  false
+2013-06-09 20:15:03,795 - FileResourceLoader : adding path '.'
+2013-06-09 20:15:03,831 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:15:03,837 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:15:03,847 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:15:03,854 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:15:03,859 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:15:03,861 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:15:03,933 - Created '20' parsers.
+2013-06-09 20:15:03,970 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:15:03,970 - Velocimacro : Default library not found.
+2013-06-09 20:15:03,970 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:15:03,970 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:15:03,970 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:15:03,970 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:15:04,064 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,167 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:15:04,169 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:15:04,186 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,188 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:15:04,190 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:15:04,202 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,222 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,225 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,229 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,231 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,235 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,236 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,239 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,244 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,245 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:04,246 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:04,246 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:04,246 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:04,257 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:04,258 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:04,258 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:04,258 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:04,258 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:26,421 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:15:26,422 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:15:26,422 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:15:26,422 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:15:26,427 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:15:26,431 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:15:26,431 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:15:26,439 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:15:26,452 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,457 - Do unicode file recognition:  false
+2013-06-09 20:15:26,457 - FileResourceLoader : adding path '.'
+2013-06-09 20:15:26,494 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:15:26,501 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:15:26,510 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:15:26,518 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:15:26,522 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:15:26,525 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:15:26,602 - Created '20' parsers.
+2013-06-09 20:15:26,640 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:15:26,640 - Velocimacro : Default library not found.
+2013-06-09 20:15:26,640 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:15:26,640 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:15:26,640 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:15:26,640 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:15:26,737 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,857 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:15:26,861 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:15:26,878 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,880 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:15:26,881 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 63, column 1]
+2013-06-09 20:15:26,894 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,910 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,914 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,918 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,920 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,924 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,926 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,929 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,934 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,935 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:26,935 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:26,935 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:26,935 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:26,942 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:15:26,943 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:26,943 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:15:26,943 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:15:26,943 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:16:46,054 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:16:46,055 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:16:46,055 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:16:46,055 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:16:46,060 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:16:46,064 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:16:46,064 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:16:46,071 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:16:46,084 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,089 - Do unicode file recognition:  false
+2013-06-09 20:16:46,089 - FileResourceLoader : adding path '.'
+2013-06-09 20:16:46,129 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:16:46,134 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:16:46,141 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:16:46,148 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:16:46,153 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:16:46,156 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:16:46,236 - Created '20' parsers.
+2013-06-09 20:16:46,280 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:16:46,280 - Velocimacro : Default library not found.
+2013-06-09 20:16:46,280 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:16:46,280 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:16:46,280 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:16:46,280 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:16:46,376 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,497 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:16:46,504 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:16:46,521 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,523 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:16:46,524 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:16:46,537 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,553 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,556 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,560 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,562 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,566 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,567 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,570 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,575 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,576 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:16:46,576 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:16:46,576 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:16:46,576 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:16:46,583 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:16:46,584 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:16:46,584 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:16:46,584 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:16:46,584 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:28,051 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:17:28,051 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:17:28,051 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:17:28,051 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:17:28,056 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:17:28,061 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:17:28,061 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:17:28,067 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:17:28,080 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,086 - Do unicode file recognition:  false
+2013-06-09 20:17:28,086 - FileResourceLoader : adding path '.'
+2013-06-09 20:17:28,124 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:17:28,129 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:17:28,135 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:17:28,140 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:17:28,146 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:17:28,148 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:17:28,231 - Created '20' parsers.
+2013-06-09 20:17:28,269 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:17:28,270 - Velocimacro : Default library not found.
+2013-06-09 20:17:28,270 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:17:28,270 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:17:28,270 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:17:28,270 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:17:28,373 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,481 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:17:28,486 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:17:28,506 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,508 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:17:28,509 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:17:28,524 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,539 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,543 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,549 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,550 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,554 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,556 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,559 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,565 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,567 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:28,567 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:28,567 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:28,567 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:28,578 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:28,579 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:28,579 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:28,579 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:28,579 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:58,316 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:17:58,317 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:17:58,317 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:17:58,317 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:17:58,326 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:17:58,333 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:17:58,333 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:17:58,345 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:17:58,368 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,378 - Do unicode file recognition:  false
+2013-06-09 20:17:58,378 - FileResourceLoader : adding path '.'
+2013-06-09 20:17:58,449 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:17:58,459 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:17:58,469 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:17:58,479 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:17:58,489 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:17:58,494 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:17:58,573 - Created '20' parsers.
+2013-06-09 20:17:58,609 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:17:58,609 - Velocimacro : Default library not found.
+2013-06-09 20:17:58,609 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:17:58,609 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:17:58,609 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:17:58,609 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:17:58,706 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,817 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:17:58,824 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:17:58,847 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,849 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 39, column 1]
+2013-06-09 20:17:58,850 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 68, column 1]
+2013-06-09 20:17:58,865 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,880 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,884 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,887 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,889 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,893 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,894 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,898 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,903 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,904 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:58,904 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:58,904 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:58,904 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:58,911 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:17:58,912 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:58,912 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:17:58,912 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:17:58,912 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:18:59,152 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:18:59,152 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:18:59,152 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:18:59,152 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:18:59,157 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:18:59,162 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:18:59,162 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:18:59,169 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:18:59,182 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,188 - Do unicode file recognition:  false
+2013-06-09 20:18:59,188 - FileResourceLoader : adding path '.'
+2013-06-09 20:18:59,257 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:18:59,267 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:18:59,278 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:18:59,289 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:18:59,299 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:18:59,304 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:18:59,410 - Created '20' parsers.
+2013-06-09 20:18:59,446 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:18:59,446 - Velocimacro : Default library not found.
+2013-06-09 20:18:59,446 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:18:59,446 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:18:59,446 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:18:59,446 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:18:59,537 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,646 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 37, column 1]
+2013-06-09 20:18:59,649 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 64, column 1]
+2013-06-09 20:18:59,672 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,674 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 37, column 1]
+2013-06-09 20:18:59,676 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 64, column 1]
+2013-06-09 20:18:59,690 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,705 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,709 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,713 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,714 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,718 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,720 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,723 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,728 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,729 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:18:59,729 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:18:59,729 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:18:59,729 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:18:59,740 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:18:59,741 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:18:59,741 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:18:59,741 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:18:59,741 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:20:26,869 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 20:20:26,870 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 20:20:26,870 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 20:20:26,870 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 20:20:26,879 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:96)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:217)
+	at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:152)
+	at org.apache.tools.ant.taskdefs.Java.run(Java.java:771)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:221)
+	at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:135)
+	at org.apache.tools.ant.taskdefs.Java.execute(Java.java:108)
+	at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)
+	at org.apache.tools.ant.Task.perform(Task.java:348)
+	at org.apache.tools.ant.Target.execute(Target.java:392)
+	at org.apache.tools.ant.Target.performTasks(Target.java:413)
+	at org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)
+	at org.apache.tools.ant.Project.executeTarget(Project.java:1368)
+	at org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)
+	at org.eclipse.ant.internal.launching.remote.EclipseDefaultExecutor.executeTargets(EclipseDefaultExecutor.java:32)
+	at org.apache.tools.ant.Project.executeTargets(Project.java:1251)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.run(InternalAntRunner.java:424)
+	at org.eclipse.ant.internal.launching.remote.InternalAntRunner.main(InternalAntRunner.java:138)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at org.apache.tools.ant.AntClassLoader.findClassInComponents(AntClassLoader.java:1365)
+	at org.apache.tools.ant.AntClassLoader.findClass(AntClassLoader.java:1315)
+	at org.apache.tools.ant.AntClassLoader.loadClass(AntClassLoader.java:1074)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 38 more
+2013-06-09 20:20:26,886 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:20:26,886 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 20:20:26,897 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 20:20:26,920 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:26,930 - Do unicode file recognition:  false
+2013-06-09 20:20:26,930 - FileResourceLoader : adding path '.'
+2013-06-09 20:20:26,982 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 20:20:26,989 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 20:20:26,999 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 20:20:27,007 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 20:20:27,013 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 20:20:27,016 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 20:20:27,095 - Created '20' parsers.
+2013-06-09 20:20:27,130 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 20:20:27,131 - Velocimacro : Default library not found.
+2013-06-09 20:20:27,131 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 20:20:27,131 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 20:20:27,131 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 20:20:27,131 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 20:20:27,236 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,338 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 40, column 1]
+2013-06-09 20:20:27,341 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 67, column 1]
+2013-06-09 20:20:27,363 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,365 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 40, column 1]
+2013-06-09 20:20:27,367 - RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vlt [line 67, column 1]
+2013-06-09 20:20:27,381 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,396 - ResourceManager : found config/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,399 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,402 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,404 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,408 - ResourceManager : found config/templates/dao_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,410 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,414 - ResourceManager : found config/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,420 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,422 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:20:27,422 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:20:27,422 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:20:27,422 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]
+2013-06-09 20:20:27,436 - ResourceManager : found config/templates/serviceImpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 20:20:27,437 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:20:27,437 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 22, column 12]
+2013-06-09 20:20:27,437 - Right side ($!{association.getNombreMaximum()}) of '==' operation has null value. If a reference, it may not be in the context. Operation not possible. config/templates/serviceImpl_template.vlt [line 34, column 12]

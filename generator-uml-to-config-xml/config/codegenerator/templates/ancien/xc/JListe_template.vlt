@@ -1,0 +1,76 @@
+<%@ taglib uri="/WEB-INF/lib/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/lib/sintia-html.tld" prefix="sintia-html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-tiles.tld" prefix="tiles"%>
+<%@ taglib uri="/WEB-INF/lib/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="/WEB-INF/lib/displaytag.tld" prefix="display"%>
+<%@ page import="fr.apriarsa.xc.intranet.commun.SessionKeys"%>
+<%@ page import="fr.apriarsa.xc.intranet.commun.ConstantesApplication"%>
+
+<html:form action="/${classe.getJavaNomClasseSansMajuscule()}">
+	
+<html:hidden property="method" value="init"/>
+<html:hidden property="compte${classe.getJavaNomClasseAvecMajuscule()}"/>
+
+<div class="titreEntetePS">
+  Gestion des ${classe.getJavaNomClasseSansMajuscule()}s
+</div>
+
+<div id="erreur" class="cadre_erreur">
+	<!-- html:errors /> -->
+	<sintia-html:errors/>
+</div>
+
+<div class="texte" align="right">
+  <a class="" href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'ajout','compte${classe.getJavaNomClasseAvecMajuscule()}','');">
+    Créer un ${classe.getJavaNomClasseSansMajuscule()}
+    &nbsp;
+    <img src="/XC/images/pictoNew.gif" width="21" height="21" />
+  </a>
+</div>
+	
+
+<%String displayListName = "sessionScope." + SessionKeys.BEAN_LISTE_UTILISATEUR;%>
+<div id="resultatRecherche">
+ <display:table name="<%=displayListName%>" cellpadding="0" cellspacing="1" 
+	decorator="${classe.getJavaPackage()}.decorator.${classe.getJavaNomClasseAvecMajuscule()}Decorator" pagesize="6" 
+		requestURI="${classe.getJavaNomClasseSansMajuscule()}.do?method=paginerListe"
+		 sort="list"	excludedParams="method" export="true">
+						
+							<display:caption>
+ 			  					<img src="/XC/images/tableau_haut-3.gif" width="100%" />
+							</display:caption>
+
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+							<display:column
+								titleKey="securite.${classe.getJavaNomClasseSansMajuscule()}.${attribut.getJavaNomAttributSansMajuscule()}" headerClass="enteteTableau1" 
+								property="${attribut.getJavaNomAttributSansMajuscule()}" sortName="${attribut.getJavaNomAttributSansMajuscule()}" sortable="true" >
+							</display:column>
+#end
+#end
+							
+							<display:column
+								titleKey="securite.${classe.getJavaNomClasseSansMajuscule()}.bouton.suppr" headerClass="enteteTableau1" 
+								property="linkSupprimer"
+								media="html" >
+							</display:column>
+							
+							<display:column
+								titleKey="securite.${classe.getJavaNomClasseSansMajuscule()}.bouton.modif" headerClass="enteteTableau1" 
+								property="linkModifier"
+								media="html" >
+							</display:column>
+						
+							<display:footer>
+							<tr>
+							  <td colspan="11">
+			  					<img src="/XC/images/tableau_bas-3.gif" width="100%" />
+			  				  </td>
+			  				</tr>
+							</display:footer>
+						</display:table>
+
+</html:form>
+
+

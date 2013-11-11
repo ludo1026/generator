@@ -1,0 +1,19 @@
+#set( $service = ${templateGenerationMap.getByClasseGenId("service_template",${classe.getGenId()})} )
+/*
+ * Package  : ${service.getNomPackage()}
+ * Source   : ${service.getNom()}.java
+ */
+package ${service.getNomPackage()};
+
+/* @zone-debut:{import} */
+/* @zone-fin:{import} */
+
+/**
+ * $!{classe.getDescription()}.
+ */
+public interface ${service.getNom()} {
+
+/* @zone-debut:{${service.getNom()}} */
+/* @zone-fin:{${service.getNom()}} */
+
+}

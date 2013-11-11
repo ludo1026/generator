@@ -1,0 +1,91 @@
+<%@ taglib uri="/WEB-INF/lib/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/lib/sintia-html.tld" prefix="sintia-html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-tiles.tld" prefix="tiles"%>
+<%@ taglib uri="/WEB-INF/lib/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="/WEB-INF/lib/displaytag.tld" prefix="display"%>
+<%@ taglib uri="/WEB-INF/lib/xc-securite.tld" prefix="securite"%>
+<%@ page import="${classe.getJavaPackageBase()}.commun.SessionKeys"%>
+<%@ page import="${classe.getJavaPackageBase()}.commun.ConstantesApplication"%>
+<%@ page import="${classe.getJavaPackageBase()}.commun.business.ParametreSingletonManager"%>
+
+<securite:estAutorise action="${classe.getJavaNomClasseSansMajuscule()}" methode="init">
+
+<html:form action="/${classe.getJavaNomClasseSansMajuscule()}">
+	
+<html:hidden property="method" value="init"/>
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+<html:hidden property="${attribut.getJavaNomAttributSansMajuscule()}"/>
+#end
+#end
+
+<div class="titreEntetePS">
+  Gestion des ${classe.getJavaNomClasseSansMajuscule()}s
+</div>
+
+<div id="erreur" class="cadre_erreur">
+	<!-- html:errors /> -->
+	<sintia-html:errors/>
+</div>
+
+<securite:estAutorise action="${classe.getJavaNomClasseSansMajuscule()}" methode="ajout">
+<div class="texte" align="right">
+  <a class="" href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'ajout'#foreach( $attribut in $classe.getListeAttributs() )#if( $attribut.estClePrimaire() ),'${attribut.getJavaNomAttributSansMajuscule()}',''#end#end);">
+    Créer un ${classe.getJavaNomClasseSansMajuscule()}
+    <img src="/extconv/images/pictoNew.gif" width="21" height="21" />
+  </a>
+</div>
+</securite:estAutorise>
+	
+
+<%
+  String displayListName = "sessionScope." + SessionKeys.BEAN_LISTE_${classe.getJavaNomClasseToutEnMajuscule()};
+  int pageSize = ParametreSingletonManager.getInt("${classe.getJavaNomClasseSansMajuscule()}.pageSize");
+%>
+<div id="resultatRecherche">
+ <display:table name="<%=displayListName%>" cellpadding="0" cellspacing="1" 
+	decorator="${classe.getJavaPackage()}.decorator.${classe.getJavaNomClasseAvecMajuscule()}Decorator" pagesize="<%=pageSize%>"
+		requestURI="${classe.getJavaNomClasseSansMajuscule()}.do?method=paginerListe"
+		 sort="list"	excludedParams="method" export="true">
+						
+							<display:caption>
+ 			  					<img src="/extconv/images/tableau_haut-3.gif" width="100%" />
+							</display:caption>
+
+#foreach( $attribut in $classe.getListeAttributs() )
+							<display:column
+								titleKey="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.${attribut.getJavaNomAttributSansMajuscule()}" headerClass="enteteTableau1" 
+								property="${attribut.getJavaNomAttributSansMajuscule()}" sortName="${attribut.getJavaNomAttributSansMajuscule()}" sortable="true" >
+							</display:column>
+						
+#end
+
+<securite:estAutorise action="${classe.getJavaNomClasseSansMajuscule()}" methode="suppr">
+							<display:column
+								title="" headerClass="enteteTableau1" 
+								property="linkSupprimer"
+								media="html" >
+							</display:column>
+</securite:estAutorise>
+							
+<securite:estAutorise action="${classe.getJavaNomClasseSansMajuscule()}" methode="modif">
+							<display:column
+								title="" headerClass="enteteTableau1" 
+								property="linkModifier"
+								media="html" >
+							</display:column>
+</securite:estAutorise>
+						
+							<display:footer>
+							<tr>
+							  <td colspan="11">
+			  					<img src="/extconv/images/tableau_bas-3.gif" width="100%" />
+			  				  </td>
+			  				</tr>
+							</display:footer>
+						</display:table>
+
+</html:form>
+
+</securite:estAutorise>

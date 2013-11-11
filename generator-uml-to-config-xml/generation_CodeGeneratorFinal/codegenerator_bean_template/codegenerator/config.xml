@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gen>
+  <templates inDir="generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates" outDir="" packageJavaBase="">
+    <template nom="service_template" file="service_template.vlt" packageJava="PPP" outDir="generated" outFile="XXXService.java" nomElementGenere="XXXService" />
+    <template nom="serviceimpl_template" file="serviceimpl_template.vlt" packageJava="PPP.impl" outDir="generated" outFile="XXXServiceImpl.java" nomElementGenere="XXXServiceImpl" />
+    <template nom="spring-config-service_template" file="spring-config-service_template.vlt" packageJava="" outDir="generated/main/resources" outFile="spring-config-service.xml" nomElementGenere="spring-config-service" />
+    <template nom="bean_template" file="bean_template.vlt" packageJava="PPP.bean.impl" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="action_template" file="action_template.vlt" packageJava="PPP.XXX" outDir="generated" outFile="XXXAction.java" nomElementGenere="XXXAction" />
+    <template nom="action-servlet_template" file="action-servlet_template.vlt" packageJava="" outDir="generated/main/webapp/WEB-INF" outFile="action-servlet.xml" nomElementGenere="action-servlet.xml" />
+    <template nom="struts-config_template" file="struts-config_template.vlt" packageJava="" outDir="generated/main/webapp/WEB-INF/config" outFile="struts-config.xml" nomElementGenere="struts-config.xml" />
+  </templates>
+  <templateGroupes>
+    <templateGroupe nom="serviceGroupe">
+      <templateRef nom="service_template" />
+      <templateRef nom="serviceimpl_template" />
+    </templateGroupe>
+    <templateGroupe nom="serviceConfigGroupe">
+      <templateRef nom="spring-config-service_template" />
+    </templateGroupe>
+    <templateGroupe nom="beanGroupe">
+      <templateRef nom="bean_template" />
+    </templateGroupe>
+    <templateGroupe nom="beanConfigGroupe">
+      <templateRef nom="beanconfig_template" />
+    </templateGroupe>
+    <templateGroupe nom="actionGroupe">
+      <templateRef nom="action_template" />
+    </templateGroupe>
+    <templateGroupe nom="actionConfigGroupe">
+      <templateRef nom="action-servlet_template" />
+      <templateRef nom="struts-config_template" />
+    </templateGroupe>
+  </templateGroupes>
+  <stereotypes>
+    <stereotype nom="bean" />
+    <stereotype nom="forward" />
+    <stereotype nom="action" />
+    <stereotype nom="service" />
+  </stereotypes>
+  <classes packageBase="org.ludo.codegenerator">
+    <classe genId="Accueil#1" nomJava="Accueil" packageJava="fr.c2rp.passvae.web.action.accueil">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="action" />
+      </stereotypesClasseRef>
+      <proprietesClasse>
+        <proprieteClasse nom="action_url" valeur="/accueil" />
+        <proprieteClasse nom="classe_description" valeur="Accueil" />
+      </proprietesClasse>
+      <attributs>
+        <attribut genId="Accueil#1.creationPassVae#1" nomJava="creationPassVae" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="0" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{DDB4AA55-32FA-402e-B8DB-26924FA9A3EE}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/creationPassVae.do?cmd=init" />
+          </proprietesAttribut>
+        </attribut>
+        <attribut genId="Accueil#1.recherchePassVae#1" nomJava="recherchePassVae" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="1" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{2FDC21CB-7D59-439a-9F4A-68E123B8C891}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/recherchePassVae.do?cmd=init" />
+          </proprietesAttribut>
+        </attribut>
+        <attribut genId="Accueil#1.statistique#1" nomJava="statistique" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="1000" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{9DEBFF6F-0D90-45a6-A73B-70A2FEAD8AB8}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/statistique.do?cmd=init" />
+          </proprietesAttribut>
+        </attribut>
+      </attributs>
+      <methodes>
+        <methode genId="Accueil#1.init#1" nomJava="init" retourType="void">
+          <parametres />
+          <stereotypesMethodeRef>
+            <stereotypeMethodeRef stereotypeMethodeNom="action" />
+          </stereotypesMethodeRef>
+          <proprietesMethode>
+            <proprieteMethode nom="type" valeur="void" />
+            <proprieteMethode nom="const" valeur="false" />
+            <proprieteMethode nom="stereotype" valeur="action" />
+            <proprieteMethode nom="synchronised" valeur="0" />
+            <proprieteMethode nom="concurrency" valeur="Sequential" />
+            <proprieteMethode nom="position" valeur="0" />
+            <proprieteMethode nom="returnarray" valeur="0" />
+            <proprieteMethode nom="pure" valeur="0" />
+            <proprieteMethode nom="ea_guid" valeur="{2421A46A-0FA7-4adf-AC46-0F7294218B22}" />
+          </proprietesMethode>
+        </methode>
+      </methodes>
+      <associations />
+    </classe>
+    <classe genId="Authentification#1" nomJava="Authentification" packageJava="fr.c2rp.passvae.web.action.authentification">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="action" />
+      </stereotypesClasseRef>
+      <proprietesClasse>
+        <proprieteClasse nom="action_url" valeur="/authentification" />
+        <proprieteClasse nom="classe_description" valeur="Authentification" />
+      </proprietesClasse>
+      <attributs>
+        <attribut genId="Authentification#1.accueil#1" nomJava="accueil" type="projet.definition.datatype.java.lang.String" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="String" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="0" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{D745C0D8-021E-434e-BF3E-53AF20545E85}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/accueil.do?cmd=init" />
+          </proprietesAttribut>
+        </attribut>
+        <attribut genId="Authentification#1.creationPassVae#1" nomJava="creationPassVae" type="projet.definition.datatype.java.lang.String" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="String" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="1" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{A7EFB178-D1B1-4537-B36A-317A26BBC16F}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/creationPassVae.do?cmd=init" />
+          </proprietesAttribut>
+        </attribut>
+        <attribut genId="Authentification#1.connexion#1" nomJava="connexion" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="1000" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{33F720A3-C4C5-4075-B167-5F39E8FEE079}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur="/" />
+          </proprietesAttribut>
+        </attribut>
+      </attributs>
+      <methodes>
+        <methode genId="Authentification#1.connecter#1" nomJava="connecter" retourType="void">
+          <parametres />
+          <stereotypesMethodeRef>
+            <stereotypeMethodeRef stereotypeMethodeNom="action" />
+          </stereotypesMethodeRef>
+          <proprietesMethode>
+            <proprieteMethode nom="type" valeur="void" />
+            <proprieteMethode nom="const" valeur="false" />
+            <proprieteMethode nom="stereotype" valeur="action" />
+            <proprieteMethode nom="synchronised" valeur="0" />
+            <proprieteMethode nom="concurrency" valeur="Sequential" />
+            <proprieteMethode nom="position" valeur="0" />
+            <proprieteMethode nom="returnarray" valeur="0" />
+            <proprieteMethode nom="pure" valeur="0" />
+            <proprieteMethode nom="ea_guid" valeur="{02E970A2-E87E-40c2-B65A-36C51D2EA044}" />
+          </proprietesMethode>
+        </methode>
+        <methode genId="Authentification#1.deconnecter#1" nomJava="deconnecter" retourType="void">
+          <parametres />
+          <stereotypesMethodeRef>
+            <stereotypeMethodeRef stereotypeMethodeNom="action" />
+          </stereotypesMethodeRef>
+          <proprietesMethode>
+            <proprieteMethode nom="type" valeur="void" />
+            <proprieteMethode nom="const" valeur="false" />
+            <proprieteMethode nom="stereotype" valeur="action" />
+            <proprieteMethode nom="synchronised" valeur="0" />
+            <proprieteMethode nom="concurrency" valeur="Sequential" />
+            <proprieteMethode nom="position" valeur="1" />
+            <proprieteMethode nom="returnarray" valeur="0" />
+            <proprieteMethode nom="pure" valeur="0" />
+            <proprieteMethode nom="ea_guid" valeur="{061BFFA9-99A5-4d52-9D54-4BAB0DC9E39E}" />
+          </proprietesMethode>
+        </methode>
+      </methodes>
+      <associations />
+    </classe>
+    <classe genId="RecherchePassVae#1" nomJava="RecherchePassVae" packageJava="fr.c2rp.passvae.web.action.passvae">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="action" />
+      </stereotypesClasseRef>
+      <proprietesClasse>
+        <proprieteClasse nom="action_url" valeur="/recherchePassVae" />
+        <proprieteClasse nom="description" valeur="Recherche de Pass VAE" />
+      </proprietesClasse>
+      <attributs>
+        <attribut genId="RecherchePassVae#1.recherche#1" nomJava="recherche" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="0" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{4380DC57-B2BB-4f8e-AEFF-0215A36415CC}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur=".passVae.recherche" />
+          </proprietesAttribut>
+        </attribut>
+        <attribut genId="RecherchePassVae#1.resultat#1" nomJava="resultat" type="int" nombreMinimum="1" nombreMaximum="1">
+          <stereotypesAttributRef>
+            <stereotypeAttributRef stereotypeAttributNom="forward" />
+          </stereotypesAttributRef>
+          <proprietesAttribut>
+            <proprieteAttribut nom="type" valeur="int" />
+            <proprieteAttribut nom="derived" valeur="0" />
+            <proprieteAttribut nom="containment" valeur="Not Specified" />
+            <proprieteAttribut nom="ordered" valeur="0" />
+            <proprieteAttribut nom="stereotype" valeur="forward" />
+            <proprieteAttribut nom="collection" valeur="false" />
+            <proprieteAttribut nom="position" valeur="1000" />
+            <proprieteAttribut nom="lowerBound" valeur="1" />
+            <proprieteAttribut nom="upperBound" valeur="1" />
+            <proprieteAttribut nom="duplicates" valeur="0" />
+            <proprieteAttribut nom="ea_guid" valeur="{39EA71E7-0ABF-48db-92DB-BB4A11D14CFB}" />
+            <proprieteAttribut nom="styleex" valeur="volatile=0;" />
+            <proprieteAttribut nom="forward_url" valeur=".passVae.resultat" />
+          </proprietesAttribut>
+        </attribut>
+      </attributs>
+      <methodes>
+        <methode genId="RecherchePassVae#1.init#1" nomJava="init" retourType="void">
+          <parametres />
+          <stereotypesMethodeRef>
+            <stereotypeMethodeRef stereotypeMethodeNom="action" />
+          </stereotypesMethodeRef>
+          <proprietesMethode>
+            <proprieteMethode nom="type" valeur="void" />
+            <proprieteMethode nom="const" valeur="false" />
+            <proprieteMethode nom="stereotype" valeur="action" />
+            <proprieteMethode nom="synchronised" valeur="0" />
+            <proprieteMethode nom="concurrency" valeur="Sequential" />
+            <proprieteMethode nom="position" valeur="0" />
+            <proprieteMethode nom="returnarray" valeur="0" />
+            <proprieteMethode nom="pure" valeur="0" />
+            <proprieteMethode nom="ea_guid" valeur="{A73AA14C-1648-4994-B304-56DDCFD1FF93}" />
+          </proprietesMethode>
+        </methode>
+        <methode genId="RecherchePassVae#1.rechercher#1" nomJava="rechercher" retourType="void">
+          <parametres />
+          <stereotypesMethodeRef>
+            <stereotypeMethodeRef stereotypeMethodeNom="action" />
+          </stereotypesMethodeRef>
+          <proprietesMethode>
+            <proprieteMethode nom="type" valeur="void" />
+            <proprieteMethode nom="const" valeur="false" />
+            <proprieteMethode nom="stereotype" valeur="action" />
+            <proprieteMethode nom="synchronised" valeur="0" />
+            <proprieteMethode nom="concurrency" valeur="Sequential" />
+            <proprieteMethode nom="position" valeur="1" />
+            <proprieteMethode nom="returnarray" valeur="0" />
+            <proprieteMethode nom="pure" valeur="0" />
+            <proprieteMethode nom="ea_guid" valeur="{56714635-E0E2-4a5d-B043-C5D997034C2A}" />
+          </proprietesMethode>
+        </methode>
+      </methodes>
+      <associations>
+        <association genId="Referentiel#1.referentielService#1" nomJavaChamp="referentielService" classeGenId="Referentiel#1" nombreMinimum="1" nombreMaximum="1" />
+        <association genId="RecherchePassVae#2.recherchePassVaeService#1" nomJavaChamp="recherchePassVaeService" classeGenId="RecherchePassVae#2" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="RecherchePassVae#2" nomJava="RecherchePassVae" packageJava="fr.c2rp.passvae.service.passvae">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="service" />
+      </stereotypesClasseRef>
+      <proprietesClasse />
+      <attributs />
+      <methodes />
+      <associations>
+        <association genId="Referentiel#1.referentielService#2" nomJavaChamp="referentielService" classeGenId="Referentiel#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="Referentiel#1" nomJava="Referentiel" packageJava="fr.c2rp.passvae.service.referentiel">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="service" />
+      </stereotypesClasseRef>
+      <proprietesClasse />
+      <attributs />
+      <methodes />
+      <associations />
+    </classe>
+    <classe genId="Table1#1" nomJava="Table1" packageJava="fr.c2rp.passvae.data">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="bean" />
+      </stereotypesClasseRef>
+      <proprietesClasse>
+        <proprieteClasse nom="description" valeur="Table 1" />
+      </proprietesClasse>
+      <attributs>
+      	<attribut genId="Table1#1.nom" nombreMinimum="0" nombreMaximum="1" nomJava="nom" type="String"/>
+      	<attribut genId="Table1#1.prenom" nombreMinimum="0" nombreMaximum="1" nomJava="prenom" type="String"/>
+      </attributs>
+      <methodes />
+      <associations />
+    </classe>
+  </classes>
+  <genererGroupe>
+    <genererParTemplates>
+      <genererParTemplate>
+        <templateGroupesRefPourGenererParTemplate>
+          <templateGroupeRefPourGenererParTemplate templateGroupeNom="actionConfigGroupe">
+            <stereotypesRefPourGenererParTemplate>
+              <stereotypeRefPourGenererParTemplate stereotypeNom="action" />
+            </stereotypesRefPourGenererParTemplate>
+          </templateGroupeRefPourGenererParTemplate>
+        </templateGroupesRefPourGenererParTemplate>
+      </genererParTemplate>
+      <genererParTemplate>
+        <templateGroupesRefPourGenererParTemplate>
+          <templateGroupeRefPourGenererParTemplate templateGroupeNom="serviceConfigGroupe">
+            <stereotypesRefPourGenererParTemplate>
+              <stereotypeRefPourGenererParTemplate stereotypeNom="service" />
+            </stereotypesRefPourGenererParTemplate>
+          </templateGroupeRefPourGenererParTemplate>
+        </templateGroupesRefPourGenererParTemplate>
+      </genererParTemplate>
+    </genererParTemplates>
+    <genererParStereotypes>
+      <genererParStereotype>
+        <stereotypesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="bean" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+        </stereotypesRefPourGenererParStereotype>
+      </genererParStereotype>
+      <genererParStereotype>
+        <stereotypesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="action" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="actionGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="service" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="serviceGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+        </stereotypesRefPourGenererParStereotype>
+      </genererParStereotype>
+    </genererParStereotypes>
+  </genererGroupe>
+</gen>
+

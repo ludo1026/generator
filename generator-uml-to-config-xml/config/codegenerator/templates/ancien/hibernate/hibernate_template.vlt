@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.bnpparibas.pixel.common.bean.${classe.getJavaNomClasseAvecMajuscule()}" table="SWD_USER">
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( $attribut.estClePrimaire() )
+		<id name="${attribut.getJavaNomAttributSansMajuscule()}" column="${attribut.getSqlNomColonne()}" type="${attribut.getHibernateTypeColonne()}">
+			<generator class="assigned" />
+		</id>
+#end
+#end
+#end
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( ! $attribut.estClePrimaire() )
+		<property name="${attribut.getJavaNomAttributSansMajuscule()}" column="${attribut.getSqlNomColonne()}" type="${attribut.getHibernateTypeAttribut()}"/>
+#end
+#end
+#end
+	</class>
+
+</hibernate-mapping>

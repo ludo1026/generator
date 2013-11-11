@@ -1,0 +1,26 @@
+package ${package}.${xmlModele.getNom()}.core.xmlreader;
+
+import ${package}.${xmlModele.getNom()}.core.bean.${noeud.getNomInterface()};
+
+import java.util.List;
+
+public class ${noeud.getNomAvecMajuscule()}XmlReaderManager {
+    
+    private ${noeud.getNomAvecMajuscule()}XmlReaderManager() {}
+    
+    private ${noeud.getNomAvecMajuscule()}XmlReader ${noeud.getNomSansMajuscule()}XmlReader = null;
+    
+    public static final ${noeud.getNomAvecMajuscule()}XmlReaderManager get${noeud.getNomAvecMajuscule()}XmlReaderManager(String fileXml) {
+        ${noeud.getNomAvecMajuscule()}XmlReaderManager ${noeud.getNomSansMajuscule()}XmlReaderManager = new ${noeud.getNomAvecMajuscule()}XmlReaderManager();
+        ${noeud.getNomAvecMajuscule()}XmlReader ${noeud.getNomSansMajuscule()}XmlReader = new ${noeud.getNomAvecMajuscule()}XmlReader(fileXml);
+        ${noeud.getNomSansMajuscule()}XmlReaderManager.${noeud.getNomSansMajuscule()} = ${noeud.getNomSansMajuscule()}XmlReader.get${noeud.getNomAvecMajuscule()}();
+        return ${noeud.getNomSansMajuscule()}XmlReaderManager;
+    }
+    
+    private ${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()} = null;
+    
+    public ${noeud.getNomInterface()} get${noeud.getNomAvecMajuscule()}() {
+        return ${noeud.getNomSansMajuscule()};
+    }
+    
+}

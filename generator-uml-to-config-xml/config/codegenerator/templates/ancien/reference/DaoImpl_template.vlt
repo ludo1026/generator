@@ -1,0 +1,97 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : fr.apriarsa.orias.intranet.commun.business.dao.impl.jdbc
+ * Source   : IReferenceDaoImpl.java
+ * Création : CHABOUD   Date : 5 déc. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Dernière mise à jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.5 $, $Date: 2007/04/02 15:07:42 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package fr.apriarsa.orias.intranet.reference.business.dao.impl.jdbc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import fr.apriarsa.orias.commun.business.dao.impl.jdbc.DaoImplUtil;
+import fr.apriarsa.orias.commun.business.dao.impl.jdbc.Query;
+import fr.apriarsa.orias.commun.business.dao.impl.jdbc.SQLSelect;
+import fr.apriarsa.orias.intranet.reference.business.dao.DReferenceDao;
+
+import fr.apriarsa.orias.intranet.reference.business.${classe.getJavaNomClasseAvecMajuscule()};
+import fr.apriarsa.orias.intranet.reference.business.dao.impl.jdbc.nom.SQLRef${classe.getJavaNomClasseAvecMajuscule()};
+
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+import fr.sintia.framework.dao.impl.jdbc.AbstractDaoImpl;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.5 $, $Date: 2007/04/02 15:07:42 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class IReferenceDaoImpl extends AbstractDaoImpl implements DReferenceDao {
+    
+    private static final Logger log = Logger.getLogger(IReferenceDaoImpl.class);
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see fr.sintia.framework.dao.AbstractDao#select(java.lang.Object)
+     */
+    public Object select(Object arg0) throws PersistenceException {
+        return null;
+    }
+
+    
+    /*
+     * (non-Javadoc)
+     * 
+     * @see fr.sintia.framework.dao.AbstractDao#getManagedClass()
+     */
+    public Class getManagedClass() {
+        return Reference.class;
+    }
+    
+    /*
+     * (non-Javadoc)
+     * 
+     * @see fr.apriarsa.dac.extranet.gestion.business.dao.DUserDao#getListeUsers(java.lang.String,
+     *      java.lang.String, java.lang.String, int,
+     *      fr.sintia.framework.dao.TransactionDao)
+     */
+    public List getListe${classe.getJavaNomClasseAvecMajuscule()}(
+            TransactionDao transaction) throws PersistenceException {
+        log.info("getListe${classe.getJavaNomClasseAvecMajuscule()} : DEBUT");
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+        SQLSelect select = new SQLSelect("SELECT * FROM "+SQLRef${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_TABLE);
+        try {
+            Query query = select.execute(null, transaction);
+            while (DaoImplUtil.next(query)) {
+                liste${classe.getJavaNomClasseAvecMajuscule()}.add(fill${classe.getJavaNomClasseAvecMajuscule()}(query));
+            }
+        } finally {
+            select.closeQuery();
+        }
+        log.debug("getListe${classe.getJavaNomClasseAvecMajuscule()} : FIN - nombre d'elements : "+(liste${classe.getJavaNomClasseAvecMajuscule()}.size()));
+        return liste${classe.getJavaNomClasseAvecMajuscule()};        
+    }
+    
+    private ${classe.getJavaNomClasseAvecMajuscule()} fill${classe.getJavaNomClasseAvecMajuscule()}(Query query) throws PersistenceException { 
+        ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = new ${classe.getJavaNomClasseAvecMajuscule()}();
+#foreach( $attribut in $classe.getListeAttributs() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()}(DaoImplUtil.get${attribut.getJavaTypeAttribut()}(SQLRef${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()}, query));
+#end
+        return ${classe.getJavaNomClasseSansMajuscule()};
+    }
+    
+}

@@ -1,0 +1,38 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : ${classe.getJavaPackage()}.business.dao.impl.jdbc.nom
+ * Source   : SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.business.dao.impl.jdbc.nom;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public interface SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()} extends SQLVue${classe.getJavaNomClasseAvecMajuscule()} {
+    
+    /** Nom de la vue des mandats */
+    public static final String SQL_NOM_VUE = "${classe.getSqlNomTable()}"; // "vue_recherche_${classe.getJavaNomClasseSansMajuscule()}";
+    
+    /** Autres champs de la vue */
+    
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( ! $attribut.estDansTable() )
+    public static final String SQL_${attribut.getJavaNomAttributAvecMajuscule()} = "${attribut.getSqlNomColonne()}";
+#end
+#end
+    
+}

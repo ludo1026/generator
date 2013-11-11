@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gen>
+  <templates inDir="config/codegenerator/templates" outDir="generated" packageJavaBase="">
+    <template nom="service_template" file="service_template.vlt" packageJava="service" outDir="generated/conserve" outFile="XXXServiceImpl.java" nomElementGenere="XXXServiceImpl" />
+    <template nom="bean_template" file="bean_template.vlt" packageJava="XXX.bean.impl" outDir="generated/override" outFile="XXXBean.java" nomElementGenere="XXXBean" />
+    <template nom="beaninterface_template" file="beaninterface_template.vlt" packageJava="XXX.bean" outDir="generated/override" outFile="IXXX.java" nomElementGenere="IXXX" />
+    <template nom="beanconfig_template" file="beanconfig_template.vlt" packageJava="" outDir="generated/override" outFile="beanConfig.xml" nomElementGenere="beanConfig.xml" />
+  </templates>
+  <templateGroupes>
+    <templateGroupe nom="serviceGroupe">
+      <templateRef nom="service_template" />
+    </templateGroupe>
+    <templateGroupe nom="beanGroupe">
+      <templateRef nom="bean_template" />
+      <templateRef nom="beaninterface_template" />
+    </templateGroupe>
+    <templateGroupe nom="beanConfigGroupe">
+      <templateRef nom="beanconfig_template" />
+    </templateGroupe>
+  </templateGroupes>
+  <stereotypes>
+    <stereotype nom="service" />
+    <stereotype nom="bean" />
+  </stereotypes>
+  <classes packageBase="org.ludo.codegenerator">
+    <classe genId="Classe#1" nomJava="Classe" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Classe#1.nom#1" nomJava="nom" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Classe#1.genId#1" nomJava="genId" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Classe#1.nomPackage#1" nomJava="nomPackage" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Classe#1.genClasse#1" nomJava="genClasse" type="org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Attribut#1.attribut#1" nomJavaChamp="attribut" classeGenId="Attribut#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Methode#1.methode#1" nomJavaChamp="methode" classeGenId="Methode#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Stereotype#1.stereotype#1" nomJavaChamp="stereotype" classeGenId="Stereotype#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Association#1.association#1" nomJavaChamp="association" classeGenId="Association#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="TemplateGeneration#1.templateGeneration#1" nomJavaChamp="templateGeneration" classeGenId="TemplateGeneration#1" nombreMinimum="0" nombreMaximum="-1" />
+      </associations>
+    </classe>
+    <classe genId="Stereotype#1" nomJava="Stereotype" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Stereotype#1.nom#1" nomJava="nom" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Stereotype#1.genStereotype#1" nomJava="genStereotype" type="org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotype" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Attribut#1.attribut#1" nomJavaChamp="attribut" classeGenId="Attribut#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Classe#1.classe#1" nomJavaChamp="classe" classeGenId="Classe#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="TemplateGeneration#1.templateGeneration#1" nomJavaChamp="templateGeneration" classeGenId="TemplateGeneration#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="Methode#1" nomJava="Methode" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Methode#1.nom#1" nomJava="nom" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Methode#1.genId#1" nomJava="genId" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Parametre#1.parametre#1" nomJavaChamp="parametre" classeGenId="Parametre#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Classe#1.classe#1" nomJavaChamp="classe" classeGenId="Classe#1" nombreMinimum="1" nombreMaximum="1" />
+        <association genId="Type#1.retourType#1" nomJavaChamp="retourType" classeGenId="Type#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="Parametre#1" nomJava="Parametre" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Parametre#1.nom#1" nomJava="nom" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Parametre#1.genId#1" nomJava="genId" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Methode#1.methode#1" nomJavaChamp="methode" classeGenId="Methode#1" nombreMinimum="1" nombreMaximum="1" />
+        <association genId="Type#1.type#1" nomJavaChamp="type" classeGenId="Type#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="Attribut#1" nomJava="Attribut" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Attribut#1.nom#1" nomJava="nom" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Attribut#1.genId#1" nomJava="genId" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Attribut#1.nombreMinimum#1" nomJava="nombreMinimum" type="int" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Attribut#1.nombreMaximum#1" nomJava="nombreMaximum" type="int" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Attribut#1.estClePrimaire#1" nomJava="estClePrimaire" type="boolean" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Stereotype#1.stereotype#1" nomJavaChamp="stereotype" classeGenId="Stereotype#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Classe#1.classe#1" nomJavaChamp="classe" classeGenId="Classe#1" nombreMinimum="1" nombreMaximum="1" />
+        <association genId="Type#1.type#1" nomJavaChamp="type" classeGenId="Type#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="Type#1" nomJava="Type" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Type#1.nomComplet#1" nomJava="nomComplet" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations />
+    </classe>
+    <classe genId="Association#1" nomJava="Association" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="Association#1.genId#1" nomJava="genId" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Association#1.nombreMinimum#1" nomJava="nombreMinimum" type="int" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="Association#1.nombreMaximum#1" nomJava="nombreMaximum" type="int" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Classe#1.classe#1" nomJavaChamp="classe" classeGenId="Classe#1" nombreMinimum="1" nombreMaximum="1" />
+        <association genId="Classe#1.classeReference#1" nomJavaChamp="classeReference" classeGenId="Classe#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+    <classe genId="TypeBase#1" nomJava="TypeBase" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef />
+      <attributs />
+      <methodes />
+      <associations />
+    </classe>
+    <classe genId="TemplateGeneration#1" nomJava="TemplateGeneration" packageJava="org.ludo.codegenerator.core.gen">
+      <stereotypesRef>
+        <stereotypeRef stereotypeNom="bean" />
+      </stereotypesRef>
+      <attributs>
+        <attribut genId="TemplateGeneration#1.nomElementGenere#1" nomJava="nomElementGenere" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.nomPackage#1" nomJava="nomPackage" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.nomFichierTemplate#1" nomJava="nomFichierTemplate" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.nomRepertoireSortie#1" nomJava="nomRepertoireSortie" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.nomFichierSortie#1" nomJava="nomFichierSortie" type="java.lang.String" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.typeTemplateGeneration#1" nomJava="typeTemplateGeneration" type="int" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.genTemplate#1" nomJava="genTemplate" type="org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplate" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.genClasse#1" nomJava="genClasse" type="org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse" nombreMinimum="1" nombreMaximum="1" />
+        <attribut genId="TemplateGeneration#1.genStereotype#1" nomJava="genStereotype" type="org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotype" nombreMinimum="1" nombreMaximum="1" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association genId="Stereotype#1.stereotype#1" nomJavaChamp="stereotype" classeGenId="Stereotype#1" nombreMinimum="0" nombreMaximum="-1" />
+        <association genId="Classe#1.classe#1" nomJavaChamp="classe" classeGenId="Classe#1" nombreMinimum="1" nombreMaximum="1" />
+      </associations>
+    </classe>
+  </classes>
+  <genererGroupe>
+    <!--genererClasses>
+     <genererClasse>
+      <classesRefPourGenererClasse>
+	   <classeRefPourGenererClasse
+	    nomJava = "CategorieCampagne"
+       />
+	  </classesRefPourGenererClasse>
+	  <templateGroupesRefPourGenererClasse>
+	   <templateGroupeRefPourGenererClasse
+	    templateGroupeNom = "modeleGroupe"
+	   />
+	  </templateGroupesRefPourGenererClasse>
+	 </genererClasse>
+	</genererClasses-->
+    <genererParTemplates>
+      <genererParTemplate>
+        <templateGroupesRefPourGenererParTemplate>
+          <templateGroupeRefPourGenererParTemplate templateGroupeNom="beanConfigGroupe">
+            <stereotypesRefPourGenererParTemplate>
+              <stereotypeRefPourGenererParTemplate stereotypeNom="bean" />
+            </stereotypesRefPourGenererParTemplate>
+          </templateGroupeRefPourGenererParTemplate>
+        </templateGroupesRefPourGenererParTemplate>
+      </genererParTemplate>
+    </genererParTemplates>
+    <genererParStereotypes>
+      <genererParStereotype>
+        <stereotypesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="service" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="serviceGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+        </stereotypesRefPourGenererParStereotype>
+      </genererParStereotype>
+      <genererParStereotype>
+        <stereotypesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="bean" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+        </stereotypesRefPourGenererParStereotype>
+      </genererParStereotype>
+    </genererParStereotypes>
+  </genererGroupe>
+</gen>
+

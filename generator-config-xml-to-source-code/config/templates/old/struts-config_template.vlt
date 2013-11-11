@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+    <!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+       
+<struts-config>
+	
+	<display-name>Pass'Vae configuration</display-name>
+	<description/>
+	
+	<form-beans>
+		
+		<form-bean
+			name="creationPassVaeForm"
+			type="fr.c2rp.passvae.web.form.passvae.CreationPassVaeForm"
+		/>
+		<form-bean
+			name="detailPassVaeForm"
+			type="fr.c2rp.passvae.web.form.passvae.DetailPassVaeForm"
+		/>
+		<form-bean
+			name="recherchePassVaeForm"
+			type="fr.c2rp.passvae.web.form.passvae.RecherchePassVaeForm"
+		/>
+		<form-bean
+			name="afficherPassVaeForm"
+			type="fr.c2rp.passvae.web.form.passvae.AfficherPassVaeForm"
+		/>
+		<form-bean
+			name="afficherPrestataireForm"
+			type="fr.c2rp.passvae.web.form.prestataire.AfficherPrestataireForm"
+		/>
+		<form-bean
+			name="statistiqueForm"
+			type="fr.c2rp.passvae.web.form.statistique.StatistiqueForm"
+		/>
+		<form-bean
+			name="rechercheCommuneForm"
+			type="fr.c2rp.passvae.web.form.commune.RechercheCommuneForm"
+		/>
+	</form-beans>
+
+	<global-exceptions />	
+
+	<global-forwards />
+
+	<action-mappings>
+		
+		<action path="/authentification"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd" validate="false">
+			<forward name="accueil" path="/accueil.do?cmd=init" />
+			<forward name="creationPassVae" path="/creationPassVae.do?cmd=init" />
+		</action>
+		
+		<action path="/accueil"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd" validate="false">
+			<forward name="recherchePassVae" path="/recherchePassVae.do?cmd=init" />
+			<forward name="creationPassVae" path="/creationPassVae.do?cmd=init" />
+			<forward name="statistique" path="/statistique.do?cmd=init" />
+		</action>
+		
+		<action path="/creationPassVae"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="creationPassVaeForm" parameter="cmd" validate="false">
+			<forward name="annuler" path="/accueil.do?cmd=init" />
+			<forward name="creation" path=".passVae.creation" />
+			<forward name="detailPassVae" path="/detailPassVae.do?cmd=afficherCreation" />
+			<forward name="afficherListePrestataire" path="/afficherPrestataire.do?cmd=afficherListe" />
+		</action>
+		<action path="/detailPassVae"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="detailPassVaeForm" parameter="cmd" validate="false">
+			<forward name="accueil" path="/accueil.do?cmd=init" />
+			<forward name="detail" path=".passVae.detail" />
+			<forward name="afficherListePrestataire" path="/afficherPrestataire.do?cmd=afficherListe" />
+			<forward name="afficherListePassVaeExistant" path="/afficherPassVae.do?cmd=afficherListePassVaeExistant" />
+			<forward name="afficherNoticeFinanceur" path="/afficherFinanceur.do?cmd=afficherNotice" />
+			<forward name="afficherBonCommande" path="/afficherBonCommande.do?cmd=afficherBonCommande" />
+			<forward name="afficherFacture" path="/afficherFacture.do?cmd=afficherFacture" />
+		</action>
+		<action path="/recherchePassVae"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="recherchePassVaeForm" parameter="cmd" validate="false">
+			<forward name="recherche" path=".passVae.recherche" />
+			<forward name="resultat" path=".passVae.resultat" />
+		</action>
+		<action path="/afficherPassVae"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="afficherPassVaeForm" parameter="cmd" validate="false">
+			<forward name="afficherListePassVaeExistant" path=".passVae.listeExistant" />
+			<forward name="error" path=".error" />
+		</action>
+		<action path="/afficherPrestataire"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd">
+			<forward name="error" path=".error" />
+		</action>
+		<action path="/afficherBonCommande"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd">
+			<forward name="error" path=".error" />
+		</action>
+		<action path="/afficherFacture"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd">
+			<forward name="error" path=".error" />
+		</action>
+		<action path="/afficherFinanceur"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="cmd">
+			<forward name="error" path=".error" />
+		</action>
+		<action path="/statistique"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="statistiqueForm" parameter="cmd" validate="false">
+			<forward name="recherche" path=".statistique.recherche" />
+			<forward name="resultat" path=".statistique.resultat" />
+			<forward name="tableaubord" path=".statistique.tableaubord" />
+		</action>
+		<action path="/rechercheCommune"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="rechercheCommuneForm"
+			parameter="cmd">
+			<forward name="resultat" path=".commune.resultat" />
+		</action>
+	</action-mappings>
+
+	<!--
+		Tiles
+	-->
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<message-resources parameter="message/ApplicationResources"/>  
+	<message-resources key="INFO" parameter="message/InfoResources"/>  
+	<message-resources key="ERROR" parameter="message/ErrorResources"/>  
+ 
+	
+	<!--
+		Conversion de types 
+	 -->
+	<plug-in className="fr.c2rp.passvae.web.plugin.PassVaeStrutsPlugIn" /> 
+	
+	
+	<!--
+		Tiles
+	-->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property 
+			property="definitions-config"
+			value="/WEB-INF/config/tiles-defs.xml"
+		/>
+		<set-property 
+			property="moduleAware"
+			value="true"
+		/>
+		<set-property 
+			property="definitions-parser-validate"
+			value="true"
+		/>
+	</plug-in>
+	
+	<!--
+		Spring
+	-->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property
+			property="contextConfigLocation"
+			value="/WEB-INF/action-servlet.xml"
+		/>
+	</plug-in>
+	
+	<!--
+		Validator 
+	-->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property
+			property="pathnames"
+			value="/WEB-INF/config/validator-rules.xml,/WEB-INF/config/validation.xml"
+		/>
+	</plug-in>
+	
+</struts-config>

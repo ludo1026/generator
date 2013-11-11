@@ -1,0 +1,158 @@
+<stereotype nom="bean">
+	<noeud nom="Classe">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.AttributBean"
+			champ="attribut"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.MethodeBean"
+			champ="methode"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.StereotypeBean"
+			champ="stereotype"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.AssociationBean"
+			champ="association"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.TemplateGenerationBean"
+			champ="templateGeneration"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="Stereotype">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.AttributBean"
+			champ="attribut"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classe"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.TemplateGenerationBean"
+			champ="templateGeneration"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="Methode">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ParametreBean"
+			champ="parametre"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classe"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.TypeBean"
+			champ="retourType"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="Parametre">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.MethodeBean"
+			champ="methode"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.TypeBean"
+			champ="type"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="Attribut">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.StereotypeBean"
+			champ="stereotype"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classe"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.TypeBean"
+			champ="type"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="Type">
+	</noeud>
+	<noeud nom="Association">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classe"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classeReference"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+	<noeud nom="TemplateGeneration">
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.StereotypeBean"
+			champ="stereotype"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+		<attribut 
+			class="org.ludo.codegenerator.core.gen.bean.impl.ClasseBean"
+			champ="classe"
+		/>
+		<stereotypes>
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+		</stereotypes>
+	</noeud>
+</stereotype>

@@ -1,0 +1,20 @@
+package fr.apriarsa.orias.intranet.reference.business.dao;
+
+import java.util.List;
+
+import fr.apriarsa.orias.intranet.reference.business.Reference;
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+
+/**
+ * <b>Description : </b> <description de la classe>
+ * 
+ * @version : $Revision: 1.1 $, $Date: 2007/02/05 14:27:37 $
+ * @author : $Author: udevlch $
+ * @since : version 1.0.0
+ */
+public interface DReferenceDao {
+
+    List getListe${classe.getJavaNomClasseAvecMajuscule()}(TransactionDao transaction) throws PersistenceException;
+    
+}

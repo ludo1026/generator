@@ -1,0 +1,35 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : ${classe.getJavaPackage()}.business.bean
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}.java
+ * Creation : CHABOUD   Date : 5 fevr. 2007
+ * Copyright (C) 2007   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.4 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.business;
+
+import java.util.Date;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.4 $, $Date: 2007/02/13 15:00:44 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public interface ${classe.getJavaNomClasseAvecMajuscule()} extends ${classe.getJavaNomClasseAvecMajuscule()}ReadOnly {
+
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+	void set${attribut.getJavaNomAttributAvecMajuscule()}(${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()});
+
+#end
+#end
+}

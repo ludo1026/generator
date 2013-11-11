@@ -1,0 +1,86 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : fr.apriarsa.xc.intranet.dossier.decorator
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}Decorator.java
+ * Création : GOULLEY   Date : 24 janv. 2007
+ * Copyright (C) 2007   Apria RSA
+ *
+ * --------------- Dernière mise à jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.3 $, $Date: 2007/08/06 16:12:55 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.decorator;
+
+import org.apache.log4j.Logger;
+
+import fr.apriarsa.xc.intranet.commun.decorator.AbstractDecorator;
+import fr.apriarsa.xc.intranet.commun.decorator.DecoratorConstants;
+import fr.apriarsa.xc.intranet.commun.struts.forms.FAbstractForm;
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()};
+
+
+/**
+ * <b>Desctription :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.3 $, $Date: 2007/08/06 16:12:55 $
+ * @version : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class ${classe.getJavaNomClasseAvecMajuscule()}Decorator extends AbstractDecorator {
+    private final Logger log = Logger.getLogger(${classe.getJavaNomClasseAvecMajuscule()}Decorator.class);
+    
+    public ${classe.getJavaNomClasseAvecMajuscule()}Decorator() {
+        super();
+    }
+    
+#foreach( $attribut in $classe.getListeAttributs() )
+    public String get${attribut.getJavaNomAttributAvecMajuscule()}(){
+        ${classe.getJavaNomClasseAvecMajuscule()} o= (${classe.getJavaNomClasseAvecMajuscule()})getCurrentRowObject();
+#if("Date" != ${attribut.getJavaTypeAttribut()})
+        return getLinkConsultation(o,getHTML(o.get${attribut.getJavaNomAttributAvecMajuscule()}(),"center")); 
+#end
+#if("Date" == ${attribut.getJavaTypeAttribut()})
+        return getLinkConsultation(o,getHTML(formatDate(o.get${attribut.getJavaNomAttributAvecMajuscule()}()),"center")); 
+#end
+    }
+#end
+
+    private String getParametreIdentifiant(${classe.getJavaNomClasseAvecMajuscule()} o) {
+        String parametreIdentifiant = 
+#set($first=true)
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            #if($first)#set($first=false)  "#else+ ",#end'${attribut.getJavaNomAttributSansMajuscule()}','" + FAbstractForm.getStringFromValue(o.get${attribut.getJavaNomAttributAvecMajuscule()}()) + "'"
+#end
+#end;
+        return parametreIdentifiant;
+    }
+        
+    private String getLinkConsultation(${classe.getJavaNomClasseAvecMajuscule()} o, String donnee) {
+        return "<a href=\"javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'consult'," + getParametreIdentifiant(o)+")\");"+donnee+"</a>";
+    }
+    
+    public String getLinkModifier(){
+        ${classe.getJavaNomClasseAvecMajuscule()} o= (${classe.getJavaNomClasseAvecMajuscule()})getCurrentRowObject();
+        String output = getLink(DecoratorConstants.TYPE_UPDATE,"f${classe.getJavaNomClasseAvecMajuscule()}Form",getParametreIdentifiant(o));
+        if(o.getSuppressionEnAttente()) {
+            output += getLinkInNewLine(DecoratorConstants.TYPE_DELETE_CONFIRM,"f${classe.getJavaNomClasseAvecMajuscule()}Form",getParametreIdentifiant(o),8,"LigneTableau1C");
+        }
+        return output;
+    }
+    
+    public String getLinkSupprimer(){
+        ${classe.getJavaNomClasseAvecMajuscule()} o= (${classe.getJavaNomClasseAvecMajuscule()})getCurrentRowObject();
+        if(o.getSuppressionEnAttente()) {
+            return "";
+        } else {
+            return getLink(DecoratorConstants.TYPE_DELETE,"f${classe.getJavaNomClasseAvecMajuscule()}Form",getParametreIdentifiant(o));
+        }
+    } 
+
+}
+

@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<generator>
+  
+  <templates
+   inDir="templates"
+   outDir="test"
+   packageJavaBase="org.ludo.service"
+  >
+   <template
+    nom="service_template"
+    file="Service_template.vlt"
+    outDir="service"
+    outFile="XXXServiceImpl.java" 
+    packageJava="service"
+   />
+  </templates>
+  <templateGroupes>
+   <templateGroupe nom="serviceGroupe">
+   	<templateRef nom="service_template" />
+   </templateGroupe>
+  </templateGroupes>
+  
+  <stereotypes>
+    <stereotype nom="service" />
+  </stereotypes>
+  
+  <classes
+   packageBase="fr.apriarsa.xc.intranet">
+   <classe
+    nomJava = "CategorieCampagne"
+	packageJava = "campagne"
+	nomTable = "CTTCPS"
+	nomVue = "CTTCPS"
+   >
+   	<attributs>
+     <attribut
+	  nomJava = "codeCategoriePS"
+	  typeJava = "String"
+	  nomSQL = "CPSCD"
+	  typeSQL = "VARCHAR2"
+	  estDansTable = "true"
+	  size = "2"
+	  estClePrimaire = "true"
+	  estCleIncrementee = "false"
+	 />
+	</attributs>
+	<methodes>
+	 <methode
+	  nomJava = "methode"
+	  retourTypeJava = "void"
+	 >
+	  <parametres>
+	   <parametre
+	    nomJava = "parametre"
+		typeJava = "String"
+       />
+	  </parametres>
+	 </methode>
+	</methodes>
+	<stereotypesRef>
+     <stereotypeRef
+	  nom = "stereotype"
+	 />
+    </stereotypesRef> 
+   </classe>
+  </classes>
+  
+  <genererGroupe>
+    <!--genererClasses>
+     <genererClasse>
+      <classesRefPourGenererClasse>
+	   <classeRefPourGenererClasse
+	    nomJava = "CategorieCampagne"
+       />
+	  </classesRefPourGenererClasse>
+	  <templateGroupesRefPourGenererClasse>
+	   <templateGroupeRefPourGenererClasse
+	    templateGroupeNom = "modeleGroupe"
+	   />
+	  </templateGroupesRefPourGenererClasse>
+	 </genererClasse>
+	</genererClasses-->
+	<genererStereotypes>
+	 <genererStereotype>
+	  <templateGroupesRefPourGenererStereotype>
+	   <templateGroupeRefPourGenererStereotype templateGroupeNom = "serviceGroupe" >
+        <stereotypesRefPourGenererStereotype>
+	     <stereotypeRefPourGenererStereotype stereotypeNom = "service" />
+	    </stereotypesRefPourGenererStereotype>
+	   </templateGroupeRefPourGenererStereotype>
+	  </templateGroupesRefPourGenererStereotype>
+	 </genererStereotype>
+	</genererStereotypes>
+  </genererGroupe>
+  
+</generator>

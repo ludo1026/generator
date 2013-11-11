@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator>
+  <templates inDir="templates" outDir="test" packageJavaBase="org.ludo">
+    <template nom="service_template" file="service_template.vlt" packageJava="service" outDir="service" outFile="XXXServiceImpl.java" />
+  </templates>
+  <templateGroupes>
+    <templateGroupe nom="serviceGroupe">
+      <templateRef nom="service_template" />
+    </templateGroupe>
+  </templateGroupes>
+  <stereotypes>
+    <stereotype nom="service" />
+  </stereotypes>
+  <classes packageBase="org.ludo">
+    <classe nomJava="User" packageJava="app">
+      <stereotypesRef>
+        <stereotypeRef nom="service" />
+      </stereotypesRef>
+      <attributs>
+        <attribut nomJava="listeUser" typeJava="List" />
+      </attributs>
+      <methodes>
+        <methode nomJava="getAllUser" retourTypeJava="List">
+          <parametres>
+            <parametre nomJava="a" typeJava="BigInteger" />
+            <parametre nomJava="b2" typeJava="List" />
+          </parametres>
+        </methode>
+      </methodes>
+    </classe>
+    <classe nomJava="Joueur" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="prenom" typeJava="String" />
+        <attribut nomJava="login" typeJava="String" />
+        <attribut nomJava="motDePasse" typeJava="String" />
+        <attribut nomJava="mail" typeJava="String" />
+        <attribut nomJava="tentativeConnexion" typeJava="Integer" />
+        <attribut nomJava="joueurID" typeJava="Integer" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="Personnage" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="description" typeJava="String" />
+        <attribut nomJava="image" typeJava="Image" />
+        <attribut nomJava="personnageID" typeJava="Integer" />
+        <attribut nomJava="experience" typeJava="Integer" />
+        <attribut nomJava="niveau" typeJava="Integer" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="Guilde" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="guildeID" typeJava="Integer" />
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="description" typeJava="String" />
+        <attribut nomJava="image" typeJava="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="Objet" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="objetID" typeJava="Integer" />
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="description" typeJava="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="TypeObjet" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="typeObjetID" typeJava="Integer" />
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="description" typeJava="String" />
+        <attribut nomJava="image" typeJava="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="Caracteristiques" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="caracteristiqueID" typeJava="Integer" />
+        <attribut nomJava="duree" typeJava="Date" />
+        <attribut nomJava="vie" typeJava="Integer" />
+        <attribut nomJava="force" typeJava="Integer" />
+        <attribut nomJava="habilete" typeJava="Integer" />
+        <attribut nomJava="endurance" typeJava="Integer" />
+        <attribut nomJava="intellGence" typeJava="Integer" />
+        <attribut nomJava="attaque" typeJava="Integer" />
+        <attribut nomJava="defense" typeJava="Integer" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="TypeCaracteristique" packageJava="data">
+      <stereotypesRef />
+      <attributs>
+        <attribut nomJava="caracteristiqueID" typeJava="Integer" />
+        <attribut nomJava="nom" typeJava="String" />
+        <attribut nomJava="description" typeJava="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe nomJava="Image" packageJava="type">
+      <stereotypesRef />
+      <attributs />
+      <methodes />
+    </classe>
+  </classes>
+  <genererGroupe>
+    <!--genererClasses>
+     <genererClasse>
+      <classesRefPourGenererClasse>
+	   <classeRefPourGenererClasse
+	    nomJava = "CategorieCampagne"
+       />
+	  </classesRefPourGenererClasse>
+	  <templateGroupesRefPourGenererClasse>
+	   <templateGroupeRefPourGenererClasse
+	    templateGroupeNom = "modeleGroupe"
+	   />
+	  </templateGroupesRefPourGenererClasse>
+	 </genererClasse>
+	</genererClasses-->
+    <!--genererParTemplates>
+      <genererParTemplate>
+        <templateGroupesRefPourGenererParTemplate>
+          <templateGroupeRefPourGenererParTemplate templateGroupeNom="serviceGroupe">
+            <stereotypesRefPourGenererParTemplate>
+              <stereotypeRefPourGenererParTemplate stereotypeNom="service" />
+            </stereotypesRefPourGenererParTemplate>
+          </templateGroupeRefPourGenererParTemplate>
+        </templateGroupesRefPourGenererParTemplate>
+      </genererParTemplate>
+    </genererParTemplates-->
+    <genererParStereotypes>
+      <genererParStereotype>
+        <stereotypesRefPourGenererParStereotype>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="service" />
+          <templateGroupesRefPourGenererParStereotype>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="serviceGroupe" />
+          </templateGroupesRefPourGenererParStereotype>
+        </stereotypesRefPourGenererParStereotype>
+      </genererParStereotype>
+    </genererParStereotypes>
+  </genererGroupe>
+</generator>
+

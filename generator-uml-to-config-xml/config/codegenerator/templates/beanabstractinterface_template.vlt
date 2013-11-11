@@ -1,0 +1,66 @@
+#set( $classeGeneration = ${templateGenerationMap.getByClasseGenId("beanabstractinterface_template",${classe.getGenId()})} )
+/*
+ * Package  : ${classeGeneration.getNomPackage()}
+ * Source   : ${classeGeneration.getNomElementGenere()}.java
+ */
+package ${classeGeneration.getNomPackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+
+#set( $listImport = false )
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("beaninterface_template",${association.getClasseGenId()})} )
+#if( "1" != ${association.getNombreMaximum()} )
+#if( ! $listImport )
+#set( $listImport = true )
+import java.util.ArrayList;
+import java.util.List;
+#end
+#end
+import ${templateGeneration.getNomPackage()}.${templateGeneration.getNomElementGenere()};
+#end
+#end
+
+/**
+ * <b>Description :</b>
+ * @zone-debut:{#1}
+ * @zone-fin:{#1}
+ */
+public interface ${classeGeneration.getNomElementGenere()} extends Serializable {
+
+#if( $classe.getGenAttributs() )
+#foreach( $attribut in $classe.getGenAttributs().getListeGenAttribut() )
+    public ${attribut.getType()} get${SU.capitalize(${attribut.getNomJava()})}();
+    
+    public void set${SU.capitalize(${attribut.getNomJava()})}(${attribut.getType()} ${SU.uncapitalize(${attribut.getNomJava()})});
+	
+#end
+#end
+
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("beaninterface_template",${association.getClasseGenId()})} )
+#if( "1" == ${association.getNombreMaximum()} )
+    /**
+     * @zone-debut:{get${SU.capitalize(${association.getNomJavaChamp()})}}
+     * @zone-fin:{get${SU.capitalize(${association.getNomJavaChamp()})}}
+     */
+    public ${templateGeneration.getNomElementGenere()} get${SU.capitalize(${association.getNomJavaChamp()})}();
+    
+    /**
+     * @zone-debut:{set${SU.capitalize(${association.getNomJavaChamp()})}}
+     * @zone-fin:{set${SU.capitalize(${association.getNomJavaChamp()})}}
+     */
+    public void set${SU.capitalize(${association.getNomJavaChamp()})}(${SU.capitalize(${templateGeneration.getNomElementGenere()})} ${SU.uncapitalize(${association.getNomJavaChamp()})});
+#end
+#if( "1" != ${association.getNombreMaximum()} )
+    public List get${SU.capitalize(${association.getNomJavaChamp()})}();
+    
+    public void add${SU.capitalize(${association.getNomJavaChamp()})}(${SU.capitalize(${templateGeneration.getNomElementGenere()})} ${SU.uncapitalize(${association.getNomJavaChamp()})});
+#end
+
+#end
+#end
+}

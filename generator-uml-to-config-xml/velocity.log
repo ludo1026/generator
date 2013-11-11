@@ -1,0 +1,453 @@
+2013-06-09 11:31:12,292 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,296 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,302 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,304 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,307 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,308 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,311 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,312 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,315 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,317 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,319 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,320 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,321 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,323 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,324 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,326 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,329 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,331 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,332 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,333 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,335 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,335 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,337 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,339 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,341 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,342 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,343 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,345 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,345 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,347 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,349 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,350 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,352 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,352 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,355 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,355 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,357 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,359 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,361 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,363 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,364 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,367 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,368 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,371 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,373 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,376 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,378 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,379 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,383 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,383 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,388 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,392 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,393 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,395 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,396 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,398 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,398 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,400 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,402 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,404 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,406 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,408 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,411 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,412 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,414 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,417 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,419 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,420 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,421 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,424 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,424 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,427 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,430 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,432 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,434 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,435 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,437 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,437 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,440 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,442 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,444 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,445 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,446 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,448 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,448 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,457 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,459 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,461 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,462 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,463 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,465 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,465 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,467 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,469 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,470 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,472 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,472 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,474 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,475 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,476 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,478 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,480 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,481 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,482 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,484 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,484 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,485 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,487 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,489 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,490 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,490 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,492 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,493 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,494 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,496 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,497 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,499 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,499 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,503 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,503 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,507 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,510 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,512 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,515 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,516 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,520 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,520 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,523 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,526 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,528 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,530 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,531 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,534 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,534 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,538 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,543 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,545 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,547 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,547 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,550 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,551 - Null reference [template 'generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+2013-06-09 11:31:12,553 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,555 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:31:12,557 - ResourceManager : found generation_CodeGeneratorFinal/parser_configXml/xmlbeangen/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,176 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 11:58:40,180 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 11:58:40,180 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 11:58:40,180 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 11:58:40,185 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:94)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:77)
+	at org.ludo.main.CodeGeneratorMain.main(CodeGeneratorMain.java:9)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:423)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 13 more
+2013-06-09 11:58:40,194 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 11:58:40,194 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 11:58:40,198 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 11:58:40,201 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,202 - Do unicode file recognition:  false
+2013-06-09 11:58:40,202 - FileResourceLoader : adding path '.'
+2013-06-09 11:58:40,220 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 11:58:40,221 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 11:58:40,222 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 11:58:40,223 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 11:58:40,224 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 11:58:40,225 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 11:58:40,262 - Created '20' parsers.
+2013-06-09 11:58:40,273 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 11:58:40,273 - Velocimacro : Default library not found.
+2013-06-09 11:58:40,273 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 11:58:40,273 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 11:58:40,273 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 11:58:40,274 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 11:58:40,335 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,363 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 11:58:40,372 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 11:58:40,381 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,382 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 11:58:40,382 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 11:58:40,388 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,395 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,406 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,407 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 11:58:40,419 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,420 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 11:58:40,434 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,457 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,472 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,473 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,473 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,501 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,501 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,501 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,521 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,521 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,521 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,558 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,558 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,558 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,580 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,581 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,581 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,602 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,602 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 11:58:40,603 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 11:58:40,612 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,612 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,613 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,613 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,613 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,615 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,616 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,616 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,617 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,617 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,622 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,625 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,626 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,627 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,627 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,627 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,627 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,629 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,629 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,629 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,629 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,629 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 11:58:40,631 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 11:58:40,633 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:22:59,921 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 12:22:59,923 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 12:22:59,923 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 12:22:59,923 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 12:22:59,925 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:94)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:77)
+	at org.ludo.main.CodeGeneratorMain.main(CodeGeneratorMain.java:9)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:423)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 13 more
+2013-06-09 12:22:59,927 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 12:22:59,927 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 12:22:59,928 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 12:22:59,931 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:22:59,932 - Do unicode file recognition:  false
+2013-06-09 12:22:59,932 - FileResourceLoader : adding path '.'
+2013-06-09 12:22:59,955 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 12:22:59,956 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 12:22:59,957 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 12:22:59,958 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 12:22:59,959 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 12:22:59,960 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 12:22:59,997 - Created '20' parsers.
+2013-06-09 12:23:00,008 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 12:23:00,008 - Velocimacro : Default library not found.
+2013-06-09 12:23:00,008 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 12:23:00,009 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 12:23:00,009 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 12:23:00,009 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 12:23:00,066 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,093 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:00,100 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:00,141 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,142 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:00,142 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:00,172 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,182 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,198 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,199 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 12:23:00,216 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,217 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 12:23:00,234 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,254 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,271 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,273 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,273 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,294 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,295 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,295 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,319 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,319 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,319 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,338 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,338 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,338 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,365 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,366 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,366 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,386 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,386 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:00,386 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:00,393 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,393 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,393 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,393 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,394 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,396 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,397 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,397 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,397 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,397 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,400 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,403 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,405 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,405 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,405 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,405 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,405 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,407 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,407 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,407 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,407 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,408 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:00,410 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:00,412 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,771 - Log4JLogChute initialized using file 'velocity.log'
+2013-06-09 12:23:32,772 - Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+2013-06-09 12:23:32,772 - Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+2013-06-09 12:23:32,772 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2013-06-09 12:23:32,773 - Couldn't find class org.apache.velocity.runtime.log.AvalonLogChute or necessary supporting classes in classpath.
+java.lang.NoClassDefFoundError: org/apache/log/format/Formatter
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:266)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:63)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:95)
+	at org.apache.velocity.runtime.log.LogManager.createLogChute(LogManager.java:147)
+	at org.apache.velocity.runtime.log.LogManager.updateLog(LogManager.java:208)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeLog(RuntimeInstance.java:728)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:240)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:113)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:83)
+	at org.ludo.codegenerator.core.ProcessManager.genererFichier(ProcessManager.java:94)
+	at org.ludo.codegenerator.main.CodeGeneratorMain.main(CodeGeneratorMain.java:77)
+	at org.ludo.main.CodeGeneratorMain.main(CodeGeneratorMain.java:9)
+Caused by: java.lang.ClassNotFoundException: org.apache.log.format.Formatter
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:423)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 13 more
+2013-06-09 12:23:32,774 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 12:23:32,774 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2013-06-09 12:23:32,777 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+2013-06-09 12:23:32,784 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,786 - Do unicode file recognition:  false
+2013-06-09 12:23:32,786 - FileResourceLoader : adding path '.'
+2013-06-09 12:23:32,802 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+2013-06-09 12:23:32,803 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2013-06-09 12:23:32,804 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2013-06-09 12:23:32,805 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2013-06-09 12:23:32,806 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2013-06-09 12:23:32,807 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2013-06-09 12:23:32,840 - Created '20' parsers.
+2013-06-09 12:23:32,849 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2013-06-09 12:23:32,850 - Velocimacro : Default library not found.
+2013-06-09 12:23:32,850 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2013-06-09 12:23:32,850 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2013-06-09 12:23:32,850 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2013-06-09 12:23:32,850 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2013-06-09 12:23:32,886 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,909 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:32,918 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:32,925 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,926 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:32,927 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action-servlet_template.vlt [line 15, column 1]
+2013-06-09 12:23:32,935 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,939 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/struts-config_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,949 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,950 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 12:23:32,963 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:32,965 - RHS of #set statement is null. Context will not be modified. generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/spring-config-service_template.vlt [line 18, column 1]
+2013-06-09 12:23:32,997 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,014 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/bean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,032 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,033 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,033 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,055 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,057 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,057 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,103 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,103 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,103 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,121 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,122 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,122 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,155 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,155 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,156 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,176 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,177 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 17] : $Revision cannot be resolved.
+2013-06-09 12:23:33,177 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/action_template.vlt', line 47, column 28] : $Date cannot be resolved.
+2013-06-09 12:23:33,186 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,186 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,187 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,187 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,187 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,189 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,189 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,189 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,189 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,190 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,193 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,196 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,198 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,199 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,199 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,199 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,199 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,201 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,201 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 4, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,201 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 14, column 18] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,201 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 16, column 17] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,201 - Null reference [template 'generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/service_template.vlt', line 17, column 15] : ${classeGeneration.getNomElementGenere()} cannot be resolved.
+2013-06-09 12:23:33,205 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2013-06-09 12:23:33,208 - ResourceManager : found generation_CodeGeneratorFinal/codegenerator_bean_template/codegenerator/templates/serviceimpl_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader

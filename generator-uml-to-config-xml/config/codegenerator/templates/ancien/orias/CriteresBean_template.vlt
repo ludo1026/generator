@@ -1,0 +1,44 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : ${classe.getJavaPackage()}.struts.beans
+ * Source   : CriteresRecherche.java
+ * Création : CHABOUD   Date : 8 déc. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Dernière mise à jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.1 $, $Date: 2007/04/02 15:48:51 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package fr.apriarsa.xc.intranet.${classe.getJavaNomClasseSansMajuscule()}.struts.beans;
+
+import java.util.Date;
+
+import fr.apriarsa.xc.intranet.commun.struts.beans.BCriteresBean;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.1 $, $Date: 2007/04/02 15:48:51 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean extends BCriteresBean {
+    
+#foreach( $attribut in $classe.getListeAttributs() )
+	private ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()};
+#end
+
+#foreach( $attribut in $classe.getListeAttributs() )
+	public ${attribut.getJavaTypeAttribut()} get${attribut.getJavaNomAttributAvecMajuscule()}() {
+		return ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+	public void set${attribut.getJavaNomAttributAvecMajuscule()}(${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()}) {
+		this.${attribut.getJavaNomAttributSansMajuscule()} = ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+#end
+
+}

@@ -1,0 +1,79 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : ${classe.getJavaPackage()}.exception
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}NonTrouve.java
+ * Création : CHABOUD   Date : 8 févr. 2007
+ * Copyright (C) 2007   Apria RSA
+ *
+ * --------------- Dernière mise à jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.1 $, $Date: 2007/02/09 16:24:53 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.exception;
+
+import java.util.Date;
+import org.apache.struts.action.ActionError;
+
+import fr.apriarsa.xc.intranet.commun.exception.FunctionalException;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.1 $, $Date: 2007/02/09 16:24:53 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException extends Exception {
+    
+    private static String codeErreur${classe.getJavaNomClasseAvecMajuscule()}NonTrouve = "errors.${classe.getJavaNomClasseSansMajuscule()}NonTrouve";
+    
+    private FunctionalException exception = new FunctionalException("");
+    
+    public ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException(
+#set( $first = true )
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            #if( $first )#set( $first = false)#else,#end ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+    		) 
+    {
+        super(
+                "La ${classe.getJavaNomClasseSansMajuscule()} ("
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+                + "${attribut.getJavaNomAttributSansMajuscule()} = '" + ${attribut.getJavaNomAttributSansMajuscule()} + "'"
+#end
+#end
+		+ ") n'est pas référencée");
+
+        Object[] param = { 
+#set( $first = true )
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            #if( $first )#set( $first = false)#else,#end ${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+        };
+        exception = 
+            new FunctionalException(
+                "La ${classe.getJavaNomClasseSansMajuscule()} ("
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+                + "${attribut.getJavaNomAttributSansMajuscule()} = '" + ${attribut.getJavaNomAttributSansMajuscule()} + "'"
+#end
+#end
+		+ ") n'est pas référencée",
+                codeErreur${classe.getJavaNomClasseAvecMajuscule()}NonTrouve,
+                param
+            );
+    }
+    
+    public ActionError getActionError() {
+        return exception.getActionError();
+    }
+}

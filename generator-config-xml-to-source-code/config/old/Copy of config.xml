@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gen xmlns="http://generator/gen/schemas">
+  <classes packageBase="org.ludo.codegenerator">
+    <classe genId="utilisateur" nomJava="Utilisateur" packageJava="data" description="Utilisateur">
+      <stereotypeClasseRefs>
+        <stereotypeClasseRef stereotypeClasseNom="bean" />
+      </stereotypeClasseRefs>
+      <attributs>
+        <attribut genId="nom" nbMin="0" nbMax="1" nomJava="nom" type="String" description="nom" />
+        <attribut genId="prenom" nbMin="0" nbMax="1" nomJava="prenom" type="String" description="prenom" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association classeGenId="profil" nomJava="profil" nbMin="0" nbMax="*" description="profils de l'utilisateur" />
+      </associations>
+    </classe>
+    <classe genId="profil" nomJava="Profil" packageJava="data" description="Profil d'un utilisateur">
+      <stereotypeClasseRefs>
+        <stereotypeClasseRef stereotypeClasseNom="bean" />
+      </stereotypeClasseRefs>
+      <attributs>
+        <attribut genId="nom" nbMin="0" nbMax="1" nomJava="nom" type="String" />
+        <attribut genId="roles" nbMin="0" nbMax="1" nomJava="prenom" type="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe genId="utilisateurService" nomJava="utilisateurService" packageJava="service" description="Service des utilisateurs">
+      <stereotypeClasseRefs>
+        <stereotypeClasseRef stereotypeClasseNom="service" />
+      </stereotypeClasseRefs>
+      <proprieteClasses />
+      <attributs />
+      <methodes />
+      <associations>
+        <association classeGenId="utilisateur" nomJava="utilisateurDao" nbMin="1" nbMax="1" />
+        <association classeGenId="profil" nomJava="profilDao" nbMin="1" nbMax="1" />
+      </associations>
+    </classe>
+  </classes>
+
+  <templateGroupes>
+    <templateGroupe nom="beanGroupe">
+      <templateRef nom="bean_template" />
+    </templateGroupe>
+    <templateGroupe nom="daoGroupe">
+      <templateRef nom="dao_template" />
+    </templateGroupe>
+    <templateGroupe nom="serviceGroupe">
+      <templateRef nom="service_template" />
+      <templateRef nom="serviceImpl_template" />
+    </templateGroupe>
+  </templateGroupes>
+
+  <templates inDir="config/templates" outDir="" packageJavaBase="">
+    <template nom="bean_template" file="bean_template.vlt" packageJava="PPP.bean.impl" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="dao_template" file="dao_template.vlt" packageJava="PPP" outDir="generated" outFile="XXXDao.java" nomElementGenere="XXXDao" />
+    <template nom="service_template" file="service_template.vlt" packageJava="PPP" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="serviceImpl_template" file="serviceImpl_template.vlt" packageJava="PPP" outDir="generated" outFile="XXXImpl.java" nomElementGenere="XXXImpl" />
+  </templates>
+
+  <stereotypes>
+    <stereotype nom="bean" />
+    <stereotype nom="service" />
+  </stereotypes>
+
+  <genererGroupe>
+    <!-- <genererParTemplates> -->
+    <!-- <genererParTemplate> -->
+    <!-- <templateGroupeRefPourGenererParTemplates> -->
+    <!-- <templateGroupeRefPourGenererParTemplate templateGroupeNom="serviceConfigGroupe"> -->
+    <!-- <stereotypeRefPourGenererParTemplates> -->
+    <!-- <stereotypeRefPourGenererParTemplate stereotypeNom="service" /> -->
+    <!-- </stereotypeRefPourGenererParTemplates> -->
+    <!-- </templateGroupeRefPourGenererParTemplate> -->
+    <!-- </templateGroupeRefPourGenererParTemplates> -->
+    <!-- </genererParTemplate> -->
+    <!-- </genererParTemplates> -->
+    <genererParStereotypes>
+      <genererParStereotype>
+        <stereotypeRefPourGenererParStereotypes>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="bean" />
+          <templateGroupeRefPourGenererParStereotypes>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="daoGroupe" />
+          </templateGroupeRefPourGenererParStereotypes>
+        </stereotypeRefPourGenererParStereotypes>
+      </genererParStereotype>
+      <genererParStereotype>
+        <stereotypeRefPourGenererParStereotypes>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="service" />
+          <templateGroupeRefPourGenererParStereotypes>
+            <templateGroupeRefPourGenererParStereotype templateGroupeNom="serviceGroupe" />
+          </templateGroupeRefPourGenererParStereotypes>
+        </stereotypeRefPourGenererParStereotypes>
+      </genererParStereotype>
+    </genererParStereotypes>
+  </genererGroupe>
+</gen>
+

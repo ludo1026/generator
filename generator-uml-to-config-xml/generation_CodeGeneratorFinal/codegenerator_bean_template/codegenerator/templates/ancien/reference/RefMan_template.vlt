@@ -1,0 +1,83 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : fr.apriarsa.orias.intranet.commun.business
+ * Source   : ReferenceManager.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.1 $, $Date: 2007/02/05 14:27:32 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package fr.apriarsa.orias.intranet.reference.business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import fr.apriarsa.orias.commun.business.Manager;
+import fr.apriarsa.orias.commun.exception.TechnicalException;
+import fr.apriarsa.orias.intranet.dossier.business.DossierManager;
+import fr.apriarsa.orias.intranet.reference.business.dao.DReferenceDao;
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.1 $, $Date: 2007/02/05 14:27:32 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class ReferenceManager extends Manager {
+
+    private static final Logger log = Logger.getLogger(DossierManager.class);
+    
+    private static DReferenceDao getReferenceDao() throws PersistenceException {
+        return (DReferenceDao) getDao(Reference.class);
+    }
+
+    
+    /**
+     * obtient la liste de la table de reference ${classe.getJavaNomClasseAvecMajuscule()}
+     * @return Liste de resultats
+     * @throws TechnicalException
+     */
+    public static List getListe${classe.getJavaNomClasseAvecMajuscule()}() throws TechnicalException {
+        log.info("getListe${classe.getJavaNomClasseAvecMajuscule()}");
+        List liste = new ArrayList();
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            liste = getListe${classe.getJavaNomClasseAvecMajuscule()}(transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+        
+        return liste;
+    }
+
+    /**
+     * Obtient la liste de la table de reference ${classe.getJavaNomClasseAvecMajuscule()} en utilisant la transaction en cours
+     * @param transaction
+     * @return Liste de resultats
+     * @throws TechnicalException
+     */
+    public static List getListe${classe.getJavaNomClasseAvecMajuscule()}(TransactionDao transaction) throws PersistenceException {
+        log.info("getListe${classe.getJavaNomClasseAvecMajuscule()}");
+           return getReferenceDao().getListe${classe.getJavaNomClasseAvecMajuscule()}(transaction);
+    }
+    
+}

@@ -1,0 +1,17 @@
+package ${package}.${xmlModele.getNom()}.core.xmlreader;
+
+public interface ${noeud.getNomAvecMajuscule()}XmlNoeud {
+    
+    // description des champs 
+#macro( calldefnoeud $noeud )
+    public final String N_${noeud.getNomAvecMajuscule()} = "${noeud.getNomXml()}";
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+    public final String N_${noeud.getNomAvecMajuscule()}_A_${attributNoeud.getNomAvecMajuscule()} = "${attributNoeud.getNomXml()}";
+#end
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#calldefnoeud( $noeudFils )
+#end
+#end
+#calldefnoeud( $noeud )
+	    
+}

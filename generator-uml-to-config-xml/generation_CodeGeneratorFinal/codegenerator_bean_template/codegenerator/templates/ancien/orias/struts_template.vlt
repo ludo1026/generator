@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<!-- Data Sources -->
+	<data-sources></data-sources>
+
+	<!-- Form Beans -->
+	<form-beans>
+		<form-bean
+			name="f${classe.getJavaNomClasseAvecMajuscule()}Form"
+			type="${classe.getJavaPackage()}.struts.forms.F${classe.getJavaNomClasseAvecMajuscule()}Form">
+		</form-bean>
+	</form-beans>
+
+	<!-- Global Exceptions -->
+	<global-exceptions>
+	    <exception 
+	    	key="error" 
+	    	type="java.lang.Throwable" 
+	    	handler="${classe.getJavaPackageBase()}.commun.struts.actions.ADefaultErrorAction" />
+	</global-exceptions>
+
+	<!-- Global Forwards -->
+	<global-forwards>
+		<forward 
+			name="default.error" 
+			path="default.error" />
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.liste" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=init">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.suppr" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=suppr">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.modif" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=modif">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.modif.valid" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=modifValid">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.modif.annul" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=modifAnnul">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.ajout" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=nouv">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.ajout.valid" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=nouvValid">
+		</forward>
+		<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.ajout.annul" path="/${classe.getModule()}/${classe.getJavaNomClasseSansMajuscule()}.do?method=nouvAnnul">
+		</forward>
+		<forward name="securite.deconnexion" path="/securite/authentification.do?method=deconnexion">
+		</forward>
+		<forward name="securite.acces.nonautorise" path="/nonautorise.jsp" redirect="true" contextRelative="true">
+		</forward>
+	</global-forwards>
+	
+	<!-- Action Mappings -->
+	<action-mappings>
+		<action path="/${classe.getJavaNomClasseSansMajuscule()}" type="${classe.getJavaPackage()}.struts.action.A${classe.getJavaNomClasseAvecMajuscule()}Action" parameter="method" name="f${classe.getJavaNomClasseAvecMajuscule()}Form" scope="request" input="securite.${classe.getJavaNomClasseSansMajuscule()}.form">
+			<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.liste" path="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.liste">
+			</forward>
+			<forward name="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.form" path="${classe.getModule()}.${classe.getJavaNomClasseSansMajuscule()}.form">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<!-- ========== Controller Configuration ================================ -->
+	<controller 
+	    contentType="text/html;charset=UTF-8"
+	    locale="true"
+		nocache="false"
+		processorClass="${classe.getJavaPackageBase()}.commun.struts.RequestProcessorApp"
+		inputForward="true" />
+
+	<message-resources 
+	    key="org.apache.struts.action.MESSAGE"
+		parameter="${classe.getJavaPackageBase()}.ressources.ApplicationResources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/struts/definition-tiles.xml, /WEB-INF/struts/${classe.getModule()}/tiles-${classe.getModule()}.xml" />
+		<set-property property="definitions-debug" value="2" />
+		<set-property property="definitions-parser-details" value="2" />
+		<set-property property="definitions-parser-validate" value="true" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/struts/global-validator-rules.xml, /WEB-INF/struts/${classe.getModule()}/validator-${classe.getModule()}.xml" />
+	</plug-in>
+
+</struts-config>

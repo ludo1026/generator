@@ -1,0 +1,30 @@
+#if( $mapListeClasseParStereotype )
+#foreach( $listeClasseParStereotype in $mapListeClasseParStereotype.values() )
+#if( ${listeClasseParStereotype} )
+<stereotype nom="${listeClasseParStereotype.getStereotypeNom()}">
+#if( ${listeClasseParStereotype.getListeClasse()} )
+#foreach( $classe in ${listeClasseParStereotype.getListeClasse()} )
+	<noeud nom="${classe.getNomJava()}">
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("bean_template",${association.getClasseGenId()})} )
+		<attribut 
+			class="${templateGeneration.getNomPackage()}.${templateGeneration.getNomElementGenere()}"
+			champ="${StringUtils.uncapitalize(${association.getNomJavaChamp()})}"
+		/>
+		<stereotypes>
+#if( ${classe.getGenStereotypesRef().getGenStereotypeRefByGenId(${listeClasseParStereotype.getStereotypeGenId()})} )
+#end
+#foreach( $stereotypeRef in ${classe.getGenStereotypesRef().getListeGenStereotypeRef()} )
+			<stereotype nom="${stereotypeRef.getNom()}"/>
+#end
+		</stereotypes>
+#end
+#end
+	</noeud>
+#end
+#end
+</stereotype>
+#end
+#end
+#end

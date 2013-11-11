@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     ${date} ${time}                                                        
+
+     ${project}    
+     ${description}
+                   
+     ${user}                                                                
+     ====================================================================== -->
+<project name="CodeGeneratorFinal" basedir="." default="init">
+    <description>
+            Génération de code
+    </description>
+	
+    <property name="src.dir" value="src"/>
+    <property name="lib.dir" value="../lib"/>
+    <property name="build.dir" value="build"/>
+    
+    <path id="master-classpath">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar"/>
+      </fileset>
+      <pathelement path="${build.dir}"/>
+    </path>
+  
+    <!-- ================================= 
+          Génération des beans de parsing du fichier config.xml
+          dans le package de codegenerator              
+         ================================= -->
+	<property name="xmlbeangenerator.main-class" value="org.ludo.xmlbeangen.XmlBeanGenExecutor"/>
+	<property name="umlgenerator.main-class" value="org.ludo.umlgenerator.main.Main"/>
+	<property name="codegenerator.main-class" value="org.ludo.codegenerator.main.Genexecutor"/>
+	<property name="parser-configXml.gen-src.dir" value="org\ludo\codegenerator\xml\core\gen\core"/>
+	
+	<!-- ================================= 
+          target: initialisation              
+         ================================= -->
+    <target name="init" depends="clean" description="Init">
+        
+    </target>
+
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          Nettoyer tout                      
+         - - - - - - - - - - - - - - - - - -->
+	<target name="clean">
+            <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          Compiler tout                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="compile-all">
+		<!-- création d'un répertoire pour la compilation -->
+		<mkdir dir="${build.dir}"/>
+		<!-- compilation des sources Java -->
+		<javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+			<classpath refid="master-classpath"/>
+		</javac>
+    </target>
+	
+    <!-- - - - - - - - - - - - - - - - - - 
+          Générer les classes servant à parser le fichier config.xml                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="generate-parser-configXml">
+        <delete dir="${parser-configXml.gen-src.dir}"/>
+    	<!-- exécution du code compilé -->
+    	<java classpath="${build.dir}" classname="${main-class}" fork="true"/>
+    </target>
+
+
+</project>

@@ -1,0 +1,461 @@
+/*
+ * Projet   : j2ee_IA_intranet
+ * Package  : ${classe.getJavaPackage()}.business.dao.impl.jdbc
+ * Source   : I${classe.getJavaNomClasseAvecMajuscule()}DaoImpl.java
+ * Creation : CHABOUD   Date : 5 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.8 $, $Date: 2007/03/20 09:40:31 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.business.dao.impl.jdbc;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.DaoImplUtil;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.Query;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.SQLDelete;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.SQLInsert;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.SQLSelect;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.SQLUpdate;
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.business.bean.B${classe.getJavaNomClasseAvecMajuscule()}Bean;
+import ${classe.getJavaPackage()}.business.dao.D${classe.getJavaNomClasseAvecMajuscule()}Dao;
+import ${classe.getJavaPackage()}.business.dao.impl.jdbc.nom.SQLTab${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.business.dao.impl.jdbc.nom.SQLVue${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.business.dao.impl.jdbc.nom.SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()};
+import ${classe.getJavaPackage()}.exception.${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException;
+import ${classe.getJavaPackage()}.struts.beans.BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean;
+import fr.sintia.framework.InternalException;
+import fr.sintia.framework.dao.DaoFactory;
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+import fr.apriarsa.xc.commun.business.dao.impl.jdbc.AbstractRechercheDaoImpl;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.8 $, $Date: 2007/03/20 09:40:31 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class I${classe.getJavaNomClasseAvecMajuscule()}DaoImpl extends AbstractRechercheDaoImpl implements D${classe.getJavaNomClasseAvecMajuscule()}Dao {
+    
+    private static final Logger log = Logger.getLogger(I${classe.getJavaNomClasseAvecMajuscule()}DaoImpl.class);
+
+    
+    /*
+     * (non-Javadoc)
+     * 
+     * @see fr.sintia.framework.dao.AbstractDao#select(java.lang.Object)
+     */
+    public Object select(Object arg0) throws PersistenceException {
+        return null;
+    }
+    
+    /*
+     * Get the managed class
+     * 
+     * @see fr.sintia.framework.dao.AbstractDao#getManagedClass()
+     */
+    public Class getManagedClass() {
+        return ${classe.getJavaNomClasseAvecMajuscule()}.class;
+    }
+
+    
+    public ${classe.getJavaNomClasseAvecMajuscule()} get${classe.getJavaNomClasseAvecMajuscule()}(
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()},
+#end
+#end
+            TransactionDao transaction) throws PersistenceException, ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException {
+        log.info("get${classe.getJavaNomClasseAvecMajuscule()} : DEBUT");
+        
+        B${classe.getJavaNomClasseAvecMajuscule()}Bean ${classe.getJavaNomClasseSansMajuscule()} = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+        
+        // Définition de la requête
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT *");
+        sql.append(" FROM "+SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_VUE);
+#set( $first = true ) 
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( $attribut.estClePrimaire() )
+	sql.append("#if( $first ) WHERE #set($first=false)#else AND #end"+SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()}+" = ? ");
+#end
+#end
+#end
+        
+        SQLSelect select = new SQLSelect(sql.toString());
+        try {
+            // Définiton de paramètres
+            Object[] params = {
+#set( $first = true ) 
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+                #if( $first )#set($first=false)#else,#end${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+            };
+            
+            // Exécution de la requête
+            Query query = select.execute(params, transaction);
+            
+            if (DaoImplUtil.next(query)) {
+                ${classe.getJavaNomClasseSansMajuscule()} = fill${classe.getJavaNomClasseAvecMajuscule()}(query);
+            }
+            else {
+                //throw new IllegalStateException("L'objet de la classe ${classe.getJavaNomClasseAvecMajuscule()} n'a pas été trouvé en base.");
+                throw new ${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException(
+#set($first=true)
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+                #if($first)#set($first=false) #else,#end ${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+                );
+            }
+            log.debug("Sortie méthode get${classe.getJavaNomClasseAvecMajuscule()}().");
+        } finally {
+            // Fermeture du resultset
+            select.closeQuery();
+        }
+
+        log.debug("get${classe.getJavaNomClasseAvecMajuscule()} : FIN");
+        return ${classe.getJavaNomClasseSansMajuscule()};        
+    }
+    
+    private B${classe.getJavaNomClasseAvecMajuscule()}Bean fill${classe.getJavaNomClasseAvecMajuscule()}(Query query) throws PersistenceException {
+        B${classe.getJavaNomClasseAvecMajuscule()}Bean ${classe.getJavaNomClasseSansMajuscule()} = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estJavaString() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()} (DaoImplUtil.getString( SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()} ,query));
+#end
+#if( $attribut.estJavaInteger() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()} (DaoImplUtil.getInteger( SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()} ,query));
+#end
+#if( $attribut.estJavaBoolean() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()} ((DaoImplUtil.getInt( SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()} ,query)==1));
+#end
+#if( $attribut.estJavaDate() )
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()} (DaoImplUtil.getDate( SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()} ,query));
+#end
+#end
+        return ${classe.getJavaNomClasseSansMajuscule()};
+    }
+    
+    public List getListe${classe.getJavaNomClasseAvecMajuscule()}(
+            TransactionDao transaction) throws PersistenceException {
+        log.debug("getListe${classe.getJavaNomClasseAvecMajuscule()}() : DEBUT");
+        
+        List liste = new ArrayList();
+        
+        // Définition de la requête
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT *");
+        sql.append(" FROM "+SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_VUE);
+        //sql.append(" WHERE "+SQLVue${classe.getJavaNomClasseAvecMajuscule()}.SQL_NumeroXXX+" = ? ");
+        
+        SQLSelect select = new SQLSelect(sql.toString());
+        try {
+            // Définiton de paramètres
+            //Object[] params = {new Integer(numeroXXX)};
+            Object[] params = {};
+            
+            // Exécution de la requête
+            Query query = select.execute(params, transaction);
+            
+            while (DaoImplUtil.next(query)) {
+                liste.add(fill${classe.getJavaNomClasseAvecMajuscule()}(query));
+            }
+            
+        } finally {
+            // Fermeture du resultset
+            select.closeQuery();
+        }
+        
+        log.debug("getListe${classe.getJavaNomClasseAvecMajuscule()} : FIN - taille de liste : "+(liste.size()));
+        return liste;
+    }
+    
+    /**
+     * Recherche les ${classe.getJavaNomClasseSansMajuscule()} d'après les id de la liste en paramètres
+     *
+     * @param criteresRecherche
+     * @param transaction
+     * @return
+     * @throws PersistenceException
+     */
+    public List recherche${classe.getJavaNomClasseAvecMajuscule()}(
+            BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteresRecherche,
+            TransactionDao transaction) throws PersistenceException {
+
+        // sélection des intermédiaires
+        StringBuffer sql = new StringBuffer();
+        sql.append("SELECT * ");
+        sql.append(" FROM "+SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_VUE+" ");
+        // critères de recherche
+        sql.append(getWhereCriteres${classe.getJavaNomClasseAvecMajuscule()}(criteresRecherche, false));
+        //sql.append(" ORDER BY "+SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_XXX);
+        return executeRecherche${classe.getJavaNomClasseAvecMajuscule()}(sql.toString(), transaction);
+    }
+    
+    private String getWhereCriteres${classe.getJavaNomClasseAvecMajuscule()}(BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteresRecherche, boolean hasCondition) {
+        StringBuffer sql = new StringBuffer();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estJavaString() )
+        hasCondition = addSQLWhereLike(SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()}, StringUtil.replace(criteresRecherche.get${attribut.getJavaNomAttributAvecMajuscule()}(),"'","''"), sql, hasCondition);
+#end
+#if( $attribut.estJavaInteger() )
+        hasCondition = addSQLWhereEqual(SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()}, criteresRecherche.get${attribut.getJavaNomAttributAvecMajuscule()}(), sql, hasCondition);
+#end
+#if( $attribut.estJavaBoolean() )
+#end
+#if( $attribut.estJavaDate() )
+        hasCondition = addSQLWhereEqualDateOnly(SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()}, criteresRecherche.get${attribut.getJavaNomAttributAvecMajuscule()}(), sql, hasCondition);
+#end
+#end
+        /* à définir :
+        hasCondition = addSQLWhereLike(SQLVueRecherche${classe.getJavaNomClasseAvecMajuscule()}.SQL_NomDenomination, StringUtil.replace(criteresRecherche.getNom(),"'","''"), sql, hasCondition);
+        if(isDefined(criteresRecherche.getNumImmat())) {
+            DecimalFormat f = new DecimalFormat("00000000");
+            String format = f.format(criteresRecherche.getNumImmat());
+            hasCondition = addSQLWhereEqual(SQLVueRecherche.SQL_NumeroImmatOrias, format, sql, hasCondition);
+        }
+        hasCondition = addSQLWhereEqual(SQLVueRecherche.SQL_NumeroIntermediaire, criteresRecherche.getNumInterm(), sql, hasCondition);
+        if(isDefined(criteresRecherche.getDenomEntMand())) {
+            if(hasCondition) { sql.append(" AND "); } else { sql.append(" WHERE "); hasCondition = true; }
+            sql.append(" ( ");
+            addSQLWhereLike(SQLVueRecherche.SQL_RaisonSocialCourtEntrMandant, StringUtil.replace(criteresRecherche.getDenomEntMand(),"'","''"), sql);
+            sql.append(" OR ");
+            addSQLWhereLike(SQLVueRecherche.SQL_RaisonSocialLongEntrMandant, StringUtil.replace(criteresRecherche.getDenomEntMand(),"'","''"), sql);
+            sql.append(" OR ");
+            addSQLWhereLike(SQLVueRecherche.SQL_SigleEntrMandant, criteresRecherche.getDenomEntMand(), sql);
+            sql.append(" ) ");
+        }
+        */
+        return sql.toString();
+    }
+    
+    private List executeRecherche${classe.getJavaNomClasseAvecMajuscule()}(
+            String sql,
+            TransactionDao transaction) throws PersistenceException {
+        
+        // resultat
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+
+        // Log
+        log.debug("Recherche des identifiants des ${classe.getJavaNomClasseSansMajuscule()}.");
+        log.debug("SQL query = '"+sql+"'");
+
+        // Définition de la query
+        Query query = new Query(transaction);
+
+        try {
+
+            if (query.getTransaction() == null) {
+                // Il faut récupérer une connexion dans le pool en autocommit ==
+                // true
+                query.setTransaction(DaoFactory.getInstance().getTransactionDao("jdbc"));
+                query.setLocalTransaction(true);
+                query.getTransaction().begin(true);
+            }
+
+            // Exécution de la requête
+            query = DaoImplUtil.execute(sql.toString(), transaction);
+
+            while(DaoImplUtil.next(query)) {
+                ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = fill${classe.getJavaNomClasseAvecMajuscule()}(query);
+                liste${classe.getJavaNomClasseAvecMajuscule()}.add(${classe.getJavaNomClasseSansMajuscule()});
+            }
+
+            // Log
+            log.debug("Sortie méthode getNextVal().");
+
+        } catch (InternalException e) {
+
+            // Log
+            log.fatal("La récupération de la transation jdbc n'a pas pu s'effectuée");
+
+            // Il faut propager l'exception
+            throw new PersistenceException(e);
+        } finally {
+
+            // Fermeture du resultset, du statement et de la connexion si cette
+            // dernière est locale
+            DaoImplUtil.closeQuery(query);
+        }
+
+        return liste${classe.getJavaNomClasseAvecMajuscule()};
+    }
+    
+    public void insert${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        insert${classe.getJavaNomClasseAvecMajuscule()}((B${classe.getJavaNomClasseAvecMajuscule()}Bean) ${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public void insert${classe.getJavaNomClasseAvecMajuscule()}(B${classe.getJavaNomClasseAvecMajuscule()}Bean ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        log.info("insert${classe.getJavaNomClasseAvecMajuscule()} : DEBUT");
+        
+        SQLInsert i = new SQLInsert();
+        
+        i.setTableName(
+                SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_TABLE);
+        
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estCleIncrementee() )
+        int newId = i.getNewIdentifier(transaction);
+        
+        ${classe.getJavaNomClasseSansMajuscule()}.set${attribut.getJavaNomAttributAvecMajuscule()}(new Integer(newId));
+        
+#end
+#end
+        i.addListeAttributNomValeur(
+                getListeNomAttributPour${classe.getJavaNomClasseAvecMajuscule()}(), 
+                getListeValeurAttributPour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}));
+        
+        log.debug("Insert query = '"+i.generateSQLQuery()+"'");
+        log.debug("Insert query = '"+i.getStatementRequestForLog()+"'");
+        
+        i.execute(transaction);
+        i.closeQuery();
+        
+        log.info("insert${classe.getJavaNomClasseAvecMajuscule()} : FIN");
+    }
+    
+    public void update${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        update${classe.getJavaNomClasseAvecMajuscule()}((B${classe.getJavaNomClasseAvecMajuscule()}Bean) ${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public void update${classe.getJavaNomClasseAvecMajuscule()}(B${classe.getJavaNomClasseAvecMajuscule()}Bean ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        log.info("update${classe.getJavaNomClasseAvecMajuscule()} : DEBUT");
+        
+        SQLUpdate u = new SQLUpdate();
+        
+        u.setTableName(
+                SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_TABLE);
+        
+        u.addListeAttributNomValeur(
+                getListeNomAttributPour${classe.getJavaNomClasseAvecMajuscule()}(), 
+                getListeValeurAttributPour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}));
+        
+        u.addListeClePrimaireNomValeur(
+                getListeNomClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}(), 
+                getListeValeurClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}));
+        
+        log.debug("Update query = '"+u.generateSQLQuery()+"'");
+        log.debug("Update query = '"+u.getStatementRequestForLog()+"'");
+        
+        u.execute(transaction);
+        u.closeQuery();
+        
+        log.info("update${classe.getJavaNomClasseAvecMajuscule()} : FIN");
+    }
+    
+    public void suppr${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        suppr${classe.getJavaNomClasseAvecMajuscule()}((B${classe.getJavaNomClasseAvecMajuscule()}Bean) ${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public void suppr${classe.getJavaNomClasseAvecMajuscule()}(B${classe.getJavaNomClasseAvecMajuscule()}Bean ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction)
+            throws PersistenceException {
+        log.info("suppr${classe.getJavaNomClasseAvecMajuscule()} : DEBUT");
+        
+        SQLDelete d = new SQLDelete();
+        
+        d.setTableName(
+                SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_NOM_TABLE);
+        
+        d.addListeClePrimaireNomValeur(
+                getListeNomClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}(), 
+                getListeValeurClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}));
+        
+        log.debug("Update query = '"+d.generateSQLQuery()+"'");
+        log.debug("Update query = '"+d.getStatementRequestForLog()+"'");
+        
+        d.execute(transaction);
+        d.closeQuery();
+        
+        log.info("suppr${classe.getJavaNomClasseAvecMajuscule()}: FIN");
+    }
+    
+    
+    public List getListeNomAttributPour${classe.getJavaNomClasseAvecMajuscule()}() {
+        List listeNomAttribut = new ArrayList();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+        listeNomAttribut.add(SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()});
+#end
+#end
+        return listeNomAttribut;
+    }
+    
+    public List getListeValeurAttributPour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) {
+        List listeValeurAttribut = new ArrayList();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( $attribut.estJavaString() )
+        listeValeurAttribut.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#if( $attribut.estJavaInteger() )
+        listeValeurAttribut.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#if( $attribut.estJavaBoolean() )
+        listeValeurAttribut.add( new Integer( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}()?1:0 ));
+#end
+#if( $attribut.estJavaDate() )
+        listeValeurAttribut.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#end
+#end
+        return listeValeurAttribut;
+    }
+    public List getListeNomClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}() {
+        List listeNomClePrimaire = new ArrayList();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( $attribut.estClePrimaire() )
+        listeNomClePrimaire.add(SQLTab${classe.getJavaNomClasseAvecMajuscule()}.SQL_${attribut.getJavaNomAttributAvecMajuscule()});
+#end
+#end
+#end
+        return listeNomClePrimaire;
+    }
+    
+    public List getListeValeurClePrimairePour${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) {
+        List listeValeurClePrimaire = new ArrayList();
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estDansTable() )
+#if( $attribut.estClePrimaire() )
+#if( $attribut.estJavaString() )
+        listeValeurClePrimaire.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#if( $attribut.estJavaInteger() )
+        listeValeurClePrimaire.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#if( $attribut.estJavaBoolean() )
+        listeValeurClePrimaire.add( new Integer( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}()?1:0 ));
+#end
+#if( $attribut.estJavaDate() )
+        listeValeurClePrimaire.add( ${classe.getJavaNomClasseSansMajuscule()}.get${attribut.getJavaNomAttributAvecMajuscule()}());
+#end
+#end
+#end
+#end
+        return listeValeurClePrimaire;
+    }
+    
+}

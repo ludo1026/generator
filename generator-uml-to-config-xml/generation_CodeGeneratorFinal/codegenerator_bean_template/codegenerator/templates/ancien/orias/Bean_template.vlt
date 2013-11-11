@@ -1,0 +1,55 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : ${classe.getJavaPackage()}.business
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.business.bean;
+
+import java.io.Serializable;
+import java.util.Date;
+import ${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()};
+
+/**
+ * <b>Description :</b>
+ * Represente un ${classe.getJavaNomClasseSansMajuscule()} lie a une inscription
+ *
+ * @version : $Revision: 1.2 $, $Date: 2007/02/13 15:00:44 $
+ * @author  : Chaboud
+ * @since   : version 1.0.0
+ */
+public class B${classe.getJavaNomClasseAvecMajuscule()}Bean implements ${classe.getJavaNomClasseAvecMajuscule()}, Serializable {
+    
+#foreach( $attribut in $classe.getListeAttributs() )
+	private ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()};
+#end
+
+#foreach( $attribut in $classe.getListeAttributs() )
+	public ${attribut.getJavaTypeAttribut()} get${attribut.getJavaNomAttributAvecMajuscule()}() {
+		return ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+	
+	public void set${attribut.getJavaNomAttributAvecMajuscule()}(${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()}) {
+		this.${attribut.getJavaNomAttributSansMajuscule()} = ${attribut.getJavaNomAttributSansMajuscule()};
+	}
+	
+#end
+
+    private boolean suppressionEnAttente = false; 
+    
+    public boolean getSuppressionEnAttente() {
+        return this.suppressionEnAttente;
+    }
+    public void setSuppressionEnAttente(boolean suppressionEnAttente) {
+        this.suppressionEnAttente = suppressionEnAttente;
+    }
+    
+}

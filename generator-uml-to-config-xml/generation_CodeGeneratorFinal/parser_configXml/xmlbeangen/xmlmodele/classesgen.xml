@@ -1,0 +1,171 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<gen _nb="1">
+  
+  <templates _nb="1"
+   inDir="templates"
+   outDir="C:\eclipse\workspace\Generator\test"
+   packageJavaBase="org.ludo.codegenerator.xml.core"
+  >
+   <template
+    nom="action_template"
+    file="Action_template.vlt"
+    outDir="struts/action"
+    outFile="AXXXAction.java" 
+    packageJava="struts.action"
+	nomElementGenere="AXXXAction"
+   />
+  </templates>
+  <templateGroupes _nb="1">
+   <templateGroupe
+    nom="templateGroupe">
+   	<templateRef
+	 nom="action_template"
+	/>
+   </templateGroupe>
+  </templateGroupes>
+  
+  <stereotypes _nb="1">
+    <stereotype
+   	  nom = "stereotype"
+    />
+  </stereotypes>
+  
+  <classes _nb="1"
+   packageBase="fr.apriarsa.xc.intranet">
+   <classe
+    genId = "a"
+    nomJava = "CategorieCampagne"
+	packageJava = "campagne"
+	nomTable = "CTTCPS"
+	nomVue = "CTTCPS"
+   >
+	<proprietesClasse _nb="1">
+     <proprieteClasse
+	  nom = "proprieteClasse"
+      valeur = "valeurPropriete"
+	 />
+    </proprietesClasse>
+   	<attributs _nb="1">
+     <attribut
+      genId = "a"
+	  nomJava = "codeCategoriePS"
+	  type = "String"
+	  nombreMinimum = "1"
+	  nombreMaximum = "1"
+	  nomSQL = "CPSCD"
+	  typeSQL = "VARCHAR2"
+	  estDansTable = "true"
+	  size = "2"
+	  estClePrimaire = "true"
+	  estCleIncrementee = "false"
+	 >
+	  <proprietesAttribut _nb="1">
+       <proprieteAttribut
+	    nom = "proprieteAttribut"
+        valeur = "valeurPropriete"
+	   />
+      </proprietesAttribut>
+      <stereotypesAttributRef _nb="1">
+	   <stereotypeAttributRef
+	    stereotypeAttributNom = "stereotypeAttribut"
+	   />
+	  </stereotypesAttributRef>
+	 </attribut>
+	</attributs>
+	<methodes _nb="1">
+	 <methode
+	  genId = "a"
+	  nomJava = "methode"
+	  retourType = "void"
+	 >
+	  <proprietesMethode _nb="1">
+       <proprieteMethode
+	    nom = "proprieteMethode"
+	    valeur = "valeurPropriete"
+	   />
+      </proprietesMethode>
+	  <parametres _nb="1">
+	   <parametre
+   	    genId = "a"
+	    nomJava = "parametre"
+		type = "String"
+       />
+	  </parametres>
+      <stereotypesMethodeRef _nb="1">
+	   <stereotypeMethodeRef
+	    stereotypeMethodeNom = "stereotypeMethode"
+	   />
+	  </stereotypesMethodeRef>
+	 </methode>
+	</methodes>
+	<stereotypesClasseRef _nb="1">
+     <stereotypeClasseRef
+	  stereotypeClasseNom = "stereotypeClasse"
+	 />
+    </stereotypesClasseRef>
+	<associations _nb="1">
+	  <association
+	   genId = "a"
+	   nomJavaChamp="listePerso"
+	   classeGenId="Perso"
+	   nombreMinimum="0"
+	   nombreMaximum="1"
+	  >
+	  	<classeDeAssociation _nb="1" _type="Association"
+		/>
+	  </association>
+	</associations>
+	<classeParents _nb="1">
+	 <classeParent classeGenId="@classe"/>
+	</classeParents>
+   </classe>
+  </classes>
+  
+  <genererGroupe _nb="1">
+    <genererParClasses _nb="1">
+     <genererParClasse>
+      <classesRefPourGenererParClasse _nb="1">
+	   <classeRefPourGenererParClasse
+	    classeGenId = "CategorieCampagne"
+       />
+	  </classesRefPourGenererParClasse>
+	  <templateGroupesRefPourGenererParClasse _nb="1">
+	   <templateGroupeRefPourGenererParClasse
+	    templateGroupeNom = "modeleGroupe"
+	   />
+	  </templateGroupesRefPourGenererParClasse>
+	 </genererParClasse>
+	</genererParClasses>
+	<genererParTemplates _nb="1">
+	 <genererParTemplate>
+	  <templateGroupesRefPourGenererParTemplate _nb="1">
+	   <templateGroupeRefPourGenererParTemplate
+	    templateGroupeNom = "modeleGroupe"
+	   >
+        <stereotypesRefPourGenererParTemplate _nb="1">
+	     <stereotypeRefPourGenererParTemplate
+          stereotypeNom = "stereotype"
+         />
+	    </stereotypesRefPourGenererParTemplate>
+	   </templateGroupeRefPourGenererParTemplate>
+	  </templateGroupesRefPourGenererParTemplate>
+	 </genererParTemplate>
+	</genererParTemplates>
+	<genererParStereotypes _nb="1">
+	 <genererParStereotype>
+      <stereotypesRefPourGenererParStereotype _nb="1">
+       <stereotypeRefPourGenererParStereotype
+        stereotypeNom = "stereotype"
+       >
+	    <templateGroupesRefPourGenererParStereotype _nb="1">
+	     <templateGroupeRefPourGenererParStereotype
+	      templateGroupeNom = "modeleGroupe"
+	     />
+	    </templateGroupesRefPourGenererParStereotype>
+       </stereotypeRefPourGenererParStereotype>
+      </stereotypesRefPourGenererParStereotype>
+	 </genererParStereotype>
+	</genererParStereotypes>
+  </genererGroupe>
+  
+</gen>

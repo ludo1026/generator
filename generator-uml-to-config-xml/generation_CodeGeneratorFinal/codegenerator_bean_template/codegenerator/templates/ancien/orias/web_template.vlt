@@ -1,0 +1,4 @@
+		<init-param>
+			<param-name>config/${classe.getModule()}</param-name>
+			<param-value>/WEB-INF/struts/${classe.getModule()}/struts-${classe.getModule()}.xml</param-value>
+		</init-param>

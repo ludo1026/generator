@@ -1,0 +1,58 @@
+	<ul class="form">
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+	<li>
+		<bean:message key="${classe.getJavaNomClasseSansMajucule()}.recherche.${attribut.getJavaNomAttributSansMajucule()}" /> : 
+		<html:text property="${attribut.getJavaNomAttributSansMajucule()}" styleId="${attribut.getJavaNomAttributSansMajucule()}Form1"/>
+	</li>
+
+		
+	</li>
+	<li>
+		<input type="button" class="bt-button" value="<bean:message key="bouton.reset"/>"
+		onclick="resetF${classe.getJavaNomClasseAvecMajucule()}form()"/>
+	</li>
+	<li>
+		<html:submit styleClass="bt-button"><bean:message key="bouton.rechercher"/></html:submit>
+	</li>
+
+	</ul>

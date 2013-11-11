@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="attribut">
+    <xsd:complexType>
+      <xsd:attribute name="nomSQL" type="xsd:string"/>
+      <xsd:attribute name="typeJava" type="xsd:string"/>
+      <xsd:attribute name="estClePrimaire" type="xsd:string"/>
+      <xsd:attribute name="estDansTable" type="xsd:string"/>
+      <xsd:attribute name="estCleIncrementee" type="xsd:string"/>
+      <xsd:attribute name="typeSQL" type="xsd:string"/>
+      <xsd:attribute name="nomJava" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="generer">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="genererPattern"/>
+      </xsd:sequence>
+      <xsd:attribute name="nomClasse" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="config">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="templates"/>
+        <xsd:element ref="classes"/>
+        <xsd:element ref="generation"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="classe">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="attribut"/>
+      </xsd:sequence>
+      <xsd:attribute name="nomTable" type="xsd:string"/>
+      <xsd:attribute name="nomVue" type="xsd:string"/>
+      <xsd:attribute name="package" type="xsd:string"/>
+      <xsd:attribute name="nomJava" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="template">
+    <xsd:complexType>
+      <xsd:attribute name="outFile" type="xsd:string"/>
+      <xsd:attribute name="file" type="xsd:string"/>
+      <xsd:attribute name="package" type="xsd:string"/>
+      <xsd:attribute name="outDir" type="xsd:string"/>
+      <xsd:attribute name="nom" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="generation">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="generer"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="classes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="classe"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="classePattern">
+    <xsd:complexType>
+      <xsd:attribute name="nomTemplate" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="templates">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="template"/>
+      </xsd:sequence>
+      <xsd:attribute name="inDir" type="xsd:string"/>
+      <xsd:attribute name="packageBase" type="xsd:string"/>
+      <xsd:attribute name="outDir" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="genererPattern">
+    <xsd:complexType>
+      <xsd:attribute name="nomPattern" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="patterns">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="pattern"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="pattern">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" ref="patternTemplate"/>
+      </xsd:sequence>
+      <xsd:attribute name="nomPattern" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="patternTemplate">
+    <xsd:complexType>
+      <xsd:attribute name="nomTemplate" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

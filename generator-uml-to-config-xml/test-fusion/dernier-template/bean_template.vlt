@@ -1,0 +1,26 @@
+#set( $classeGeneration = ${templateGenerationMap.getByClasseGenId("bean_template",${classe.getGenId()})} )
+/*
+ * Package  : ${classeGeneration.getNomPackage()}
+ * Source   : ${classeGeneration.getNomElementGenere()}.java
+ */
+package ${classeGeneration.getNomPackage()};
+
+import java.io.Serializable;
+
+/* @zone-debut:{import} */
+/* @zone-fin:{import} */
+
+#set( $beanAbstractTemplateGeneration = ${templateGenerationMap.getByClasseGenId("beanabstract_template",${classe.getGenId()})} )
+import ${beanAbstractTemplateGeneration.getNomPackage()}.${beanAbstractTemplateGeneration.getNomElementGenere()};
+#set( $beanInterfaceTemplateGeneration = ${templateGenerationMap.getByClasseGenId("beaninterface_template",${classe.getGenId()})} )
+import ${beanInterfaceTemplateGeneration.getNomPackage()}.${beanInterfaceTemplateGeneration.getNomElementGenere()};
+
+/**
+ * <b>Description :</b>
+ */
+public class ${classeGeneration.getNomElementGenere()} extends ${beanAbstractTemplateGeneration.getNomElementGenere()} implements ${beanInterfaceTemplateGeneration.getNomElementGenere()}, Serializable {
+
+/* @zone-debut:{${classeGeneration.getNomElementGenere()}} */
+/* @zone-fin:{${classeGeneration.getNomElementGenere()}} */
+
+}

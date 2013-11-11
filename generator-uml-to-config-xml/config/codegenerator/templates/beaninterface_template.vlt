@@ -1,0 +1,36 @@
+#set( $classeGeneration = ${templateGenerationMap.getByClasseGenId("beaninterface_template",${classe.getGenId()})} )
+/*
+ * Package  : ${classeGeneration.getNomPackage()}
+ * Source   : ${classeGeneration.getNomElementGenere()}.java
+ */
+package ${classeGeneration.getNomPackage()};
+
+import java.io.Serializable;
+import java.util.Date;
+
+#set( $listImport = false )
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("bean_template",${association.getClasseGenId()})} )
+#if( "1" != ${association.getNombreMaximum()} )
+#if( ! $listImport )
+#set( $listImport = true )
+import java.util.ArrayList;
+import java.util.List;
+#end
+#end
+import ${templateGeneration.getNomPackage()}.${templateGeneration.getNomElementGenere()};
+#end
+#end
+
+#set( $beanAbstractInterfaceTemplateGeneration = ${templateGenerationMap.getByClasseGenId("beanabstractinterface_template",${classe.getGenId()})} )
+import ${beanAbstractInterfaceTemplateGeneration.getNomPackage()}.${beanAbstractInterfaceTemplateGeneration.getNomElementGenere()};
+
+/**
+ * <b>Description :</b>
+ * ${classeGeneration.getNomElementGenere()}
+ *
+ */
+public interface ${classeGeneration.getNomElementGenere()} extends ${beanAbstractInterfaceTemplateGeneration.getNomElementGenere()}, Serializable {
+
+}

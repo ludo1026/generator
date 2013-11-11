@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     ${date} ${time}                                                        
+
+     ${project}    
+     ${description}
+                   
+     ${user}                                                                
+     ====================================================================== -->
+<project name="GeneratorConfigXMLParser" basedir="." default="compile-all">
+    <description>
+            Génération de code
+    </description>
+	
+    <property name="lib.dir" value="../lib"/>
+    <property name="build.dir" value="build"/>
+    <property name="parser.src.dir" value="../generator-xml-parser/src/main/java"/>
+    <property name="parser.gen.dir" value="../generator-xml-parser/src/main/generated"/>
+    <property name="common.src.dir" value="../generator-common/src/main/java"/>
+    
+    <path id="master-classpath">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar"/>
+      </fileset>
+      <pathelement path="${build.dir}"/>
+    </path>
+	
+	<!-- Nettoyer -->
+	<target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <!-- Compiler -->
+    <target name="compile-all" depends="clean">
+		<mkdir dir="${build.dir}"/>
+        <javac srcdir="${common.src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+          <classpath refid="master-classpath"/>
+        </javac>
+        <javac srcdir="${parser.gen.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+          <classpath refid="master-classpath"/>
+        </javac>
+		<javac srcdir="${parser.src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+			<classpath refid="master-classpath"/>
+		</javac>
+    </target>
+	
+</project>

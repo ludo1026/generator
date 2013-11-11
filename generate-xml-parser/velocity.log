@@ -1,0 +1,474 @@
+Sun Jun 16 02:57:39 CEST 2013  [debug] AvalonLogChute initialized using file 'velocity.log'
+Sun Jun 16 02:57:39 CEST 2013  [trace] *******************************************************************
+Sun Jun 16 02:57:39 CEST 2013  [debug] Starting Jakarta Velocity v1.5-SNAPSHOT (compiled: 2006-07-21 06:25:35)
+Sun Jun 16 02:57:39 CEST 2013  [trace] RuntimeInstance initializing.
+Sun Jun 16 02:57:39 CEST 2013  [debug] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+Sun Jun 16 02:57:39 CEST 2013  [debug] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+Sun Jun 16 02:57:39 CEST 2013  [debug] Using logger class org.apache.velocity.runtime.log.AvalonLogChute
+Sun Jun 16 02:57:39 CEST 2013  [debug] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [trace] FileResourceLoader : initialization starting.
+Sun Jun 16 02:57:39 CEST 2013   [info] FileResourceLoader : adding path '.'
+Sun Jun 16 02:57:39 CEST 2013  [trace] FileResourceLoader : initialization complete.
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Sun Jun 16 02:57:39 CEST 2013  [trace] Default ResourceManager initialization complete.
+Sun Jun 16 02:57:39 CEST 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Sun Jun 16 02:57:39 CEST 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Sun Jun 16 02:57:39 CEST 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Sun Jun 16 02:57:39 CEST 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Sun Jun 16 02:57:39 CEST 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Sun Jun 16 02:57:39 CEST 2013  [debug] Created '20' parsers.
+Sun Jun 16 02:57:39 CEST 2013  [trace] Velocimacro : initialization starting.
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : Default library not found.
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+Sun Jun 16 02:57:39 CEST 2013  [debug] Velocimacro : autoload off : VM system will not automatically reload global library macros
+Sun Jun 16 02:57:39 CEST 2013  [trace] Velocimacro : initialization complete.
+Sun Jun 16 02:57:39 CEST 2013  [trace] RuntimeInstance successfully initialized.
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/test_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/test_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/xmlmanager_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/xmlmanager_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callimport(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callimportint(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencoursvar(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencourspos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencoursdefpos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencoursgetpos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencoursget(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callencoursset(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callstartelt(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callstarteltfnc(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callendelt(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [info] Velocimacro : added #callendeltfnc(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callimport: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callimportint: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencoursvar: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencourspos: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencoursdefpos: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencoursgetpos: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencoursget: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callencoursset: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callstartelt: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callstarteltfnc: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callendelt: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callendeltfnc: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [error] VM #callendeltfnc: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/xmlhandler_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:39 CEST 2013  [error] VM error callendeltfnc. Null AST
+Sun Jun 16 02:57:39 CEST 2013  [error] VM error callendeltfnc. Null AST
+Sun Jun 16 02:57:39 CEST 2013  [error] VM error callendeltfnc. Null AST
+Sun Jun 16 02:57:39 CEST 2013  [error] VM error callendeltfnc. Null AST
+Sun Jun 16 02:57:39 CEST 2013  [error] VM error callendeltfnc. Null AST
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callimport : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callimport(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callimportint : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callimportint(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencoursvar : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencoursvar(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencourspos : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencourspos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencoursdefpos : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencoursdefpos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencoursgetpos : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencoursgetpos(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencoursget : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencoursget(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callencoursset : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callencoursset(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callstartelt : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callstartelt(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callstarteltfnc : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callstarteltfnc(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callendelt : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callendelt(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013   [warn] Velocimacro : VM addition rejected : callendeltfnc : inline not allowed to replace existing VM
+Sun Jun 16 02:57:39 CEST 2013   [warn] Failed to add macro: #callendeltfnc(  noeud ) : source = config/templates/xmlhandler_template.vlt
+Sun Jun 16 02:57:39 CEST 2013  [debug] ResourceManager : found config/templates/xmlhandler_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Velocimacro : added #calldefnoeud(  noeud ) : source = config/templates/xmlnoeud_template.vlt
+Sun Jun 16 02:57:40 CEST 2013  [error] VM #calldefnoeud: error : too few arguments to macro. Wanted 1 got 0
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/xmlnoeud_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [warn] Velocimacro : VM addition rejected : calldefnoeud : inline not allowed to replace existing VM
+Sun Jun 16 02:57:40 CEST 2013   [warn] Failed to add macro: #calldefnoeud(  noeud ) : source = config/templates/xmlnoeud_template.vlt
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/xmlnoeud_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/xmlreader_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/xmlreader_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:40 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/noeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013   [info] Null reference [template 'config/templates/abstractnoeudbean_template.vlt', line 5, column 51] : ${noeudParent.getNomInterface()} cannot be resolved.
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/abstractnoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Sun Jun 16 02:57:41 CEST 2013  [debug] ResourceManager : found config/templates/interfacenoeudbean_template.vlt with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader

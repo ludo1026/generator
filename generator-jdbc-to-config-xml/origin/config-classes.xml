@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gen xmlns="http://generator/gen/schemas">
+  <classes packageBase="com.bnpparibas.phenics">
+    <classe genId="utilisateur" nomJava="Utilisateur" packageJava="data" description="Utilisateur">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="bean" />
+      </stereotypesClasseRef>
+      <attributs>
+        <attribut genId="nom" nbMin="0" nbMax="1" nomJava="nom" type="String" description="nom" />
+        <attribut genId="prenom" nbMin="0" nbMax="1" nomJava="prenom" type="String" description="prenom" />
+      </attributs>
+      <methodes />
+      <associations>
+        <association classeGenId="profil" nomJava="profil" nbMin="0" nbMax="*" description="profils de l'utilisateur" />
+      </associations>
+    </classe>
+    <classe genId="profil" nomJava="Profil" packageJava="data" description="Profil d'un utilisateur">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="bean" />
+      </stereotypesClasseRef>
+      <attributs>
+        <attribut genId="nom" nbMin="0" nbMax="1" nomJava="nom" type="String" />
+        <attribut genId="roles" nbMin="0" nbMax="1" nomJava="prenom" type="String" />
+      </attributs>
+      <methodes />
+    </classe>
+    <classe genId="utilisateurService" nomJava="utilisateurService" packageJava="service" description="Service des utilisateurs">
+      <stereotypesClasseRef>
+        <stereotypeClasseRef stereotypeClasseNom="service" />
+      </stereotypesClasseRef>
+      <proprietesClasse />
+      <attributs />
+      <methodes />
+      <associations>
+        <association classeGenId="utilisateur" nomJava="utilisateurDao" nbMin="1" nbMax="1" />
+        <association classeGenId="profil" nomJava="profilDao" nbMin="1" nbMax="1" />
+      </associations>
+    </classe>
+  </classes>
+</gen>
+

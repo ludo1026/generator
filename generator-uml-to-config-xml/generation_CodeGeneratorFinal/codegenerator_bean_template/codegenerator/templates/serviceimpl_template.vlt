@@ -1,0 +1,22 @@
+#set( $classeGeneration = ${templateGenerationMap.getByClasseGenId("serviceimpl_template",${classe.getGenId()})} )
+/*
+ * Package  : ${classeGeneration.getNomPackage()}
+ * Source   : ${classeGeneration.getNomGenere()}.java
+ */
+package ${classeGeneration.getNomPackage()};
+
+#set( $service_TemplateGeneration = ${templateGenerationMap.getByClasseGenId("service_template",${classe.getGenId()})} )
+import ${service_TemplateGeneration.getNomPackage()}.${service_TemplateGeneration.getNomGenere()};
+
+/* @zone-debut:{import} */
+/* @zone-fin:{import} */
+
+/**
+ * <b>Description :</b>
+ */
+public class ${classeGeneration.getNomGenere()} implements ${service_TemplateGeneration.getNomGenere()} {
+
+/* @zone-debut:{${classeGeneration.getNomGenere()}} */
+/* @zone-fin:{${classeGeneration.getNomGenere()}} */
+
+}

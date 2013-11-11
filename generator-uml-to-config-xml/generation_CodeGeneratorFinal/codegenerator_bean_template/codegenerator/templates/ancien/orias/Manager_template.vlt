@@ -1,0 +1,240 @@
+/*
+ * Projet   : j2ee_XC_intranet
+ * Package  : ${classe.getJavaPackage()}.business
+ * Source   : ${classe.getJavaNomClasseAvecMajuscule()}Manager.java
+ * Creation : CHABOUD   Date : 14 dec. 2006
+ * Copyright (C) 2006   Apria RSA
+ *
+ * --------------- Derniere mise a jour ---------------------
+ * @author  : $author$
+ * @version : $Revision: 1.6 $, $Date: 2007/02/27 17:42:27 $
+ * --------------- Historique -------------------------------
+ * Auteur :                      Date : ../../....
+ * Motif  :
+ */
+package ${classe.getJavaPackage()}.business;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+
+import fr.apriarsa.xc.commun.business.Manager;
+import fr.apriarsa.xc.commun.exception.TechnicalException;
+import ${classe.getJavaPackage()}.business.bean.B${classe.getJavaNomClasseAvecMajuscule()}Bean;
+import ${classe.getJavaPackage()}.business.dao.D${classe.getJavaNomClasseAvecMajuscule()}Dao;
+import ${classe.getJavaPackage()}.exception.${classe.getJavaNomClasseAvecMajuscule()}NonTrouveException;
+import ${classe.getJavaPackage()}.struts.beans.BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean;
+import fr.sintia.framework.dao.PersistenceException;
+import fr.sintia.framework.dao.TransactionDao;
+
+/**
+ * <b>Description :</b>
+ * <description de la classe>
+ *
+ * @version : $Revision: 1.6 $, $Date: 2007/02/27 17:42:27 $
+ * @author  : $Author: udevlch $
+ * @since   : version 1.0.0
+ */
+public class ${classe.getJavaNomClasseAvecMajuscule()}Manager extends Manager {
+
+    private static final Logger log = Logger.getLogger(${classe.getJavaNomClasseAvecMajuscule()}Manager.class);
+    
+    
+    /**
+     * obtient les informations sur un intermediaire
+#set( $first = true)
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+     * @param ${attribut.getJavaNomAttributSansMajuscule()} ${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+     * @return Liste de resultats
+     * @throws TechnicalException
+     */
+    public static ${classe.getJavaNomClasseAvecMajuscule()} get${classe.getJavaNomClasseAvecMajuscule()}(
+#set( $first = true)
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            		#if($first)#set($first=false) #else,#end ${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()}
+#end
+#end
+
+    			) throws TechnicalException, ${classe.getJavaNomClasse()}NonTrouveException {
+        log.info("get${classe.getJavaNomClasseAvecMajuscule()}");
+        ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()} = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            ${classe.getJavaNomClasseSansMajuscule()} = get${classe.getJavaNomClasseAvecMajuscule()}(
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+            		${attribut.getJavaNomAttributSansMajuscule()},
+#end
+#end
+            		transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+        
+        return ${classe.getJavaNomClasseSansMajuscule()};
+    }
+    
+    public static void update${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) throws TechnicalException {
+        log.info("update${classe.getJavaNomClasseAvecMajuscule()}");
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            update${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+    }
+    
+    public static void insert${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) throws TechnicalException {
+        log.info("insert${classe.getJavaNomClasseAvecMajuscule()}");
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            insert${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+    }
+    
+    public static void suppr${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}) throws TechnicalException {
+        log.info("suppr${classe.getJavaNomClasseAvecMajuscule()}");
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            suppr${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+    }
+    
+    public static List getListe${classe.getJavaNomClasseAvecMajuscule()}() throws TechnicalException {
+        log.info("getListe${classe.getJavaNomClasseAvecMajuscule()}");
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            liste${classe.getJavaNomClasseAvecMajuscule()} = getListe${classe.getJavaNomClasseAvecMajuscule()}(transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+        
+        return liste${classe.getJavaNomClasseAvecMajuscule()};
+    }
+    
+    public static List recherche${classe.getJavaNomClasseAvecMajuscule()}(final BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteres) throws TechnicalException {
+        log.info("recherche${classe.getJavaNomClasseAvecMajuscule()}");
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+        
+        TransactionDao transaction = null;
+        try {
+            transaction = getTransactionDao();
+            transaction.begin();
+            liste${classe.getJavaNomClasseAvecMajuscule()} = recherche${classe.getJavaNomClasseAvecMajuscule()}(criteres, transaction);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            log.error("PersistenceException...");
+            rollback(transaction);
+            throw new TechnicalException(e.getMessage());
+        } finally {
+            endTransaction(transaction);
+        }
+        
+        return liste${classe.getJavaNomClasseAvecMajuscule()};
+    }
+
+    
+    private static D${classe.getJavaNomClasseAvecMajuscule()}Dao get${classe.getJavaNomClasseAvecMajuscule()}Dao() throws PersistenceException {
+        return (D${classe.getJavaNomClasseAvecMajuscule()}Dao) getDao(${classe.getJavaPackage()}.business.${classe.getJavaNomClasseAvecMajuscule()}.class);
+    }
+    
+    public static ${classe.getJavaNomClasseAvecMajuscule()} get${classe.getJavaNomClasseAvecMajuscule()}(
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+				${attribut.getJavaTypeAttribut()} ${attribut.getJavaNomAttributSansMajuscule()},
+#end
+#end
+				TransactionDao transaction) throws PersistenceException, ${classe.getJavaNomClasse()}NonTrouveException {
+        log.info("get${classe.getJavaNomClasseAvecMajuscule()}");
+        ${classe.getJavaNomClasseAvecMajuscule()} interm = new B${classe.getJavaNomClasseAvecMajuscule()}Bean();
+        interm = get${classe.getJavaNomClasseAvecMajuscule()}Dao().get${classe.getJavaNomClasseAvecMajuscule()}(
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+			${attribut.getJavaNomAttributSansMajuscule()},
+#end
+#end
+			transaction);
+        return interm;
+    }
+    
+    public static void update${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction) throws PersistenceException {
+        log.info("update${classe.getJavaNomClasseAvecMajuscule()}");
+        get${classe.getJavaNomClasseAvecMajuscule()}Dao().update${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public static void insert${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction) throws PersistenceException {
+        log.info("insert${classe.getJavaNomClasseAvecMajuscule()}");
+        get${classe.getJavaNomClasseAvecMajuscule()}Dao().insert${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public static void suppr${classe.getJavaNomClasseAvecMajuscule()}(final ${classe.getJavaNomClasseAvecMajuscule()} ${classe.getJavaNomClasseSansMajuscule()}, TransactionDao transaction) throws PersistenceException {
+        log.info("suppr${classe.getJavaNomClasseAvecMajuscule()}");
+        get${classe.getJavaNomClasseAvecMajuscule()}Dao().suppr${classe.getJavaNomClasseAvecMajuscule()}(${classe.getJavaNomClasseSansMajuscule()}, transaction);
+    }
+    
+    public static List getListe${classe.getJavaNomClasseAvecMajuscule()}(TransactionDao transaction) throws PersistenceException {
+        log.info("getListe${classe.getJavaNomClasseAvecMajuscule()}");
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+        liste${classe.getJavaNomClasseAvecMajuscule()} = get${classe.getJavaNomClasseAvecMajuscule()}Dao().getListe${classe.getJavaNomClasseAvecMajuscule()}(transaction);
+        return liste${classe.getJavaNomClasseAvecMajuscule()};
+    }
+    
+    public static List recherche${classe.getJavaNomClasseAvecMajuscule()}(final BCriteres${classe.getJavaNomClasseAvecMajuscule()}Bean criteres, TransactionDao transaction) throws PersistenceException {
+        log.info("recherche${classe.getJavaNomClasseAvecMajuscule()}");
+        List liste${classe.getJavaNomClasseAvecMajuscule()} = new ArrayList();
+        liste${classe.getJavaNomClasseAvecMajuscule()} = get${classe.getJavaNomClasseAvecMajuscule()}Dao().recherche${classe.getJavaNomClasseAvecMajuscule()}(criteres, transaction);
+        return liste${classe.getJavaNomClasseAvecMajuscule()};
+    }
+    
+}

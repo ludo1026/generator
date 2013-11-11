@@ -1,0 +1,58 @@
+<config>
+  <templates inDir="config/templates" outDir="generated" packageBase="org.ludo.codegenerator.xml.core">
+    <template nom="test_template" file="test_template.vlt"
+              outDir="test" outFile="TestXXX.java" 
+              package="test" />
+    <template nom="xmlbean_template" file="xmlbean_template.vlt"
+              outDir="core/bean/impl" outFile="XXXBean.java" 
+              package="core.bean.impl" />
+    <template nom="noeudbean_template" file="noeudbean_template.vlt"
+              outDir="core/bean/impl" outFile="XXXBean.java" 
+              package="core.bean.impl" />
+    <template nom="abstractnoeudbean_template" file="abstractnoeudbean_template.vlt"
+              outDir="core/bean/impl" outFile="AbstractXXXBean.java" 
+              package="core.bean.impl" />
+    <template nom="interfacenoeudbean_template" file="interfacenoeudbean_template.vlt"
+              outDir="core/bean" outFile="IXXX.java" 
+              package="core.bean" />
+    <template nom="xmlmanager_template" file="xmlmanager_template.vlt"
+              outDir="core/xmlreader" outFile="XXXXmlReaderManager.java" 
+              package="core.xmlreader" />
+    <template nom="xmlhandler_template" file="xmlhandler_template.vlt"
+              outDir="core/xmlreader" outFile="XXXXmlHandler.java" 
+              package="core.xmlreader" />
+    <template nom="xmlnoeud_template" file="xmlnoeud_template.vlt"
+              outDir="core/xmlreader" outFile="XXXXmlNoeud.java" 
+              package="core.xmlreader" />
+    <template nom="xmlreader_template" file="xmlreader_template.vlt"
+              outDir="core/xmlreader" outFile="XXXXmlReader.java" 
+              package="core.xmlreader" />
+
+  </templates>
+  <xmlmodeles path="config/xmlmodele">
+  <!-- 
+  	<xmlmodele nom="workflow" fichier="workflow.xml" />
+  	<xmlmodele nom="struts" fichier="struts-config.xml" />
+  	<xmlmodele nom="buffer" fichier="buffer.xml" />
+  	<xmlmodele nom="livraison" fichier="livraison.xml" />
+  	 -->
+  	<xmlmodele nom="classesgen" fichier="classesgen.xml" />
+  </xmlmodeles>
+  <generation>
+    <generer nomClasse="Xml">
+	    <pattern nomTemplate="test_template"/>
+	    <pattern nomTemplate="noeudbean_template"/>
+	    <pattern nomTemplate="abstractnoeudbean_template"/>
+	    <pattern nomTemplate="interfacenoeudbean_template"/>
+	    <pattern nomTemplate="xmlmanager_template"/>
+	    <pattern nomTemplate="xmlhandler_template"/>
+	    <pattern nomTemplate="xmlnoeud_template"/>
+	    <pattern nomTemplate="xmlreader_template"/>
+    </generer>
+    <generer nomClasse="Noeud">
+	    <pattern nomTemplate="noeudbean_template"/>
+	    <pattern nomTemplate="abstractnoeudbean_template"/>
+	    <pattern nomTemplate="interfacenoeudbean_template"/>
+    </generer>
+  </generation>
+</config>

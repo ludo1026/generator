@@ -1,0 +1,233 @@
+package ${package}.${xmlModele.getNom()}.${template.getNomSousPackage()};
+
+import ${package}.${xmlModele.getNom()}.core.bean.${noeud.getNomInterface()};
+#if( $noeud.getReferenceNoeud() )
+import ${package}.${xmlModele.getNom()}.core.bean.${noeudParent.getNomInterface()};
+#end
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+import ${package}.${xmlModele.getNom()}.core.bean.${noeudFils.getNomInterface()};
+#end
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ${noeud.getNomAbstract()} implements ${noeud.getNomInterface()} {
+	
+	/** Récupération de l'élément parent */
+#if( $noeud.getReferenceNoeud() )
+#set( $noeudParent = $noeud.getReferenceNoeud() )
+	
+	private ${noeudParent.getNomInterface()} reference${noeudParent.getNomAvecMajuscule()};
+	
+	public ${noeudParent.getNomInterface()} getReference${noeudParent.getNomAvecMajuscule()}() {
+		return reference${noeudParent.getNomAvecMajuscule()};
+	}
+	
+	public void setReference${noeudParent.getNomAvecMajuscule()}(${noeudParent.getNomInterface()} reference${noeudParent.getNomAvecMajuscule()}) {
+		this.reference${noeudParent.getNomAvecMajuscule()} = reference${noeudParent.getNomAvecMajuscule()};
+	}
+#end
+	
+	/** Récupération des éléments fils */
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#if( $noeudFils.getNombre() == 0 )
+	
+	private String ${noeudFils.getNomSansMajuscule()} = null;
+    
+    public String get${noeudFils.getNomAvecMajuscule()}() {
+    	return this.${noeudFils.getNomSansMajuscule()};
+    }
+    
+    public void set${noeudFils.getNomAvecMajuscule()}(String ${noeudFils.getNomSansMajuscule()}) {
+    	this.${noeudFils.getNomSansMajuscule()} = ${noeudFils.getNomSansMajuscule()};
+    }
+	
+#elseif( $noeudFils.getNombre() == 1 )
+
+    private ${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()} = new ${noeudFils.getNomBean()}();
+    
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}() {
+    	return this.${noeudFils.getNomSansMajuscule()};
+    }
+    
+    public void set${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()}) {
+    	${noeudFils.getNomSansMajuscule()}.setReference${noeud.getNomAvecMajuscule()}(this);
+    	this.${noeudFils.getNomSansMajuscule()} = ${noeudFils.getNomSansMajuscule()};
+    }
+	
+#else
+	
+    private List<${noeudFils.getNomInterface()}> ${noeudFils.getNomSansMajuscule()}s = new ArrayList<${noeudFils.getNomInterface()}>();
+	
+#foreach( $attributNoeudFils in $noeudFils.getListeAttribut() )
+    public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}For${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()}) {
+        for(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()} : ${noeudFils.getNomSansMajuscule()}s) {
+            if(${noeudFils.getNomSansMajuscule()}.get${attributNoeudFils.getNomAvecMajuscule()}().equalsIgnoreCase(${attributNoeudFils.getNomSansMajuscule()})) {
+                return ${noeudFils.getNomSansMajuscule()};
+            }
+        }
+        throw new IllegalStateException("La ${noeudFils.getNomSansMajuscule()} n'est pas définie : ${attributNoeudFils.getNomSansMajuscule()} de ${noeudFils.getNomSansMajuscule()} = "+${attributNoeudFils.getNomSansMajuscule()});
+    }
+#end
+    public void add${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()}) {
+    	${noeudFils.getNomSansMajuscule()}.setReference${noeud.getNomAvecMajuscule()}(this);
+        ${noeudFils.getNomSansMajuscule()}s.add(${noeudFils.getNomSansMajuscule()});
+    }
+    public List<${noeudFils.getNomInterface()}> get${noeudFils.getNomAvecMajuscule()}s() {
+        return ${noeudFils.getNomSansMajuscule()}s;
+    }
+    public void set${noeudFils.getNomAvecMajuscule()}s(List<${noeudFils.getNomInterface()}> ${noeudFils.getNomSansMajuscule()}s) {
+        this.${noeudFils.getNomSansMajuscule()}s = ${noeudFils.getNomSansMajuscule()}s;
+    }
+#end
+#end
+	
+	/** Récupération des attributs de l'objet de base sans transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+
+	public String get${attributNoeud.getNomAvecMajuscule()}AsString() {
+		return this.${attributNoeud.getNomSansMajuscule()};
+	}
+	public void set${attributNoeud.getNomAvecMajuscule()}AsString(String ${attributNoeud.getNomSansMajuscule()}AsString) {
+		this.${attributNoeud.getNomSansMajuscule()} = ${attributNoeud.getNomSansMajuscule()}AsString;
+	}
+#end
+	
+	/** Récupération des attributs de l'objet de base avec transtypage */
+	
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+	private String ${attributNoeud.getNomSansMajuscule()} = null;
+#end
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+
+	public String get${attributNoeud.getNomAvecMajuscule()}() {
+		return this.${attributNoeud.getNomSansMajuscule()};
+	}
+	public void set${attributNoeud.getNomAvecMajuscule()}(String ${attributNoeud.getNomSansMajuscule()}) {
+		this.${attributNoeud.getNomSansMajuscule()} = ${attributNoeud.getNomSansMajuscule()};
+	}
+#end
+
+#if($noeud.getListeNoeud().size() == 1 && $noeud.getListeNoeud().get(0).getNombre() != 0 && $noeud.getListeNoeud().get(0).getNombre() != 1)
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+	@Override
+	public int size() {
+		return this.${noeudFils.getNomSansMajuscule()}s.size();
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return this.${noeudFils.getNomSansMajuscule()}s.isEmpty();
+	}
+
+	@Override
+	public boolean contains(final Object o) {
+		return this.${noeudFils.getNomSansMajuscule()}s.contains(o);
+	}
+
+	@Override
+	public Iterator<${noeudFils.getNomAvecMajuscule()}> iterator() {
+		return this.${noeudFils.getNomSansMajuscule()}s.iterator();
+	}
+
+	@Override
+	public Object[] toArray() {
+		return this.${noeudFils.getNomSansMajuscule()}s.toArray();
+	}
+
+	@Override
+	public <T> T[] toArray(final T[] a) {
+		return this.${noeudFils.getNomSansMajuscule()}s.toArray(a);
+	}
+
+	@Override
+	public boolean add(final ${noeudFils.getNomAvecMajuscule()} e) {
+		return this.${noeudFils.getNomSansMajuscule()}s.add(e);
+	}
+
+	@Override
+	public boolean remove(final Object o) {
+		return this.${noeudFils.getNomSansMajuscule()}s.remove(o);
+	}
+
+	@Override
+	public boolean containsAll(final Collection<?> c) {
+		return this.${noeudFils.getNomSansMajuscule()}s.containsAll(c);
+	}
+
+	@Override
+	public boolean addAll(final Collection<? extends ${noeudFils.getNomAvecMajuscule()}> c) {
+		return this.${noeudFils.getNomSansMajuscule()}s.addAll(c);
+	}
+
+	@Override
+	public boolean addAll(final int index, final Collection<? extends ${noeudFils.getNomAvecMajuscule()}> c) {
+		return this.${noeudFils.getNomSansMajuscule()}s.addAll(index, c);
+	}
+
+	@Override
+	public boolean removeAll(final Collection<?> c) {
+		return this.${noeudFils.getNomSansMajuscule()}s.removeAll(c);
+	}
+
+	@Override
+	public boolean retainAll(final Collection<?> c) {
+		return this.${noeudFils.getNomSansMajuscule()}s.retainAll(c);
+	}
+
+	@Override
+	public void clear() {
+		this.${noeudFils.getNomSansMajuscule()}s.clear();
+	}
+
+	@Override
+	public ${noeudFils.getNomAvecMajuscule()} get(final int index) {
+		return this.${noeudFils.getNomSansMajuscule()}s.get(index);
+	}
+
+	@Override
+	public ${noeudFils.getNomAvecMajuscule()} set(final int index, final ${noeudFils.getNomAvecMajuscule()} element) {
+		return this.${noeudFils.getNomSansMajuscule()}s.set(index, element);
+	}
+
+	@Override
+	public void add(final int index, final ${noeudFils.getNomAvecMajuscule()} element) {
+		this.${noeudFils.getNomSansMajuscule()}s.add(index, element);
+	}
+
+	@Override
+	public ${noeudFils.getNomAvecMajuscule()} remove(final int index) {
+		return this.${noeudFils.getNomSansMajuscule()}s.remove(index);
+	}
+
+	@Override
+	public int indexOf(final Object o) {
+		return this.${noeudFils.getNomSansMajuscule()}s.indexOf(o);
+	}
+
+	@Override
+	public int lastIndexOf(final Object o) {
+		return this.${noeudFils.getNomSansMajuscule()}s.lastIndexOf(o);
+	}
+
+	@Override
+	public ListIterator<${noeudFils.getNomAvecMajuscule()}> listIterator() {
+		return this.${noeudFils.getNomSansMajuscule()}s.listIterator();
+	}
+
+	@Override
+	public ListIterator<${noeudFils.getNomAvecMajuscule()}> listIterator(final int index) {
+		return this.${noeudFils.getNomSansMajuscule()}s.listIterator(index);
+	}
+
+	@Override
+	public List<${noeudFils.getNomAvecMajuscule()}> subList(final int fromIndex, final int toIndex) {
+		return this.${noeudFils.getNomSansMajuscule()}s.subList(fromIndex, toIndex);
+	}
+#end
+#end
+}

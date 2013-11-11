@@ -1,0 +1,188 @@
+package ${package}.${xmlModele.getNom()}.core.xmlreader;
+
+#macro( callimport $noeud )
+import ${package}.${xmlModele.getNom()}.core.bean.impl.${noeud.getNomBean()};
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callimport( $noeudFils )
+#end
+#end
+#callimport( $noeud )
+
+#macro( callimportint $noeud )
+import ${package}.${xmlModele.getNom()}.core.bean.${noeud.getNomInterface()};
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callimportint( $noeudFils )
+#end
+#end
+#callimportint( $noeud )
+
+import org.apache.log4j.Logger;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+import org.ludo.utils.LoggerManager;
+
+#set( $nomNoeudPrincipal = $noeud.getNomAvecMajuscule() )
+public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
+    
+    private static Logger log = LoggerManager.getLogger(${noeud.getNomAvecMajuscule()}XmlHandler.class);
+    
+    private EnCours enCours = new EnCours();
+    
+    private class EnCours {
+#macro( callencoursvar $noeud )
+        private ${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()} = null;
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencoursvar( $noeudFils )
+#end
+#end
+#callencoursvar( $noeud )
+        
+        public int posCompteur = 0;
+#macro( callencourspos $noeud )
+        public int pos${noeud.getNomAvecMajuscule()} = 0;
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencourspos( $noeudFils )
+#end
+#end
+#callencourspos( $noeud )
+
+#macro( callencoursdefpos $noeud )
+        public void definePos${noeud.getNomAvecMajuscule()}() { pos${noeud.getNomAvecMajuscule()} = ++ posCompteur; }
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencoursdefpos( $noeudFils )
+#end
+#end
+#callencoursdefpos( $noeud )
+
+#macro( callencoursgetpos $noeud )
+        public int getPos${noeud.getNomAvecMajuscule()}() { return pos${noeud.getNomAvecMajuscule()}; }
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencoursgetpos( $noeudFils )
+#end
+#end
+#callencoursgetpos( $noeud )
+        
+#macro( callencoursget $noeud )
+		public final ${noeud.getNomInterface()} get${noeud.getNomAvecMajuscule()}() { return ${noeud.getNomSansMajuscule()}; }
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencoursget( $noeudFils )
+#end
+#end
+#callencoursget( $noeud )
+		
+#macro( callencoursset $noeud )
+		public final void set${noeud.getNomAvecMajuscule()}(${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()}) {
+			this.definePos${noeud.getNomAvecMajuscule()}();
+			this.${noeud.getNomSansMajuscule()} = ${noeud.getNomSansMajuscule()};
+		}
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callencoursset( $noeudFils )
+#end
+#end
+#callencoursset( $noeud )
+    };
+    
+    public ${noeud.getNomInterface()} get${noeud.getNomAvecMajuscule()}() {
+        return enCours.get${noeud.getNomAvecMajuscule()}();
+    }
+    
+    /**
+     * Receive notification of the start of an element.
+     * @param namespaceURI - The Namespace URI, or the empty string if the element has no Namespace URI or if Namespace processing is not being performed.
+     * @param localName - The local name (without prefix), or the empty string if Namespace processing is not being performed.
+     * @param qName - The qualified name (with prefix), or the empty string if qualified names are not available.
+     * @param atts - The attributes attached to the element. If there are no attributes, it shall be an empty Attributes object.
+     * @throws SAXException - Any SAX exception, possibly wrapping another exception.
+     */
+    public void startElement(String namespaceURI, String localName, String qName, Attributes atts)
+    throws SAXException {
+#macro( callstartelt $noeud )
+        if (${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}.equalsIgnoreCase(localName)){
+            startElement_${noeud.getNomAvecMajuscule()}(namespaceURI, localName, qName, atts);
+        }
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callstartelt( $noeudFils )
+#end
+#end
+#callstartelt( $noeud )
+    }
+
+#macro( callstarteltfnc $noeud )
+    public void startElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName, Attributes atts)
+    throws SAXException {
+    	${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()} = new ${noeud.getNomBean()}();
+        for(int i=0; i<atts.getLength(); i++) {
+            String attName = atts.getQName(i);
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+            if(${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}_A_${attributNoeud.getNomAvecMajuscule()}.equalsIgnoreCase(attName)) {
+            	${noeud.getNomSansMajuscule()}.set${attributNoeud.getNomAvecMajuscule()}AsString(atts.getValue(i));
+            }
+#end
+        }
+        enCours.set${noeud.getNomAvecMajuscule()}( ${noeud.getNomSansMajuscule()} );
+    }
+    
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callstarteltfnc( $noeudFils )
+#end
+#end
+#callstarteltfnc( $noeud )
+    
+    /**
+     * Receive notification of character data inside an element.
+     * @param ch - The characters.
+     * @param start - The start position in the character array.
+     * @param length - The number of characters to use from the character array.
+     * @throws SAXException - Any SAX exception, possibly wrapping another exception.
+     */
+    public void characters(char[] ch, int start, int length)
+    throws SAXException {
+        //String strValue = new String(ch, start, length);
+    }
+    
+    /**
+     * Receive notification of the end of an element.
+     * @param namespaceURI - The Namespace URI, or the empty string if the element has no Namespace URI or if Namespace processing is not being performed.
+     * @param localName - The local name (without prefix), or the empty string if Namespace processing is not being performed.
+     * @param qName - The qualified name (with prefix), or the empty string if qualified names are not available.
+     * @throws SAXException - Any SAX exception, possibly wrapping another exception.
+     */
+    public void endElement(String namespaceURI, String localName, String qName)
+    throws SAXException {
+#macro( callendelt $noeud )
+        if (${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}.equalsIgnoreCase(localName)){
+            endElement_${noeud.getNomAvecMajuscule()}(namespaceURI, localName, qName);
+        }
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callendelt( $noeudFils )
+#end
+#end
+#callendelt( $noeud )
+    }
+
+    public void endElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName)
+    throws SAXException {
+    	enCours.set${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
+    }
+    
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callendeltfnc( $noeudFils )
+#end
+#macro( callendeltfnc $noeud )
+    public void endElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName)
+    throws SAXException {
+#if( $noeud.getNombre() == 1 )
+    	enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}().set${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
+#end
+#if( $noeud.getNombre() != 1 )
+    	enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}().add${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
+#end
+    }
+    
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#callendeltfnc( $noeudFils )
+#end
+#end
+	    
+}

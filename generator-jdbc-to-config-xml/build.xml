@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     ${date} ${time}                                                        
+
+     ${project}    
+     ${description}
+                   
+     ${user}                                                                
+     ====================================================================== -->
+<project name="GeneratorJDBC" basedir="." default="generate">
+    <description>
+            Génération de code
+    </description>
+	
+    <property name="src.dir" value="src"/>
+    <property name="lib.dir" value="../lib"/>
+    <property name="build.dir" value="build"/>
+    <property name="parser.src.dir" value="../generator-xml-parser/src/main/java"/>
+    <property name="parser.gen.dir" value="../generator-xml-parser/src/main/generated"/>
+    <property name="common.src.dir" value="../generator-common/src/main/java"/>
+    <property name="resources.dir" value="src/main/resources"/>
+
+    <path id="src.path">
+      <fileset dir="${src.dir}"/>
+      <fileset dir="${parser.src.dir}"/>
+      <fileset dir="${parser.gen.dir}"/>
+    </path>
+    
+    <path id="master-classpath">
+      <fileset dir="${lib.dir}">
+        <include name="*.jar"/>
+      </fileset>
+      <pathelement path="${build.dir}"/>
+    </path>
+  
+    <!-- ================================= 
+          Génération des beans de parsing du fichier config.xml
+          dans le package de codegenerator              
+         ================================= -->
+	<property name="generated.dir" value="generated"/>
+	<property name="generator.main-class" value="org.ludo.jdbc.Main"/>
+	
+	<!-- Nettoyer -->
+	<target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${generated.dir}"/>
+    </target>
+
+    <!-- Compiler -->
+    <target name="compile-all">
+		<mkdir dir="${build.dir}"/>
+        <copy todir="${build.dir}">
+            <fileset dir="${resources.dir}" />
+        </copy>
+        <javac srcdir="${common.src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+          <classpath refid="master-classpath"/>
+        </javac>
+        <javac srcdir="${parser.gen.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+          <classpath refid="master-classpath"/>
+        </javac>
+        <javac srcdir="${parser.src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+          <classpath refid="master-classpath"/>
+        </javac>
+		<javac srcdir="${src.dir}" destdir="${build.dir}" debug="true" failonerror="true" optimize="on">
+			<classpath refid="master-classpath"/>
+		</javac>
+    </target>
+	
+    <!-- Générer les fichiers -->
+    <target name="generate" depends="clean, compile-all">
+        <mkdir dir="${generated.dir}"/>
+		<java dir="${build.dir}" classname="${generator.main-class}" fork="true">
+			<classpath refid="master-classpath"/>
+		</java>
+    </target>
+	
+</project>

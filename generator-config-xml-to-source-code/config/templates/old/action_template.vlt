@@ -1,0 +1,179 @@
+#set( $gen = ${templateGenerationMap.getByClasseGenId("action_template",${classe.getGenId()})} )
+/*
+ * Package  : ${gen.getNomPackage()}
+ * Source   : ${gen.getNomGenere()}.java
+ */
+package ${gen.getNomPackage()};
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+
+#set( $listImport = false )
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("service_template",${association.getClasseGenId()})} )
+import ${templateGeneration.getNomPackage()}.${templateGeneration.getNomGenere()};
+#end
+#end
+
+/* @zoneDebut={import} */
+/* @zoneFin={import} */
+
+/**
+ * <b>Description :</b>
+ */
+public class ${gen.getNomGenere()}
+// @zoneDebut={${gen.getNomGenere()}.extends}
+// @zoneFin={${gen.getNomGenere()}.extends}
+{
+    /**
+     * Logger par dÃ©faut.
+     */
+    private static final Logger LOG = Logger.getLogger(${gen.getNomGenere()}.class);
+	
+    /**
+     *
+     * Classe contenant la liste des noms des actions de cette classe action.
+     *
+     * @author Ludovic Chaboud
+     * @date 23 juil. 08
+     * @version $Revision$ $Date$
+     *
+     */
+    public static final class ActionName
+    {
+        /** contructeur privï¿½. */
+        private ActionName()
+        { /** contructeur privï¿½. */ }
+
+#if( $classe.getGenMethodes() )
+#if( $GU.getListeGenMethodeByGenStereotype($classe.getGenMethodes(), "action") )
+#foreach( $methode in $GU.getListeGenMethodeByGenStereotype($classe.getGenMethodes(), "action") )
+        /** ${SU.uncapitalize(${methode.getNomJava()})}. */
+        public static final String ACTION_${SU.constante(${methode.getNomJava()})} =
+                                         "${SU.uncapitalize(${methode.getNomJava()})}";
+        
+#end
+#end
+#end
+	}
+	
+	/**
+     *
+     * Noms des forwards de l'action.
+     *
+     */
+    private static final class ForwardName
+    {
+        /** contructeur privï¿½. */
+        private ForwardName()
+        { /** constructeur privï¿½. */ }
+
+#if( $classe.getGenAttributs() )
+#if( $GU.getListeGenAttributByGenStereotype($classe.getGenAttributs(), "forward") )
+#foreach( $attribut in $GU.getListeGenAttributByGenStereotype($classe.getGenAttributs(), "forward") )
+        /** ${SU.uncapitalize(${attribut.getNomJava()})}. */
+        public static final String FORWARD_${SU.constante(${attribut.getNomJava()})} =
+                                         "${SU.uncapitalize(${attribut.getNomJava()})}";
+		
+#end
+#end
+#end
+	}
+	
+#if( $classe.getGenAssociations() )
+#if( $GU.getListeGenClasseByGenStereotype($classe.getGenAssociations(), "service") )
+#foreach( $classeAssocie in $GU.getListeGenClasseByGenStereotype($classe.getGenAssociations(), "service") )
+#set( $genClasseAssocie = ${templateGenerationMap.getByClasseGenId("service_template",${classeAssocie.getGenId()})} )
+	// ${genClasseAssocie.getNomGenere()} 
+#end
+#end
+#end
+
+	/*******************************************************************
+	 * Injections de dÃ©pendances.
+	 */
+	
+#if( $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenAssociations().getListeGenAssociation() )
+#set( $templateGeneration = ${templateGenerationMap.getByClasseGenId("service_template",${association.getClasseGenId()})} )
+#if( "1" == ${association.getNombreMaximum()} )
+    /**
+     * Instance de : <code>${SU.uncapitalize(${association.getNomJavaChamp()})}</code>.
+     */
+    private ${templateGeneration.getNomGenere()} ${SU.uncapitalize(${association.getNomJavaChamp()})};
+    
+    /**
+     * Injection de la dÃ©pendance vers : <code>${SU.uncapitalize(${association.getNomJavaChamp()})}</code>.
+     */
+    public void set${SU.capitalize(${association.getNomJavaChamp()})}(
+            final ${SU.capitalize(${templateGeneration.getNomGenere()})} ${SU.uncapitalize(${association.getNomJavaChamp()})})
+    {
+        this.${SU.uncapitalize(${association.getNomJavaChamp()})} = ${SU.uncapitalize(${association.getNomJavaChamp()})};
+    }
+#end
+#if( "1" != ${association.getNombreMaximum()} )
+    public List get${SU.capitalize(${association.getNomJavaChamp()})}();
+    
+    public void add${SU.capitalize(${association.getNomJavaChamp()})}(${SU.capitalize(${templateGeneration.getNomGenere()})} ${SU.uncapitalize(${association.getNomJavaChamp()})});
+#end
+
+#end
+#end
+	
+	/*******************************************************************
+	 * Methodes d'action
+	 */
+	
+#if( $classe.getGenMethodes() )
+#if( $GU.getListeGenMethodeByGenStereotype($classe.getGenMethodes(), "action") )
+#foreach( $methode in $GU.getListeGenMethodeByGenStereotype($classe.getGenMethodes(), "action") )
+	    
+    /**
+     * @zoneDebut={${gen.getNomGenere()}-${methode.getNomJava()}-entete}
+     * @zoneFin={${gen.getNomGenere()}-${methode.getNomJava()}-entete}
+     * 
+     * @param mapping Mapping de redirection vers la couche - Vue -
+     * @param form Formulaire de donnÃ©es
+     * @param request Requete http d'entrÃ©e
+     * @param response Reponse http de sortie
+     * @return forward Redirection vers la page suivante
+     * @throws Exception
+     */
+	private ActionForward ${SU.uncapitalize(${methode.getNomJava()})} (
+                                ActionMapping mapping, 
+                                ActionForm form,
+                                HttpServletRequest request, 
+                                HttpServletResponse response)
+    throws Exception
+    {
+    	/** Contient la redirection vers la page suivante */
+        ActionForward forward = null;
+    	
+        // @zoneDebut={${gen.getNomGenere()}.${methode.getNomJava()}.methode}
+        // @zoneFin={${gen.getNomGenere()}.${methode.getNomJava()}.methode}
+    	
+        /** Affichage de la page d'accueil */
+        
+        AssertHelper.assertNotNull(forward, "forward vers la page d'accueil");
+        return forward;
+    }
+#end
+#end
+#end
+	
+	/*******************************************************************
+	 * Mï¿½thodes utilitaires
+	 */
+	
+	/* @zoneDebut={${gen.getNomGenere()}} */
+	/* @zoneFin={${gen.getNomGenere()}} */
+
+}

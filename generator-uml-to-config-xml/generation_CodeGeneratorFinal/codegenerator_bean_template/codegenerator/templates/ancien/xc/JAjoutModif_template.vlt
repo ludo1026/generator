@@ -1,0 +1,77 @@
+<%@ taglib uri="/WEB-INF/lib/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/lib/sintia-html.tld" prefix="sintia-html"%>
+<%@ taglib uri="/WEB-INF/lib/struts-tiles.tld" prefix="tiles"%>
+<%@ taglib uri="/WEB-INF/lib/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="/WEB-INF/lib/displaytag.tld" prefix="display"%>
+
+<div class="titreEntetePS">
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="1">
+  <bean:message key="securite.${classe.getJavaNomClasseSansMajuscule()}.ajout.titre"/>
+</logic:equal>
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="2">
+  <bean:message key="securite.${classe.getJavaNomClasseSansMajuscule()}.modif.titre"/>
+</logic:equal>
+</div>
+
+<div id="erreur" class="cadre_erreur">
+	<!-- html:errors /> -->
+	<sintia-html:errors/>
+</div>
+
+<html:form action="/${classe.getJavaNomClasseSansMajuscule()}">
+
+<html:hidden property="method" value="init"/>
+
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="2">
+#foreach( $attribut in $classe.getListeAttributs() )
+#if( $attribut.estClePrimaire() )
+<html:hidden name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="${attribut.getJavaNomAttributSansMajuscule()}"/>
+#end
+#end
+</logic:equal>
+
+<table border="0" cellpadding="2" cellspacing="0" width="750">
+<tr>
+<td colspan="2"><img src="/XC/images/tableau_haut-3.gif" width="100%" /></td>
+</tr>
+
+#foreach( $attribut in $classe.getListeAttributs() )
+<tr class="LigneTableau1B">
+<td align="right">
+     <bean:message key="securite.${classe.getJavaNomClasseSansMajuscule()}.${attribut.getJavaNomAttributSansMajuscule()}"/>
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="1">
+</td><td> <html:text property="${attribut.getJavaNomAttributSansMajuscule()}" size="38"/></td>
+</logic:equal>
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="2">
+ : </td><td> <bean:write name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="${attribut.getJavaNomAttributSansMajuscule()}"/></td>
+</logic:equal>
+</tr>
+#end
+
+<tr class="LigneTableau1B">
+<td colspan="2" align="right">
+
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="1">
+  <a href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'ajoutAnnul');"><img src="/XC/images/pictoAnnuler.gif" alt="Annuler"/></a>
+  &nbsp; &nbsp;
+  <a href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'ajoutValid');"><img src="/XC/images/pictoEnregistrer.gif" alt="Enregistrer"/></a>
+  &nbsp; 
+</logic:equal>
+
+<logic:equal name="f${classe.getJavaNomClasseAvecMajuscule()}Form" property="typeAction" value="2">
+  <a href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'modifAnnul');"><img src="/XC/images/pictoAnnuler.gif" alt="Annuler"/></a>
+  &nbsp; &nbsp;
+  <a href="javascript:submitForm(document.f${classe.getJavaNomClasseAvecMajuscule()}Form,'modifValid');"><img src="/XC/images/pictoEnregistrer.gif" alt="Enregistrer"/></a>
+  &nbsp; 
+</logic:equal>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2"><img src="/XC/images/tableau_bas-3.gif" width="100%" /></td>
+</tr>
+</table>
+
+</html:form>

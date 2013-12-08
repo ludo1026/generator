@@ -15,7 +15,7 @@
     <property name="src.dir" value="src/main/java"/>
     <property name="lib.dir" value="../lib"/>
     <property name="build.dir" value="build"/>
-    <property name="generated.dir" value="../generator-xml-parser/generated"/>
+    <property name="generated.dir" value="../generator-xml-parser/src/main/generated"/>
     
     <path id="master-classpath">
       <fileset dir="${lib.dir}">

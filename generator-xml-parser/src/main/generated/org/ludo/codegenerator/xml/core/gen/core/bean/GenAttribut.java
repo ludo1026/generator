@@ -59,8 +59,8 @@ public interface GenAttribut
 	public String getEstCleIncrementeeAsString();
 	public void setEstCleIncrementeeAsString(String estCleIncrementeeAsString);
 	
-	public String getEstCleEtrangereAsString();
-	public void setEstCleEtrangereAsString(String estCleEtrangereAsString);
+	public String getAssociationIdAsString();
+	public void setAssociationIdAsString(String associationIdAsString);
 	
 	public String getDescriptionAsString();
 	public void setDescriptionAsString(String descriptionAsString);
@@ -101,8 +101,8 @@ public interface GenAttribut
 	public String getEstCleIncrementee();
 	public void setEstCleIncrementee(String estCleIncrementee);
 
-	public String getEstCleEtrangere();
-	public void setEstCleEtrangere(String estCleEtrangere);
+	public String getAssociationId();
+	public void setAssociationId(String associationId);
 
 	public String getDescription();
 	public void setDescription(String description);

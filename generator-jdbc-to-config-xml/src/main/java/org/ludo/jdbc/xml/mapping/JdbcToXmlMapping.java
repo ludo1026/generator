@@ -53,6 +53,18 @@ public class JdbcToXmlMapping {
 					final GenAssociationAttribut genAssociationAttribut = new GenAssociationAttributBean();
 					genAssociationAttribut.setGenId(this.nomSqlToJava(colonne.getNom()));
 					genAssociation.getGenAssociationAttributs().add(genAssociationAttribut);
+					// Attribut associationId de l'attribut pour pointer vers l'association
+					GenAttribut genAttribut = genClasseOrigine.getGenAttributs().getGenAttributForGenId(this.nomSqlToJava(colonne.getNom()));
+					if(genAttribut != null) {
+						String associationId = genAttribut.getAssociationId();
+						if(associationId != null) {
+							associationId += ",";
+						} else {
+							associationId = "";
+						}
+						associationId += genAssociation.getGenId();
+						genAttribut.setAssociationId(associationId);
+					}
 				}
 
 				genClasseOrigine.getGenAssociations().add(genAssociation);
@@ -93,19 +105,6 @@ public class JdbcToXmlMapping {
 				attribut.setEstClePrimaire("true");
 			} else {
 				attribut.setEstClePrimaire("false");
-			}
-			boolean isCleEtrangere = false;
-			for (final CleEtrangere cleEtrangere : table.getCleEtrangeres()) {
-				for (final Colonne colonne2 : cleEtrangere.getColonnes()) {
-					if(colonne2.getNom().equals(colonne.getNom())) {
-						isCleEtrangere = true;
-					}
-				}
-			}
-			if(isCleEtrangere) {
-				attribut.setEstCleEtrangere("true");
-			} else {
-				attribut.setEstCleEtrangere("false");
 			}
 			classe.getGenAttributs().add(attribut);
 		}

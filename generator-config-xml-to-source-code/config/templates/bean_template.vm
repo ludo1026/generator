@@ -24,8 +24,7 @@ import $!{bean2.getPackage()}.$!{bean2.getNom()};
 public class $!{bean.getNom()} implements Serializable 
 {
 #foreach( $attribut in $classe.getGenAttributs() )
-#if( "true" == $attribut.getEstCleEtrangere() )
-#else
+#if( ! $attribut.getAssociationId() )
 #if( $attribut.getDescription() )
 	/** $!{SU.capitalize($!{attribut.getDescription()})} */
 #end
@@ -46,8 +45,7 @@ public class $!{bean.getNom()} implements Serializable
 #end
 
 #foreach( $attribut in $classe.getGenAttributs() )
-#if( "true" == $attribut.getEstCleEtrangere() )
-#else
+#if( ! $attribut.getAssociationId() )
     public $!{attribut.getType()} get$!{SU.capitalize($!{attribut.getNomJava()})}() {
         return $!{SU.uncapitalize($!{attribut.getNomJava()})};
     }

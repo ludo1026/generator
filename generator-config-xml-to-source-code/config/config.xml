@@ -10,7 +10,7 @@
     <genererParStereotypes>
       <genererParStereotype>
         <stereotypeRefPourGenererParStereotypes>
-          <stereotypeRefPourGenererParStereotype stereotypeNom="workflow" />
+          <stereotypeRefPourGenererParStereotype stereotypeNom="bean" />
           <templateGroupeRefPourGenererParStereotypes>
             <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
           </templateGroupeRefPourGenererParStereotypes>
@@ -27,8 +27,8 @@
   </templateGroupes>
 
   <templates inDir="config/templates" outDir="" packageJavaBase="com.bnpparibas.phenics">
-    <template nom="bean_template" file="bean_template.vlt" packageJava="PPP.bean.impl" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
-    <template nom="attributEnum" file="attributEnum.vlt" packageJava="PPP.common.workflow.util" outDir="generated" outFile="AttributXXXEnum.java" nomElementGenere="AttributXXXEnum" />
+    <template nom="bean_template" file="bean_template.vm" packageJava="PPP.bean.impl" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="attributEnum" file="attributEnum.vm" packageJava="PPP.common.workflow.util" outDir="generated" outFile="AttributXXXEnum.java" nomElementGenere="AttributXXXEnum" />
   </templates>
 
 </gen>

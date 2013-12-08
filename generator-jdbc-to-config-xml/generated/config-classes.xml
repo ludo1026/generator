@@ -6,8 +6,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="boissonsIdBoisson" nomJava="boissonsIdBoisson" type="Integer" nomSQL="Boissons_ID_BOISSON" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="barIdBar" nomJava="barIdBar" type="Integer" nomSQL="Bar_ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
+        <attribut genId="boissonsIdBoisson" nomJava="boissonsIdBoisson" type="Integer" nomSQL="Boissons_ID_BOISSON" typeSQL="INT" size="10" estClePrimaire="true" associationId="boisson" nbMin="1" nbMax="1" />
+        <attribut genId="barIdBar" nomJava="barIdBar" type="Integer" nomSQL="Bar_ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" associationId="bar" nbMin="1" nbMax="1" />
       </attributs>
       <associations>
         <association genId="boisson" nomJava="boisson" classeGenId="boisson" nbMin="1" nbMax="1">
@@ -27,8 +27,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="nomStatut" nomJava="nomStatut" type="String" nomSQL="NOM_STATUT" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idStatut" nomJava="idStatut" type="Integer" nomSQL="ID_STATUT" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="nomStatut" nomJava="nomStatut" type="String" nomSQL="NOM_STATUT" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="idStatut" nomJava="idStatut" type="Integer" nomSQL="ID_STATUT" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="adresse" nomJava="adresse" nomTable="adresse">
@@ -36,13 +36,13 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="complement" nomJava="complement" type="String" nomSQL="COMPLEMENT" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="ville" nomJava="ville" type="String" nomSQL="VILLE" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idAdresse" nomJava="idAdresse" type="Integer" nomSQL="ID_ADRESSE" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="cp" nomJava="cp" type="Integer" nomSQL="CP" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="nomRue" nomJava="nomRue" type="String" nomSQL="NOM_RUE" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="contact" nomJava="contact" type="String" nomSQL="CONTACT" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="numRue" nomJava="numRue" type="Integer" nomSQL="NUM_RUE" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="complement" nomJava="complement" type="String" nomSQL="COMPLEMENT" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="ville" nomJava="ville" type="String" nomSQL="VILLE" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="idAdresse" nomJava="idAdresse" type="Integer" nomSQL="ID_ADRESSE" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
+        <attribut genId="cp" nomJava="cp" type="Integer" nomSQL="CP" typeSQL="INT" size="10" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="nomRue" nomJava="nomRue" type="String" nomSQL="NOM_RUE" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="contact" nomJava="contact" type="String" nomSQL="CONTACT" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="numRue" nomJava="numRue" type="Integer" nomSQL="NUM_RUE" typeSQL="INT" size="10" estClePrimaire="false" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="categorie" nomJava="categorie" nomTable="categorie">
@@ -50,8 +50,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="idCategorie" nomJava="idCategorie" type="Integer" nomSQL="ID_CATEGORIE" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="nomCategorie" nomJava="nomCategorie" type="String" nomSQL="NOM_CATEGORIE" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="idCategorie" nomJava="idCategorie" type="Integer" nomSQL="ID_CATEGORIE" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
+        <attribut genId="nomCategorie" nomJava="nomCategorie" type="String" nomSQL="NOM_CATEGORIE" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="boisson" nomJava="boisson" nomTable="boisson">
@@ -59,9 +59,9 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="nomBoisson" nomJava="nomBoisson" type="String" nomSQL="NOM_BOISSON" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="prixBoisson" nomJava="prixBoisson" nomSQL="PRIX_BOISSON" typeSQL="DECIMAL" size="10" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idBoisson" nomJava="idBoisson" type="Integer" nomSQL="ID_BOISSON" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="nomBoisson" nomJava="nomBoisson" type="String" nomSQL="NOM_BOISSON" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="prixBoisson" nomJava="prixBoisson" nomSQL="PRIX_BOISSON" typeSQL="DECIMAL" size="10" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="idBoisson" nomJava="idBoisson" type="Integer" nomSQL="ID_BOISSON" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="lienJourBar" nomJava="lienJourBar" nomTable="lien_jour_bar">
@@ -69,8 +69,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="barIdBar" nomJava="barIdBar" type="Integer" nomSQL="BAR_ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="jourIdJour" nomJava="jourIdJour" type="Integer" nomSQL="JOUR_ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
+        <attribut genId="barIdBar" nomJava="barIdBar" type="Integer" nomSQL="BAR_ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" associationId="bar" nbMin="1" nbMax="1" />
+        <attribut genId="jourIdJour" nomJava="jourIdJour" type="Integer" nomSQL="JOUR_ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" associationId="jour" nbMin="1" nbMax="1" />
       </attributs>
       <associations>
         <association genId="jour" nomJava="jour" classeGenId="jour" nbMin="1" nbMax="1">
@@ -90,8 +90,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="idJour" nomJava="idJour" type="Integer" nomSQL="ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="idOuverture" nomJava="idOuverture" type="Integer" nomSQL="ID_OUVERTURE" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="true" nbMin="1" nbMax="1" />
+        <attribut genId="idJour" nomJava="idJour" type="Integer" nomSQL="ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" associationId="jour" nbMin="1" nbMax="1" />
+        <attribut genId="idOuverture" nomJava="idOuverture" type="Integer" nomSQL="ID_OUVERTURE" typeSQL="INT" size="10" estClePrimaire="true" associationId="horaire" nbMin="1" nbMax="1" />
       </attributs>
       <associations>
         <association genId="jour" nomJava="jour" classeGenId="jour" nbMin="1" nbMax="1">
@@ -111,8 +111,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="nomJour" nomJava="nomJour" type="String" nomSQL="NOM_JOUR" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idJour" nomJava="idJour" type="Integer" nomSQL="ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="nomJour" nomJava="nomJour" type="String" nomSQL="NOM_JOUR" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="idJour" nomJava="idJour" type="Integer" nomSQL="ID_JOUR" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="bar" nomJava="bar" nomTable="bar">
@@ -120,14 +120,14 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="idBar" nomJava="idBar" type="Integer" nomSQL="ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idStatutBar" nomJava="idStatutBar" type="Integer" nomSQL="ID_STATUT_BAR" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="photoIdPhoto" nomJava="photoIdPhoto" type="Integer" nomSQL="PHOTO_ID_PHOTO" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="siteBar" nomJava="siteBar" type="String" nomSQL="SITE_BAR" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="descriptionBar" nomJava="descriptionBar" type="String" nomSQL="DESCRIPTION_BAR" typeSQL="VARCHAR" size="500" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="adresseIdAdresse" nomJava="adresseIdAdresse" type="Integer" nomSQL="ADRESSE_ID_ADRESSE" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="idCategorieBar" nomJava="idCategorieBar" type="Integer" nomSQL="ID_CATEGORIE_BAR" typeSQL="INT" size="10" estClePrimaire="false" estCleEtrangere="true" nbMin="1" nbMax="1" />
-        <attribut genId="nomBar" nomJava="nomBar" type="String" nomSQL="NOM_BAR" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="idBar" nomJava="idBar" type="Integer" nomSQL="ID_BAR" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
+        <attribut genId="idStatutBar" nomJava="idStatutBar" type="Integer" nomSQL="ID_STATUT_BAR" typeSQL="INT" size="10" estClePrimaire="false" associationId="statut" nbMin="1" nbMax="1" />
+        <attribut genId="photoIdPhoto" nomJava="photoIdPhoto" type="Integer" nomSQL="PHOTO_ID_PHOTO" typeSQL="INT" size="10" estClePrimaire="false" associationId="photo" nbMin="1" nbMax="1" />
+        <attribut genId="siteBar" nomJava="siteBar" type="String" nomSQL="SITE_BAR" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="descriptionBar" nomJava="descriptionBar" type="String" nomSQL="DESCRIPTION_BAR" typeSQL="VARCHAR" size="500" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="adresseIdAdresse" nomJava="adresseIdAdresse" type="Integer" nomSQL="ADRESSE_ID_ADRESSE" typeSQL="INT" size="10" estClePrimaire="false" associationId="adresse" nbMin="1" nbMax="1" />
+        <attribut genId="idCategorieBar" nomJava="idCategorieBar" type="Integer" nomSQL="ID_CATEGORIE_BAR" typeSQL="INT" size="10" estClePrimaire="false" associationId="categorie" nbMin="1" nbMax="1" />
+        <attribut genId="nomBar" nomJava="nomBar" type="String" nomSQL="NOM_BAR" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
       </attributs>
       <associations>
         <association genId="statut" nomJava="statut" classeGenId="statut" nbMin="1" nbMax="1">
@@ -157,8 +157,8 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="idPhoto" nomJava="idPhoto" type="Integer" nomSQL="ID_PHOTO" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="urlPhoto" nomJava="urlPhoto" type="String" nomSQL="URL_PHOTO" typeSQL="VARCHAR" size="45" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="idPhoto" nomJava="idPhoto" type="Integer" nomSQL="ID_PHOTO" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
+        <attribut genId="urlPhoto" nomJava="urlPhoto" type="String" nomSQL="URL_PHOTO" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
     <classe xmlns="" genId="horaire" nomJava="horaire" nomTable="horaire">
@@ -166,9 +166,9 @@
         <stereotypeClasse nom="bean" />
       </stereotypeClasses>
       <attributs>
-        <attribut genId="heureOuverture" nomJava="heureOuverture" type="Date" nomSQL="HEURE_OUVERTURE" typeSQL="TIME" size="8" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="idOuverture" nomJava="idOuverture" type="Integer" nomSQL="ID_OUVERTURE" typeSQL="INT" size="10" estClePrimaire="true" estCleEtrangere="false" nbMin="1" nbMax="1" />
-        <attribut genId="heureFermeture" nomJava="heureFermeture" type="Date" nomSQL="HEURE_FERMETURE" typeSQL="TIME" size="8" estClePrimaire="false" estCleEtrangere="false" nbMin="1" nbMax="1" />
+        <attribut genId="heureOuverture" nomJava="heureOuverture" type="Date" nomSQL="HEURE_OUVERTURE" typeSQL="TIME" size="8" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="idOuverture" nomJava="idOuverture" type="Integer" nomSQL="ID_OUVERTURE" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
+        <attribut genId="heureFermeture" nomJava="heureFermeture" type="Date" nomSQL="HEURE_FERMETURE" typeSQL="TIME" size="8" estClePrimaire="false" nbMin="1" nbMax="1" />
       </attributs>
     </classe>
   </classes>

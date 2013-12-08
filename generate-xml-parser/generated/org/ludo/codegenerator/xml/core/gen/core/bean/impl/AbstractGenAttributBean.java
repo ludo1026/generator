@@ -131,11 +131,11 @@ public class AbstractGenAttributBean implements GenAttribut {
 		this.estCleIncrementee = estCleIncrementeeAsString;
 	}
 
-	public String getEstCleEtrangereAsString() {
-		return this.estCleEtrangere;
+	public String getAssociationAsString() {
+		return this.association;
 	}
-	public void setEstCleEtrangereAsString(String estCleEtrangereAsString) {
-		this.estCleEtrangere = estCleEtrangereAsString;
+	public void setAssociationAsString(String associationAsString) {
+		this.association = associationAsString;
 	}
 
 	public String getDescriptionAsString() {
@@ -158,7 +158,7 @@ public class AbstractGenAttributBean implements GenAttribut {
 	private String size = null;
 	private String estClePrimaire = null;
 	private String estCleIncrementee = null;
-	private String estCleEtrangere = null;
+	private String association = null;
 	private String description = null;
 
 	public String getGenId() {
@@ -238,11 +238,11 @@ public class AbstractGenAttributBean implements GenAttribut {
 		this.estCleIncrementee = estCleIncrementee;
 	}
 
-	public String getEstCleEtrangere() {
-		return this.estCleEtrangere;
+	public String getAssociation() {
+		return this.association;
 	}
-	public void setEstCleEtrangere(String estCleEtrangere) {
-		this.estCleEtrangere = estCleEtrangere;
+	public void setAssociation(String association) {
+		this.association = association;
 	}
 
 	public String getDescription() {

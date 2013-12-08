@@ -116,13 +116,13 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : estCleIncrementee de genAttribut = "+estCleIncrementee);
     }
-    public GenAttribut getGenAttributForEstCleEtrangere(String estCleEtrangere) {
+    public GenAttribut getGenAttributForAssociation(String association) {
         for(GenAttribut genAttribut : genAttributs) {
-            if(genAttribut.getEstCleEtrangere().equalsIgnoreCase(estCleEtrangere)) {
+            if(genAttribut.getAssociation().equalsIgnoreCase(association)) {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas définie : estCleEtrangere de genAttribut = "+estCleEtrangere);
+        throw new IllegalStateException("La genAttribut n'est pas définie : association de genAttribut = "+association);
     }
     public GenAttribut getGenAttributForDescription(String description) {
         for(GenAttribut genAttribut : genAttributs) {

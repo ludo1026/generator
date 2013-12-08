@@ -59,7 +59,7 @@
 	  size = "2"
 	  estClePrimaire = "true"
 	  estCleIncrementee = "false"
-	  estCleEtrangere = "false"
+	  associationId = "associationId"
 	  description = "description"
 	 >
 	  <proprieteAttributs _nb="1">

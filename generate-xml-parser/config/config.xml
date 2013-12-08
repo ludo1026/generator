@@ -1,5 +1,5 @@
 <config>
-  <templates inDir="config/templates" outDir="generated" packageBase="org.ludo.codegenerator.xml.core">
+  <templates inDir="config/templates" outDir="../generator-xml-parser/src/main/generated" packageBase="org.ludo.codegenerator.xml.core">
     <template nom="test_template" file="test_template.vlt"
               outDir="test" outFile="TestXXX.java" 
               package="test" />

@@ -25,7 +25,7 @@ public interface GenAttributs
     public GenAttribut getGenAttributForSize(String size);
     public GenAttribut getGenAttributForEstClePrimaire(String estClePrimaire);
     public GenAttribut getGenAttributForEstCleIncrementee(String estCleIncrementee);
-    public GenAttribut getGenAttributForEstCleEtrangere(String estCleEtrangere);
+    public GenAttribut getGenAttributForAssociation(String association);
     public GenAttribut getGenAttributForDescription(String description);
     public void addGenAttribut(GenAttribut genAttribut);
     public List<GenAttribut> getGenAttributs();

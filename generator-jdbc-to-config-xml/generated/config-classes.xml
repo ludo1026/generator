@@ -60,7 +60,7 @@
       </stereotypeClasses>
       <attributs>
         <attribut genId="nomBoisson" nomJava="nomBoisson" type="String" nomSQL="NOM_BOISSON" typeSQL="VARCHAR" size="45" estClePrimaire="false" nbMin="1" nbMax="1" />
-        <attribut genId="prixBoisson" nomJava="prixBoisson" nomSQL="PRIX_BOISSON" typeSQL="DECIMAL" size="10" estClePrimaire="false" nbMin="1" nbMax="1" />
+        <attribut genId="prixBoisson" nomJava="prixBoisson" type="BigDecimal" nomSQL="PRIX_BOISSON" typeSQL="DECIMAL" size="10" estClePrimaire="false" nbMin="1" nbMax="1" />
         <attribut genId="idBoisson" nomJava="idBoisson" type="Integer" nomSQL="ID_BOISSON" typeSQL="INT" size="10" estClePrimaire="true" nbMin="1" nbMax="1" />
       </attributs>
     </classe>

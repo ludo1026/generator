@@ -439,8 +439,6 @@ public class ProcessManager {
 			// traitement
 			final File repSortie = new File(nomRepertoireSortie);
 			repSortie.mkdirs();
-			final File repSortieTemp = new File("temp/" + nomRepertoireSortie);
-			repSortieTemp.mkdirs();
 			final File fileSortie = new File(nomFichierSortie);
 			if (!fileSortie.exists()) {
 				final FileWriter file = new FileWriter(new File(nomFichierSortie));
@@ -448,7 +446,7 @@ public class ProcessManager {
 				file.flush();
 				file.close();
 			} else {
-				final FileWriter file = new FileWriter(new File("temp/" + nomFichierSortie));
+				final FileWriter file = new FileWriter(new File(nomFichierSortie + ".tmp"));
 				Velocity.mergeTemplate(nomFichierTemplate, "UTF-8", context, file);
 				file.flush();
 				file.close();
@@ -497,7 +495,7 @@ public class ProcessManager {
 
 				// Modification du fichier de sortie
 				final BufferedWriter out = new BufferedWriter(new FileWriter(nomFichierSortie));
-				in = new BufferedReader(new FileReader("temp/" + nomFichierSortie));
+				in = new BufferedReader(new FileReader(nomFichierSortie + ".tmp"));
 				line = in.readLine();
 				while (line != null) {
 					final int posZoneDebut = StringUtils.indexOf(line, "@zoneDebut=");
@@ -534,7 +532,13 @@ public class ProcessManager {
 					line = in.readLine();
 				}
 				out.close();
+				in.close();
 				AssertHelper.assertDefined(codeZonePrecedent == null, "la dernière zone de modifications n'est pas terminée par une balise de fin");
+				
+				File fileTmp = new File(nomFichierSortie + ".tmp");
+				if(fileTmp.exists()) {
+					fileTmp.delete();
+				}
 			}
 		}
 		// deleteDirectory(new File("temp/"));

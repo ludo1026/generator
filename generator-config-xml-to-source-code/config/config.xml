@@ -3,7 +3,6 @@
 
   <stereotypes>
     <stereotype nom="bean" />
-    <stereotype nom="workflow" />
   </stereotypes>
 
   <genererGroupe>
@@ -17,18 +16,31 @@
         </stereotypeRefPourGenererParStereotypes>
       </genererParStereotype>
     </genererParStereotypes>
+    <genererParTemplates>
+      <genererParTemplate>
+        <templateGroupeRefPourGenererParTemplates _nb="1">
+          <templateGroupeRefPourGenererParTemplate templateGroupeNom="uniqueGroupe">
+            <stereotypeRefPourGenererParTemplates _nb="1">
+              <stereotypeRefPourGenererParTemplate stereotypeNom="bean" />
+            </stereotypeRefPourGenererParTemplates>
+          </templateGroupeRefPourGenererParTemplate>
+        </templateGroupeRefPourGenererParTemplates>
+      </genererParTemplate>
+    </genererParTemplates>
   </genererGroupe>
 
   <templateGroupes>
     <templateGroupe nom="beanGroupe">
       <templateRef nom="bean_template" />
-      <templateRef nom="attributEnum" />
+    </templateGroupe>
+    <templateGroupe nom="uniqueGroupe">
+      <templateRef nom="spring_jspx_index" />
     </templateGroupe>
   </templateGroupes>
 
-  <templates inDir="config/templates" outDir="" packageJavaBase="com.bnpparibas.phenics">
-    <template nom="bean_template" file="bean_template.vm" packageJava="PPP.bean.impl" outDir="generated" outFile="XXX.java" nomElementGenere="XXX" />
-    <template nom="attributEnum" file="attributEnum.vm" packageJava="PPP.common.workflow.util" outDir="generated" outFile="AttributXXXEnum.java" nomElementGenere="AttributXXXEnum" />
+  <templates inDir="config/templates" outDir="D:/workspace/glougloubar2" packageJavaBase="com.glougloubar">
+    <template nom="bean_template" file="bean_template.vm" packageJava="PPP.domain" outDir="D:/workspace/glougloubar2/src/main/generated" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="spring_jspx_index" file="spring_jspx_index.vm" outDir="D:/workspace/glougloubar2/src/main/webapp/WEB-INF/views" outFile="index.jspx" nomElementGenere="index.jspx" />
   </templates>
 
 </gen>

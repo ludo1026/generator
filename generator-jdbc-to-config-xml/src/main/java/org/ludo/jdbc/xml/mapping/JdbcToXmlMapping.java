@@ -134,7 +134,7 @@ public class JdbcToXmlMapping {
 		if (typeSQL.startsWith("long")) {
 			return "Long";
 		}
-		if (typeSQL.startsWith("number") || typeSQL.startsWith("float") || typeSQL.startsWith("double")) {
+		if (typeSQL.startsWith("number") || typeSQL.startsWith("float") || typeSQL.startsWith("double") || typeSQL.startsWith("decimal")) {
 			return "BigDecimal";
 		}
 		if (typeSQL.startsWith("varchar") || typeSQL.startsWith("nchar")) {

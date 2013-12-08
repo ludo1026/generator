@@ -50,7 +50,7 @@
 
 	<!-- Générer les classes servant à parser le fichier config.xml -->
     <target name="generate" depends="clean, compile-all">
-		<java classname="${generator.main-class}" fork="true">
+		<java classname="${generator.main-class}" fork="false">
 			<classpath refid="master-classpath"/>
 		</java>
     </target>

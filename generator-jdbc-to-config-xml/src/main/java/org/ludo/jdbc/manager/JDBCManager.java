@@ -56,9 +56,7 @@ public class JDBCManager {
 
 	private Schema getSchema(final Connection connection, final DatabaseMetaData meta) throws SQLException {
 		final Schema schema = new Schema();
-		getTables(connection, meta, schema, "FLU%");
-		getTables(connection, meta, schema, "IHM%");
-		getTables(connection, meta, schema, "SWD%");
+		getTables(connection, meta, schema, "%");
 
 		for (final Table table : schema.getTableByNoms().values()) {
 			this.defineColonnes(connection, meta, table);

@@ -45,6 +45,7 @@ public class GenXmlWriter {
 
 	public void save(final String filename) throws FileNotFoundException, IOException {
 		AssertHelper.assertDefined(this.document, "objet document XML JDOM");
+		File file = new File(filename);
 		final XMLOutputter sortie = new XMLOutputter(Format.getPrettyFormat());
 		sortie.output(this.document, new FileOutputStream(filename));
 	}

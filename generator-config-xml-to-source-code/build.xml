@@ -65,7 +65,7 @@
     <!-- Générer les fichiers -->
     <target name="generate" depends="clean, compile-all">
         <mkdir dir="${generated.dir}"/>
-		<java classname="${generator.main-class}" fork="true">
+		<java classname="${generator.main-class}" fork="false">
 			<classpath refid="master-classpath"/>
 		</java>
     </target>

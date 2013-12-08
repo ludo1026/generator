@@ -65,7 +65,7 @@
     <target name="generate-parser-configXml">
         <delete dir="${parser-configXml.gen-src.dir}"/>
     	<!-- exécution du code compilé -->
-    	<java classpath="${build.dir}" classname="${main-class}" fork="true"/>
+    	<java classpath="${build.dir}" classname="${main-class}" fork="false"/>
     </target>
 
 

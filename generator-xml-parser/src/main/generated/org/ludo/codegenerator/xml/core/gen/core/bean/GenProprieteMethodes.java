@@ -6,13 +6,13 @@ public interface GenProprieteMethodes
 	extends List<GenProprieteMethode>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenMethode getReferenceGenMethode();
 	
 	public void setReferenceGenMethode(GenMethode referenceGenMethode);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenProprieteMethode getGenProprieteMethodeForNom(String nom);
     public GenProprieteMethode getGenProprieteMethodeForValeur(String valeur);
@@ -20,9 +20,9 @@ public interface GenProprieteMethodes
     public List<GenProprieteMethode> getGenProprieteMethodes();
     public void setGenProprieteMethodes(List<GenProprieteMethode> genProprieteMethode);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

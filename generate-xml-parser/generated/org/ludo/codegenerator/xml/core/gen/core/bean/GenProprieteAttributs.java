@@ -6,13 +6,13 @@ public interface GenProprieteAttributs
 	extends List<GenProprieteAttribut>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenAttribut getReferenceGenAttribut();
 	
 	public void setReferenceGenAttribut(GenAttribut referenceGenAttribut);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenProprieteAttribut getGenProprieteAttributForNom(String nom);
     public GenProprieteAttribut getGenProprieteAttributForValeur(String valeur);
@@ -20,9 +20,9 @@ public interface GenProprieteAttributs
     public List<GenProprieteAttribut> getGenProprieteAttributs();
     public void setGenProprieteAttributs(List<GenProprieteAttribut> genProprieteAttribut);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

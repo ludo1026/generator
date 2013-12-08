@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeClassesBean implements GenStereotypeClasses {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasse referenceGenClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenStereotypeClassesBean implements GenStereotypeClasses {
 		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenStereotypeClasse> genStereotypeClasses = new ArrayList<GenStereotypeClasse>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenStereotypeClassesBean implements GenStereotypeClasses {
                 return genStereotypeClasse;
             }
         }
-        throw new IllegalStateException("La genStereotypeClasse n'est pas dÃ©finie : nom de genStereotypeClasse = "+nom);
+        throw new IllegalStateException("La genStereotypeClasse n'est pas définie : nom de genStereotypeClasse = "+nom);
     }
     public void addGenStereotypeClasse(GenStereotypeClasse genStereotypeClasse) {
     	genStereotypeClasse.setReferenceGenStereotypeClasses(this);
@@ -47,10 +47,10 @@ public class AbstractGenStereotypeClassesBean implements GenStereotypeClasses {
         this.genStereotypeClasses = genStereotypeClasses;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

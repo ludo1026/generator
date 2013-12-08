@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeRefPourGenererParStereotypesBean implements GenStereotypeRefPourGenererParStereotypes {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParStereotype referenceGenGenererParStereotype;
 	
@@ -24,7 +24,7 @@ public class AbstractGenStereotypeRefPourGenererParStereotypesBean implements Ge
 		this.referenceGenGenererParStereotype = referenceGenGenererParStereotype;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenStereotypeRefPourGenererParStereotype> genStereotypeRefPourGenererParStereotypes = new ArrayList<GenStereotypeRefPourGenererParStereotype>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenStereotypeRefPourGenererParStereotypesBean implements Ge
                 return genStereotypeRefPourGenererParStereotype;
             }
         }
-        throw new IllegalStateException("La genStereotypeRefPourGenererParStereotype n'est pas dÃ©finie : stereotypeNom de genStereotypeRefPourGenererParStereotype = "+stereotypeNom);
+        throw new IllegalStateException("La genStereotypeRefPourGenererParStereotype n'est pas définie : stereotypeNom de genStereotypeRefPourGenererParStereotype = "+stereotypeNom);
     }
     public void addGenStereotypeRefPourGenererParStereotype(GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype) {
     	genStereotypeRefPourGenererParStereotype.setReferenceGenStereotypeRefPourGenererParStereotypes(this);
@@ -47,10 +47,10 @@ public class AbstractGenStereotypeRefPourGenererParStereotypesBean implements Ge
         this.genStereotypeRefPourGenererParStereotypes = genStereotypeRefPourGenererParStereotypes;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

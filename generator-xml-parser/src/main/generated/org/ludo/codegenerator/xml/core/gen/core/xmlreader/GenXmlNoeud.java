@@ -49,6 +49,7 @@ public interface GenXmlNoeud {
     public final String N_GenAttribut_A_Size = "size";
     public final String N_GenAttribut_A_EstClePrimaire = "estClePrimaire";
     public final String N_GenAttribut_A_EstCleIncrementee = "estCleIncrementee";
+    public final String N_GenAttribut_A_EstCleEtrangere = "estCleEtrangere";
     public final String N_GenAttribut_A_Description = "description";
     public final String N_GenProprieteAttributs = "proprieteAttributs";
     public final String N_GenProprieteAttribut = "proprieteAttribut";

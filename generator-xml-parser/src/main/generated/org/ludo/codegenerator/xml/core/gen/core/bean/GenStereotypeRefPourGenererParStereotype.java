@@ -5,26 +5,26 @@ import java.util.List;
 public interface GenStereotypeRefPourGenererParStereotype 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenStereotypeRefPourGenererParStereotypes getReferenceGenStereotypeRefPourGenererParStereotypes();
 	
 	public void setReferenceGenStereotypeRefPourGenererParStereotypes(GenStereotypeRefPourGenererParStereotypes referenceGenStereotypeRefPourGenererParStereotypes);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenTemplateGroupeRefPourGenererParStereotypes getGenTemplateGroupeRefPourGenererParStereotypes();
     
     public void setGenTemplateGroupeRefPourGenererParStereotypes(GenTemplateGroupeRefPourGenererParStereotypes genTemplateGroupeRefPourGenererParStereotypes);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getStereotypeNomAsString();
 	public void setStereotypeNomAsString(String stereotypeNomAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getStereotypeNom();

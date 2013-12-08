@@ -6,21 +6,21 @@ public interface GenGenererParClasses
 	extends List<GenGenererParClasse>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenGenererGroupe getReferenceGenGenererGroupe();
 	
 	public void setReferenceGenGenererGroupe(GenGenererGroupe referenceGenGenererGroupe);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public void addGenGenererParClasse(GenGenererParClasse genGenererParClasse);
     public List<GenGenererParClasse> getGenGenererParClasses();
     public void setGenGenererParClasses(List<GenGenererParClasse> genGenererParClasse);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

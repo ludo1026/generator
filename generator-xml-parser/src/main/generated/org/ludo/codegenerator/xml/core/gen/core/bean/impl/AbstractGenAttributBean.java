@@ -13,7 +13,7 @@ import java.util.ListIterator;
 
 public class AbstractGenAttributBean implements GenAttribut {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenAttributs referenceGenAttributs;
 	
@@ -25,7 +25,7 @@ public class AbstractGenAttributBean implements GenAttribut {
 		this.referenceGenAttributs = referenceGenAttributs;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     private GenProprieteAttributs genProprieteAttributs = new GenProprieteAttributsBean();
     
@@ -51,7 +51,7 @@ public class AbstractGenAttributBean implements GenAttribut {
     }
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getGenIdAsString() {
@@ -131,6 +131,13 @@ public class AbstractGenAttributBean implements GenAttribut {
 		this.estCleIncrementee = estCleIncrementeeAsString;
 	}
 
+	public String getEstCleEtrangereAsString() {
+		return this.estCleEtrangere;
+	}
+	public void setEstCleEtrangereAsString(String estCleEtrangereAsString) {
+		this.estCleEtrangere = estCleEtrangereAsString;
+	}
+
 	public String getDescriptionAsString() {
 		return this.description;
 	}
@@ -138,7 +145,7 @@ public class AbstractGenAttributBean implements GenAttribut {
 		this.description = descriptionAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String genId = null;
 	private String nomJava = null;
@@ -151,6 +158,7 @@ public class AbstractGenAttributBean implements GenAttribut {
 	private String size = null;
 	private String estClePrimaire = null;
 	private String estCleIncrementee = null;
+	private String estCleEtrangere = null;
 	private String description = null;
 
 	public String getGenId() {
@@ -228,6 +236,13 @@ public class AbstractGenAttributBean implements GenAttribut {
 	}
 	public void setEstCleIncrementee(String estCleIncrementee) {
 		this.estCleIncrementee = estCleIncrementee;
+	}
+
+	public String getEstCleEtrangere() {
+		return this.estCleEtrangere;
+	}
+	public void setEstCleEtrangere(String estCleEtrangere) {
+		this.estCleEtrangere = estCleEtrangere;
 	}
 
 	public String getDescription() {

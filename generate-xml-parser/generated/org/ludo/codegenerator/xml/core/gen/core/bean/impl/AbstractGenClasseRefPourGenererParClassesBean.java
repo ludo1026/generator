@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenClasseRefPourGenererParClassesBean implements GenClasseRefPourGenererParClasses {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParClasse referenceGenGenererParClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenClasseRefPourGenererParClassesBean implements GenClasseR
 		this.referenceGenGenererParClasse = referenceGenGenererParClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenClasseRefPourGenererParClasse> genClasseRefPourGenererParClasses = new ArrayList<GenClasseRefPourGenererParClasse>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenClasseRefPourGenererParClassesBean implements GenClasseR
                 return genClasseRefPourGenererParClasse;
             }
         }
-        throw new IllegalStateException("La genClasseRefPourGenererParClasse n'est pas dÃ©finie : classeGenId de genClasseRefPourGenererParClasse = "+classeGenId);
+        throw new IllegalStateException("La genClasseRefPourGenererParClasse n'est pas définie : classeGenId de genClasseRefPourGenererParClasse = "+classeGenId);
     }
     public void addGenClasseRefPourGenererParClasse(GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse) {
     	genClasseRefPourGenererParClasse.setReferenceGenClasseRefPourGenererParClasses(this);
@@ -47,10 +47,10 @@ public class AbstractGenClasseRefPourGenererParClassesBean implements GenClasseR
         this.genClasseRefPourGenererParClasses = genClasseRefPourGenererParClasses;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

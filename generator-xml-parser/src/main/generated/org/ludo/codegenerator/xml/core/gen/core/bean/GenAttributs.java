@@ -6,13 +6,13 @@ public interface GenAttributs
 	extends List<GenAttribut>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenClasse getReferenceGenClasse();
 	
 	public void setReferenceGenClasse(GenClasse referenceGenClasse);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenAttribut getGenAttributForGenId(String genId);
     public GenAttribut getGenAttributForNomJava(String nomJava);
@@ -25,14 +25,15 @@ public interface GenAttributs
     public GenAttribut getGenAttributForSize(String size);
     public GenAttribut getGenAttributForEstClePrimaire(String estClePrimaire);
     public GenAttribut getGenAttributForEstCleIncrementee(String estCleIncrementee);
+    public GenAttribut getGenAttributForEstCleEtrangere(String estCleEtrangere);
     public GenAttribut getGenAttributForDescription(String description);
     public void addGenAttribut(GenAttribut genAttribut);
     public List<GenAttribut> getGenAttributs();
     public void setGenAttributs(List<GenAttribut> genAttribut);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

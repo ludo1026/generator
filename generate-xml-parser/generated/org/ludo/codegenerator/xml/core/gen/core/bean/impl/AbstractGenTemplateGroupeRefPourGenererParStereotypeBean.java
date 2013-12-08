@@ -11,7 +11,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupeRefPourGenererParStereotypeBean implements GenTemplateGroupeRefPourGenererParStereotype {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenTemplateGroupeRefPourGenererParStereotypes referenceGenTemplateGroupeRefPourGenererParStereotypes;
 	
@@ -23,9 +23,9 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypeBean implements
 		this.referenceGenTemplateGroupeRefPourGenererParStereotypes = referenceGenTemplateGroupeRefPourGenererParStereotypes;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getTemplateGroupeNomAsString() {
@@ -35,7 +35,7 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypeBean implements
 		this.templateGroupeNom = templateGroupeNomAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String templateGroupeNom = null;
 

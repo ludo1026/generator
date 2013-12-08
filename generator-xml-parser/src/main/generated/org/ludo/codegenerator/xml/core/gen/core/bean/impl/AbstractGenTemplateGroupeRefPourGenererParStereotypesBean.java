@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupeRefPourGenererParStereotypesBean implements GenTemplateGroupeRefPourGenererParStereotypes {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenStereotypeRefPourGenererParStereotype referenceGenStereotypeRefPourGenererParStereotype;
 	
@@ -24,7 +24,7 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypesBean implement
 		this.referenceGenStereotypeRefPourGenererParStereotype = referenceGenStereotypeRefPourGenererParStereotype;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenTemplateGroupeRefPourGenererParStereotype> genTemplateGroupeRefPourGenererParStereotypes = new ArrayList<GenTemplateGroupeRefPourGenererParStereotype>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypesBean implement
                 return genTemplateGroupeRefPourGenererParStereotype;
             }
         }
-        throw new IllegalStateException("La genTemplateGroupeRefPourGenererParStereotype n'est pas dÃ©finie : templateGroupeNom de genTemplateGroupeRefPourGenererParStereotype = "+templateGroupeNom);
+        throw new IllegalStateException("La genTemplateGroupeRefPourGenererParStereotype n'est pas définie : templateGroupeNom de genTemplateGroupeRefPourGenererParStereotype = "+templateGroupeNom);
     }
     public void addGenTemplateGroupeRefPourGenererParStereotype(GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype) {
     	genTemplateGroupeRefPourGenererParStereotype.setReferenceGenTemplateGroupeRefPourGenererParStereotypes(this);
@@ -47,10 +47,10 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypesBean implement
         this.genTemplateGroupeRefPourGenererParStereotypes = genTemplateGroupeRefPourGenererParStereotypes;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

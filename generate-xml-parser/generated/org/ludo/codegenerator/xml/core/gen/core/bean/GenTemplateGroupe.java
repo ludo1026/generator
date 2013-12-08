@@ -6,26 +6,26 @@ public interface GenTemplateGroupe
 	extends List<GenTemplateRef>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenTemplateGroupes getReferenceGenTemplateGroupes();
 	
 	public void setReferenceGenTemplateGroupes(GenTemplateGroupes referenceGenTemplateGroupes);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenTemplateRef getGenTemplateRefForNom(String nom);
     public void addGenTemplateRef(GenTemplateRef genTemplateRef);
     public List<GenTemplateRef> getGenTemplateRefs();
     public void setGenTemplateRefs(List<GenTemplateRef> genTemplateRef);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getNomAsString();
 	public void setNomAsString(String nomAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getNom();

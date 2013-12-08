@@ -11,7 +11,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateBean implements GenTemplate {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenTemplates referenceGenTemplates;
 	
@@ -23,9 +23,9 @@ public class AbstractGenTemplateBean implements GenTemplate {
 		this.referenceGenTemplates = referenceGenTemplates;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getNomAsString() {
@@ -70,7 +70,7 @@ public class AbstractGenTemplateBean implements GenTemplate {
 		this.nomElementGenere = nomElementGenereAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String nom = null;
 	private String file = null;

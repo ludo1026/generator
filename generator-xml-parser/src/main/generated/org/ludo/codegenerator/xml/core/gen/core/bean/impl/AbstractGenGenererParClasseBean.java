@@ -13,7 +13,7 @@ import java.util.ListIterator;
 
 public class AbstractGenGenererParClasseBean implements GenGenererParClasse {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParClasses referenceGenGenererParClasses;
 	
@@ -25,7 +25,7 @@ public class AbstractGenGenererParClasseBean implements GenGenererParClasse {
 		this.referenceGenGenererParClasses = referenceGenGenererParClasses;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     private GenClasseRefPourGenererParClasses genClasseRefPourGenererParClasses = new GenClasseRefPourGenererParClassesBean();
     
@@ -51,10 +51,10 @@ public class AbstractGenGenererParClasseBean implements GenGenererParClasse {
     }
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 }

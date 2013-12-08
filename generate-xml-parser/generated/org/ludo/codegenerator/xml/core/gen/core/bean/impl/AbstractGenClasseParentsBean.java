@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenClasseParentsBean implements GenClasseParents {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasse referenceGenClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenClasseParentsBean implements GenClasseParents {
 		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenClasseParent> genClasseParents = new ArrayList<GenClasseParent>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenClasseParentsBean implements GenClasseParents {
                 return genClasseParent;
             }
         }
-        throw new IllegalStateException("La genClasseParent n'est pas dÃ©finie : classeGenId de genClasseParent = "+classeGenId);
+        throw new IllegalStateException("La genClasseParent n'est pas définie : classeGenId de genClasseParent = "+classeGenId);
     }
     public void addGenClasseParent(GenClasseParent genClasseParent) {
     	genClasseParent.setReferenceGenClasseParents(this);
@@ -47,10 +47,10 @@ public class AbstractGenClasseParentsBean implements GenClasseParents {
         this.genClasseParents = genClasseParents;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

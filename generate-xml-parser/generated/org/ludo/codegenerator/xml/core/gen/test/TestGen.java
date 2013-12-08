@@ -15,7 +15,7 @@ public class TestGen {
 		String filename = FILECONFIG_PATH + "/" + FILECONFIG_FILENAME;
 		GenXmlReaderManager m = GenXmlReaderManager.getGenXmlReaderManager(filename);
 		Gen s = m.getGen();
-		filename = ""; // Point d'arrÃªt
+		filename = ""; // Point d'arrêt
 	}
 
 }

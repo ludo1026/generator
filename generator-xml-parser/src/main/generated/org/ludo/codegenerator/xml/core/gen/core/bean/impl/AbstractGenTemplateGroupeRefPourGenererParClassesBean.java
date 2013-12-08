@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupeRefPourGenererParClassesBean implements GenTemplateGroupeRefPourGenererParClasses {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParClasse referenceGenGenererParClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenTemplateGroupeRefPourGenererParClassesBean implements Ge
 		this.referenceGenGenererParClasse = referenceGenGenererParClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenTemplateGroupeRefPourGenererParClasse> genTemplateGroupeRefPourGenererParClasses = new ArrayList<GenTemplateGroupeRefPourGenererParClasse>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenTemplateGroupeRefPourGenererParClassesBean implements Ge
                 return genTemplateGroupeRefPourGenererParClasse;
             }
         }
-        throw new IllegalStateException("La genTemplateGroupeRefPourGenererParClasse n'est pas dÃ©finie : templateGroupeNom de genTemplateGroupeRefPourGenererParClasse = "+templateGroupeNom);
+        throw new IllegalStateException("La genTemplateGroupeRefPourGenererParClasse n'est pas définie : templateGroupeNom de genTemplateGroupeRefPourGenererParClasse = "+templateGroupeNom);
     }
     public void addGenTemplateGroupeRefPourGenererParClasse(GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse) {
     	genTemplateGroupeRefPourGenererParClasse.setReferenceGenTemplateGroupeRefPourGenererParClasses(this);
@@ -47,10 +47,10 @@ public class AbstractGenTemplateGroupeRefPourGenererParClassesBean implements Ge
         this.genTemplateGroupeRefPourGenererParClasses = genTemplateGroupeRefPourGenererParClasses;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

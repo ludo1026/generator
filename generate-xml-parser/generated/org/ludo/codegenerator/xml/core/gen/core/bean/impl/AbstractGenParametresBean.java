@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenParametresBean implements GenParametres {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenMethode referenceGenMethode;
 	
@@ -24,7 +24,7 @@ public class AbstractGenParametresBean implements GenParametres {
 		this.referenceGenMethode = referenceGenMethode;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenParametre> genParametres = new ArrayList<GenParametre>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenParametresBean implements GenParametres {
                 return genParametre;
             }
         }
-        throw new IllegalStateException("La genParametre n'est pas dÃ©finie : genId de genParametre = "+genId);
+        throw new IllegalStateException("La genParametre n'est pas définie : genId de genParametre = "+genId);
     }
     public GenParametre getGenParametreForNomJava(String nomJava) {
         for(GenParametre genParametre : genParametres) {
@@ -42,7 +42,7 @@ public class AbstractGenParametresBean implements GenParametres {
                 return genParametre;
             }
         }
-        throw new IllegalStateException("La genParametre n'est pas dÃ©finie : nomJava de genParametre = "+nomJava);
+        throw new IllegalStateException("La genParametre n'est pas définie : nomJava de genParametre = "+nomJava);
     }
     public GenParametre getGenParametreForType(String type) {
         for(GenParametre genParametre : genParametres) {
@@ -50,7 +50,7 @@ public class AbstractGenParametresBean implements GenParametres {
                 return genParametre;
             }
         }
-        throw new IllegalStateException("La genParametre n'est pas dÃ©finie : type de genParametre = "+type);
+        throw new IllegalStateException("La genParametre n'est pas définie : type de genParametre = "+type);
     }
     public GenParametre getGenParametreForDescription(String description) {
         for(GenParametre genParametre : genParametres) {
@@ -58,7 +58,7 @@ public class AbstractGenParametresBean implements GenParametres {
                 return genParametre;
             }
         }
-        throw new IllegalStateException("La genParametre n'est pas dÃ©finie : description de genParametre = "+description);
+        throw new IllegalStateException("La genParametre n'est pas définie : description de genParametre = "+description);
     }
     public void addGenParametre(GenParametre genParametre) {
     	genParametre.setReferenceGenParametres(this);
@@ -71,10 +71,10 @@ public class AbstractGenParametresBean implements GenParametres {
         this.genParametres = genParametres;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

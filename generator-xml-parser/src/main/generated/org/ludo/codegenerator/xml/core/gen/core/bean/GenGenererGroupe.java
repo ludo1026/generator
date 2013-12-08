@@ -5,13 +5,13 @@ import java.util.List;
 public interface GenGenererGroupe 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public Gen getReferenceGen();
 	
 	public void setReferenceGen(Gen referenceGen);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenGenererParClasses getGenGenererParClasses();
     
@@ -28,9 +28,9 @@ public interface GenGenererGroupe
     public void setGenGenererParStereotypes(GenGenererParStereotypes genGenererParStereotypes);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

@@ -6,22 +6,22 @@ public interface GenAssociationAttributs
 	extends List<GenAssociationAttribut>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenAssociation getReferenceGenAssociation();
 	
 	public void setReferenceGenAssociation(GenAssociation referenceGenAssociation);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenAssociationAttribut getGenAssociationAttributForGenId(String genId);
     public void addGenAssociationAttribut(GenAssociationAttribut genAssociationAttribut);
     public List<GenAssociationAttribut> getGenAssociationAttributs();
     public void setGenAssociationAttributs(List<GenAssociationAttribut> genAssociationAttribut);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

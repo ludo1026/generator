@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenGenererParTemplateBean implements GenGenererParTemplate {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParTemplates referenceGenGenererParTemplates;
 	
@@ -24,7 +24,7 @@ public class AbstractGenGenererParTemplateBean implements GenGenererParTemplate 
 		this.referenceGenGenererParTemplates = referenceGenGenererParTemplates;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     private GenTemplateGroupeRefPourGenererParTemplates genTemplateGroupeRefPourGenererParTemplates = new GenTemplateGroupeRefPourGenererParTemplatesBean();
     
@@ -38,10 +38,10 @@ public class AbstractGenGenererParTemplateBean implements GenGenererParTemplate 
     }
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 }

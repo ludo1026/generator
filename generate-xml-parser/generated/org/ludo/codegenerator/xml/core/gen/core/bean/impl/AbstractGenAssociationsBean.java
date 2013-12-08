@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenAssociationsBean implements GenAssociations {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasse referenceGenClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
 		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenAssociation> genAssociations = new ArrayList<GenAssociation>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : genId de genAssociation = "+genId);
+        throw new IllegalStateException("La genAssociation n'est pas définie : genId de genAssociation = "+genId);
     }
     public GenAssociation getGenAssociationForNomJava(String nomJava) {
         for(GenAssociation genAssociation : genAssociations) {
@@ -42,7 +42,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : nomJava de genAssociation = "+nomJava);
+        throw new IllegalStateException("La genAssociation n'est pas définie : nomJava de genAssociation = "+nomJava);
     }
     public GenAssociation getGenAssociationForClasseGenId(String classeGenId) {
         for(GenAssociation genAssociation : genAssociations) {
@@ -50,7 +50,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : classeGenId de genAssociation = "+classeGenId);
+        throw new IllegalStateException("La genAssociation n'est pas définie : classeGenId de genAssociation = "+classeGenId);
     }
     public GenAssociation getGenAssociationForNbMin(String nbMin) {
         for(GenAssociation genAssociation : genAssociations) {
@@ -58,7 +58,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : nbMin de genAssociation = "+nbMin);
+        throw new IllegalStateException("La genAssociation n'est pas définie : nbMin de genAssociation = "+nbMin);
     }
     public GenAssociation getGenAssociationForNbMax(String nbMax) {
         for(GenAssociation genAssociation : genAssociations) {
@@ -66,7 +66,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : nbMax de genAssociation = "+nbMax);
+        throw new IllegalStateException("La genAssociation n'est pas définie : nbMax de genAssociation = "+nbMax);
     }
     public GenAssociation getGenAssociationForDescription(String description) {
         for(GenAssociation genAssociation : genAssociations) {
@@ -74,7 +74,7 @@ public class AbstractGenAssociationsBean implements GenAssociations {
                 return genAssociation;
             }
         }
-        throw new IllegalStateException("La genAssociation n'est pas dÃ©finie : description de genAssociation = "+description);
+        throw new IllegalStateException("La genAssociation n'est pas définie : description de genAssociation = "+description);
     }
     public void addGenAssociation(GenAssociation genAssociation) {
     	genAssociation.setReferenceGenAssociations(this);
@@ -87,10 +87,10 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         this.genAssociations = genAssociations;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

@@ -94,6 +94,19 @@ public class JdbcToXmlMapping {
 			} else {
 				attribut.setEstClePrimaire("false");
 			}
+			boolean isCleEtrangere = false;
+			for (final CleEtrangere cleEtrangere : table.getCleEtrangeres()) {
+				for (final Colonne colonne2 : cleEtrangere.getColonnes()) {
+					if(colonne2.getNom().equals(colonne.getNom())) {
+						isCleEtrangere = true;
+					}
+				}
+			}
+			if(isCleEtrangere) {
+				attribut.setEstCleEtrangere("true");
+			} else {
+				attribut.setEstCleEtrangere("false");
+			}
 			classe.getGenAttributs().add(attribut);
 		}
 

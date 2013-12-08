@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenAssociationAttributsBean implements GenAssociationAttributs {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenAssociation referenceGenAssociation;
 	
@@ -24,7 +24,7 @@ public class AbstractGenAssociationAttributsBean implements GenAssociationAttrib
 		this.referenceGenAssociation = referenceGenAssociation;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenAssociationAttribut> genAssociationAttributs = new ArrayList<GenAssociationAttribut>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenAssociationAttributsBean implements GenAssociationAttrib
                 return genAssociationAttribut;
             }
         }
-        throw new IllegalStateException("La genAssociationAttribut n'est pas dÃ©finie : genId de genAssociationAttribut = "+genId);
+        throw new IllegalStateException("La genAssociationAttribut n'est pas définie : genId de genAssociationAttribut = "+genId);
     }
     public void addGenAssociationAttribut(GenAssociationAttribut genAssociationAttribut) {
     	genAssociationAttribut.setReferenceGenAssociationAttributs(this);
@@ -47,10 +47,10 @@ public class AbstractGenAssociationAttributsBean implements GenAssociationAttrib
         this.genAssociationAttributs = genAssociationAttributs;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

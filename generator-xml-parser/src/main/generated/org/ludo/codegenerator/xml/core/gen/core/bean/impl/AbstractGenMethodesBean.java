@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenMethodesBean implements GenMethodes {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasse referenceGenClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenMethodesBean implements GenMethodes {
 		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenMethode> genMethodes = new ArrayList<GenMethode>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenMethodesBean implements GenMethodes {
                 return genMethode;
             }
         }
-        throw new IllegalStateException("La genMethode n'est pas dÃ©finie : genId de genMethode = "+genId);
+        throw new IllegalStateException("La genMethode n'est pas définie : genId de genMethode = "+genId);
     }
     public GenMethode getGenMethodeForNomJava(String nomJava) {
         for(GenMethode genMethode : genMethodes) {
@@ -42,7 +42,7 @@ public class AbstractGenMethodesBean implements GenMethodes {
                 return genMethode;
             }
         }
-        throw new IllegalStateException("La genMethode n'est pas dÃ©finie : nomJava de genMethode = "+nomJava);
+        throw new IllegalStateException("La genMethode n'est pas définie : nomJava de genMethode = "+nomJava);
     }
     public GenMethode getGenMethodeForRetourType(String retourType) {
         for(GenMethode genMethode : genMethodes) {
@@ -50,7 +50,7 @@ public class AbstractGenMethodesBean implements GenMethodes {
                 return genMethode;
             }
         }
-        throw new IllegalStateException("La genMethode n'est pas dÃ©finie : retourType de genMethode = "+retourType);
+        throw new IllegalStateException("La genMethode n'est pas définie : retourType de genMethode = "+retourType);
     }
     public GenMethode getGenMethodeForDescription(String description) {
         for(GenMethode genMethode : genMethodes) {
@@ -58,7 +58,7 @@ public class AbstractGenMethodesBean implements GenMethodes {
                 return genMethode;
             }
         }
-        throw new IllegalStateException("La genMethode n'est pas dÃ©finie : description de genMethode = "+description);
+        throw new IllegalStateException("La genMethode n'est pas définie : description de genMethode = "+description);
     }
     public void addGenMethode(GenMethode genMethode) {
     	genMethode.setReferenceGenMethodes(this);
@@ -71,10 +71,10 @@ public class AbstractGenMethodesBean implements GenMethodes {
         this.genMethodes = genMethodes;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

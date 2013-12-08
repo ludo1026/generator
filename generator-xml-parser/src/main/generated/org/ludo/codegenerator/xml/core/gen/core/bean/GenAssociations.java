@@ -6,13 +6,13 @@ public interface GenAssociations
 	extends List<GenAssociation>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenClasse getReferenceGenClasse();
 	
 	public void setReferenceGenClasse(GenClasse referenceGenClasse);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenAssociation getGenAssociationForGenId(String genId);
     public GenAssociation getGenAssociationForNomJava(String nomJava);
@@ -24,9 +24,9 @@ public interface GenAssociations
     public List<GenAssociation> getGenAssociations();
     public void setGenAssociations(List<GenAssociation> genAssociation);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

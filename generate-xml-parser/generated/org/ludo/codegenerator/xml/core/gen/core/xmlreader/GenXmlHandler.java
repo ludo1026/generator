@@ -1024,6 +1024,9 @@ public class GenXmlHandler extends DefaultHandler {
             if(GenXmlNoeud.N_GenAttribut_A_EstCleIncrementee.equalsIgnoreCase(attName)) {
             	genAttribut.setEstCleIncrementeeAsString(atts.getValue(i));
             }
+            if(GenXmlNoeud.N_GenAttribut_A_EstCleEtrangere.equalsIgnoreCase(attName)) {
+            	genAttribut.setEstCleEtrangereAsString(atts.getValue(i));
+            }
             if(GenXmlNoeud.N_GenAttribut_A_Description.equalsIgnoreCase(attName)) {
             	genAttribut.setDescriptionAsString(atts.getValue(i));
             }

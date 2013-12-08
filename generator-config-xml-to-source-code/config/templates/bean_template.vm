@@ -24,13 +24,16 @@ import $!{bean2.getPackage()}.$!{bean2.getNom()};
 public class $!{bean.getNom()} implements Serializable 
 {
 #foreach( $attribut in $classe.getGenAttributs() )
+#if( "true" == $attribut.getEstCleEtrangere() )
+#else
 #if( $attribut.getDescription() )
 	/** $!{SU.capitalize($!{attribut.getDescription()})} */
 #end
 	private $!{attribut.getType()} $!{SU.uncapitalize($!{attribut.getNomJava()})};
 #end
+#end
 #foreach( $association in $classe.getGenAssociations() )
-#set( $bean2 = $!{templateGenerationMap.getByClasseGenId("beaninterface_template",$!{association.getClasseGenId()})} )
+#set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )
 #if( $association.getDescription() )
 	/** $!{SU.capitalize($!{association.getDescription()})} */
 #end
@@ -43,6 +46,8 @@ public class $!{bean.getNom()} implements Serializable
 #end
 
 #foreach( $attribut in $classe.getGenAttributs() )
+#if( "true" == $attribut.getEstCleEtrangere() )
+#else
     public $!{attribut.getType()} get$!{SU.capitalize($!{attribut.getNomJava()})}() {
         return $!{SU.uncapitalize($!{attribut.getNomJava()})};
     }
@@ -52,8 +57,9 @@ public class $!{bean.getNom()} implements Serializable
     }
 	
 #end
+#end
 #foreach( $association in $classe.getGenAssociations() )
-#set( $bean2 = $!{templateGenerationMap.getByClasseGenId("beaninterface_template",$!{association.getClasseGenId()})} )
+#set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )
 #if( "1" == $!{association.getNbMax()} )
     public $!{bean2.getNom()} get$!{SU.capitalize($!{association.getNomJava()})}() {
         return $!{SU.uncapitalize($!{association.getNomJava()})};

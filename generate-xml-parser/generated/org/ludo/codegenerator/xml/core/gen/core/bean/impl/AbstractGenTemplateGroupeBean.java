@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenTemplateGroupes referenceGenTemplateGroupes;
 	
@@ -24,7 +24,7 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 		this.referenceGenTemplateGroupes = referenceGenTemplateGroupes;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenTemplateRef> genTemplateRefs = new ArrayList<GenTemplateRef>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
                 return genTemplateRef;
             }
         }
-        throw new IllegalStateException("La genTemplateRef n'est pas dÃ©finie : nom de genTemplateRef = "+nom);
+        throw new IllegalStateException("La genTemplateRef n'est pas définie : nom de genTemplateRef = "+nom);
     }
     public void addGenTemplateRef(GenTemplateRef genTemplateRef) {
     	genTemplateRef.setReferenceGenTemplateGroupe(this);
@@ -47,7 +47,7 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
         this.genTemplateRefs = genTemplateRefs;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getNomAsString() {
@@ -57,7 +57,7 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 		this.nom = nomAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String nom = null;
 

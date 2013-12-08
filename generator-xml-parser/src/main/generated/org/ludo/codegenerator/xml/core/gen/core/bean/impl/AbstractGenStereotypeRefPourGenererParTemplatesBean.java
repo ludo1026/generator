@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeRefPourGenererParTemplatesBean implements GenStereotypeRefPourGenererParTemplates {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenTemplateGroupeRefPourGenererParTemplate referenceGenTemplateGroupeRefPourGenererParTemplate;
 	
@@ -24,7 +24,7 @@ public class AbstractGenStereotypeRefPourGenererParTemplatesBean implements GenS
 		this.referenceGenTemplateGroupeRefPourGenererParTemplate = referenceGenTemplateGroupeRefPourGenererParTemplate;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenStereotypeRefPourGenererParTemplate> genStereotypeRefPourGenererParTemplates = new ArrayList<GenStereotypeRefPourGenererParTemplate>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenStereotypeRefPourGenererParTemplatesBean implements GenS
                 return genStereotypeRefPourGenererParTemplate;
             }
         }
-        throw new IllegalStateException("La genStereotypeRefPourGenererParTemplate n'est pas dÃ©finie : stereotypeNom de genStereotypeRefPourGenererParTemplate = "+stereotypeNom);
+        throw new IllegalStateException("La genStereotypeRefPourGenererParTemplate n'est pas définie : stereotypeNom de genStereotypeRefPourGenererParTemplate = "+stereotypeNom);
     }
     public void addGenStereotypeRefPourGenererParTemplate(GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate) {
     	genStereotypeRefPourGenererParTemplate.setReferenceGenStereotypeRefPourGenererParTemplates(this);
@@ -47,10 +47,10 @@ public class AbstractGenStereotypeRefPourGenererParTemplatesBean implements GenS
         this.genStereotypeRefPourGenererParTemplates = genStereotypeRefPourGenererParTemplates;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

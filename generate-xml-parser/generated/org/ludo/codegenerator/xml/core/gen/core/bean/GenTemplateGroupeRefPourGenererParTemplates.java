@@ -6,22 +6,22 @@ public interface GenTemplateGroupeRefPourGenererParTemplates
 	extends List<GenTemplateGroupeRefPourGenererParTemplate>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenGenererParTemplate getReferenceGenGenererParTemplate();
 	
 	public void setReferenceGenGenererParTemplate(GenGenererParTemplate referenceGenGenererParTemplate);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenTemplateGroupeRefPourGenererParTemplate getGenTemplateGroupeRefPourGenererParTemplateForTemplateGroupeNom(String templateGroupeNom);
     public void addGenTemplateGroupeRefPourGenererParTemplate(GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate);
     public List<GenTemplateGroupeRefPourGenererParTemplate> getGenTemplateGroupeRefPourGenererParTemplates();
     public void setGenTemplateGroupeRefPourGenererParTemplates(List<GenTemplateGroupeRefPourGenererParTemplate> genTemplateGroupeRefPourGenererParTemplate);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

@@ -5,13 +5,13 @@ import java.util.List;
 public interface GenClasse 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenClasses getReferenceGenClasses();
 	
 	public void setReferenceGenClasses(GenClasses referenceGenClasses);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenProprieteClasses getGenProprieteClasses();
     
@@ -43,7 +43,7 @@ public interface GenClasse
     public void setGenClasseParents(GenClasseParents genClasseParents);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getGenIdAsString();
@@ -64,7 +64,7 @@ public interface GenClasse
 	public String getDescriptionAsString();
 	public void setDescriptionAsString(String descriptionAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getGenId();

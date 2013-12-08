@@ -5,26 +5,26 @@ import java.util.List;
 public interface GenTemplateGroupeRefPourGenererParTemplate 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenTemplateGroupeRefPourGenererParTemplates getReferenceGenTemplateGroupeRefPourGenererParTemplates();
 	
 	public void setReferenceGenTemplateGroupeRefPourGenererParTemplates(GenTemplateGroupeRefPourGenererParTemplates referenceGenTemplateGroupeRefPourGenererParTemplates);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenStereotypeRefPourGenererParTemplates getGenStereotypeRefPourGenererParTemplates();
     
     public void setGenStereotypeRefPourGenererParTemplates(GenStereotypeRefPourGenererParTemplates genStereotypeRefPourGenererParTemplates);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getTemplateGroupeNomAsString();
 	public void setTemplateGroupeNomAsString(String templateGroupeNomAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getTemplateGroupeNom();

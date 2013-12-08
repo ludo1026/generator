@@ -6,13 +6,13 @@ public interface GenTemplates
 	extends List<GenTemplate>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public Gen getReferenceGen();
 	
 	public void setReferenceGen(Gen referenceGen);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenTemplate getGenTemplateForNom(String nom);
     public GenTemplate getGenTemplateForFile(String file);
@@ -24,7 +24,7 @@ public interface GenTemplates
     public List<GenTemplate> getGenTemplates();
     public void setGenTemplates(List<GenTemplate> genTemplate);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getInDirAsString();
@@ -36,7 +36,7 @@ public interface GenTemplates
 	public String getPackageJavaBaseAsString();
 	public void setPackageJavaBaseAsString(String packageJavaBaseAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getInDir();

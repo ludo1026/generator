@@ -11,7 +11,7 @@ import java.util.ListIterator;
 
 public class AbstractGenClasseRefPourGenererParClasseBean implements GenClasseRefPourGenererParClasse {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasseRefPourGenererParClasses referenceGenClasseRefPourGenererParClasses;
 	
@@ -23,9 +23,9 @@ public class AbstractGenClasseRefPourGenererParClasseBean implements GenClasseRe
 		this.referenceGenClasseRefPourGenererParClasses = referenceGenClasseRefPourGenererParClasses;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getClasseGenIdAsString() {
@@ -35,7 +35,7 @@ public class AbstractGenClasseRefPourGenererParClasseBean implements GenClasseRe
 		this.classeGenId = classeGenIdAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String classeGenId = null;
 

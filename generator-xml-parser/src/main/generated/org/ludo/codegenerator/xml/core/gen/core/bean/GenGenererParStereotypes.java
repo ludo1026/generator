@@ -6,21 +6,21 @@ public interface GenGenererParStereotypes
 	extends List<GenGenererParStereotype>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenGenererGroupe getReferenceGenGenererGroupe();
 	
 	public void setReferenceGenGenererGroupe(GenGenererGroupe referenceGenGenererGroupe);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public void addGenGenererParStereotype(GenGenererParStereotype genGenererParStereotype);
     public List<GenGenererParStereotype> getGenGenererParStereotypes();
     public void setGenGenererParStereotypes(List<GenGenererParStereotype> genGenererParStereotype);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

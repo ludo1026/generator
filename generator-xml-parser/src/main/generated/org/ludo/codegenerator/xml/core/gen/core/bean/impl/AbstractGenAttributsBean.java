@@ -1,18 +1,18 @@
 package org.ludo.codegenerator.xml.core.gen.core.bean.impl;
 
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttributs;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttribut;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttribut;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttributs;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
-
 public class AbstractGenAttributsBean implements GenAttributs {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasse referenceGenClasse;
 	
@@ -24,7 +24,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
 		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenAttribut> genAttributs = new ArrayList<GenAttribut>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        return null;
+        throw new IllegalStateException("La genAttribut n'est pas définie : genId de genAttribut = "+genId);
     }
     public GenAttribut getGenAttributForNomJava(String nomJava) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -42,7 +42,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : nomJava de genAttribut = "+nomJava);
+        throw new IllegalStateException("La genAttribut n'est pas définie : nomJava de genAttribut = "+nomJava);
     }
     public GenAttribut getGenAttributForType(String type) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -50,7 +50,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : type de genAttribut = "+type);
+        throw new IllegalStateException("La genAttribut n'est pas définie : type de genAttribut = "+type);
     }
     public GenAttribut getGenAttributForNbMin(String nbMin) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -58,7 +58,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : nbMin de genAttribut = "+nbMin);
+        throw new IllegalStateException("La genAttribut n'est pas définie : nbMin de genAttribut = "+nbMin);
     }
     public GenAttribut getGenAttributForNbMax(String nbMax) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -66,7 +66,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : nbMax de genAttribut = "+nbMax);
+        throw new IllegalStateException("La genAttribut n'est pas définie : nbMax de genAttribut = "+nbMax);
     }
     public GenAttribut getGenAttributForNomSQL(String nomSQL) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -74,7 +74,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : nomSQL de genAttribut = "+nomSQL);
+        throw new IllegalStateException("La genAttribut n'est pas définie : nomSQL de genAttribut = "+nomSQL);
     }
     public GenAttribut getGenAttributForTypeSQL(String typeSQL) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -82,7 +82,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : typeSQL de genAttribut = "+typeSQL);
+        throw new IllegalStateException("La genAttribut n'est pas définie : typeSQL de genAttribut = "+typeSQL);
     }
     public GenAttribut getGenAttributForEstDansTable(String estDansTable) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -90,7 +90,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : estDansTable de genAttribut = "+estDansTable);
+        throw new IllegalStateException("La genAttribut n'est pas définie : estDansTable de genAttribut = "+estDansTable);
     }
     public GenAttribut getGenAttributForSize(String size) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -98,7 +98,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : size de genAttribut = "+size);
+        throw new IllegalStateException("La genAttribut n'est pas définie : size de genAttribut = "+size);
     }
     public GenAttribut getGenAttributForEstClePrimaire(String estClePrimaire) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -106,7 +106,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : estClePrimaire de genAttribut = "+estClePrimaire);
+        throw new IllegalStateException("La genAttribut n'est pas définie : estClePrimaire de genAttribut = "+estClePrimaire);
     }
     public GenAttribut getGenAttributForEstCleIncrementee(String estCleIncrementee) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -114,7 +114,15 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : estCleIncrementee de genAttribut = "+estCleIncrementee);
+        throw new IllegalStateException("La genAttribut n'est pas définie : estCleIncrementee de genAttribut = "+estCleIncrementee);
+    }
+    public GenAttribut getGenAttributForEstCleEtrangere(String estCleEtrangere) {
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getEstCleEtrangere().equalsIgnoreCase(estCleEtrangere)) {
+                return genAttribut;
+            }
+        }
+        throw new IllegalStateException("La genAttribut n'est pas définie : estCleEtrangere de genAttribut = "+estCleEtrangere);
     }
     public GenAttribut getGenAttributForDescription(String description) {
         for(GenAttribut genAttribut : genAttributs) {
@@ -122,7 +130,7 @@ public class AbstractGenAttributsBean implements GenAttributs {
                 return genAttribut;
             }
         }
-        throw new IllegalStateException("La genAttribut n'est pas dÃ©finie : description de genAttribut = "+description);
+        throw new IllegalStateException("La genAttribut n'est pas définie : description de genAttribut = "+description);
     }
     public void addGenAttribut(GenAttribut genAttribut) {
     	genAttribut.setReferenceGenAttributs(this);
@@ -135,10 +143,10 @@ public class AbstractGenAttributsBean implements GenAttributs {
         this.genAttributs = genAttributs;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

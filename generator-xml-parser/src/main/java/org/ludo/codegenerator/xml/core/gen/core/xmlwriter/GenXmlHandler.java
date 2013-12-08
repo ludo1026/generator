@@ -213,6 +213,7 @@ public class GenXmlHandler {
 		this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_TypeSQL, genAttribut.getTypeSQL());
 		this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_Size, genAttribut.getSize());
 		this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_EstClePrimaire, genAttribut.getEstClePrimaire());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_EstCleEtrangere, genAttribut.getEstCleEtrangere());
 		this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_EstDansTable, genAttribut.getEstDansTable());
 		if ((genAttribut.getNbMin() != null) && (genAttribut.getNbMax() != null)) {
 			this.writeAttribute(elementAttribut, GenXmlNoeud.N_GenAttribut_A_NbMin, genAttribut.getNbMin());

@@ -5,13 +5,13 @@ import java.util.List;
 public interface GenMethode 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenMethodes getReferenceGenMethodes();
 	
 	public void setReferenceGenMethodes(GenMethodes referenceGenMethodes);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenProprieteMethodes getGenProprieteMethodes();
     
@@ -28,7 +28,7 @@ public interface GenMethode
     public void setGenStereotypeMethodes(GenStereotypeMethodes genStereotypeMethodes);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getGenIdAsString();
@@ -43,7 +43,7 @@ public interface GenMethode
 	public String getDescriptionAsString();
 	public void setDescriptionAsString(String descriptionAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getGenId();

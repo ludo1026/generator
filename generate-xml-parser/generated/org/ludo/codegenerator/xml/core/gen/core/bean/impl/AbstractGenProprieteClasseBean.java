@@ -11,7 +11,7 @@ import java.util.ListIterator;
 
 public class AbstractGenProprieteClasseBean implements GenProprieteClasse {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenProprieteClasses referenceGenProprieteClasses;
 	
@@ -23,9 +23,9 @@ public class AbstractGenProprieteClasseBean implements GenProprieteClasse {
 		this.referenceGenProprieteClasses = referenceGenProprieteClasses;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getNomAsString() {
@@ -42,7 +42,7 @@ public class AbstractGenProprieteClasseBean implements GenProprieteClasse {
 		this.valeur = valeurAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String nom = null;
 	private String valeur = null;

@@ -123,6 +123,7 @@
         <xs:element ref="schemas:stereotypeAttributs"/>
       </xs:sequence>
       <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="estCleEtrangere" use="required" type="xs:boolean"/>
       <xs:attribute name="estCleIncrementee" use="required" type="xs:boolean"/>
       <xs:attribute name="estClePrimaire" use="required" type="xs:boolean"/>
       <xs:attribute name="estDansTable" use="required" type="xs:boolean"/>

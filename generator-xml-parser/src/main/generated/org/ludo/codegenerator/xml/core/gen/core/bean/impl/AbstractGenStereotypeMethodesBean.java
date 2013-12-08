@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeMethodesBean implements GenStereotypeMethodes {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenMethode referenceGenMethode;
 	
@@ -24,7 +24,7 @@ public class AbstractGenStereotypeMethodesBean implements GenStereotypeMethodes 
 		this.referenceGenMethode = referenceGenMethode;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenStereotypeMethode> genStereotypeMethodes = new ArrayList<GenStereotypeMethode>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenStereotypeMethodesBean implements GenStereotypeMethodes 
                 return genStereotypeMethode;
             }
         }
-        throw new IllegalStateException("La genStereotypeMethode n'est pas dÃ©finie : nom de genStereotypeMethode = "+nom);
+        throw new IllegalStateException("La genStereotypeMethode n'est pas définie : nom de genStereotypeMethode = "+nom);
     }
     public void addGenStereotypeMethode(GenStereotypeMethode genStereotypeMethode) {
     	genStereotypeMethode.setReferenceGenStereotypeMethodes(this);
@@ -47,10 +47,10 @@ public class AbstractGenStereotypeMethodesBean implements GenStereotypeMethodes 
         this.genStereotypeMethodes = genStereotypeMethodes;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

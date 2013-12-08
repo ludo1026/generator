@@ -5,13 +5,13 @@ import java.util.List;
 public interface GenGenererParClasse 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenGenererParClasses getReferenceGenGenererParClasses();
 	
 	public void setReferenceGenGenererParClasses(GenGenererParClasses referenceGenGenererParClasses);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenClasseRefPourGenererParClasses getGenClasseRefPourGenererParClasses();
     
@@ -23,9 +23,9 @@ public interface GenGenererParClasse
     public void setGenTemplateGroupeRefPourGenererParClasses(GenTemplateGroupeRefPourGenererParClasses genTemplateGroupeRefPourGenererParClasses);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

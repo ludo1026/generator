@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeAttributsBean implements GenStereotypeAttributs {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenAttribut referenceGenAttribut;
 	
@@ -24,7 +24,7 @@ public class AbstractGenStereotypeAttributsBean implements GenStereotypeAttribut
 		this.referenceGenAttribut = referenceGenAttribut;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenStereotypeAttribut> genStereotypeAttributs = new ArrayList<GenStereotypeAttribut>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenStereotypeAttributsBean implements GenStereotypeAttribut
                 return genStereotypeAttribut;
             }
         }
-        throw new IllegalStateException("La genStereotypeAttribut n'est pas dÃ©finie : nom de genStereotypeAttribut = "+nom);
+        throw new IllegalStateException("La genStereotypeAttribut n'est pas définie : nom de genStereotypeAttribut = "+nom);
     }
     public void addGenStereotypeAttribut(GenStereotypeAttribut genStereotypeAttribut) {
     	genStereotypeAttribut.setReferenceGenStereotypeAttributs(this);
@@ -47,10 +47,10 @@ public class AbstractGenStereotypeAttributsBean implements GenStereotypeAttribut
         this.genStereotypeAttributs = genStereotypeAttributs;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

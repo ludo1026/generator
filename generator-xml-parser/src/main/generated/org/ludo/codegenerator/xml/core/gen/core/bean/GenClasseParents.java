@@ -6,22 +6,22 @@ public interface GenClasseParents
 	extends List<GenClasseParent>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenClasse getReferenceGenClasse();
 	
 	public void setReferenceGenClasse(GenClasse referenceGenClasse);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenClasseParent getGenClasseParentForClasseGenId(String classeGenId);
     public void addGenClasseParent(GenClasseParent genClasseParent);
     public List<GenClasseParent> getGenClasseParents();
     public void setGenClasseParents(List<GenClasseParent> genClasseParent);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

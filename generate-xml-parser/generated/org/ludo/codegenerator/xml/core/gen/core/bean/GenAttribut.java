@@ -5,13 +5,13 @@ import java.util.List;
 public interface GenAttribut 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenAttributs getReferenceGenAttributs();
 	
 	public void setReferenceGenAttributs(GenAttributs referenceGenAttributs);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     public GenProprieteAttributs getGenProprieteAttributs();
     
@@ -23,7 +23,7 @@ public interface GenAttribut
     public void setGenStereotypeAttributs(GenStereotypeAttributs genStereotypeAttributs);
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getGenIdAsString();
@@ -59,10 +59,13 @@ public interface GenAttribut
 	public String getEstCleIncrementeeAsString();
 	public void setEstCleIncrementeeAsString(String estCleIncrementeeAsString);
 	
+	public String getEstCleEtrangereAsString();
+	public void setEstCleEtrangereAsString(String estCleEtrangereAsString);
+	
 	public String getDescriptionAsString();
 	public void setDescriptionAsString(String descriptionAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getGenId();
@@ -97,6 +100,9 @@ public interface GenAttribut
 
 	public String getEstCleIncrementee();
 	public void setEstCleIncrementee(String estCleIncrementee);
+
+	public String getEstCleEtrangere();
+	public void setEstCleEtrangere(String estCleEtrangere);
 
 	public String getDescription();
 	public void setDescription(String description);

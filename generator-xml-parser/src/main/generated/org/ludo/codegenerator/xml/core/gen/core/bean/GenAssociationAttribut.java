@@ -5,21 +5,21 @@ import java.util.List;
 public interface GenAssociationAttribut 
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenAssociationAttributs getReferenceGenAssociationAttributs();
 	
 	public void setReferenceGenAssociationAttributs(GenAssociationAttributs referenceGenAssociationAttributs);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getGenIdAsString();
 	public void setGenIdAsString(String genIdAsString);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	public String getGenId();

@@ -6,22 +6,22 @@ public interface GenStereotypeAttributs
 	extends List<GenStereotypeAttribut>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenAttribut getReferenceGenAttribut();
 	
 	public void setReferenceGenAttribut(GenAttribut referenceGenAttribut);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenStereotypeAttribut getGenStereotypeAttributForNom(String nom);
     public void addGenStereotypeAttribut(GenStereotypeAttribut genStereotypeAttribut);
     public List<GenStereotypeAttribut> getGenStereotypeAttributs();
     public void setGenStereotypeAttributs(List<GenStereotypeAttribut> genStereotypeAttribut);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

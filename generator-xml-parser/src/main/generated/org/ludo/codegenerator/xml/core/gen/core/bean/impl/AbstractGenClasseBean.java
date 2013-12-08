@@ -17,7 +17,7 @@ import java.util.ListIterator;
 
 public class AbstractGenClasseBean implements GenClasse {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenClasses referenceGenClasses;
 	
@@ -29,7 +29,7 @@ public class AbstractGenClasseBean implements GenClasse {
 		this.referenceGenClasses = referenceGenClasses;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     private GenProprieteClasses genProprieteClasses = new GenProprieteClassesBean();
     
@@ -103,7 +103,7 @@ public class AbstractGenClasseBean implements GenClasse {
     }
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 
 	public String getGenIdAsString() {
@@ -148,7 +148,7 @@ public class AbstractGenClasseBean implements GenClasse {
 		this.description = descriptionAsString;
 	}
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 	private String genId = null;
 	private String nomJava = null;

@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenGenererParStereotypeBean implements GenGenererParStereotype {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenGenererParStereotypes referenceGenGenererParStereotypes;
 	
@@ -24,7 +24,7 @@ public class AbstractGenGenererParStereotypeBean implements GenGenererParStereot
 		this.referenceGenGenererParStereotypes = referenceGenGenererParStereotypes;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 
     private GenStereotypeRefPourGenererParStereotypes genStereotypeRefPourGenererParStereotypes = new GenStereotypeRefPourGenererParStereotypesBean();
     
@@ -38,10 +38,10 @@ public class AbstractGenGenererParStereotypeBean implements GenGenererParStereot
     }
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 }

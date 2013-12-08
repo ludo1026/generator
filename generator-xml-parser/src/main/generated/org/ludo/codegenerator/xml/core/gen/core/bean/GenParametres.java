@@ -6,13 +6,13 @@ public interface GenParametres
 	extends List<GenParametre>
 {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	public GenMethode getReferenceGenMethode();
 	
 	public void setReferenceGenMethode(GenMethode referenceGenMethode);
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     public GenParametre getGenParametreForGenId(String genId);
     public GenParametre getGenParametreForNomJava(String nomJava);
@@ -22,9 +22,9 @@ public interface GenParametres
     public List<GenParametre> getGenParametres();
     public void setGenParametres(List<GenParametre> genParametre);
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 }

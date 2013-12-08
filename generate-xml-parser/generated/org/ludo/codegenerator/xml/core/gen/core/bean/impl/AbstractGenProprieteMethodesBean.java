@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
 	
-	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
+	/** Récupération de l'élément parent */
 	
 	private GenMethode referenceGenMethode;
 	
@@ -24,7 +24,7 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
 		this.referenceGenMethode = referenceGenMethode;
 	}
 	
-	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
+	/** Récupération des éléments fils */
 	
     private List<GenProprieteMethode> genProprieteMethodes = new ArrayList<GenProprieteMethode>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
                 return genProprieteMethode;
             }
         }
-        throw new IllegalStateException("La genProprieteMethode n'est pas dÃ©finie : nom de genProprieteMethode = "+nom);
+        throw new IllegalStateException("La genProprieteMethode n'est pas définie : nom de genProprieteMethode = "+nom);
     }
     public GenProprieteMethode getGenProprieteMethodeForValeur(String valeur) {
         for(GenProprieteMethode genProprieteMethode : genProprieteMethodes) {
@@ -42,7 +42,7 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
                 return genProprieteMethode;
             }
         }
-        throw new IllegalStateException("La genProprieteMethode n'est pas dÃ©finie : valeur de genProprieteMethode = "+valeur);
+        throw new IllegalStateException("La genProprieteMethode n'est pas définie : valeur de genProprieteMethode = "+valeur);
     }
     public void addGenProprieteMethode(GenProprieteMethode genProprieteMethode) {
     	genProprieteMethode.setReferenceGenProprieteMethodes(this);
@@ -55,10 +55,10 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
         this.genProprieteMethodes = genProprieteMethodes;
     }
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
+	/** Récupération des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
+	/** Récupération des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

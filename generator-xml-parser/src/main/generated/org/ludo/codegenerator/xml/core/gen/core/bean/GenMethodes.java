@@ -15,9 +15,13 @@ public interface GenMethodes
 	/** Récupération des éléments fils */
 	
     public GenMethode getGenMethodeForGenId(String genId);
+    public List<GenMethode> getGenMethodesByGenId(String genId);
     public GenMethode getGenMethodeForNomJava(String nomJava);
+    public List<GenMethode> getGenMethodesByNomJava(String nomJava);
     public GenMethode getGenMethodeForRetourType(String retourType);
+    public List<GenMethode> getGenMethodesByRetourType(String retourType);
     public GenMethode getGenMethodeForDescription(String description);
+    public List<GenMethode> getGenMethodesByDescription(String description);
     public void addGenMethode(GenMethode genMethode);
     public List<GenMethode> getGenMethodes();
     public void setGenMethodes(List<GenMethode> genMethode);

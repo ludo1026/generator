@@ -36,6 +36,17 @@ public class AbstractGenStereotypeRefPourGenererParStereotypesBean implements Ge
         }
         throw new IllegalStateException("La genStereotypeRefPourGenererParStereotype n'est pas définie : stereotypeNom de genStereotypeRefPourGenererParStereotype = "+stereotypeNom);
     }
+
+    public List<GenStereotypeRefPourGenererParStereotype> getGenStereotypeRefPourGenererParStereotypesByStereotypeNom(String stereotypeNom) {
+        List<GenStereotypeRefPourGenererParStereotype> result = new ArrayList<GenStereotypeRefPourGenererParStereotype>();
+        for(GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype : genStereotypeRefPourGenererParStereotypes) {
+            if(genStereotypeRefPourGenererParStereotype.getStereotypeNom().equalsIgnoreCase(stereotypeNom)) {
+                result.add(genStereotypeRefPourGenererParStereotype);
+            }
+        }
+        return result;
+    }
+
     public void addGenStereotypeRefPourGenererParStereotype(GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype) {
     	genStereotypeRefPourGenererParStereotype.setReferenceGenStereotypeRefPourGenererParStereotypes(this);
         genStereotypeRefPourGenererParStereotypes.add(genStereotypeRefPourGenererParStereotype);

@@ -15,6 +15,7 @@ public interface GenTemplateGroupes
 	/** Récupération des éléments fils */
 	
     public GenTemplateGroupe getGenTemplateGroupeForNom(String nom);
+    public List<GenTemplateGroupe> getGenTemplateGroupesByNom(String nom);
     public void addGenTemplateGroupe(GenTemplateGroupe genTemplateGroupe);
     public List<GenTemplateGroupe> getGenTemplateGroupes();
     public void setGenTemplateGroupes(List<GenTemplateGroupe> genTemplateGroupe);

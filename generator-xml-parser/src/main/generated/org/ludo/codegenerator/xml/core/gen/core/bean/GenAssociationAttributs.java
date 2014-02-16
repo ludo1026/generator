@@ -15,6 +15,7 @@ public interface GenAssociationAttributs
 	/** Récupération des éléments fils */
 	
     public GenAssociationAttribut getGenAssociationAttributForGenId(String genId);
+    public List<GenAssociationAttribut> getGenAssociationAttributsByGenId(String genId);
     public void addGenAssociationAttribut(GenAssociationAttribut genAssociationAttribut);
     public List<GenAssociationAttribut> getGenAssociationAttributs();
     public void setGenAssociationAttributs(List<GenAssociationAttribut> genAssociationAttribut);

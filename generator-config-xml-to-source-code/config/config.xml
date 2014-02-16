@@ -5,42 +5,45 @@
     <stereotype nom="bean" />
   </stereotypes>
 
-  <genererGroupe>
+  <generate>
     <genererParStereotypes>
       <genererParStereotype>
         <stereotypeRefPourGenererParStereotypes>
-          <stereotypeRefPourGenererParStereotype stereotypeNom="bean" />
-          <templateGroupeRefPourGenererParStereotypes>
-            <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
-          </templateGroupeRefPourGenererParStereotypes>
+          <stereotypeRefPourGenererParStereotype stereotypeNom="bean">
+            <templateGroupeRefPourGenererParStereotypes>
+              <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
+            </templateGroupeRefPourGenererParStereotypes>
+          </stereotypeRefPourGenererParStereotype>
         </stereotypeRefPourGenererParStereotypes>
       </genererParStereotype>
     </genererParStereotypes>
     <genererParTemplates>
       <genererParTemplate>
-        <templateGroupeRefPourGenererParTemplates _nb="1">
+        <templateGroupeRefPourGenererParTemplates>
           <templateGroupeRefPourGenererParTemplate templateGroupeNom="uniqueGroupe">
-            <stereotypeRefPourGenererParTemplates _nb="1">
+            <stereotypeRefPourGenererParTemplates>
               <stereotypeRefPourGenererParTemplate stereotypeNom="bean" />
             </stereotypeRefPourGenererParTemplates>
           </templateGroupeRefPourGenererParTemplate>
         </templateGroupeRefPourGenererParTemplates>
       </genererParTemplate>
     </genererParTemplates>
-  </genererGroupe>
+  </generate>
 
   <templateGroupes>
     <templateGroupe nom="beanGroupe">
       <templateRef nom="bean_template" />
+      <templateRef nom="jpa_bean_template" />
     </templateGroupe>
     <templateGroupe nom="uniqueGroupe">
       <templateRef nom="spring_jspx_index" />
     </templateGroupe>
   </templateGroupes>
 
-  <templates inDir="config/templates" outDir="D:/workspace/glougloubar2" packageJavaBase="com.glougloubar">
-    <template nom="bean_template" file="bean_template.vm" packageJava="PPP.domain" outDir="D:/workspace/glougloubar2/src/main/generated" outFile="XXX.java" nomElementGenere="XXX" />
-    <template nom="spring_jspx_index" file="spring_jspx_index.vm" outDir="D:/workspace/glougloubar2/src/main/webapp/WEB-INF/views" outFile="index.jspx" nomElementGenere="index.jspx" />
+  <templates inDir="config/templates" outDir="D:/workspace/glougloubar" packageJavaBase="com.glougloubar">
+    <template nom="bean_template" file="bean_template.vm" packageJava="PPP.domain" outDir="src/main/java" outFile="XXX.java" nomElementGenere="XXX" />
+    <template nom="spring_jspx_index" file="spring_jspx_index.vm" outDir="src/main/webapp/WEB-INF/views" outFile="index.jspx" nomElementGenere="index.jspx" />
+    <template nom="jpa_bean_template" file="jpa_bean_with_links.vm" packageJava="PPP.bean" outDir="src/main/java" outFile="XXX.java" nomElementGenere="XXX" />
   </templates>
 
 </gen>

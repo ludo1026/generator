@@ -15,6 +15,7 @@ public interface GenStereotypeClasses
 	/** Récupération des éléments fils */
 	
     public GenStereotypeClasse getGenStereotypeClasseForNom(String nom);
+    public List<GenStereotypeClasse> getGenStereotypeClassesByNom(String nom);
     public void addGenStereotypeClasse(GenStereotypeClasse genStereotypeClasse);
     public List<GenStereotypeClasse> getGenStereotypeClasses();
     public void setGenStereotypeClasses(List<GenStereotypeClasse> genStereotypeClasse);

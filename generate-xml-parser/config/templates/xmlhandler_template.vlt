@@ -42,55 +42,103 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
     	}
     	
 #macro( callencoursvar $noeud )
-        private ${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()} = null;
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+        private ${noeud.getNomInterface()} ${nomNoeud} = null;
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencoursvar( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencoursvar( $noeud )
         
         public int posCompteur = 0;
 #macro( callencourspos $noeud )
-        public int pos${noeud.getNomAvecMajuscule()} = 0;
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+        public int pos${nomNoeud} = 0;
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencourspos( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencourspos( $noeud )
 
 #macro( callencoursdefpos $noeud )
-        public void definePos${noeud.getNomAvecMajuscule()}() { pos${noeud.getNomAvecMajuscule()} = ++ posCompteur; }
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+        public void definePos${nomNoeud}() { pos${nomNoeud} = ++ posCompteur; }
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencoursdefpos( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencoursdefpos( $noeud )
 
 #macro( callencoursgetpos $noeud )
-        public int getPos${noeud.getNomAvecMajuscule()}() { return pos${noeud.getNomAvecMajuscule()}; }
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+        public int getPos${nomNoeud}() { return pos${nomNoeud}; }
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencoursgetpos( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencoursgetpos( $noeud )
         
 #macro( callencoursget $noeud )
-		public final ${noeud.getNomInterface()} get${noeud.getNomAvecMajuscule()}() { return ${noeud.getNomSansMajuscule()}; }
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+		public final ${noeud.getNomInterface()} get${nomNoeud}() { return ${nomNoeud}; }
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencoursget( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencoursget( $noeud )
 		
 #macro( callencoursset $noeud )
-		public final void set${noeud.getNomAvecMajuscule()}(${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()}) {
-			this.definePos${noeud.getNomAvecMajuscule()}();
-			this.${noeud.getNomSansMajuscule()} = ${noeud.getNomSansMajuscule()};
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+		public final void set${nomNoeud}(${noeud.getNomInterface()} ${nomNoeud}) {
+			this.definePos${nomNoeud}();
+			this.${nomNoeud} = ${nomNoeud};
 		}
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callencoursset( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callencoursset( $noeud )
     };
     
@@ -109,35 +157,58 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
 #macro( callstartelt $noeud )
-        if (${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}.equalsIgnoreCase(localName)){
-            startElement_${noeud.getNomAvecMajuscule()}(namespaceURI, localName, qName, atts);
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#set( $nomParent = "" )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#set( $nomParent = $nomNoeuds.peek() )
+#end
+#if( $nomParent == "" )
+        if (${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+#else
+        if (enCours.get${nomParent}() != null
+         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+#end
+            startElement_${nomNoeud}(namespaceURI, localName, qName, atts);
         }
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callstartelt( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callstartelt( $noeud )
     }
 
 #macro( callstarteltfnc $noeud )
-    public void startElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName, Attributes atts)
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+    public void startElement_${nomNoeud}(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	${noeud.getNomInterface()} ${noeud.getNomSansMajuscule()} = new ${noeud.getNomBean()}();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
 #foreach( $attributNoeud in $noeud.getListeAttribut() )
-            if(${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}_A_${attributNoeud.getNomAvecMajuscule()}.equalsIgnoreCase(attName)) {
+            if(${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}_A_${attributNoeud.getNomAvecMajuscule()}.equalsIgnoreCase(attName)) {
             	${noeud.getNomSansMajuscule()}.set${attributNoeud.getNomAvecMajuscule()}AsString(atts.getValue(i));
             }
 #end
         }
-        enCours.set${noeud.getNomAvecMajuscule()}( ${noeud.getNomSansMajuscule()} );
+        enCours.set${nomNoeud}( ${noeud.getNomSansMajuscule()} );
     }
     
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callstarteltfnc( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callstarteltfnc( $noeud )
     
     /**
@@ -163,13 +234,22 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
     public void endElement(String namespaceURI, String localName, String qName)
     throws SAXException {
 #macro( callendelt $noeud )
-        if (${nomNoeudPrincipal}XmlNoeud.N_${noeud.getNomAvecMajuscule()}.equalsIgnoreCase(localName)){
-            endElement_${noeud.getNomAvecMajuscule()}(namespaceURI, localName, qName);
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#end
+        if (enCours.get${nomNoeud}() != null
+         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+            endElement_${nomNoeud}(namespaceURI, localName, qName);
         }
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callendelt( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
+#set( $nomNoeuds = $stackFactory.newStack() )
 #callendelt( $noeud )
     }
 
@@ -178,27 +258,39 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
     	enCours.set${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
     }
     
-#foreach( $noeudFils in $noeud.getListeNoeud() )
-#callendeltfnc( $noeudFils )
-#end
 #macro( callendeltfnc $noeud )
-    public void endElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName)
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
+#set( $nomParent = $nomNoeuds.peek() )
+#end
+    public void endElement_${nomNoeud}(String namespaceURI, String localName, String qName)
     throws SAXException {
 #if( $noeud.getNombre() == 0 )
-    	enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}().set${noeud.getNomAvecMajuscule()}(enCours.getStrValue());
+    	enCours.get${nomParent}().set${noeud.getNomAvecMajuscule()}(enCours.getStrValue());
 #elseif( $noeud.getNombre() == 1 )
-    	enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}().set${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
+    	enCours.get${nomParent}().set${noeud.getNomAvecMajuscule()}(enCours.get${nomNoeud}());
 #else
-    	if(enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}() == null) {
-    		enCours.set${noeud.getReferenceNoeud().getNomAvecMajuscule()}(new ${noeud.getReferenceNoeud().getNomBean()}());
+    	if(enCours.get${nomParent}() == null) {
+    		enCours.set${nomParent}(new ${noeud.getReferenceNoeud().getNomBean()}());
     	}
-    	enCours.get${noeud.getReferenceNoeud().getNomAvecMajuscule()}().add${noeud.getNomAvecMajuscule()}(enCours.get${noeud.getNomAvecMajuscule()}());
+    	enCours.get${nomParent}().add${noeud.getNomAvecMajuscule()}(enCours.get${nomNoeud}());
 #end
+    	enCours.set${nomNoeud}(null);
     }
     
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callendeltfnc( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
+#end
+#foreach( $noeudFils in $noeud.getListeNoeud() )
+#set( $nomNoeuds = $stackFactory.newStack() )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+#callendeltfnc( $noeudFils )
 #end
 	    
 }

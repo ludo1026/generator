@@ -39,6 +39,26 @@ public class Noeud {
 		this.referenceXml = referenceXml;
 	}
 
+	private String nomPourParserSAX = "";
+	
+	public String getNomPourParserSAX() {
+		return nomPourParserSAX;
+	}
+
+	public void setNomPourParserSAX(String nomPourParserSAX) {
+		this.nomPourParserSAX = nomPourParserSAX;
+	}
+
+	private Noeud noeudParent = null;
+
+	public Noeud getNoeudParent() {
+		return noeudParent;
+	}
+
+	public void setNoeudParent(Noeud noeudParent) {
+		this.noeudParent = noeudParent;
+	}
+
 	private Noeud referenceNoeud = null;
 
 	public boolean hasReferenceNoeud() {

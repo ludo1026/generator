@@ -37,6 +37,7 @@ public interface ${noeud.getNomInterface()}
 	
 #foreach( $attributNoeudFils in $noeudFils.getListeAttribut() )
     public ${noeudFils.getNomInterface()} get${noeudFils.getNomAvecMajuscule()}For${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()});
+    public List<${noeudFils.getNomInterface()}> get${noeudFils.getNomAvecMajuscule()}sBy${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()});
 #end
     public void add${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()});
     public List<${noeudFils.getNomInterface()}> get${noeudFils.getNomAvecMajuscule()}s();

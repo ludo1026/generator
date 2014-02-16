@@ -36,6 +36,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : genId de genClasse = "+genId);
     }
+
+    public List<GenClasse> getGenClassesByGenId(String genId) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public GenClasse getGenClasseForNomJava(String nomJava) {
         for(GenClasse genClasse : genClasses) {
             if(genClasse.getNomJava().equalsIgnoreCase(nomJava)) {
@@ -44,6 +55,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : nomJava de genClasse = "+nomJava);
     }
+
+    public List<GenClasse> getGenClassesByNomJava(String nomJava) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getNomJava().equalsIgnoreCase(nomJava)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public GenClasse getGenClasseForPackageJava(String packageJava) {
         for(GenClasse genClasse : genClasses) {
             if(genClasse.getPackageJava().equalsIgnoreCase(packageJava)) {
@@ -52,6 +74,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : packageJava de genClasse = "+packageJava);
     }
+
+    public List<GenClasse> getGenClassesByPackageJava(String packageJava) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getPackageJava().equalsIgnoreCase(packageJava)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public GenClasse getGenClasseForNomTable(String nomTable) {
         for(GenClasse genClasse : genClasses) {
             if(genClasse.getNomTable().equalsIgnoreCase(nomTable)) {
@@ -60,6 +93,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : nomTable de genClasse = "+nomTable);
     }
+
+    public List<GenClasse> getGenClassesByNomTable(String nomTable) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getNomTable().equalsIgnoreCase(nomTable)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public GenClasse getGenClasseForNomVue(String nomVue) {
         for(GenClasse genClasse : genClasses) {
             if(genClasse.getNomVue().equalsIgnoreCase(nomVue)) {
@@ -68,6 +112,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : nomVue de genClasse = "+nomVue);
     }
+
+    public List<GenClasse> getGenClassesByNomVue(String nomVue) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getNomVue().equalsIgnoreCase(nomVue)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public GenClasse getGenClasseForDescription(String description) {
         for(GenClasse genClasse : genClasses) {
             if(genClasse.getDescription().equalsIgnoreCase(description)) {
@@ -76,6 +131,17 @@ public class AbstractGenClassesBean implements GenClasses {
         }
         throw new IllegalStateException("La genClasse n'est pas définie : description de genClasse = "+description);
     }
+
+    public List<GenClasse> getGenClassesByDescription(String description) {
+        List<GenClasse> result = new ArrayList<GenClasse>();
+        for(GenClasse genClasse : genClasses) {
+            if(genClasse.getDescription().equalsIgnoreCase(description)) {
+                result.add(genClasse);
+            }
+        }
+        return result;
+    }
+
     public void addGenClasse(GenClasse genClasse) {
     	genClasse.setReferenceGenClasses(this);
         genClasses.add(genClasse);

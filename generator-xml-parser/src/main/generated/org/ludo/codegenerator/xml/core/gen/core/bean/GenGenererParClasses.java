@@ -8,9 +8,9 @@ public interface GenGenererParClasses
 	
 	/** Récupération de l'élément parent */
 	
-	public GenGenererGroupe getReferenceGenGenererGroupe();
+	public GenGenerate getReferenceGenGenerate();
 	
-	public void setReferenceGenGenererGroupe(GenGenererGroupe referenceGenGenererGroupe);
+	public void setReferenceGenGenerate(GenGenerate referenceGenGenerate);
 	
 	/** Récupération des éléments fils */
 	

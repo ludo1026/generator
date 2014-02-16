@@ -36,6 +36,17 @@ public class AbstractGenParametresBean implements GenParametres {
         }
         throw new IllegalStateException("La genParametre n'est pas définie : genId de genParametre = "+genId);
     }
+
+    public List<GenParametre> getGenParametresByGenId(String genId) {
+        List<GenParametre> result = new ArrayList<GenParametre>();
+        for(GenParametre genParametre : genParametres) {
+            if(genParametre.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genParametre);
+            }
+        }
+        return result;
+    }
+
     public GenParametre getGenParametreForNomJava(String nomJava) {
         for(GenParametre genParametre : genParametres) {
             if(genParametre.getNomJava().equalsIgnoreCase(nomJava)) {
@@ -44,6 +55,17 @@ public class AbstractGenParametresBean implements GenParametres {
         }
         throw new IllegalStateException("La genParametre n'est pas définie : nomJava de genParametre = "+nomJava);
     }
+
+    public List<GenParametre> getGenParametresByNomJava(String nomJava) {
+        List<GenParametre> result = new ArrayList<GenParametre>();
+        for(GenParametre genParametre : genParametres) {
+            if(genParametre.getNomJava().equalsIgnoreCase(nomJava)) {
+                result.add(genParametre);
+            }
+        }
+        return result;
+    }
+
     public GenParametre getGenParametreForType(String type) {
         for(GenParametre genParametre : genParametres) {
             if(genParametre.getType().equalsIgnoreCase(type)) {
@@ -52,6 +74,17 @@ public class AbstractGenParametresBean implements GenParametres {
         }
         throw new IllegalStateException("La genParametre n'est pas définie : type de genParametre = "+type);
     }
+
+    public List<GenParametre> getGenParametresByType(String type) {
+        List<GenParametre> result = new ArrayList<GenParametre>();
+        for(GenParametre genParametre : genParametres) {
+            if(genParametre.getType().equalsIgnoreCase(type)) {
+                result.add(genParametre);
+            }
+        }
+        return result;
+    }
+
     public GenParametre getGenParametreForDescription(String description) {
         for(GenParametre genParametre : genParametres) {
             if(genParametre.getDescription().equalsIgnoreCase(description)) {
@@ -60,6 +93,17 @@ public class AbstractGenParametresBean implements GenParametres {
         }
         throw new IllegalStateException("La genParametre n'est pas définie : description de genParametre = "+description);
     }
+
+    public List<GenParametre> getGenParametresByDescription(String description) {
+        List<GenParametre> result = new ArrayList<GenParametre>();
+        for(GenParametre genParametre : genParametres) {
+            if(genParametre.getDescription().equalsIgnoreCase(description)) {
+                result.add(genParametre);
+            }
+        }
+        return result;
+    }
+
     public void addGenParametre(GenParametre genParametre) {
     	genParametre.setReferenceGenParametres(this);
         genParametres.add(genParametre);

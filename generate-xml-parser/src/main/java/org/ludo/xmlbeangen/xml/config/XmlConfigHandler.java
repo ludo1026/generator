@@ -14,6 +14,8 @@
  */
 package org.ludo.xmlbeangen.xml.config;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 import org.apache.commons.lang.StringUtils;
@@ -38,26 +40,6 @@ import org.xml.sax.helpers.DefaultHandler;
 public class XmlConfigHandler extends DefaultHandler {
     
     private static Logger log = LoggerManager.getLogger(XmlConfigHandler.class);
-    
-    // description des champs 
-    private float fOrderPrice = 0;
-    private String priceElement = "";
-    private final String N_CLASSES = "CLASSES";
-    private final String N_CLASSES_A_PACKAGE_BASE = "PACKAGEBASE";
-    private final String N_CLASSE = "CLASSE";
-    private final String N_CLASSE_A_NOM_JAVA = "NOMJAVA";
-    private final String N_CLASSE_A_NOM_TABLE = "NOMTABLE";
-    private final String N_CLASSE_A_NOM_VUE = "NOMVUE";
-    private final String N_CLASSE_A_MODULE = "MODULE";
-    private final String N_ATTRIBUT = "ATTRIBUT";
-    private final String N_ATTRIBUT_A_NOM_JAVA = "NOMJAVA";
-    private final String N_ATTRIBUT_A_TYPE_JAVA = "TYPEJAVA";
-    private final String N_ATTRIBUT_A_NOM_SQL = "NOMSQL";
-    private final String N_ATTRIBUT_A_TYPE_SQL = "TYPESQL";
-    private final String N_ATTRIBUT_A_EST_DANS_TABLE = "ESTDANSTABLE";
-    private final String N_ATTRIBUT_A_EST_CLE_PRIMAIRE = "ESTCLEPRIMAIRE";
-    private final String N_ATTRIBUT_A_EST_CLE_INCREMENTEE = "ESTCLEINCREMENTEE";
-    private final String N_ATTRIBUT_A_SIZE = "SIZE";
     
     private EnCours enCours = new EnCours();
     
@@ -120,11 +102,32 @@ public class XmlConfigHandler extends DefaultHandler {
         if(enCours.noeud == null) {
         	enCours.xml.setNoeud(noeud);
         } else {
-        	((Noeud)enCours.pileNoeud.peek()).addNoeud(noeud);
+        	Noeud noeudParent = ((Noeud)enCours.pileNoeud.peek());
+        	noeudParent.addNoeud(noeud);
+            // Define parent node
+            noeud.setNoeudParent(noeudParent);
         }
         // Le dÃ©finir comme noeud courant
         enCours.pileNoeud.push(noeud);
         enCours.noeud = noeud;
+
+        // Définir le nom de variable pour le parser SAX qui sera généré
+        defineNomPourParserSAX(noeud);
+    }
+    
+    private void defineNomPourParserSAX(Noeud noeud) {
+    	StringBuffer nom = new StringBuffer("");
+    	Stack<Noeud> noeuds = new Stack<Noeud>();
+    	Noeud noeudCourant = noeud;
+    	while(noeudCourant != null) {
+    		noeuds.push(noeudCourant);
+    		noeudCourant = noeudCourant.getNoeudParent();
+    	}
+    	while(noeuds.size()!=0) {
+    		noeudCourant = noeuds.pop();
+    		nom.append(noeudCourant.getNomAvecMajuscule());
+    	}
+    	noeud.setNomPourParserSAX(nom.toString());
     }
     
     /**

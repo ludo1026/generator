@@ -71,6 +71,17 @@ public class ${noeud.getNomAbstract()} implements ${noeud.getNomInterface()} {
         }
         throw new IllegalStateException("La ${noeudFils.getNomSansMajuscule()} n'est pas définie : ${attributNoeudFils.getNomSansMajuscule()} de ${noeudFils.getNomSansMajuscule()} = "+${attributNoeudFils.getNomSansMajuscule()});
     }
+
+    public List<${noeudFils.getNomInterface()}> get${noeudFils.getNomAvecMajuscule()}sBy${attributNoeudFils.getNomAvecMajuscule()}(String ${attributNoeudFils.getNomSansMajuscule()}) {
+        List<${noeudFils.getNomInterface()}> result = new ArrayList<${noeudFils.getNomInterface()}>();
+        for(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()} : ${noeudFils.getNomSansMajuscule()}s) {
+            if(${noeudFils.getNomSansMajuscule()}.get${attributNoeudFils.getNomAvecMajuscule()}().equalsIgnoreCase(${attributNoeudFils.getNomSansMajuscule()})) {
+                result.add(${noeudFils.getNomSansMajuscule()});
+            }
+        }
+        return result;
+    }
+
 #end
     public void add${noeudFils.getNomAvecMajuscule()}(${noeudFils.getNomInterface()} ${noeudFils.getNomSansMajuscule()}) {
     	${noeudFils.getNomSansMajuscule()}.setReference${noeud.getNomAvecMajuscule()}(this);

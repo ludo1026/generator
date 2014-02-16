@@ -36,6 +36,17 @@ public class AbstractGenStereotypeRefPourGenererParTemplatesBean implements GenS
         }
         throw new IllegalStateException("La genStereotypeRefPourGenererParTemplate n'est pas définie : stereotypeNom de genStereotypeRefPourGenererParTemplate = "+stereotypeNom);
     }
+
+    public List<GenStereotypeRefPourGenererParTemplate> getGenStereotypeRefPourGenererParTemplatesByStereotypeNom(String stereotypeNom) {
+        List<GenStereotypeRefPourGenererParTemplate> result = new ArrayList<GenStereotypeRefPourGenererParTemplate>();
+        for(GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate : genStereotypeRefPourGenererParTemplates) {
+            if(genStereotypeRefPourGenererParTemplate.getStereotypeNom().equalsIgnoreCase(stereotypeNom)) {
+                result.add(genStereotypeRefPourGenererParTemplate);
+            }
+        }
+        return result;
+    }
+
     public void addGenStereotypeRefPourGenererParTemplate(GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate) {
     	genStereotypeRefPourGenererParTemplate.setReferenceGenStereotypeRefPourGenererParTemplates(this);
         genStereotypeRefPourGenererParTemplates.add(genStereotypeRefPourGenererParTemplate);

@@ -36,6 +36,17 @@ public class AbstractGenStereotypeAttributsBean implements GenStereotypeAttribut
         }
         throw new IllegalStateException("La genStereotypeAttribut n'est pas définie : nom de genStereotypeAttribut = "+nom);
     }
+
+    public List<GenStereotypeAttribut> getGenStereotypeAttributsByNom(String nom) {
+        List<GenStereotypeAttribut> result = new ArrayList<GenStereotypeAttribut>();
+        for(GenStereotypeAttribut genStereotypeAttribut : genStereotypeAttributs) {
+            if(genStereotypeAttribut.getNom().equalsIgnoreCase(nom)) {
+                result.add(genStereotypeAttribut);
+            }
+        }
+        return result;
+    }
+
     public void addGenStereotypeAttribut(GenStereotypeAttribut genStereotypeAttribut) {
     	genStereotypeAttribut.setReferenceGenStereotypeAttributs(this);
         genStereotypeAttributs.add(genStereotypeAttribut);

@@ -36,6 +36,17 @@ public class AbstractGenAssociationAttributsBean implements GenAssociationAttrib
         }
         throw new IllegalStateException("La genAssociationAttribut n'est pas définie : genId de genAssociationAttribut = "+genId);
     }
+
+    public List<GenAssociationAttribut> getGenAssociationAttributsByGenId(String genId) {
+        List<GenAssociationAttribut> result = new ArrayList<GenAssociationAttribut>();
+        for(GenAssociationAttribut genAssociationAttribut : genAssociationAttributs) {
+            if(genAssociationAttribut.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genAssociationAttribut);
+            }
+        }
+        return result;
+    }
+
     public void addGenAssociationAttribut(GenAssociationAttribut genAssociationAttribut) {
     	genAssociationAttribut.setReferenceGenAssociationAttributs(this);
         genAssociationAttributs.add(genAssociationAttribut);

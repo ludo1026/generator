@@ -15,9 +15,13 @@ public interface GenParametres
 	/** Récupération des éléments fils */
 	
     public GenParametre getGenParametreForGenId(String genId);
+    public List<GenParametre> getGenParametresByGenId(String genId);
     public GenParametre getGenParametreForNomJava(String nomJava);
+    public List<GenParametre> getGenParametresByNomJava(String nomJava);
     public GenParametre getGenParametreForType(String type);
+    public List<GenParametre> getGenParametresByType(String type);
     public GenParametre getGenParametreForDescription(String description);
+    public List<GenParametre> getGenParametresByDescription(String description);
     public void addGenParametre(GenParametre genParametre);
     public List<GenParametre> getGenParametres();
     public void setGenParametres(List<GenParametre> genParametre);

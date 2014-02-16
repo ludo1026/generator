@@ -36,6 +36,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : genId de genAssociation = "+genId);
     }
+
+    public List<GenAssociation> getGenAssociationsByGenId(String genId) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public GenAssociation getGenAssociationForNomJava(String nomJava) {
         for(GenAssociation genAssociation : genAssociations) {
             if(genAssociation.getNomJava().equalsIgnoreCase(nomJava)) {
@@ -44,6 +55,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : nomJava de genAssociation = "+nomJava);
     }
+
+    public List<GenAssociation> getGenAssociationsByNomJava(String nomJava) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getNomJava().equalsIgnoreCase(nomJava)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public GenAssociation getGenAssociationForClasseGenId(String classeGenId) {
         for(GenAssociation genAssociation : genAssociations) {
             if(genAssociation.getClasseGenId().equalsIgnoreCase(classeGenId)) {
@@ -52,6 +74,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : classeGenId de genAssociation = "+classeGenId);
     }
+
+    public List<GenAssociation> getGenAssociationsByClasseGenId(String classeGenId) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getClasseGenId().equalsIgnoreCase(classeGenId)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public GenAssociation getGenAssociationForNbMin(String nbMin) {
         for(GenAssociation genAssociation : genAssociations) {
             if(genAssociation.getNbMin().equalsIgnoreCase(nbMin)) {
@@ -60,6 +93,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : nbMin de genAssociation = "+nbMin);
     }
+
+    public List<GenAssociation> getGenAssociationsByNbMin(String nbMin) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getNbMin().equalsIgnoreCase(nbMin)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public GenAssociation getGenAssociationForNbMax(String nbMax) {
         for(GenAssociation genAssociation : genAssociations) {
             if(genAssociation.getNbMax().equalsIgnoreCase(nbMax)) {
@@ -68,6 +112,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : nbMax de genAssociation = "+nbMax);
     }
+
+    public List<GenAssociation> getGenAssociationsByNbMax(String nbMax) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getNbMax().equalsIgnoreCase(nbMax)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public GenAssociation getGenAssociationForDescription(String description) {
         for(GenAssociation genAssociation : genAssociations) {
             if(genAssociation.getDescription().equalsIgnoreCase(description)) {
@@ -76,6 +131,17 @@ public class AbstractGenAssociationsBean implements GenAssociations {
         }
         throw new IllegalStateException("La genAssociation n'est pas définie : description de genAssociation = "+description);
     }
+
+    public List<GenAssociation> getGenAssociationsByDescription(String description) {
+        List<GenAssociation> result = new ArrayList<GenAssociation>();
+        for(GenAssociation genAssociation : genAssociations) {
+            if(genAssociation.getDescription().equalsIgnoreCase(description)) {
+                result.add(genAssociation);
+            }
+        }
+        return result;
+    }
+
     public void addGenAssociation(GenAssociation genAssociation) {
     	genAssociation.setReferenceGenAssociations(this);
         genAssociations.add(genAssociation);

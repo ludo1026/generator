@@ -36,6 +36,17 @@ public class AbstractGenProprieteClassesBean implements GenProprieteClasses {
         }
         throw new IllegalStateException("La genProprieteClasse n'est pas définie : nom de genProprieteClasse = "+nom);
     }
+
+    public List<GenProprieteClasse> getGenProprieteClassesByNom(String nom) {
+        List<GenProprieteClasse> result = new ArrayList<GenProprieteClasse>();
+        for(GenProprieteClasse genProprieteClasse : genProprieteClasses) {
+            if(genProprieteClasse.getNom().equalsIgnoreCase(nom)) {
+                result.add(genProprieteClasse);
+            }
+        }
+        return result;
+    }
+
     public GenProprieteClasse getGenProprieteClasseForValeur(String valeur) {
         for(GenProprieteClasse genProprieteClasse : genProprieteClasses) {
             if(genProprieteClasse.getValeur().equalsIgnoreCase(valeur)) {
@@ -44,6 +55,17 @@ public class AbstractGenProprieteClassesBean implements GenProprieteClasses {
         }
         throw new IllegalStateException("La genProprieteClasse n'est pas définie : valeur de genProprieteClasse = "+valeur);
     }
+
+    public List<GenProprieteClasse> getGenProprieteClassesByValeur(String valeur) {
+        List<GenProprieteClasse> result = new ArrayList<GenProprieteClasse>();
+        for(GenProprieteClasse genProprieteClasse : genProprieteClasses) {
+            if(genProprieteClasse.getValeur().equalsIgnoreCase(valeur)) {
+                result.add(genProprieteClasse);
+            }
+        }
+        return result;
+    }
+
     public void addGenProprieteClasse(GenProprieteClasse genProprieteClasse) {
     	genProprieteClasse.setReferenceGenProprieteClasses(this);
         genProprieteClasses.add(genProprieteClasse);

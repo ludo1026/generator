@@ -15,7 +15,9 @@ public interface GenProprieteClasses
 	/** Récupération des éléments fils */
 	
     public GenProprieteClasse getGenProprieteClasseForNom(String nom);
+    public List<GenProprieteClasse> getGenProprieteClassesByNom(String nom);
     public GenProprieteClasse getGenProprieteClasseForValeur(String valeur);
+    public List<GenProprieteClasse> getGenProprieteClassesByValeur(String valeur);
     public void addGenProprieteClasse(GenProprieteClasse genProprieteClasse);
     public List<GenProprieteClasse> getGenProprieteClasses();
     public void setGenProprieteClasses(List<GenProprieteClasse> genProprieteClasse);

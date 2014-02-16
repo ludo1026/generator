@@ -41,7 +41,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseRefPourGenererParClasse;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseRefPourGenererParClasses;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasse;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasses;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParStereotype;
@@ -109,7 +109,7 @@ public class ProcessManager {
 			if (classes == null) {
 				return;
 			}
-			final GenGenererGroupe genererGroupe = this.gen.getGenGenererGroupe();
+			final GenGenerate genererGroupe = this.gen.getGenGenerate();
 			if (genererGroupe == null) {
 				return;
 			}
@@ -427,9 +427,11 @@ public class ProcessManager {
 			VelocityUtils.putInContextIfNotNull(context, "mapListeClasseParStereotype", templateGeneration.getMapListeClasseParStereotype());
 			VelocityUtils.putInContextIfNotNull(context, "templateGeneration", templateGeneration);
 
+			final GenTemplates templates = this.gen.getGenTemplates();
+			
 			final String nomFichierTemplate = templateGeneration.getNomFichierTemplate();
-			final String nomRepertoireSortie = templateGeneration.getNomRepertoireSortie();
-			final String nomFichierSortie = templateGeneration.getNomFichierSortie();
+			final String nomRepertoireSortie = templates.getOutDir() + "/" + templateGeneration.getNomRepertoireSortie();
+			final String nomFichierSortie = templates.getOutDir() + "/" + templateGeneration.getNomFichierSortie();
 
 			final StringWriter w = new StringWriter();
 			Velocity.mergeTemplate(nomFichierTemplate, "UTF-8", context, w);

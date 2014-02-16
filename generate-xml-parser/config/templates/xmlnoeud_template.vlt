@@ -2,15 +2,24 @@ package ${package}.${xmlModele.getNom()}.core.xmlreader;
 
 public interface ${noeud.getNomAvecMajuscule()}XmlNoeud {
     
-    // description des champs 
+    // description des champs
+#set( $nomNoeuds = $stackFactory.newStack() )
 #macro( calldefnoeud $noeud )
-    public final String N_${noeud.getNomAvecMajuscule()} = "${noeud.getNomXml()}";
-#foreach( $attributNoeud in $noeud.getListeAttribut() )
-    public final String N_${noeud.getNomAvecMajuscule()}_A_${attributNoeud.getNomAvecMajuscule()} = "${attributNoeud.getNomXml()}";
+#if( $nomNoeuds.size() == 0 )
+#set( $nomNoeud = ${noeud.getNomAvecMajuscule()} )
+#else
+#set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
 #end
+#set( $_ = ${nomNoeuds.push($nomNoeud)} )
+    public final String N_${nomNoeud} = "${noeud.getNomXml()}";
+#foreach( $attributNoeud in $noeud.getListeAttribut() )
+    public final String N_${nomNoeud}_A_${attributNoeud.getNomAvecMajuscule()} = "${attributNoeud.getNomXml()}";
+#end
+
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #calldefnoeud( $noeudFils )
 #end
+#set( $_ = ${nomNoeuds.pop()} )
 #end
 #calldefnoeud( $noeud )
 	    

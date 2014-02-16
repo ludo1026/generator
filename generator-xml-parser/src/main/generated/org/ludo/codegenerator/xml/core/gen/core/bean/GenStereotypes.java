@@ -15,6 +15,7 @@ public interface GenStereotypes
 	/** Récupération des éléments fils */
 	
     public GenStereotype getGenStereotypeForNom(String nom);
+    public List<GenStereotype> getGenStereotypesByNom(String nom);
     public void addGenStereotype(GenStereotype genStereotype);
     public List<GenStereotype> getGenStereotypes();
     public void setGenStereotypes(List<GenStereotype> genStereotype);

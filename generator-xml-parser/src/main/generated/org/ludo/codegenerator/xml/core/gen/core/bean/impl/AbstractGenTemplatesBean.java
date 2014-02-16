@@ -36,6 +36,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : nom de genTemplate = "+nom);
     }
+
+    public List<GenTemplate> getGenTemplatesByNom(String nom) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getNom().equalsIgnoreCase(nom)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public GenTemplate getGenTemplateForFile(String file) {
         for(GenTemplate genTemplate : genTemplates) {
             if(genTemplate.getFile().equalsIgnoreCase(file)) {
@@ -44,6 +55,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : file de genTemplate = "+file);
     }
+
+    public List<GenTemplate> getGenTemplatesByFile(String file) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getFile().equalsIgnoreCase(file)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public GenTemplate getGenTemplateForOutDir(String outDir) {
         for(GenTemplate genTemplate : genTemplates) {
             if(genTemplate.getOutDir().equalsIgnoreCase(outDir)) {
@@ -52,6 +74,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : outDir de genTemplate = "+outDir);
     }
+
+    public List<GenTemplate> getGenTemplatesByOutDir(String outDir) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getOutDir().equalsIgnoreCase(outDir)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public GenTemplate getGenTemplateForOutFile(String outFile) {
         for(GenTemplate genTemplate : genTemplates) {
             if(genTemplate.getOutFile().equalsIgnoreCase(outFile)) {
@@ -60,6 +93,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : outFile de genTemplate = "+outFile);
     }
+
+    public List<GenTemplate> getGenTemplatesByOutFile(String outFile) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getOutFile().equalsIgnoreCase(outFile)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public GenTemplate getGenTemplateForPackageJava(String packageJava) {
         for(GenTemplate genTemplate : genTemplates) {
             if(genTemplate.getPackageJava().equalsIgnoreCase(packageJava)) {
@@ -68,6 +112,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : packageJava de genTemplate = "+packageJava);
     }
+
+    public List<GenTemplate> getGenTemplatesByPackageJava(String packageJava) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getPackageJava().equalsIgnoreCase(packageJava)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public GenTemplate getGenTemplateForNomElementGenere(String nomElementGenere) {
         for(GenTemplate genTemplate : genTemplates) {
             if(genTemplate.getNomElementGenere().equalsIgnoreCase(nomElementGenere)) {
@@ -76,6 +131,17 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         }
         throw new IllegalStateException("La genTemplate n'est pas définie : nomElementGenere de genTemplate = "+nomElementGenere);
     }
+
+    public List<GenTemplate> getGenTemplatesByNomElementGenere(String nomElementGenere) {
+        List<GenTemplate> result = new ArrayList<GenTemplate>();
+        for(GenTemplate genTemplate : genTemplates) {
+            if(genTemplate.getNomElementGenere().equalsIgnoreCase(nomElementGenere)) {
+                result.add(genTemplate);
+            }
+        }
+        return result;
+    }
+
     public void addGenTemplate(GenTemplate genTemplate) {
     	genTemplate.setReferenceGenTemplates(this);
         genTemplates.add(genTemplate);

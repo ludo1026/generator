@@ -15,11 +15,17 @@ public interface GenTemplates
 	/** Récupération des éléments fils */
 	
     public GenTemplate getGenTemplateForNom(String nom);
+    public List<GenTemplate> getGenTemplatesByNom(String nom);
     public GenTemplate getGenTemplateForFile(String file);
+    public List<GenTemplate> getGenTemplatesByFile(String file);
     public GenTemplate getGenTemplateForOutDir(String outDir);
+    public List<GenTemplate> getGenTemplatesByOutDir(String outDir);
     public GenTemplate getGenTemplateForOutFile(String outFile);
+    public List<GenTemplate> getGenTemplatesByOutFile(String outFile);
     public GenTemplate getGenTemplateForPackageJava(String packageJava);
+    public List<GenTemplate> getGenTemplatesByPackageJava(String packageJava);
     public GenTemplate getGenTemplateForNomElementGenere(String nomElementGenere);
+    public List<GenTemplate> getGenTemplatesByNomElementGenere(String nomElementGenere);
     public void addGenTemplate(GenTemplate genTemplate);
     public List<GenTemplate> getGenTemplates();
     public void setGenTemplates(List<GenTemplate> genTemplate);

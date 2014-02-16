@@ -15,7 +15,9 @@ public interface GenProprieteAttributs
 	/** Récupération des éléments fils */
 	
     public GenProprieteAttribut getGenProprieteAttributForNom(String nom);
+    public List<GenProprieteAttribut> getGenProprieteAttributsByNom(String nom);
     public GenProprieteAttribut getGenProprieteAttributForValeur(String valeur);
+    public List<GenProprieteAttribut> getGenProprieteAttributsByValeur(String valeur);
     public void addGenProprieteAttribut(GenProprieteAttribut genProprieteAttribut);
     public List<GenProprieteAttribut> getGenProprieteAttributs();
     public void setGenProprieteAttributs(List<GenProprieteAttribut> genProprieteAttribut);

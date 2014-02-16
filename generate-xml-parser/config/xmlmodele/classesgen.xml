@@ -132,7 +132,7 @@
    </classe>
   </classes>
   
-  <genererGroupe _nb="1">
+  <generate _nb="1">
     <genererParClasses _nb="1">
      <genererParClasse>
       <classeRefPourGenererParClasses _nb="1">

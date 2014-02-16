@@ -15,6 +15,7 @@ public interface GenStereotypeRefPourGenererParTemplates
 	/** Récupération des éléments fils */
 	
     public GenStereotypeRefPourGenererParTemplate getGenStereotypeRefPourGenererParTemplateForStereotypeNom(String stereotypeNom);
+    public List<GenStereotypeRefPourGenererParTemplate> getGenStereotypeRefPourGenererParTemplatesByStereotypeNom(String stereotypeNom);
     public void addGenStereotypeRefPourGenererParTemplate(GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate);
     public List<GenStereotypeRefPourGenererParTemplate> getGenStereotypeRefPourGenererParTemplates();
     public void setGenStereotypeRefPourGenererParTemplates(List<GenStereotypeRefPourGenererParTemplate> genStereotypeRefPourGenererParTemplate);

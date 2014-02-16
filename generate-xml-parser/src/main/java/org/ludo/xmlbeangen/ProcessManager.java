@@ -158,6 +158,7 @@ public class ProcessManager {
         context.put("template", template);
         context.put("xmlModele", xmlModele);
         context.put("package", templateManager.getTemplates().getPackageBase());
+        context.put("stackFactory", new StackFactory());
         context.put("NOMBRE_NOEUD_ILLIMITE", Noeud.NOMBRE_NOEUD_ILLIMITE_INTEGER);
         
         StringWriter w = new StringWriter();

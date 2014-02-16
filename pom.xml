@@ -13,6 +13,7 @@
 	<module>generator-uml-to-config-xml</module>
 	<module>generator-config-xml-to-source-code</module>
 	
+	<module>generator-java-to-config-xml</module>
 	</modules>
 	<build>
 		<plugins>

@@ -36,6 +36,17 @@ public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
         }
         throw new IllegalStateException("La genTemplateGroupe n'est pas définie : nom de genTemplateGroupe = "+nom);
     }
+
+    public List<GenTemplateGroupe> getGenTemplateGroupesByNom(String nom) {
+        List<GenTemplateGroupe> result = new ArrayList<GenTemplateGroupe>();
+        for(GenTemplateGroupe genTemplateGroupe : genTemplateGroupes) {
+            if(genTemplateGroupe.getNom().equalsIgnoreCase(nom)) {
+                result.add(genTemplateGroupe);
+            }
+        }
+        return result;
+    }
+
     public void addGenTemplateGroupe(GenTemplateGroupe genTemplateGroupe) {
     	genTemplateGroupe.setReferenceGenTemplateGroupes(this);
         genTemplateGroupes.add(genTemplateGroupe);

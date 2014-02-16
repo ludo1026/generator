@@ -29,9 +29,9 @@ public interface Gen
     public void setGenClasses(GenClasses genClasses);
 	
 
-    public GenGenererGroupe getGenGenererGroupe();
+    public GenGenerate getGenGenerate();
     
-    public void setGenGenererGroupe(GenGenererGroupe genGenererGroupe);
+    public void setGenGenerate(GenGenerate genGenerate);
 	
 	
 	/** Récupération des attributs de l'objet de base sans transtypage */

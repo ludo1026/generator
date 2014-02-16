@@ -38,9 +38,13 @@ public class JdbcToXmlMapping {
 		}
 
 		final Map<String, GenClasse> genClasseByNomTables = this.mapGenClasseByNomTables(genClasses);
-
+		
 		for (final Table table : schema.getTableByNoms().values()) {
 			final GenClasse genClasseOrigine = genClasseByNomTables.get(table.getNom());
+			if(estTableAssociation(table)) {
+				
+			}
+			// clés étrangères : associations
 			for (final CleEtrangere cleEtrangere : table.getCleEtrangeres()) {
 				final Table tableDestination = cleEtrangere.getTableDestination();
 				final GenClasse genClasseDestination = genClasseByNomTables.get(tableDestination.getNom());
@@ -151,4 +155,25 @@ public class JdbcToXmlMapping {
 		}
 		return null;
 	}
+	
+
+	private boolean estTableAssociation(Table table) {
+		Map<String, Boolean> estPresentByColonnes = new HashMap<>();
+		for(String colonneName : table.getColonneByNames().keySet()) {
+			estPresentByColonnes.put(colonneName, Boolean.FALSE);
+		}
+		for(CleEtrangere cleEtrangere : table.getCleEtrangeres()) {
+			for(Colonne colonne : cleEtrangere.getColonnes()) {
+				estPresentByColonnes.put(colonne.getNom(), Boolean.TRUE);
+			}
+		}
+		boolean toutesColonnesDansCleEtrangere = true;
+		for(Boolean estPresent : estPresentByColonnes.values()) {
+			if(estPresent == false) {
+				toutesColonnesDansCleEtrangere = false;
+			}
+		}
+		return toutesColonnesDansCleEtrangere;
+	}
+
 }

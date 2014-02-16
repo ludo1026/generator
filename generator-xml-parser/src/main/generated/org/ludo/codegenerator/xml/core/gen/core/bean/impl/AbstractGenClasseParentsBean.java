@@ -36,6 +36,17 @@ public class AbstractGenClasseParentsBean implements GenClasseParents {
         }
         throw new IllegalStateException("La genClasseParent n'est pas définie : classeGenId de genClasseParent = "+classeGenId);
     }
+
+    public List<GenClasseParent> getGenClasseParentsByClasseGenId(String classeGenId) {
+        List<GenClasseParent> result = new ArrayList<GenClasseParent>();
+        for(GenClasseParent genClasseParent : genClasseParents) {
+            if(genClasseParent.getClasseGenId().equalsIgnoreCase(classeGenId)) {
+                result.add(genClasseParent);
+            }
+        }
+        return result;
+    }
+
     public void addGenClasseParent(GenClasseParent genClasseParent) {
     	genClasseParent.setReferenceGenClasseParents(this);
         genClasseParents.add(genClasseParent);

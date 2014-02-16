@@ -5,7 +5,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplates;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupes;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypes;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -67,15 +67,15 @@ public class AbstractGenBean implements Gen {
     }
 	
 
-    private GenGenererGroupe genGenererGroupe = new GenGenererGroupeBean();
+    private GenGenerate genGenerate = new GenGenerateBean();
     
-    public GenGenererGroupe getGenGenererGroupe() {
-    	return this.genGenererGroupe;
+    public GenGenerate getGenGenerate() {
+    	return this.genGenerate;
     }
     
-    public void setGenGenererGroupe(GenGenererGroupe genGenererGroupe) {
-    	genGenererGroupe.setReferenceGen(this);
-    	this.genGenererGroupe = genGenererGroupe;
+    public void setGenGenerate(GenGenerate genGenerate) {
+    	genGenerate.setReferenceGen(this);
+    	this.genGenerate = genGenerate;
     }
 	
 	

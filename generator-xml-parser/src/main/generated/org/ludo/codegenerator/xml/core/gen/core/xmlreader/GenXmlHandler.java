@@ -35,7 +35,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenAssociationAttribut
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenClasseDeAssociationBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenClasseParentsBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenClasseParentBean;
-import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenererGroupeBean;
+import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenererParClassesBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenererParClasseBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenClasseRefPourGenererParClassesBean;
@@ -90,7 +90,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.GenAssociationAttribut;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseDeAssociation;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseParents;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseParent;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasses;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasse;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseRefPourGenererParClasses;
@@ -134,497 +134,497 @@ public class GenXmlHandler extends DefaultHandler {
     		this.strValue = strValue;
     	}
     	
-        private Gen gen = null;
-        private GenTemplates genTemplates = null;
-        private GenTemplate genTemplate = null;
-        private GenTemplateGroupes genTemplateGroupes = null;
-        private GenTemplateGroupe genTemplateGroupe = null;
-        private GenTemplateRef genTemplateRef = null;
-        private GenStereotypes genStereotypes = null;
-        private GenStereotype genStereotype = null;
-        private GenClasses genClasses = null;
-        private GenClasse genClasse = null;
-        private GenProprieteClasses genProprieteClasses = null;
-        private GenProprieteClasse genProprieteClasse = null;
-        private GenAttributs genAttributs = null;
-        private GenAttribut genAttribut = null;
-        private GenProprieteAttributs genProprieteAttributs = null;
-        private GenProprieteAttribut genProprieteAttribut = null;
-        private GenStereotypeAttributs genStereotypeAttributs = null;
-        private GenStereotypeAttribut genStereotypeAttribut = null;
-        private GenMethodes genMethodes = null;
-        private GenMethode genMethode = null;
-        private GenProprieteMethodes genProprieteMethodes = null;
-        private GenProprieteMethode genProprieteMethode = null;
-        private GenParametres genParametres = null;
-        private GenParametre genParametre = null;
-        private GenStereotypeMethodes genStereotypeMethodes = null;
-        private GenStereotypeMethode genStereotypeMethode = null;
-        private GenStereotypeClasses genStereotypeClasses = null;
-        private GenStereotypeClasse genStereotypeClasse = null;
-        private GenAssociations genAssociations = null;
-        private GenAssociation genAssociation = null;
-        private GenAssociationAttributs genAssociationAttributs = null;
-        private GenAssociationAttribut genAssociationAttribut = null;
-        private GenClasseDeAssociation genClasseDeAssociation = null;
-        private GenClasseParents genClasseParents = null;
-        private GenClasseParent genClasseParent = null;
-        private GenGenererGroupe genGenererGroupe = null;
-        private GenGenererParClasses genGenererParClasses = null;
-        private GenGenererParClasse genGenererParClasse = null;
-        private GenClasseRefPourGenererParClasses genClasseRefPourGenererParClasses = null;
-        private GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse = null;
-        private GenTemplateGroupeRefPourGenererParClasses genTemplateGroupeRefPourGenererParClasses = null;
-        private GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse = null;
-        private GenGenererParTemplates genGenererParTemplates = null;
-        private GenGenererParTemplate genGenererParTemplate = null;
-        private GenTemplateGroupeRefPourGenererParTemplates genTemplateGroupeRefPourGenererParTemplates = null;
-        private GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate = null;
-        private GenStereotypeRefPourGenererParTemplates genStereotypeRefPourGenererParTemplates = null;
-        private GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate = null;
-        private GenGenererParStereotypes genGenererParStereotypes = null;
-        private GenGenererParStereotype genGenererParStereotype = null;
-        private GenStereotypeRefPourGenererParStereotypes genStereotypeRefPourGenererParStereotypes = null;
-        private GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype = null;
-        private GenTemplateGroupeRefPourGenererParStereotypes genTemplateGroupeRefPourGenererParStereotypes = null;
-        private GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype = null;
+        private Gen Gen = null;
+        private GenTemplates Gen_GenTemplates = null;
+        private GenTemplate Gen_GenTemplates_GenTemplate = null;
+        private GenTemplateGroupes Gen_GenTemplateGroupes = null;
+        private GenTemplateGroupe Gen_GenTemplateGroupes_GenTemplateGroupe = null;
+        private GenTemplateRef Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef = null;
+        private GenStereotypes Gen_GenStereotypes = null;
+        private GenStereotype Gen_GenStereotypes_GenStereotype = null;
+        private GenClasses Gen_GenClasses = null;
+        private GenClasse Gen_GenClasses_GenClasse = null;
+        private GenProprieteClasses Gen_GenClasses_GenClasse_GenProprieteClasses = null;
+        private GenProprieteClasse Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse = null;
+        private GenAttributs Gen_GenClasses_GenClasse_GenAttributs = null;
+        private GenAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut = null;
+        private GenProprieteAttributs Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs = null;
+        private GenProprieteAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut = null;
+        private GenStereotypeAttributs Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs = null;
+        private GenStereotypeAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut = null;
+        private GenMethodes Gen_GenClasses_GenClasse_GenMethodes = null;
+        private GenMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode = null;
+        private GenProprieteMethodes Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes = null;
+        private GenProprieteMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode = null;
+        private GenParametres Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres = null;
+        private GenParametre Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre = null;
+        private GenStereotypeMethodes Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes = null;
+        private GenStereotypeMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode = null;
+        private GenStereotypeClasses Gen_GenClasses_GenClasse_GenStereotypeClasses = null;
+        private GenStereotypeClasse Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse = null;
+        private GenAssociations Gen_GenClasses_GenClasse_GenAssociations = null;
+        private GenAssociation Gen_GenClasses_GenClasse_GenAssociations_GenAssociation = null;
+        private GenAssociationAttributs Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs = null;
+        private GenAssociationAttribut Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut = null;
+        private GenClasseDeAssociation Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation = null;
+        private GenClasseParents Gen_GenClasses_GenClasse_GenClasseParents = null;
+        private GenClasseParent Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent = null;
+        private GenGenerate Gen_GenGenerate = null;
+        private GenGenererParClasses Gen_GenGenerate_GenGenererParClasses = null;
+        private GenGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse = null;
+        private GenClasseRefPourGenererParClasses Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses = null;
+        private GenClasseRefPourGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse = null;
+        private GenTemplateGroupeRefPourGenererParClasses Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses = null;
+        private GenTemplateGroupeRefPourGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse = null;
+        private GenGenererParTemplates Gen_GenGenerate_GenGenererParTemplates = null;
+        private GenGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate = null;
+        private GenTemplateGroupeRefPourGenererParTemplates Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates = null;
+        private GenTemplateGroupeRefPourGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate = null;
+        private GenStereotypeRefPourGenererParTemplates Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates = null;
+        private GenStereotypeRefPourGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate = null;
+        private GenGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes = null;
+        private GenGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype = null;
+        private GenStereotypeRefPourGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes = null;
+        private GenStereotypeRefPourGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype = null;
+        private GenTemplateGroupeRefPourGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes = null;
+        private GenTemplateGroupeRefPourGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype = null;
         
         public int posCompteur = 0;
         public int posGen = 0;
-        public int posGenTemplates = 0;
-        public int posGenTemplate = 0;
-        public int posGenTemplateGroupes = 0;
-        public int posGenTemplateGroupe = 0;
-        public int posGenTemplateRef = 0;
-        public int posGenStereotypes = 0;
-        public int posGenStereotype = 0;
-        public int posGenClasses = 0;
-        public int posGenClasse = 0;
-        public int posGenProprieteClasses = 0;
-        public int posGenProprieteClasse = 0;
-        public int posGenAttributs = 0;
-        public int posGenAttribut = 0;
-        public int posGenProprieteAttributs = 0;
-        public int posGenProprieteAttribut = 0;
-        public int posGenStereotypeAttributs = 0;
-        public int posGenStereotypeAttribut = 0;
-        public int posGenMethodes = 0;
-        public int posGenMethode = 0;
-        public int posGenProprieteMethodes = 0;
-        public int posGenProprieteMethode = 0;
-        public int posGenParametres = 0;
-        public int posGenParametre = 0;
-        public int posGenStereotypeMethodes = 0;
-        public int posGenStereotypeMethode = 0;
-        public int posGenStereotypeClasses = 0;
-        public int posGenStereotypeClasse = 0;
-        public int posGenAssociations = 0;
-        public int posGenAssociation = 0;
-        public int posGenAssociationAttributs = 0;
-        public int posGenAssociationAttribut = 0;
-        public int posGenClasseDeAssociation = 0;
-        public int posGenClasseParents = 0;
-        public int posGenClasseParent = 0;
-        public int posGenGenererGroupe = 0;
-        public int posGenGenererParClasses = 0;
-        public int posGenGenererParClasse = 0;
-        public int posGenClasseRefPourGenererParClasses = 0;
-        public int posGenClasseRefPourGenererParClasse = 0;
-        public int posGenTemplateGroupeRefPourGenererParClasses = 0;
-        public int posGenTemplateGroupeRefPourGenererParClasse = 0;
-        public int posGenGenererParTemplates = 0;
-        public int posGenGenererParTemplate = 0;
-        public int posGenTemplateGroupeRefPourGenererParTemplates = 0;
-        public int posGenTemplateGroupeRefPourGenererParTemplate = 0;
-        public int posGenStereotypeRefPourGenererParTemplates = 0;
-        public int posGenStereotypeRefPourGenererParTemplate = 0;
-        public int posGenGenererParStereotypes = 0;
-        public int posGenGenererParStereotype = 0;
-        public int posGenStereotypeRefPourGenererParStereotypes = 0;
-        public int posGenStereotypeRefPourGenererParStereotype = 0;
-        public int posGenTemplateGroupeRefPourGenererParStereotypes = 0;
-        public int posGenTemplateGroupeRefPourGenererParStereotype = 0;
+        public int posGen_GenTemplates = 0;
+        public int posGen_GenTemplates_GenTemplate = 0;
+        public int posGen_GenTemplateGroupes = 0;
+        public int posGen_GenTemplateGroupes_GenTemplateGroupe = 0;
+        public int posGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef = 0;
+        public int posGen_GenStereotypes = 0;
+        public int posGen_GenStereotypes_GenStereotype = 0;
+        public int posGen_GenClasses = 0;
+        public int posGen_GenClasses_GenClasse = 0;
+        public int posGen_GenClasses_GenClasse_GenProprieteClasses = 0;
+        public int posGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs_GenAttribut = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs = 0;
+        public int posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes = 0;
+        public int posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode = 0;
+        public int posGen_GenClasses_GenClasse_GenStereotypeClasses = 0;
+        public int posGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse = 0;
+        public int posGen_GenClasses_GenClasse_GenAssociations = 0;
+        public int posGen_GenClasses_GenClasse_GenAssociations_GenAssociation = 0;
+        public int posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs = 0;
+        public int posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut = 0;
+        public int posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation = 0;
+        public int posGen_GenClasses_GenClasse_GenClasseParents = 0;
+        public int posGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent = 0;
+        public int posGen_GenGenerate = 0;
+        public int posGen_GenGenerate_GenGenererParClasses = 0;
+        public int posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse = 0;
+        public int posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses = 0;
+        public int posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse = 0;
+        public int posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses = 0;
+        public int posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates = 0;
+        public int posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes = 0;
+        public int posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype = 0;
 
         public void definePosGen() { posGen = ++ posCompteur; }
-        public void definePosGenTemplates() { posGenTemplates = ++ posCompteur; }
-        public void definePosGenTemplate() { posGenTemplate = ++ posCompteur; }
-        public void definePosGenTemplateGroupes() { posGenTemplateGroupes = ++ posCompteur; }
-        public void definePosGenTemplateGroupe() { posGenTemplateGroupe = ++ posCompteur; }
-        public void definePosGenTemplateRef() { posGenTemplateRef = ++ posCompteur; }
-        public void definePosGenStereotypes() { posGenStereotypes = ++ posCompteur; }
-        public void definePosGenStereotype() { posGenStereotype = ++ posCompteur; }
-        public void definePosGenClasses() { posGenClasses = ++ posCompteur; }
-        public void definePosGenClasse() { posGenClasse = ++ posCompteur; }
-        public void definePosGenProprieteClasses() { posGenProprieteClasses = ++ posCompteur; }
-        public void definePosGenProprieteClasse() { posGenProprieteClasse = ++ posCompteur; }
-        public void definePosGenAttributs() { posGenAttributs = ++ posCompteur; }
-        public void definePosGenAttribut() { posGenAttribut = ++ posCompteur; }
-        public void definePosGenProprieteAttributs() { posGenProprieteAttributs = ++ posCompteur; }
-        public void definePosGenProprieteAttribut() { posGenProprieteAttribut = ++ posCompteur; }
-        public void definePosGenStereotypeAttributs() { posGenStereotypeAttributs = ++ posCompteur; }
-        public void definePosGenStereotypeAttribut() { posGenStereotypeAttribut = ++ posCompteur; }
-        public void definePosGenMethodes() { posGenMethodes = ++ posCompteur; }
-        public void definePosGenMethode() { posGenMethode = ++ posCompteur; }
-        public void definePosGenProprieteMethodes() { posGenProprieteMethodes = ++ posCompteur; }
-        public void definePosGenProprieteMethode() { posGenProprieteMethode = ++ posCompteur; }
-        public void definePosGenParametres() { posGenParametres = ++ posCompteur; }
-        public void definePosGenParametre() { posGenParametre = ++ posCompteur; }
-        public void definePosGenStereotypeMethodes() { posGenStereotypeMethodes = ++ posCompteur; }
-        public void definePosGenStereotypeMethode() { posGenStereotypeMethode = ++ posCompteur; }
-        public void definePosGenStereotypeClasses() { posGenStereotypeClasses = ++ posCompteur; }
-        public void definePosGenStereotypeClasse() { posGenStereotypeClasse = ++ posCompteur; }
-        public void definePosGenAssociations() { posGenAssociations = ++ posCompteur; }
-        public void definePosGenAssociation() { posGenAssociation = ++ posCompteur; }
-        public void definePosGenAssociationAttributs() { posGenAssociationAttributs = ++ posCompteur; }
-        public void definePosGenAssociationAttribut() { posGenAssociationAttribut = ++ posCompteur; }
-        public void definePosGenClasseDeAssociation() { posGenClasseDeAssociation = ++ posCompteur; }
-        public void definePosGenClasseParents() { posGenClasseParents = ++ posCompteur; }
-        public void definePosGenClasseParent() { posGenClasseParent = ++ posCompteur; }
-        public void definePosGenGenererGroupe() { posGenGenererGroupe = ++ posCompteur; }
-        public void definePosGenGenererParClasses() { posGenGenererParClasses = ++ posCompteur; }
-        public void definePosGenGenererParClasse() { posGenGenererParClasse = ++ posCompteur; }
-        public void definePosGenClasseRefPourGenererParClasses() { posGenClasseRefPourGenererParClasses = ++ posCompteur; }
-        public void definePosGenClasseRefPourGenererParClasse() { posGenClasseRefPourGenererParClasse = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParClasses() { posGenTemplateGroupeRefPourGenererParClasses = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParClasse() { posGenTemplateGroupeRefPourGenererParClasse = ++ posCompteur; }
-        public void definePosGenGenererParTemplates() { posGenGenererParTemplates = ++ posCompteur; }
-        public void definePosGenGenererParTemplate() { posGenGenererParTemplate = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParTemplates() { posGenTemplateGroupeRefPourGenererParTemplates = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParTemplate() { posGenTemplateGroupeRefPourGenererParTemplate = ++ posCompteur; }
-        public void definePosGenStereotypeRefPourGenererParTemplates() { posGenStereotypeRefPourGenererParTemplates = ++ posCompteur; }
-        public void definePosGenStereotypeRefPourGenererParTemplate() { posGenStereotypeRefPourGenererParTemplate = ++ posCompteur; }
-        public void definePosGenGenererParStereotypes() { posGenGenererParStereotypes = ++ posCompteur; }
-        public void definePosGenGenererParStereotype() { posGenGenererParStereotype = ++ posCompteur; }
-        public void definePosGenStereotypeRefPourGenererParStereotypes() { posGenStereotypeRefPourGenererParStereotypes = ++ posCompteur; }
-        public void definePosGenStereotypeRefPourGenererParStereotype() { posGenStereotypeRefPourGenererParStereotype = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParStereotypes() { posGenTemplateGroupeRefPourGenererParStereotypes = ++ posCompteur; }
-        public void definePosGenTemplateGroupeRefPourGenererParStereotype() { posGenTemplateGroupeRefPourGenererParStereotype = ++ posCompteur; }
+        public void definePosGen_GenTemplates() { posGen_GenTemplates = ++ posCompteur; }
+        public void definePosGen_GenTemplates_GenTemplate() { posGen_GenTemplates_GenTemplate = ++ posCompteur; }
+        public void definePosGen_GenTemplateGroupes() { posGen_GenTemplateGroupes = ++ posCompteur; }
+        public void definePosGen_GenTemplateGroupes_GenTemplateGroupe() { posGen_GenTemplateGroupes_GenTemplateGroupe = ++ posCompteur; }
+        public void definePosGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef() { posGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef = ++ posCompteur; }
+        public void definePosGen_GenStereotypes() { posGen_GenStereotypes = ++ posCompteur; }
+        public void definePosGen_GenStereotypes_GenStereotype() { posGen_GenStereotypes_GenStereotype = ++ posCompteur; }
+        public void definePosGen_GenClasses() { posGen_GenClasses = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse() { posGen_GenClasses_GenClasse = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenProprieteClasses() { posGen_GenClasses_GenClasse_GenProprieteClasses = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse() { posGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs() { posGen_GenClasses_GenClasse_GenAttributs = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut() { posGen_GenClasses_GenClasse_GenAttributs_GenAttribut = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() { posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut() { posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() { posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut() { posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes() { posGen_GenClasses_GenClasse_GenMethodes = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode() { posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenStereotypeClasses() { posGen_GenClasses_GenClasse_GenStereotypeClasses = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse() { posGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAssociations() { posGen_GenClasses_GenClasse_GenAssociations = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation() { posGen_GenClasses_GenClasse_GenAssociations_GenAssociation = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() { posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut() { posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation() { posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenClasseParents() { posGen_GenClasses_GenClasse_GenClasseParents = ++ posCompteur; }
+        public void definePosGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent() { posGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent = ++ posCompteur; }
+        public void definePosGen_GenGenerate() { posGen_GenGenerate = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses() { posGen_GenGenerate_GenGenererParClasses = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() { posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() { posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse() { posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() { posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse() { posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates() { posGen_GenGenerate_GenGenererParTemplates = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate() { posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() { posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate() { posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() { posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate() { posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes() { posGen_GenGenerate_GenGenererParStereotypes = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype() { posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() { posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype() { posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() { posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype() { posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype = ++ posCompteur; }
 
         public int getPosGen() { return posGen; }
-        public int getPosGenTemplates() { return posGenTemplates; }
-        public int getPosGenTemplate() { return posGenTemplate; }
-        public int getPosGenTemplateGroupes() { return posGenTemplateGroupes; }
-        public int getPosGenTemplateGroupe() { return posGenTemplateGroupe; }
-        public int getPosGenTemplateRef() { return posGenTemplateRef; }
-        public int getPosGenStereotypes() { return posGenStereotypes; }
-        public int getPosGenStereotype() { return posGenStereotype; }
-        public int getPosGenClasses() { return posGenClasses; }
-        public int getPosGenClasse() { return posGenClasse; }
-        public int getPosGenProprieteClasses() { return posGenProprieteClasses; }
-        public int getPosGenProprieteClasse() { return posGenProprieteClasse; }
-        public int getPosGenAttributs() { return posGenAttributs; }
-        public int getPosGenAttribut() { return posGenAttribut; }
-        public int getPosGenProprieteAttributs() { return posGenProprieteAttributs; }
-        public int getPosGenProprieteAttribut() { return posGenProprieteAttribut; }
-        public int getPosGenStereotypeAttributs() { return posGenStereotypeAttributs; }
-        public int getPosGenStereotypeAttribut() { return posGenStereotypeAttribut; }
-        public int getPosGenMethodes() { return posGenMethodes; }
-        public int getPosGenMethode() { return posGenMethode; }
-        public int getPosGenProprieteMethodes() { return posGenProprieteMethodes; }
-        public int getPosGenProprieteMethode() { return posGenProprieteMethode; }
-        public int getPosGenParametres() { return posGenParametres; }
-        public int getPosGenParametre() { return posGenParametre; }
-        public int getPosGenStereotypeMethodes() { return posGenStereotypeMethodes; }
-        public int getPosGenStereotypeMethode() { return posGenStereotypeMethode; }
-        public int getPosGenStereotypeClasses() { return posGenStereotypeClasses; }
-        public int getPosGenStereotypeClasse() { return posGenStereotypeClasse; }
-        public int getPosGenAssociations() { return posGenAssociations; }
-        public int getPosGenAssociation() { return posGenAssociation; }
-        public int getPosGenAssociationAttributs() { return posGenAssociationAttributs; }
-        public int getPosGenAssociationAttribut() { return posGenAssociationAttribut; }
-        public int getPosGenClasseDeAssociation() { return posGenClasseDeAssociation; }
-        public int getPosGenClasseParents() { return posGenClasseParents; }
-        public int getPosGenClasseParent() { return posGenClasseParent; }
-        public int getPosGenGenererGroupe() { return posGenGenererGroupe; }
-        public int getPosGenGenererParClasses() { return posGenGenererParClasses; }
-        public int getPosGenGenererParClasse() { return posGenGenererParClasse; }
-        public int getPosGenClasseRefPourGenererParClasses() { return posGenClasseRefPourGenererParClasses; }
-        public int getPosGenClasseRefPourGenererParClasse() { return posGenClasseRefPourGenererParClasse; }
-        public int getPosGenTemplateGroupeRefPourGenererParClasses() { return posGenTemplateGroupeRefPourGenererParClasses; }
-        public int getPosGenTemplateGroupeRefPourGenererParClasse() { return posGenTemplateGroupeRefPourGenererParClasse; }
-        public int getPosGenGenererParTemplates() { return posGenGenererParTemplates; }
-        public int getPosGenGenererParTemplate() { return posGenGenererParTemplate; }
-        public int getPosGenTemplateGroupeRefPourGenererParTemplates() { return posGenTemplateGroupeRefPourGenererParTemplates; }
-        public int getPosGenTemplateGroupeRefPourGenererParTemplate() { return posGenTemplateGroupeRefPourGenererParTemplate; }
-        public int getPosGenStereotypeRefPourGenererParTemplates() { return posGenStereotypeRefPourGenererParTemplates; }
-        public int getPosGenStereotypeRefPourGenererParTemplate() { return posGenStereotypeRefPourGenererParTemplate; }
-        public int getPosGenGenererParStereotypes() { return posGenGenererParStereotypes; }
-        public int getPosGenGenererParStereotype() { return posGenGenererParStereotype; }
-        public int getPosGenStereotypeRefPourGenererParStereotypes() { return posGenStereotypeRefPourGenererParStereotypes; }
-        public int getPosGenStereotypeRefPourGenererParStereotype() { return posGenStereotypeRefPourGenererParStereotype; }
-        public int getPosGenTemplateGroupeRefPourGenererParStereotypes() { return posGenTemplateGroupeRefPourGenererParStereotypes; }
-        public int getPosGenTemplateGroupeRefPourGenererParStereotype() { return posGenTemplateGroupeRefPourGenererParStereotype; }
+        public int getPosGen_GenTemplates() { return posGen_GenTemplates; }
+        public int getPosGen_GenTemplates_GenTemplate() { return posGen_GenTemplates_GenTemplate; }
+        public int getPosGen_GenTemplateGroupes() { return posGen_GenTemplateGroupes; }
+        public int getPosGen_GenTemplateGroupes_GenTemplateGroupe() { return posGen_GenTemplateGroupes_GenTemplateGroupe; }
+        public int getPosGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef() { return posGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef; }
+        public int getPosGen_GenStereotypes() { return posGen_GenStereotypes; }
+        public int getPosGen_GenStereotypes_GenStereotype() { return posGen_GenStereotypes_GenStereotype; }
+        public int getPosGen_GenClasses() { return posGen_GenClasses; }
+        public int getPosGen_GenClasses_GenClasse() { return posGen_GenClasses_GenClasse; }
+        public int getPosGen_GenClasses_GenClasse_GenProprieteClasses() { return posGen_GenClasses_GenClasse_GenProprieteClasses; }
+        public int getPosGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse() { return posGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs() { return posGen_GenClasses_GenClasse_GenAttributs; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs_GenAttribut() { return posGen_GenClasses_GenClasse_GenAttributs_GenAttribut; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() { return posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut() { return posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() { return posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs; }
+        public int getPosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut() { return posGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes() { return posGen_GenClasses_GenClasse_GenMethodes; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes; }
+        public int getPosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode() { return posGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode; }
+        public int getPosGen_GenClasses_GenClasse_GenStereotypeClasses() { return posGen_GenClasses_GenClasse_GenStereotypeClasses; }
+        public int getPosGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse() { return posGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse; }
+        public int getPosGen_GenClasses_GenClasse_GenAssociations() { return posGen_GenClasses_GenClasse_GenAssociations; }
+        public int getPosGen_GenClasses_GenClasse_GenAssociations_GenAssociation() { return posGen_GenClasses_GenClasse_GenAssociations_GenAssociation; }
+        public int getPosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() { return posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs; }
+        public int getPosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut() { return posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut; }
+        public int getPosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation() { return posGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation; }
+        public int getPosGen_GenClasses_GenClasse_GenClasseParents() { return posGen_GenClasses_GenClasse_GenClasseParents; }
+        public int getPosGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent() { return posGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent; }
+        public int getPosGen_GenGenerate() { return posGen_GenGenerate; }
+        public int getPosGen_GenGenerate_GenGenererParClasses() { return posGen_GenGenerate_GenGenererParClasses; }
+        public int getPosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() { return posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse; }
+        public int getPosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() { return posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses; }
+        public int getPosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse() { return posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse; }
+        public int getPosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() { return posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses; }
+        public int getPosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse() { return posGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates() { return posGen_GenGenerate_GenGenererParTemplates; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate() { return posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() { return posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate() { return posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() { return posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates; }
+        public int getPosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate() { return posGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes() { return posGen_GenGenerate_GenGenererParStereotypes; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype() { return posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() { return posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype() { return posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() { return posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes; }
+        public int getPosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype() { return posGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype; }
         
-		public final Gen getGen() { return gen; }
-		public final GenTemplates getGenTemplates() { return genTemplates; }
-		public final GenTemplate getGenTemplate() { return genTemplate; }
-		public final GenTemplateGroupes getGenTemplateGroupes() { return genTemplateGroupes; }
-		public final GenTemplateGroupe getGenTemplateGroupe() { return genTemplateGroupe; }
-		public final GenTemplateRef getGenTemplateRef() { return genTemplateRef; }
-		public final GenStereotypes getGenStereotypes() { return genStereotypes; }
-		public final GenStereotype getGenStereotype() { return genStereotype; }
-		public final GenClasses getGenClasses() { return genClasses; }
-		public final GenClasse getGenClasse() { return genClasse; }
-		public final GenProprieteClasses getGenProprieteClasses() { return genProprieteClasses; }
-		public final GenProprieteClasse getGenProprieteClasse() { return genProprieteClasse; }
-		public final GenAttributs getGenAttributs() { return genAttributs; }
-		public final GenAttribut getGenAttribut() { return genAttribut; }
-		public final GenProprieteAttributs getGenProprieteAttributs() { return genProprieteAttributs; }
-		public final GenProprieteAttribut getGenProprieteAttribut() { return genProprieteAttribut; }
-		public final GenStereotypeAttributs getGenStereotypeAttributs() { return genStereotypeAttributs; }
-		public final GenStereotypeAttribut getGenStereotypeAttribut() { return genStereotypeAttribut; }
-		public final GenMethodes getGenMethodes() { return genMethodes; }
-		public final GenMethode getGenMethode() { return genMethode; }
-		public final GenProprieteMethodes getGenProprieteMethodes() { return genProprieteMethodes; }
-		public final GenProprieteMethode getGenProprieteMethode() { return genProprieteMethode; }
-		public final GenParametres getGenParametres() { return genParametres; }
-		public final GenParametre getGenParametre() { return genParametre; }
-		public final GenStereotypeMethodes getGenStereotypeMethodes() { return genStereotypeMethodes; }
-		public final GenStereotypeMethode getGenStereotypeMethode() { return genStereotypeMethode; }
-		public final GenStereotypeClasses getGenStereotypeClasses() { return genStereotypeClasses; }
-		public final GenStereotypeClasse getGenStereotypeClasse() { return genStereotypeClasse; }
-		public final GenAssociations getGenAssociations() { return genAssociations; }
-		public final GenAssociation getGenAssociation() { return genAssociation; }
-		public final GenAssociationAttributs getGenAssociationAttributs() { return genAssociationAttributs; }
-		public final GenAssociationAttribut getGenAssociationAttribut() { return genAssociationAttribut; }
-		public final GenClasseDeAssociation getGenClasseDeAssociation() { return genClasseDeAssociation; }
-		public final GenClasseParents getGenClasseParents() { return genClasseParents; }
-		public final GenClasseParent getGenClasseParent() { return genClasseParent; }
-		public final GenGenererGroupe getGenGenererGroupe() { return genGenererGroupe; }
-		public final GenGenererParClasses getGenGenererParClasses() { return genGenererParClasses; }
-		public final GenGenererParClasse getGenGenererParClasse() { return genGenererParClasse; }
-		public final GenClasseRefPourGenererParClasses getGenClasseRefPourGenererParClasses() { return genClasseRefPourGenererParClasses; }
-		public final GenClasseRefPourGenererParClasse getGenClasseRefPourGenererParClasse() { return genClasseRefPourGenererParClasse; }
-		public final GenTemplateGroupeRefPourGenererParClasses getGenTemplateGroupeRefPourGenererParClasses() { return genTemplateGroupeRefPourGenererParClasses; }
-		public final GenTemplateGroupeRefPourGenererParClasse getGenTemplateGroupeRefPourGenererParClasse() { return genTemplateGroupeRefPourGenererParClasse; }
-		public final GenGenererParTemplates getGenGenererParTemplates() { return genGenererParTemplates; }
-		public final GenGenererParTemplate getGenGenererParTemplate() { return genGenererParTemplate; }
-		public final GenTemplateGroupeRefPourGenererParTemplates getGenTemplateGroupeRefPourGenererParTemplates() { return genTemplateGroupeRefPourGenererParTemplates; }
-		public final GenTemplateGroupeRefPourGenererParTemplate getGenTemplateGroupeRefPourGenererParTemplate() { return genTemplateGroupeRefPourGenererParTemplate; }
-		public final GenStereotypeRefPourGenererParTemplates getGenStereotypeRefPourGenererParTemplates() { return genStereotypeRefPourGenererParTemplates; }
-		public final GenStereotypeRefPourGenererParTemplate getGenStereotypeRefPourGenererParTemplate() { return genStereotypeRefPourGenererParTemplate; }
-		public final GenGenererParStereotypes getGenGenererParStereotypes() { return genGenererParStereotypes; }
-		public final GenGenererParStereotype getGenGenererParStereotype() { return genGenererParStereotype; }
-		public final GenStereotypeRefPourGenererParStereotypes getGenStereotypeRefPourGenererParStereotypes() { return genStereotypeRefPourGenererParStereotypes; }
-		public final GenStereotypeRefPourGenererParStereotype getGenStereotypeRefPourGenererParStereotype() { return genStereotypeRefPourGenererParStereotype; }
-		public final GenTemplateGroupeRefPourGenererParStereotypes getGenTemplateGroupeRefPourGenererParStereotypes() { return genTemplateGroupeRefPourGenererParStereotypes; }
-		public final GenTemplateGroupeRefPourGenererParStereotype getGenTemplateGroupeRefPourGenererParStereotype() { return genTemplateGroupeRefPourGenererParStereotype; }
+		public final Gen getGen() { return Gen; }
+		public final GenTemplates getGen_GenTemplates() { return Gen_GenTemplates; }
+		public final GenTemplate getGen_GenTemplates_GenTemplate() { return Gen_GenTemplates_GenTemplate; }
+		public final GenTemplateGroupes getGen_GenTemplateGroupes() { return Gen_GenTemplateGroupes; }
+		public final GenTemplateGroupe getGen_GenTemplateGroupes_GenTemplateGroupe() { return Gen_GenTemplateGroupes_GenTemplateGroupe; }
+		public final GenTemplateRef getGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef() { return Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef; }
+		public final GenStereotypes getGen_GenStereotypes() { return Gen_GenStereotypes; }
+		public final GenStereotype getGen_GenStereotypes_GenStereotype() { return Gen_GenStereotypes_GenStereotype; }
+		public final GenClasses getGen_GenClasses() { return Gen_GenClasses; }
+		public final GenClasse getGen_GenClasses_GenClasse() { return Gen_GenClasses_GenClasse; }
+		public final GenProprieteClasses getGen_GenClasses_GenClasse_GenProprieteClasses() { return Gen_GenClasses_GenClasse_GenProprieteClasses; }
+		public final GenProprieteClasse getGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse() { return Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse; }
+		public final GenAttributs getGen_GenClasses_GenClasse_GenAttributs() { return Gen_GenClasses_GenClasse_GenAttributs; }
+		public final GenAttribut getGen_GenClasses_GenClasse_GenAttributs_GenAttribut() { return Gen_GenClasses_GenClasse_GenAttributs_GenAttribut; }
+		public final GenProprieteAttributs getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() { return Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs; }
+		public final GenProprieteAttribut getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut() { return Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut; }
+		public final GenStereotypeAttributs getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() { return Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs; }
+		public final GenStereotypeAttribut getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut() { return Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut; }
+		public final GenMethodes getGen_GenClasses_GenClasse_GenMethodes() { return Gen_GenClasses_GenClasse_GenMethodes; }
+		public final GenMethode getGen_GenClasses_GenClasse_GenMethodes_GenMethode() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode; }
+		public final GenProprieteMethodes getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes; }
+		public final GenProprieteMethode getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode; }
+		public final GenParametres getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres; }
+		public final GenParametre getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre; }
+		public final GenStereotypeMethodes getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes; }
+		public final GenStereotypeMethode getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode() { return Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode; }
+		public final GenStereotypeClasses getGen_GenClasses_GenClasse_GenStereotypeClasses() { return Gen_GenClasses_GenClasse_GenStereotypeClasses; }
+		public final GenStereotypeClasse getGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse() { return Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse; }
+		public final GenAssociations getGen_GenClasses_GenClasse_GenAssociations() { return Gen_GenClasses_GenClasse_GenAssociations; }
+		public final GenAssociation getGen_GenClasses_GenClasse_GenAssociations_GenAssociation() { return Gen_GenClasses_GenClasse_GenAssociations_GenAssociation; }
+		public final GenAssociationAttributs getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() { return Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs; }
+		public final GenAssociationAttribut getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut() { return Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut; }
+		public final GenClasseDeAssociation getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation() { return Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation; }
+		public final GenClasseParents getGen_GenClasses_GenClasse_GenClasseParents() { return Gen_GenClasses_GenClasse_GenClasseParents; }
+		public final GenClasseParent getGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent() { return Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent; }
+		public final GenGenerate getGen_GenGenerate() { return Gen_GenGenerate; }
+		public final GenGenererParClasses getGen_GenGenerate_GenGenererParClasses() { return Gen_GenGenerate_GenGenererParClasses; }
+		public final GenGenererParClasse getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() { return Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse; }
+		public final GenClasseRefPourGenererParClasses getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() { return Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses; }
+		public final GenClasseRefPourGenererParClasse getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse() { return Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse; }
+		public final GenTemplateGroupeRefPourGenererParClasses getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() { return Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses; }
+		public final GenTemplateGroupeRefPourGenererParClasse getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse() { return Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse; }
+		public final GenGenererParTemplates getGen_GenGenerate_GenGenererParTemplates() { return Gen_GenGenerate_GenGenererParTemplates; }
+		public final GenGenererParTemplate getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate() { return Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate; }
+		public final GenTemplateGroupeRefPourGenererParTemplates getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() { return Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates; }
+		public final GenTemplateGroupeRefPourGenererParTemplate getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate() { return Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate; }
+		public final GenStereotypeRefPourGenererParTemplates getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() { return Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates; }
+		public final GenStereotypeRefPourGenererParTemplate getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate() { return Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate; }
+		public final GenGenererParStereotypes getGen_GenGenerate_GenGenererParStereotypes() { return Gen_GenGenerate_GenGenererParStereotypes; }
+		public final GenGenererParStereotype getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype() { return Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype; }
+		public final GenStereotypeRefPourGenererParStereotypes getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() { return Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes; }
+		public final GenStereotypeRefPourGenererParStereotype getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype() { return Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype; }
+		public final GenTemplateGroupeRefPourGenererParStereotypes getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() { return Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes; }
+		public final GenTemplateGroupeRefPourGenererParStereotype getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype() { return Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype; }
 		
-		public final void setGen(Gen gen) {
+		public final void setGen(Gen Gen) {
 			this.definePosGen();
-			this.gen = gen;
+			this.Gen = Gen;
 		}
-		public final void setGenTemplates(GenTemplates genTemplates) {
-			this.definePosGenTemplates();
-			this.genTemplates = genTemplates;
+		public final void setGen_GenTemplates(GenTemplates Gen_GenTemplates) {
+			this.definePosGen_GenTemplates();
+			this.Gen_GenTemplates = Gen_GenTemplates;
 		}
-		public final void setGenTemplate(GenTemplate genTemplate) {
-			this.definePosGenTemplate();
-			this.genTemplate = genTemplate;
+		public final void setGen_GenTemplates_GenTemplate(GenTemplate Gen_GenTemplates_GenTemplate) {
+			this.definePosGen_GenTemplates_GenTemplate();
+			this.Gen_GenTemplates_GenTemplate = Gen_GenTemplates_GenTemplate;
 		}
-		public final void setGenTemplateGroupes(GenTemplateGroupes genTemplateGroupes) {
-			this.definePosGenTemplateGroupes();
-			this.genTemplateGroupes = genTemplateGroupes;
+		public final void setGen_GenTemplateGroupes(GenTemplateGroupes Gen_GenTemplateGroupes) {
+			this.definePosGen_GenTemplateGroupes();
+			this.Gen_GenTemplateGroupes = Gen_GenTemplateGroupes;
 		}
-		public final void setGenTemplateGroupe(GenTemplateGroupe genTemplateGroupe) {
-			this.definePosGenTemplateGroupe();
-			this.genTemplateGroupe = genTemplateGroupe;
+		public final void setGen_GenTemplateGroupes_GenTemplateGroupe(GenTemplateGroupe Gen_GenTemplateGroupes_GenTemplateGroupe) {
+			this.definePosGen_GenTemplateGroupes_GenTemplateGroupe();
+			this.Gen_GenTemplateGroupes_GenTemplateGroupe = Gen_GenTemplateGroupes_GenTemplateGroupe;
 		}
-		public final void setGenTemplateRef(GenTemplateRef genTemplateRef) {
-			this.definePosGenTemplateRef();
-			this.genTemplateRef = genTemplateRef;
+		public final void setGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(GenTemplateRef Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef) {
+			this.definePosGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef();
+			this.Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef = Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef;
 		}
-		public final void setGenStereotypes(GenStereotypes genStereotypes) {
-			this.definePosGenStereotypes();
-			this.genStereotypes = genStereotypes;
+		public final void setGen_GenStereotypes(GenStereotypes Gen_GenStereotypes) {
+			this.definePosGen_GenStereotypes();
+			this.Gen_GenStereotypes = Gen_GenStereotypes;
 		}
-		public final void setGenStereotype(GenStereotype genStereotype) {
-			this.definePosGenStereotype();
-			this.genStereotype = genStereotype;
+		public final void setGen_GenStereotypes_GenStereotype(GenStereotype Gen_GenStereotypes_GenStereotype) {
+			this.definePosGen_GenStereotypes_GenStereotype();
+			this.Gen_GenStereotypes_GenStereotype = Gen_GenStereotypes_GenStereotype;
 		}
-		public final void setGenClasses(GenClasses genClasses) {
-			this.definePosGenClasses();
-			this.genClasses = genClasses;
+		public final void setGen_GenClasses(GenClasses Gen_GenClasses) {
+			this.definePosGen_GenClasses();
+			this.Gen_GenClasses = Gen_GenClasses;
 		}
-		public final void setGenClasse(GenClasse genClasse) {
-			this.definePosGenClasse();
-			this.genClasse = genClasse;
+		public final void setGen_GenClasses_GenClasse(GenClasse Gen_GenClasses_GenClasse) {
+			this.definePosGen_GenClasses_GenClasse();
+			this.Gen_GenClasses_GenClasse = Gen_GenClasses_GenClasse;
 		}
-		public final void setGenProprieteClasses(GenProprieteClasses genProprieteClasses) {
-			this.definePosGenProprieteClasses();
-			this.genProprieteClasses = genProprieteClasses;
+		public final void setGen_GenClasses_GenClasse_GenProprieteClasses(GenProprieteClasses Gen_GenClasses_GenClasse_GenProprieteClasses) {
+			this.definePosGen_GenClasses_GenClasse_GenProprieteClasses();
+			this.Gen_GenClasses_GenClasse_GenProprieteClasses = Gen_GenClasses_GenClasse_GenProprieteClasses;
 		}
-		public final void setGenProprieteClasse(GenProprieteClasse genProprieteClasse) {
-			this.definePosGenProprieteClasse();
-			this.genProprieteClasse = genProprieteClasse;
+		public final void setGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(GenProprieteClasse Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse) {
+			this.definePosGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse();
+			this.Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse = Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse;
 		}
-		public final void setGenAttributs(GenAttributs genAttributs) {
-			this.definePosGenAttributs();
-			this.genAttributs = genAttributs;
+		public final void setGen_GenClasses_GenClasse_GenAttributs(GenAttributs Gen_GenClasses_GenClasse_GenAttributs) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs();
+			this.Gen_GenClasses_GenClasse_GenAttributs = Gen_GenClasses_GenClasse_GenAttributs;
 		}
-		public final void setGenAttribut(GenAttribut genAttribut) {
-			this.definePosGenAttribut();
-			this.genAttribut = genAttribut;
+		public final void setGen_GenClasses_GenClasse_GenAttributs_GenAttribut(GenAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut();
+			this.Gen_GenClasses_GenClasse_GenAttributs_GenAttribut = Gen_GenClasses_GenClasse_GenAttributs_GenAttribut;
 		}
-		public final void setGenProprieteAttributs(GenProprieteAttributs genProprieteAttributs) {
-			this.definePosGenProprieteAttributs();
-			this.genProprieteAttributs = genProprieteAttributs;
+		public final void setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(GenProprieteAttributs Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs();
+			this.Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs = Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs;
 		}
-		public final void setGenProprieteAttribut(GenProprieteAttribut genProprieteAttribut) {
-			this.definePosGenProprieteAttribut();
-			this.genProprieteAttribut = genProprieteAttribut;
+		public final void setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(GenProprieteAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut();
+			this.Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut = Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut;
 		}
-		public final void setGenStereotypeAttributs(GenStereotypeAttributs genStereotypeAttributs) {
-			this.definePosGenStereotypeAttributs();
-			this.genStereotypeAttributs = genStereotypeAttributs;
+		public final void setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(GenStereotypeAttributs Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs();
+			this.Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs = Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs;
 		}
-		public final void setGenStereotypeAttribut(GenStereotypeAttribut genStereotypeAttribut) {
-			this.definePosGenStereotypeAttribut();
-			this.genStereotypeAttribut = genStereotypeAttribut;
+		public final void setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(GenStereotypeAttribut Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut) {
+			this.definePosGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut();
+			this.Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut = Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut;
 		}
-		public final void setGenMethodes(GenMethodes genMethodes) {
-			this.definePosGenMethodes();
-			this.genMethodes = genMethodes;
+		public final void setGen_GenClasses_GenClasse_GenMethodes(GenMethodes Gen_GenClasses_GenClasse_GenMethodes) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes();
+			this.Gen_GenClasses_GenClasse_GenMethodes = Gen_GenClasses_GenClasse_GenMethodes;
 		}
-		public final void setGenMethode(GenMethode genMethode) {
-			this.definePosGenMethode();
-			this.genMethode = genMethode;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode(GenMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode = Gen_GenClasses_GenClasse_GenMethodes_GenMethode;
 		}
-		public final void setGenProprieteMethodes(GenProprieteMethodes genProprieteMethodes) {
-			this.definePosGenProprieteMethodes();
-			this.genProprieteMethodes = genProprieteMethodes;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(GenProprieteMethodes Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes;
 		}
-		public final void setGenProprieteMethode(GenProprieteMethode genProprieteMethode) {
-			this.definePosGenProprieteMethode();
-			this.genProprieteMethode = genProprieteMethode;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(GenProprieteMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode;
 		}
-		public final void setGenParametres(GenParametres genParametres) {
-			this.definePosGenParametres();
-			this.genParametres = genParametres;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(GenParametres Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres;
 		}
-		public final void setGenParametre(GenParametre genParametre) {
-			this.definePosGenParametre();
-			this.genParametre = genParametre;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(GenParametre Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre;
 		}
-		public final void setGenStereotypeMethodes(GenStereotypeMethodes genStereotypeMethodes) {
-			this.definePosGenStereotypeMethodes();
-			this.genStereotypeMethodes = genStereotypeMethodes;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(GenStereotypeMethodes Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes;
 		}
-		public final void setGenStereotypeMethode(GenStereotypeMethode genStereotypeMethode) {
-			this.definePosGenStereotypeMethode();
-			this.genStereotypeMethode = genStereotypeMethode;
+		public final void setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(GenStereotypeMethode Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode) {
+			this.definePosGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode();
+			this.Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode = Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode;
 		}
-		public final void setGenStereotypeClasses(GenStereotypeClasses genStereotypeClasses) {
-			this.definePosGenStereotypeClasses();
-			this.genStereotypeClasses = genStereotypeClasses;
+		public final void setGen_GenClasses_GenClasse_GenStereotypeClasses(GenStereotypeClasses Gen_GenClasses_GenClasse_GenStereotypeClasses) {
+			this.definePosGen_GenClasses_GenClasse_GenStereotypeClasses();
+			this.Gen_GenClasses_GenClasse_GenStereotypeClasses = Gen_GenClasses_GenClasse_GenStereotypeClasses;
 		}
-		public final void setGenStereotypeClasse(GenStereotypeClasse genStereotypeClasse) {
-			this.definePosGenStereotypeClasse();
-			this.genStereotypeClasse = genStereotypeClasse;
+		public final void setGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(GenStereotypeClasse Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse) {
+			this.definePosGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse();
+			this.Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse = Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse;
 		}
-		public final void setGenAssociations(GenAssociations genAssociations) {
-			this.definePosGenAssociations();
-			this.genAssociations = genAssociations;
+		public final void setGen_GenClasses_GenClasse_GenAssociations(GenAssociations Gen_GenClasses_GenClasse_GenAssociations) {
+			this.definePosGen_GenClasses_GenClasse_GenAssociations();
+			this.Gen_GenClasses_GenClasse_GenAssociations = Gen_GenClasses_GenClasse_GenAssociations;
 		}
-		public final void setGenAssociation(GenAssociation genAssociation) {
-			this.definePosGenAssociation();
-			this.genAssociation = genAssociation;
+		public final void setGen_GenClasses_GenClasse_GenAssociations_GenAssociation(GenAssociation Gen_GenClasses_GenClasse_GenAssociations_GenAssociation) {
+			this.definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation();
+			this.Gen_GenClasses_GenClasse_GenAssociations_GenAssociation = Gen_GenClasses_GenClasse_GenAssociations_GenAssociation;
 		}
-		public final void setGenAssociationAttributs(GenAssociationAttributs genAssociationAttributs) {
-			this.definePosGenAssociationAttributs();
-			this.genAssociationAttributs = genAssociationAttributs;
+		public final void setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(GenAssociationAttributs Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs) {
+			this.definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs();
+			this.Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs = Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs;
 		}
-		public final void setGenAssociationAttribut(GenAssociationAttribut genAssociationAttribut) {
-			this.definePosGenAssociationAttribut();
-			this.genAssociationAttribut = genAssociationAttribut;
+		public final void setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(GenAssociationAttribut Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut) {
+			this.definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut();
+			this.Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut = Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut;
 		}
-		public final void setGenClasseDeAssociation(GenClasseDeAssociation genClasseDeAssociation) {
-			this.definePosGenClasseDeAssociation();
-			this.genClasseDeAssociation = genClasseDeAssociation;
+		public final void setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(GenClasseDeAssociation Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation) {
+			this.definePosGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation();
+			this.Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation = Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation;
 		}
-		public final void setGenClasseParents(GenClasseParents genClasseParents) {
-			this.definePosGenClasseParents();
-			this.genClasseParents = genClasseParents;
+		public final void setGen_GenClasses_GenClasse_GenClasseParents(GenClasseParents Gen_GenClasses_GenClasse_GenClasseParents) {
+			this.definePosGen_GenClasses_GenClasse_GenClasseParents();
+			this.Gen_GenClasses_GenClasse_GenClasseParents = Gen_GenClasses_GenClasse_GenClasseParents;
 		}
-		public final void setGenClasseParent(GenClasseParent genClasseParent) {
-			this.definePosGenClasseParent();
-			this.genClasseParent = genClasseParent;
+		public final void setGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(GenClasseParent Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent) {
+			this.definePosGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent();
+			this.Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent = Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent;
 		}
-		public final void setGenGenererGroupe(GenGenererGroupe genGenererGroupe) {
-			this.definePosGenGenererGroupe();
-			this.genGenererGroupe = genGenererGroupe;
+		public final void setGen_GenGenerate(GenGenerate Gen_GenGenerate) {
+			this.definePosGen_GenGenerate();
+			this.Gen_GenGenerate = Gen_GenGenerate;
 		}
-		public final void setGenGenererParClasses(GenGenererParClasses genGenererParClasses) {
-			this.definePosGenGenererParClasses();
-			this.genGenererParClasses = genGenererParClasses;
+		public final void setGen_GenGenerate_GenGenererParClasses(GenGenererParClasses Gen_GenGenerate_GenGenererParClasses) {
+			this.definePosGen_GenGenerate_GenGenererParClasses();
+			this.Gen_GenGenerate_GenGenererParClasses = Gen_GenGenerate_GenGenererParClasses;
 		}
-		public final void setGenGenererParClasse(GenGenererParClasse genGenererParClasse) {
-			this.definePosGenGenererParClasse();
-			this.genGenererParClasse = genGenererParClasse;
+		public final void setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse(GenGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse) {
+			this.definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse();
+			this.Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse = Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse;
 		}
-		public final void setGenClasseRefPourGenererParClasses(GenClasseRefPourGenererParClasses genClasseRefPourGenererParClasses) {
-			this.definePosGenClasseRefPourGenererParClasses();
-			this.genClasseRefPourGenererParClasses = genClasseRefPourGenererParClasses;
+		public final void setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(GenClasseRefPourGenererParClasses Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses) {
+			this.definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses();
+			this.Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses = Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses;
 		}
-		public final void setGenClasseRefPourGenererParClasse(GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse) {
-			this.definePosGenClasseRefPourGenererParClasse();
-			this.genClasseRefPourGenererParClasse = genClasseRefPourGenererParClasse;
+		public final void setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(GenClasseRefPourGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse) {
+			this.definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse();
+			this.Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse = Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParClasses(GenTemplateGroupeRefPourGenererParClasses genTemplateGroupeRefPourGenererParClasses) {
-			this.definePosGenTemplateGroupeRefPourGenererParClasses();
-			this.genTemplateGroupeRefPourGenererParClasses = genTemplateGroupeRefPourGenererParClasses;
+		public final void setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(GenTemplateGroupeRefPourGenererParClasses Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses) {
+			this.definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses();
+			this.Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses = Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParClasse(GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse) {
-			this.definePosGenTemplateGroupeRefPourGenererParClasse();
-			this.genTemplateGroupeRefPourGenererParClasse = genTemplateGroupeRefPourGenererParClasse;
+		public final void setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(GenTemplateGroupeRefPourGenererParClasse Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse) {
+			this.definePosGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse();
+			this.Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse = Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse;
 		}
-		public final void setGenGenererParTemplates(GenGenererParTemplates genGenererParTemplates) {
-			this.definePosGenGenererParTemplates();
-			this.genGenererParTemplates = genGenererParTemplates;
+		public final void setGen_GenGenerate_GenGenererParTemplates(GenGenererParTemplates Gen_GenGenerate_GenGenererParTemplates) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates();
+			this.Gen_GenGenerate_GenGenererParTemplates = Gen_GenGenerate_GenGenererParTemplates;
 		}
-		public final void setGenGenererParTemplate(GenGenererParTemplate genGenererParTemplate) {
-			this.definePosGenGenererParTemplate();
-			this.genGenererParTemplate = genGenererParTemplate;
+		public final void setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(GenGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate();
+			this.Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate = Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParTemplates(GenTemplateGroupeRefPourGenererParTemplates genTemplateGroupeRefPourGenererParTemplates) {
-			this.definePosGenTemplateGroupeRefPourGenererParTemplates();
-			this.genTemplateGroupeRefPourGenererParTemplates = genTemplateGroupeRefPourGenererParTemplates;
+		public final void setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(GenTemplateGroupeRefPourGenererParTemplates Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates();
+			this.Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates = Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParTemplate(GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate) {
-			this.definePosGenTemplateGroupeRefPourGenererParTemplate();
-			this.genTemplateGroupeRefPourGenererParTemplate = genTemplateGroupeRefPourGenererParTemplate;
+		public final void setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(GenTemplateGroupeRefPourGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate();
+			this.Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate = Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate;
 		}
-		public final void setGenStereotypeRefPourGenererParTemplates(GenStereotypeRefPourGenererParTemplates genStereotypeRefPourGenererParTemplates) {
-			this.definePosGenStereotypeRefPourGenererParTemplates();
-			this.genStereotypeRefPourGenererParTemplates = genStereotypeRefPourGenererParTemplates;
+		public final void setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(GenStereotypeRefPourGenererParTemplates Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates();
+			this.Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates = Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates;
 		}
-		public final void setGenStereotypeRefPourGenererParTemplate(GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate) {
-			this.definePosGenStereotypeRefPourGenererParTemplate();
-			this.genStereotypeRefPourGenererParTemplate = genStereotypeRefPourGenererParTemplate;
+		public final void setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(GenStereotypeRefPourGenererParTemplate Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate) {
+			this.definePosGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate();
+			this.Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate = Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate;
 		}
-		public final void setGenGenererParStereotypes(GenGenererParStereotypes genGenererParStereotypes) {
-			this.definePosGenGenererParStereotypes();
-			this.genGenererParStereotypes = genGenererParStereotypes;
+		public final void setGen_GenGenerate_GenGenererParStereotypes(GenGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes();
+			this.Gen_GenGenerate_GenGenererParStereotypes = Gen_GenGenerate_GenGenererParStereotypes;
 		}
-		public final void setGenGenererParStereotype(GenGenererParStereotype genGenererParStereotype) {
-			this.definePosGenGenererParStereotype();
-			this.genGenererParStereotype = genGenererParStereotype;
+		public final void setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(GenGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype();
+			this.Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype = Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype;
 		}
-		public final void setGenStereotypeRefPourGenererParStereotypes(GenStereotypeRefPourGenererParStereotypes genStereotypeRefPourGenererParStereotypes) {
-			this.definePosGenStereotypeRefPourGenererParStereotypes();
-			this.genStereotypeRefPourGenererParStereotypes = genStereotypeRefPourGenererParStereotypes;
+		public final void setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(GenStereotypeRefPourGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes();
+			this.Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes = Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes;
 		}
-		public final void setGenStereotypeRefPourGenererParStereotype(GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype) {
-			this.definePosGenStereotypeRefPourGenererParStereotype();
-			this.genStereotypeRefPourGenererParStereotype = genStereotypeRefPourGenererParStereotype;
+		public final void setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(GenStereotypeRefPourGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype();
+			this.Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype = Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParStereotypes(GenTemplateGroupeRefPourGenererParStereotypes genTemplateGroupeRefPourGenererParStereotypes) {
-			this.definePosGenTemplateGroupeRefPourGenererParStereotypes();
-			this.genTemplateGroupeRefPourGenererParStereotypes = genTemplateGroupeRefPourGenererParStereotypes;
+		public final void setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(GenTemplateGroupeRefPourGenererParStereotypes Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes();
+			this.Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes = Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes;
 		}
-		public final void setGenTemplateGroupeRefPourGenererParStereotype(GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype) {
-			this.definePosGenTemplateGroupeRefPourGenererParStereotype();
-			this.genTemplateGroupeRefPourGenererParStereotype = genTemplateGroupeRefPourGenererParStereotype;
+		public final void setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(GenTemplateGroupeRefPourGenererParStereotype Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype) {
+			this.definePosGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype();
+			this.Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype = Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype;
 		}
     };
     
@@ -645,164 +645,217 @@ public class GenXmlHandler extends DefaultHandler {
         if (GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
             startElement_Gen(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplates.equalsIgnoreCase(localName)){
-            startElement_GenTemplates(namespaceURI, localName, qName, atts);
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplates(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplate.equalsIgnoreCase(localName)){
-            startElement_GenTemplate(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenTemplates() != null
+         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupes.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupe.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupe(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenTemplateGroupes() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateRef.equalsIgnoreCase(localName)){
-            startElement_GenTemplateRef(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypes.equalsIgnoreCase(localName)){
-            startElement_GenStereotypes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenStereotypes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotype.equalsIgnoreCase(localName)){
-            startElement_GenStereotype(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasses.equalsIgnoreCase(localName)){
-            startElement_GenClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasse.equalsIgnoreCase(localName)){
-            startElement_GenClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteClasses.equalsIgnoreCase(localName)){
-            startElement_GenProprieteClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenProprieteClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteClasse.equalsIgnoreCase(localName)){
-            startElement_GenProprieteClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenProprieteClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAttributs.equalsIgnoreCase(localName)){
-            startElement_GenAttributs(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAttribut.equalsIgnoreCase(localName)){
-            startElement_GenAttribut(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteAttributs.equalsIgnoreCase(localName)){
-            startElement_GenProprieteAttributs(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteAttribut.equalsIgnoreCase(localName)){
-            startElement_GenProprieteAttribut(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeAttributs.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeAttributs(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeAttribut.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeAttribut(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenMethodes.equalsIgnoreCase(localName)){
-            startElement_GenMethodes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenMethode.equalsIgnoreCase(localName)){
-            startElement_GenMethode(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteMethodes.equalsIgnoreCase(localName)){
-            startElement_GenProprieteMethodes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenProprieteMethode.equalsIgnoreCase(localName)){
-            startElement_GenProprieteMethode(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenParametres.equalsIgnoreCase(localName)){
-            startElement_GenParametres(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenParametre.equalsIgnoreCase(localName)){
-            startElement_GenParametre(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeMethodes.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeMethodes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeMethode.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeMethode(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeClasses.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenStereotypeClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeClasse.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAssociations.equalsIgnoreCase(localName)){
-            startElement_GenAssociations(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAssociations(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAssociation.equalsIgnoreCase(localName)){
-            startElement_GenAssociation(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAssociationAttributs.equalsIgnoreCase(localName)){
-            startElement_GenAssociationAttributs(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenAssociationAttribut.equalsIgnoreCase(localName)){
-            startElement_GenAssociationAttribut(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasseDeAssociation.equalsIgnoreCase(localName)){
-            startElement_GenClasseDeAssociation(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasseParents.equalsIgnoreCase(localName)){
-            startElement_GenClasseParents(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseParents(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasseParent.equalsIgnoreCase(localName)){
-            startElement_GenClasseParent(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseParents() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererGroupe.equalsIgnoreCase(localName)){
-            startElement_GenGenererGroupe(namespaceURI, localName, qName, atts);
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParClasses.equalsIgnoreCase(localName)){
-            startElement_GenGenererParClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParClasse.equalsIgnoreCase(localName)){
-            startElement_GenGenererParClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasseRefPourGenererParClasses.equalsIgnoreCase(localName)){
-            startElement_GenClasseRefPourGenererParClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenClasseRefPourGenererParClasse.equalsIgnoreCase(localName)){
-            startElement_GenClasseRefPourGenererParClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParClasses.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParClasses(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParClasse.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParClasse(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParTemplates.equalsIgnoreCase(localName)){
-            startElement_GenGenererParTemplates(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParTemplate.equalsIgnoreCase(localName)){
-            startElement_GenGenererParTemplate(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParTemplates(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParTemplate(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeRefPourGenererParTemplates(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeRefPourGenererParTemplate(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParStereotypes.equalsIgnoreCase(localName)){
-            startElement_GenGenererParStereotypes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenGenererParStereotype.equalsIgnoreCase(localName)){
-            startElement_GenGenererParStereotype(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeRefPourGenererParStereotypes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
-            startElement_GenStereotypeRefPourGenererParStereotype(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParStereotypes(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(namespaceURI, localName, qName, atts);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
-            startElement_GenTemplateGroupeRefPourGenererParStereotype(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(namespaceURI, localName, qName, atts);
         }
     }
 
@@ -815,673 +868,673 @@ public class GenXmlHandler extends DefaultHandler {
         enCours.setGen( gen );
     }
     
-    public void startElement_GenTemplates(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenTemplates(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplates genTemplates = new GenTemplatesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplates_A_InDir.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_A_InDir.equalsIgnoreCase(attName)) {
             	genTemplates.setInDirAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplates_A_OutDir.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_A_OutDir.equalsIgnoreCase(attName)) {
             	genTemplates.setOutDirAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplates_A_PackageJavaBase.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_A_PackageJavaBase.equalsIgnoreCase(attName)) {
             	genTemplates.setPackageJavaBaseAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplates( genTemplates );
+        enCours.setGen_GenTemplates( genTemplates );
     }
     
-    public void startElement_GenTemplate(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenTemplates_GenTemplate(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplate genTemplate = new GenTemplateBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplate_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_Nom.equalsIgnoreCase(attName)) {
             	genTemplate.setNomAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplate_A_File.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_File.equalsIgnoreCase(attName)) {
             	genTemplate.setFileAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplate_A_OutDir.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_OutDir.equalsIgnoreCase(attName)) {
             	genTemplate.setOutDirAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplate_A_OutFile.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_OutFile.equalsIgnoreCase(attName)) {
             	genTemplate.setOutFileAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplate_A_PackageJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_PackageJava.equalsIgnoreCase(attName)) {
             	genTemplate.setPackageJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenTemplate_A_NomElementGenere.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_NomElementGenere.equalsIgnoreCase(attName)) {
             	genTemplate.setNomElementGenereAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplate( genTemplate );
+        enCours.setGen_GenTemplates_GenTemplate( genTemplate );
     }
     
-    public void startElement_GenTemplateGroupes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenTemplateGroupes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupes genTemplateGroupes = new GenTemplateGroupesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenTemplateGroupes( genTemplateGroupes );
+        enCours.setGen_GenTemplateGroupes( genTemplateGroupes );
     }
     
-    public void startElement_GenTemplateGroupe(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenTemplateGroupes_GenTemplateGroupe(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupe genTemplateGroupe = new GenTemplateGroupeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplateGroupe_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_A_Nom.equalsIgnoreCase(attName)) {
             	genTemplateGroupe.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplateGroupe( genTemplateGroupe );
+        enCours.setGen_GenTemplateGroupes_GenTemplateGroupe( genTemplateGroupe );
     }
     
-    public void startElement_GenTemplateRef(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateRef genTemplateRef = new GenTemplateRefBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplateRef_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef_A_Nom.equalsIgnoreCase(attName)) {
             	genTemplateRef.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplateRef( genTemplateRef );
+        enCours.setGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef( genTemplateRef );
     }
     
-    public void startElement_GenStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypes genStereotypes = new GenStereotypesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypes( genStereotypes );
+        enCours.setGen_GenStereotypes( genStereotypes );
     }
     
-    public void startElement_GenStereotype(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenStereotypes_GenStereotype(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotype genStereotype = new GenStereotypeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotype_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype_A_Nom.equalsIgnoreCase(attName)) {
             	genStereotype.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotype( genStereotype );
+        enCours.setGen_GenStereotypes_GenStereotype( genStereotype );
     }
     
-    public void startElement_GenClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasses genClasses = new GenClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenClasses_A_PackageBase.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_A_PackageBase.equalsIgnoreCase(attName)) {
             	genClasses.setPackageBaseAsString(atts.getValue(i));
             }
         }
-        enCours.setGenClasses( genClasses );
+        enCours.setGen_GenClasses( genClasses );
     }
     
-    public void startElement_GenClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasse genClasse = new GenClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenClasse_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_GenId.equalsIgnoreCase(attName)) {
             	genClasse.setGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenClasse_A_NomJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomJava.equalsIgnoreCase(attName)) {
             	genClasse.setNomJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenClasse_A_PackageJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_PackageJava.equalsIgnoreCase(attName)) {
             	genClasse.setPackageJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenClasse_A_NomTable.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomTable.equalsIgnoreCase(attName)) {
             	genClasse.setNomTableAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenClasse_A_NomVue.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomVue.equalsIgnoreCase(attName)) {
             	genClasse.setNomVueAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenClasse_A_Description.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_Description.equalsIgnoreCase(attName)) {
             	genClasse.setDescriptionAsString(atts.getValue(i));
             }
         }
-        enCours.setGenClasse( genClasse );
+        enCours.setGen_GenClasses_GenClasse( genClasse );
     }
     
-    public void startElement_GenProprieteClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenProprieteClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteClasses genProprieteClasses = new GenProprieteClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenProprieteClasses( genProprieteClasses );
+        enCours.setGen_GenClasses_GenClasse_GenProprieteClasses( genProprieteClasses );
     }
     
-    public void startElement_GenProprieteClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteClasse genProprieteClasse = new GenProprieteClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenProprieteClasse_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse_A_Nom.equalsIgnoreCase(attName)) {
             	genProprieteClasse.setNomAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenProprieteClasse_A_Valeur.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse_A_Valeur.equalsIgnoreCase(attName)) {
             	genProprieteClasse.setValeurAsString(atts.getValue(i));
             }
         }
-        enCours.setGenProprieteClasse( genProprieteClasse );
+        enCours.setGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse( genProprieteClasse );
     }
     
-    public void startElement_GenAttributs(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAttributs genAttributs = new GenAttributsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenAttributs( genAttributs );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs( genAttributs );
     }
     
-    public void startElement_GenAttribut(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAttribut genAttribut = new GenAttributBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenAttribut_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_GenId.equalsIgnoreCase(attName)) {
             	genAttribut.setGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_NomJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NomJava.equalsIgnoreCase(attName)) {
             	genAttribut.setNomJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_Type.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_Type.equalsIgnoreCase(attName)) {
             	genAttribut.setTypeAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_NbMin.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMin.equalsIgnoreCase(attName)) {
             	genAttribut.setNbMinAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_NbMax.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMax.equalsIgnoreCase(attName)) {
             	genAttribut.setNbMaxAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_NomSQL.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NomSQL.equalsIgnoreCase(attName)) {
             	genAttribut.setNomSQLAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_TypeSQL.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_TypeSQL.equalsIgnoreCase(attName)) {
             	genAttribut.setTypeSQLAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_EstDansTable.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_EstDansTable.equalsIgnoreCase(attName)) {
             	genAttribut.setEstDansTableAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_Size.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_Size.equalsIgnoreCase(attName)) {
             	genAttribut.setSizeAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_EstClePrimaire.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_EstClePrimaire.equalsIgnoreCase(attName)) {
             	genAttribut.setEstClePrimaireAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_EstCleIncrementee.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_EstCleIncrementee.equalsIgnoreCase(attName)) {
             	genAttribut.setEstCleIncrementeeAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_AssociationId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_AssociationId.equalsIgnoreCase(attName)) {
             	genAttribut.setAssociationIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAttribut_A_Description.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_Description.equalsIgnoreCase(attName)) {
             	genAttribut.setDescriptionAsString(atts.getValue(i));
             }
         }
-        enCours.setGenAttribut( genAttribut );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut( genAttribut );
     }
     
-    public void startElement_GenProprieteAttributs(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteAttributs genProprieteAttributs = new GenProprieteAttributsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenProprieteAttributs( genProprieteAttributs );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs( genProprieteAttributs );
     }
     
-    public void startElement_GenProprieteAttribut(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteAttribut genProprieteAttribut = new GenProprieteAttributBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenProprieteAttribut_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut_A_Nom.equalsIgnoreCase(attName)) {
             	genProprieteAttribut.setNomAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenProprieteAttribut_A_Valeur.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut_A_Valeur.equalsIgnoreCase(attName)) {
             	genProprieteAttribut.setValeurAsString(atts.getValue(i));
             }
         }
-        enCours.setGenProprieteAttribut( genProprieteAttribut );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut( genProprieteAttribut );
     }
     
-    public void startElement_GenStereotypeAttributs(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeAttributs genStereotypeAttributs = new GenStereotypeAttributsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypeAttributs( genStereotypeAttributs );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs( genStereotypeAttributs );
     }
     
-    public void startElement_GenStereotypeAttribut(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeAttribut genStereotypeAttribut = new GenStereotypeAttributBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotypeAttribut_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut_A_Nom.equalsIgnoreCase(attName)) {
             	genStereotypeAttribut.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotypeAttribut( genStereotypeAttribut );
+        enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut( genStereotypeAttribut );
     }
     
-    public void startElement_GenMethodes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenMethodes genMethodes = new GenMethodesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenMethodes( genMethodes );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes( genMethodes );
     }
     
-    public void startElement_GenMethode(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenMethode genMethode = new GenMethodeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenMethode_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_GenId.equalsIgnoreCase(attName)) {
             	genMethode.setGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenMethode_A_NomJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_NomJava.equalsIgnoreCase(attName)) {
             	genMethode.setNomJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenMethode_A_RetourType.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_RetourType.equalsIgnoreCase(attName)) {
             	genMethode.setRetourTypeAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenMethode_A_Description.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_Description.equalsIgnoreCase(attName)) {
             	genMethode.setDescriptionAsString(atts.getValue(i));
             }
         }
-        enCours.setGenMethode( genMethode );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode( genMethode );
     }
     
-    public void startElement_GenProprieteMethodes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteMethodes genProprieteMethodes = new GenProprieteMethodesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenProprieteMethodes( genProprieteMethodes );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes( genProprieteMethodes );
     }
     
-    public void startElement_GenProprieteMethode(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenProprieteMethode genProprieteMethode = new GenProprieteMethodeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenProprieteMethode_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode_A_Nom.equalsIgnoreCase(attName)) {
             	genProprieteMethode.setNomAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenProprieteMethode_A_Valeur.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode_A_Valeur.equalsIgnoreCase(attName)) {
             	genProprieteMethode.setValeurAsString(atts.getValue(i));
             }
         }
-        enCours.setGenProprieteMethode( genProprieteMethode );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode( genProprieteMethode );
     }
     
-    public void startElement_GenParametres(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenParametres genParametres = new GenParametresBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenParametres( genParametres );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres( genParametres );
     }
     
-    public void startElement_GenParametre(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenParametre genParametre = new GenParametreBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenParametre_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_GenId.equalsIgnoreCase(attName)) {
             	genParametre.setGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenParametre_A_NomJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_NomJava.equalsIgnoreCase(attName)) {
             	genParametre.setNomJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenParametre_A_Type.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_Type.equalsIgnoreCase(attName)) {
             	genParametre.setTypeAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenParametre_A_Description.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_Description.equalsIgnoreCase(attName)) {
             	genParametre.setDescriptionAsString(atts.getValue(i));
             }
         }
-        enCours.setGenParametre( genParametre );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre( genParametre );
     }
     
-    public void startElement_GenStereotypeMethodes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeMethodes genStereotypeMethodes = new GenStereotypeMethodesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypeMethodes( genStereotypeMethodes );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes( genStereotypeMethodes );
     }
     
-    public void startElement_GenStereotypeMethode(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeMethode genStereotypeMethode = new GenStereotypeMethodeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotypeMethode_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode_A_Nom.equalsIgnoreCase(attName)) {
             	genStereotypeMethode.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotypeMethode( genStereotypeMethode );
+        enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode( genStereotypeMethode );
     }
     
-    public void startElement_GenStereotypeClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenStereotypeClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeClasses genStereotypeClasses = new GenStereotypeClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypeClasses( genStereotypeClasses );
+        enCours.setGen_GenClasses_GenClasse_GenStereotypeClasses( genStereotypeClasses );
     }
     
-    public void startElement_GenStereotypeClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeClasse genStereotypeClasse = new GenStereotypeClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotypeClasse_A_Nom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse_A_Nom.equalsIgnoreCase(attName)) {
             	genStereotypeClasse.setNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotypeClasse( genStereotypeClasse );
+        enCours.setGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse( genStereotypeClasse );
     }
     
-    public void startElement_GenAssociations(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAssociations(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAssociations genAssociations = new GenAssociationsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenAssociations( genAssociations );
+        enCours.setGen_GenClasses_GenClasse_GenAssociations( genAssociations );
     }
     
-    public void startElement_GenAssociation(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAssociation genAssociation = new GenAssociationBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenAssociation_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_GenId.equalsIgnoreCase(attName)) {
             	genAssociation.setGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAssociation_A_NomJava.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NomJava.equalsIgnoreCase(attName)) {
             	genAssociation.setNomJavaAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAssociation_A_ClasseGenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_ClasseGenId.equalsIgnoreCase(attName)) {
             	genAssociation.setClasseGenIdAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAssociation_A_NbMin.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMin.equalsIgnoreCase(attName)) {
             	genAssociation.setNbMinAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAssociation_A_NbMax.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMax.equalsIgnoreCase(attName)) {
             	genAssociation.setNbMaxAsString(atts.getValue(i));
             }
-            if(GenXmlNoeud.N_GenAssociation_A_Description.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_Description.equalsIgnoreCase(attName)) {
             	genAssociation.setDescriptionAsString(atts.getValue(i));
             }
         }
-        enCours.setGenAssociation( genAssociation );
+        enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation( genAssociation );
     }
     
-    public void startElement_GenAssociationAttributs(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAssociationAttributs genAssociationAttributs = new GenAssociationAttributsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenAssociationAttributs( genAssociationAttributs );
+        enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs( genAssociationAttributs );
     }
     
-    public void startElement_GenAssociationAttribut(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenAssociationAttribut genAssociationAttribut = new GenAssociationAttributBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenAssociationAttribut_A_GenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut_A_GenId.equalsIgnoreCase(attName)) {
             	genAssociationAttribut.setGenIdAsString(atts.getValue(i));
             }
         }
-        enCours.setGenAssociationAttribut( genAssociationAttribut );
+        enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut( genAssociationAttribut );
     }
     
-    public void startElement_GenClasseDeAssociation(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasseDeAssociation genClasseDeAssociation = new GenClasseDeAssociationBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenClasseDeAssociation_A__type.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation_A__type.equalsIgnoreCase(attName)) {
             	genClasseDeAssociation.set_typeAsString(atts.getValue(i));
             }
         }
-        enCours.setGenClasseDeAssociation( genClasseDeAssociation );
+        enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation( genClasseDeAssociation );
     }
     
-    public void startElement_GenClasseParents(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenClasseParents(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasseParents genClasseParents = new GenClasseParentsBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenClasseParents( genClasseParents );
+        enCours.setGen_GenClasses_GenClasse_GenClasseParents( genClasseParents );
     }
     
-    public void startElement_GenClasseParent(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasseParent genClasseParent = new GenClasseParentBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenClasseParent_A_ClasseGenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent_A_ClasseGenId.equalsIgnoreCase(attName)) {
             	genClasseParent.setClasseGenIdAsString(atts.getValue(i));
             }
         }
-        enCours.setGenClasseParent( genClasseParent );
+        enCours.setGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent( genClasseParent );
     }
     
-    public void startElement_GenGenererGroupe(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
-    	GenGenererGroupe genGenererGroupe = new GenGenererGroupeBean();
+    	GenGenerate genGenerate = new GenGenerateBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererGroupe( genGenererGroupe );
+        enCours.setGen_GenGenerate( genGenerate );
     }
     
-    public void startElement_GenGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParClasses genGenererParClasses = new GenGenererParClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParClasses( genGenererParClasses );
+        enCours.setGen_GenGenerate_GenGenererParClasses( genGenererParClasses );
     }
     
-    public void startElement_GenGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParClasse genGenererParClasse = new GenGenererParClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParClasse( genGenererParClasse );
+        enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse( genGenererParClasse );
     }
     
-    public void startElement_GenClasseRefPourGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasseRefPourGenererParClasses genClasseRefPourGenererParClasses = new GenClasseRefPourGenererParClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenClasseRefPourGenererParClasses( genClasseRefPourGenererParClasses );
+        enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses( genClasseRefPourGenererParClasses );
     }
     
-    public void startElement_GenClasseRefPourGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse = new GenClasseRefPourGenererParClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenClasseRefPourGenererParClasse_A_ClasseGenId.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse_A_ClasseGenId.equalsIgnoreCase(attName)) {
             	genClasseRefPourGenererParClasse.setClasseGenIdAsString(atts.getValue(i));
             }
         }
-        enCours.setGenClasseRefPourGenererParClasse( genClasseRefPourGenererParClasse );
+        enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse( genClasseRefPourGenererParClasse );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParClasses genTemplateGroupeRefPourGenererParClasses = new GenTemplateGroupeRefPourGenererParClassesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenTemplateGroupeRefPourGenererParClasses( genTemplateGroupeRefPourGenererParClasses );
+        enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses( genTemplateGroupeRefPourGenererParClasses );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse = new GenTemplateGroupeRefPourGenererParClasseBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParClasse_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
             	genTemplateGroupeRefPourGenererParClasse.setTemplateGroupeNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplateGroupeRefPourGenererParClasse( genTemplateGroupeRefPourGenererParClasse );
+        enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse( genTemplateGroupeRefPourGenererParClasse );
     }
     
-    public void startElement_GenGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParTemplates genGenererParTemplates = new GenGenererParTemplatesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParTemplates( genGenererParTemplates );
+        enCours.setGen_GenGenerate_GenGenererParTemplates( genGenererParTemplates );
     }
     
-    public void startElement_GenGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParTemplate genGenererParTemplate = new GenGenererParTemplateBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParTemplate( genGenererParTemplate );
+        enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate( genGenererParTemplate );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParTemplates genTemplateGroupeRefPourGenererParTemplates = new GenTemplateGroupeRefPourGenererParTemplatesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenTemplateGroupeRefPourGenererParTemplates( genTemplateGroupeRefPourGenererParTemplates );
+        enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates( genTemplateGroupeRefPourGenererParTemplates );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate = new GenTemplateGroupeRefPourGenererParTemplateBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParTemplate_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
             	genTemplateGroupeRefPourGenererParTemplate.setTemplateGroupeNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplateGroupeRefPourGenererParTemplate( genTemplateGroupeRefPourGenererParTemplate );
+        enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate( genTemplateGroupeRefPourGenererParTemplate );
     }
     
-    public void startElement_GenStereotypeRefPourGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeRefPourGenererParTemplates genStereotypeRefPourGenererParTemplates = new GenStereotypeRefPourGenererParTemplatesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypeRefPourGenererParTemplates( genStereotypeRefPourGenererParTemplates );
+        enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates( genStereotypeRefPourGenererParTemplates );
     }
     
-    public void startElement_GenStereotypeRefPourGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeRefPourGenererParTemplate genStereotypeRefPourGenererParTemplate = new GenStereotypeRefPourGenererParTemplateBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotypeRefPourGenererParTemplate_A_StereotypeNom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate_A_StereotypeNom.equalsIgnoreCase(attName)) {
             	genStereotypeRefPourGenererParTemplate.setStereotypeNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotypeRefPourGenererParTemplate( genStereotypeRefPourGenererParTemplate );
+        enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate( genStereotypeRefPourGenererParTemplate );
     }
     
-    public void startElement_GenGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParStereotypes genGenererParStereotypes = new GenGenererParStereotypesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParStereotypes( genGenererParStereotypes );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes( genGenererParStereotypes );
     }
     
-    public void startElement_GenGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenGenererParStereotype genGenererParStereotype = new GenGenererParStereotypeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenGenererParStereotype( genGenererParStereotype );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype( genGenererParStereotype );
     }
     
-    public void startElement_GenStereotypeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeRefPourGenererParStereotypes genStereotypeRefPourGenererParStereotypes = new GenStereotypeRefPourGenererParStereotypesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenStereotypeRefPourGenererParStereotypes( genStereotypeRefPourGenererParStereotypes );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes( genStereotypeRefPourGenererParStereotypes );
     }
     
-    public void startElement_GenStereotypeRefPourGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenStereotypeRefPourGenererParStereotype genStereotypeRefPourGenererParStereotype = new GenStereotypeRefPourGenererParStereotypeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenStereotypeRefPourGenererParStereotype_A_StereotypeNom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_A_StereotypeNom.equalsIgnoreCase(attName)) {
             	genStereotypeRefPourGenererParStereotype.setStereotypeNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenStereotypeRefPourGenererParStereotype( genStereotypeRefPourGenererParStereotype );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype( genStereotypeRefPourGenererParStereotype );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParStereotypes genTemplateGroupeRefPourGenererParStereotypes = new GenTemplateGroupeRefPourGenererParStereotypesBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
         }
-        enCours.setGenTemplateGroupeRefPourGenererParStereotypes( genTemplateGroupeRefPourGenererParStereotypes );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes( genTemplateGroupeRefPourGenererParStereotypes );
     }
     
-    public void startElement_GenTemplateGroupeRefPourGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
     	GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype = new GenTemplateGroupeRefPourGenererParStereotypeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParStereotype_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype_A_TemplateGroupeNom.equalsIgnoreCase(attName)) {
             	genTemplateGroupeRefPourGenererParStereotype.setTemplateGroupeNomAsString(atts.getValue(i));
             }
         }
-        enCours.setGenTemplateGroupeRefPourGenererParStereotype( genTemplateGroupeRefPourGenererParStereotype );
+        enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype( genTemplateGroupeRefPourGenererParStereotype );
     }
     
     
@@ -1507,167 +1560,221 @@ public class GenXmlHandler extends DefaultHandler {
      */
     public void endElement(String namespaceURI, String localName, String qName)
     throws SAXException {
-        if (GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
             endElement_Gen(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplates.equalsIgnoreCase(localName)){
-            endElement_GenTemplates(namespaceURI, localName, qName);
+        if (enCours.getGen_GenTemplates() != null
+         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplates(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplate.equalsIgnoreCase(localName)){
-            endElement_GenTemplate(namespaceURI, localName, qName);
+        if (enCours.getGen_GenTemplates_GenTemplate() != null
+         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupes.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenTemplateGroupes() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupe.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupe(namespaceURI, localName, qName);
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateRef.equalsIgnoreCase(localName)){
-            endElement_GenTemplateRef(namespaceURI, localName, qName);
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypes.equalsIgnoreCase(localName)){
-            endElement_GenStereotypes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenStereotypes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotype.equalsIgnoreCase(localName)){
-            endElement_GenStereotype(namespaceURI, localName, qName);
+        if (enCours.getGen_GenStereotypes_GenStereotype() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasses.equalsIgnoreCase(localName)){
-            endElement_GenClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasse.equalsIgnoreCase(localName)){
-            endElement_GenClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteClasses.equalsIgnoreCase(localName)){
-            endElement_GenProprieteClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenProprieteClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenProprieteClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteClasse.equalsIgnoreCase(localName)){
-            endElement_GenProprieteClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAttributs.equalsIgnoreCase(localName)){
-            endElement_GenAttributs(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAttribut.equalsIgnoreCase(localName)){
-            endElement_GenAttribut(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteAttributs.equalsIgnoreCase(localName)){
-            endElement_GenProprieteAttributs(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteAttribut.equalsIgnoreCase(localName)){
-            endElement_GenProprieteAttribut(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeAttributs.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeAttributs(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeAttribut.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeAttribut(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenMethodes.equalsIgnoreCase(localName)){
-            endElement_GenMethodes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenMethode.equalsIgnoreCase(localName)){
-            endElement_GenMethode(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteMethodes.equalsIgnoreCase(localName)){
-            endElement_GenProprieteMethodes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenProprieteMethode.equalsIgnoreCase(localName)){
-            endElement_GenProprieteMethode(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenParametres.equalsIgnoreCase(localName)){
-            endElement_GenParametres(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenParametre.equalsIgnoreCase(localName)){
-            endElement_GenParametre(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeMethodes.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeMethodes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeMethode.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeMethode(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeClasses.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenStereotypeClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeClasse.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAssociations.equalsIgnoreCase(localName)){
-            endElement_GenAssociations(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAssociations(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAssociation.equalsIgnoreCase(localName)){
-            endElement_GenAssociation(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAssociationAttributs.equalsIgnoreCase(localName)){
-            endElement_GenAssociationAttributs(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenAssociationAttribut.equalsIgnoreCase(localName)){
-            endElement_GenAssociationAttribut(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasseDeAssociation.equalsIgnoreCase(localName)){
-            endElement_GenClasseDeAssociation(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasseParents.equalsIgnoreCase(localName)){
-            endElement_GenClasseParents(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseParents() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseParents(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasseParent.equalsIgnoreCase(localName)){
-            endElement_GenClasseParent(namespaceURI, localName, qName);
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererGroupe.equalsIgnoreCase(localName)){
-            endElement_GenGenererGroupe(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParClasses.equalsIgnoreCase(localName)){
-            endElement_GenGenererParClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParClasse.equalsIgnoreCase(localName)){
-            endElement_GenGenererParClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasseRefPourGenererParClasses.equalsIgnoreCase(localName)){
-            endElement_GenClasseRefPourGenererParClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenClasseRefPourGenererParClasse.equalsIgnoreCase(localName)){
-            endElement_GenClasseRefPourGenererParClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParClasses.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParClasses(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParClasse.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParClasse(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParTemplates.equalsIgnoreCase(localName)){
-            endElement_GenGenererParTemplates(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParTemplate.equalsIgnoreCase(localName)){
-            endElement_GenGenererParTemplate(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParTemplates(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParTemplate(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeRefPourGenererParTemplates(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeRefPourGenererParTemplate(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParStereotypes.equalsIgnoreCase(localName)){
-            endElement_GenGenererParStereotypes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenGenererParStereotype.equalsIgnoreCase(localName)){
-            endElement_GenGenererParStereotype(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeRefPourGenererParStereotypes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenStereotypeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
-            endElement_GenStereotypeRefPourGenererParStereotype(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParStereotypes(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(namespaceURI, localName, qName);
         }
-        if (GenXmlNoeud.N_GenTemplateGroupeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
-            endElement_GenTemplateGroupeRefPourGenererParStereotype(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(namespaceURI, localName, qName);
         }
     }
 
@@ -1676,347 +1783,400 @@ public class GenXmlHandler extends DefaultHandler {
     	enCours.setGen(enCours.getGen());
     }
     
-    public void endElement_GenTemplates(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenTemplates(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGen().setGenTemplates(enCours.getGenTemplates());
+    	enCours.getGen().setGenTemplates(enCours.getGen_GenTemplates());
+    	enCours.setGen_GenTemplates(null);
     }
     
-    public void endElement_GenTemplate(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenTemplates_GenTemplate(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplates() == null) {
-    		enCours.setGenTemplates(new GenTemplatesBean());
+    	if(enCours.getGen_GenTemplates() == null) {
+    		enCours.setGen_GenTemplates(new GenTemplatesBean());
     	}
-    	enCours.getGenTemplates().addGenTemplate(enCours.getGenTemplate());
+    	enCours.getGen_GenTemplates().addGenTemplate(enCours.getGen_GenTemplates_GenTemplate());
+    	enCours.setGen_GenTemplates_GenTemplate(null);
     }
     
-    public void endElement_GenTemplateGroupes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenTemplateGroupes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGen().setGenTemplateGroupes(enCours.getGenTemplateGroupes());
+    	enCours.getGen().setGenTemplateGroupes(enCours.getGen_GenTemplateGroupes());
+    	enCours.setGen_GenTemplateGroupes(null);
     }
     
-    public void endElement_GenTemplateGroupe(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenTemplateGroupes_GenTemplateGroupe(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplateGroupes() == null) {
-    		enCours.setGenTemplateGroupes(new GenTemplateGroupesBean());
+    	if(enCours.getGen_GenTemplateGroupes() == null) {
+    		enCours.setGen_GenTemplateGroupes(new GenTemplateGroupesBean());
     	}
-    	enCours.getGenTemplateGroupes().addGenTemplateGroupe(enCours.getGenTemplateGroupe());
+    	enCours.getGen_GenTemplateGroupes().addGenTemplateGroupe(enCours.getGen_GenTemplateGroupes_GenTemplateGroupe());
+    	enCours.setGen_GenTemplateGroupes_GenTemplateGroupe(null);
     }
     
-    public void endElement_GenTemplateRef(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplateGroupe() == null) {
-    		enCours.setGenTemplateGroupe(new GenTemplateGroupeBean());
+    	if(enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() == null) {
+    		enCours.setGen_GenTemplateGroupes_GenTemplateGroupe(new GenTemplateGroupeBean());
     	}
-    	enCours.getGenTemplateGroupe().addGenTemplateRef(enCours.getGenTemplateRef());
+    	enCours.getGen_GenTemplateGroupes_GenTemplateGroupe().addGenTemplateRef(enCours.getGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef());
+    	enCours.setGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateRef(null);
     }
     
-    public void endElement_GenStereotypes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenStereotypes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGen().setGenStereotypes(enCours.getGenStereotypes());
+    	enCours.getGen().setGenStereotypes(enCours.getGen_GenStereotypes());
+    	enCours.setGen_GenStereotypes(null);
     }
     
-    public void endElement_GenStereotype(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenStereotypes_GenStereotype(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypes() == null) {
-    		enCours.setGenStereotypes(new GenStereotypesBean());
+    	if(enCours.getGen_GenStereotypes() == null) {
+    		enCours.setGen_GenStereotypes(new GenStereotypesBean());
     	}
-    	enCours.getGenStereotypes().addGenStereotype(enCours.getGenStereotype());
+    	enCours.getGen_GenStereotypes().addGenStereotype(enCours.getGen_GenStereotypes_GenStereotype());
+    	enCours.setGen_GenStereotypes_GenStereotype(null);
     }
     
-    public void endElement_GenClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGen().setGenClasses(enCours.getGenClasses());
+    	enCours.getGen().setGenClasses(enCours.getGen_GenClasses());
+    	enCours.setGen_GenClasses(null);
     }
     
-    public void endElement_GenClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenClasses() == null) {
-    		enCours.setGenClasses(new GenClassesBean());
+    	if(enCours.getGen_GenClasses() == null) {
+    		enCours.setGen_GenClasses(new GenClassesBean());
     	}
-    	enCours.getGenClasses().addGenClasse(enCours.getGenClasse());
+    	enCours.getGen_GenClasses().addGenClasse(enCours.getGen_GenClasses_GenClasse());
+    	enCours.setGen_GenClasses_GenClasse(null);
     }
     
-    public void endElement_GenProprieteClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenProprieteClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenProprieteClasses(enCours.getGenProprieteClasses());
+    	enCours.getGen_GenClasses_GenClasse().setGenProprieteClasses(enCours.getGen_GenClasses_GenClasse_GenProprieteClasses());
+    	enCours.setGen_GenClasses_GenClasse_GenProprieteClasses(null);
     }
     
-    public void endElement_GenProprieteClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenProprieteClasses() == null) {
-    		enCours.setGenProprieteClasses(new GenProprieteClassesBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenProprieteClasses() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenProprieteClasses(new GenProprieteClassesBean());
     	}
-    	enCours.getGenProprieteClasses().addGenProprieteClasse(enCours.getGenProprieteClasse());
+    	enCours.getGen_GenClasses_GenClasse_GenProprieteClasses().addGenProprieteClasse(enCours.getGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse());
+    	enCours.setGen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse(null);
     }
     
-    public void endElement_GenAttributs(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenAttributs(enCours.getGenAttributs());
+    	enCours.getGen_GenClasses_GenClasse().setGenAttributs(enCours.getGen_GenClasses_GenClasse_GenAttributs());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs(null);
     }
     
-    public void endElement_GenAttribut(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenAttributs() == null) {
-    		enCours.setGenAttributs(new GenAttributsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenAttributs() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenAttributs(new GenAttributsBean());
     	}
-    	enCours.getGenAttributs().addGenAttribut(enCours.getGenAttribut());
+    	enCours.getGen_GenClasses_GenClasse_GenAttributs().addGenAttribut(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut(null);
     }
     
-    public void endElement_GenProprieteAttributs(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenAttribut().setGenProprieteAttributs(enCours.getGenProprieteAttributs());
+    	enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut().setGenProprieteAttributs(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(null);
     }
     
-    public void endElement_GenProprieteAttribut(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenProprieteAttributs() == null) {
-    		enCours.setGenProprieteAttributs(new GenProprieteAttributsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs(new GenProprieteAttributsBean());
     	}
-    	enCours.getGenProprieteAttributs().addGenProprieteAttribut(enCours.getGenProprieteAttribut());
+    	enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs().addGenProprieteAttribut(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut(null);
     }
     
-    public void endElement_GenStereotypeAttributs(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenAttribut().setGenStereotypeAttributs(enCours.getGenStereotypeAttributs());
+    	enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut().setGenStereotypeAttributs(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(null);
     }
     
-    public void endElement_GenStereotypeAttribut(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypeAttributs() == null) {
-    		enCours.setGenStereotypeAttributs(new GenStereotypeAttributsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs(new GenStereotypeAttributsBean());
     	}
-    	enCours.getGenStereotypeAttributs().addGenStereotypeAttribut(enCours.getGenStereotypeAttribut());
+    	enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs().addGenStereotypeAttribut(enCours.getGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut());
+    	enCours.setGen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut(null);
     }
     
-    public void endElement_GenMethodes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenMethodes(enCours.getGenMethodes());
+    	enCours.getGen_GenClasses_GenClasse().setGenMethodes(enCours.getGen_GenClasses_GenClasse_GenMethodes());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes(null);
     }
     
-    public void endElement_GenMethode(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenMethodes() == null) {
-    		enCours.setGenMethodes(new GenMethodesBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenMethodes() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenMethodes(new GenMethodesBean());
     	}
-    	enCours.getGenMethodes().addGenMethode(enCours.getGenMethode());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes().addGenMethode(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode(null);
     }
     
-    public void endElement_GenProprieteMethodes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenMethode().setGenProprieteMethodes(enCours.getGenProprieteMethodes());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode().setGenProprieteMethodes(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(null);
     }
     
-    public void endElement_GenProprieteMethode(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenProprieteMethodes() == null) {
-    		enCours.setGenProprieteMethodes(new GenProprieteMethodesBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes(new GenProprieteMethodesBean());
     	}
-    	enCours.getGenProprieteMethodes().addGenProprieteMethode(enCours.getGenProprieteMethode());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes().addGenProprieteMethode(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode(null);
     }
     
-    public void endElement_GenParametres(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenMethode().setGenParametres(enCours.getGenParametres());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode().setGenParametres(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(null);
     }
     
-    public void endElement_GenParametre(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenParametres() == null) {
-    		enCours.setGenParametres(new GenParametresBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres(new GenParametresBean());
     	}
-    	enCours.getGenParametres().addGenParametre(enCours.getGenParametre());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres().addGenParametre(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre(null);
     }
     
-    public void endElement_GenStereotypeMethodes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenMethode().setGenStereotypeMethodes(enCours.getGenStereotypeMethodes());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode().setGenStereotypeMethodes(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(null);
     }
     
-    public void endElement_GenStereotypeMethode(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypeMethodes() == null) {
-    		enCours.setGenStereotypeMethodes(new GenStereotypeMethodesBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes(new GenStereotypeMethodesBean());
     	}
-    	enCours.getGenStereotypeMethodes().addGenStereotypeMethode(enCours.getGenStereotypeMethode());
+    	enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes().addGenStereotypeMethode(enCours.getGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode());
+    	enCours.setGen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode(null);
     }
     
-    public void endElement_GenStereotypeClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenStereotypeClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenStereotypeClasses(enCours.getGenStereotypeClasses());
+    	enCours.getGen_GenClasses_GenClasse().setGenStereotypeClasses(enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses());
+    	enCours.setGen_GenClasses_GenClasse_GenStereotypeClasses(null);
     }
     
-    public void endElement_GenStereotypeClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypeClasses() == null) {
-    		enCours.setGenStereotypeClasses(new GenStereotypeClassesBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenStereotypeClasses(new GenStereotypeClassesBean());
     	}
-    	enCours.getGenStereotypeClasses().addGenStereotypeClasse(enCours.getGenStereotypeClasse());
+    	enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses().addGenStereotypeClasse(enCours.getGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse());
+    	enCours.setGen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse(null);
     }
     
-    public void endElement_GenAssociations(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAssociations(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenAssociations(enCours.getGenAssociations());
+    	enCours.getGen_GenClasses_GenClasse().setGenAssociations(enCours.getGen_GenClasses_GenClasse_GenAssociations());
+    	enCours.setGen_GenClasses_GenClasse_GenAssociations(null);
     }
     
-    public void endElement_GenAssociation(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenAssociations() == null) {
-    		enCours.setGenAssociations(new GenAssociationsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenAssociations() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenAssociations(new GenAssociationsBean());
     	}
-    	enCours.getGenAssociations().addGenAssociation(enCours.getGenAssociation());
+    	enCours.getGen_GenClasses_GenClasse_GenAssociations().addGenAssociation(enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation());
+    	enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation(null);
     }
     
-    public void endElement_GenAssociationAttributs(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenAssociation().setGenAssociationAttributs(enCours.getGenAssociationAttributs());
+    	enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation().setGenAssociationAttributs(enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs());
+    	enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(null);
     }
     
-    public void endElement_GenAssociationAttribut(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenAssociationAttributs() == null) {
-    		enCours.setGenAssociationAttributs(new GenAssociationAttributsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs(new GenAssociationAttributsBean());
     	}
-    	enCours.getGenAssociationAttributs().addGenAssociationAttribut(enCours.getGenAssociationAttribut());
+    	enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs().addGenAssociationAttribut(enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut());
+    	enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut(null);
     }
     
-    public void endElement_GenClasseDeAssociation(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenAssociation().setGenClasseDeAssociation(enCours.getGenClasseDeAssociation());
+    	enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation().setGenClasseDeAssociation(enCours.getGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation());
+    	enCours.setGen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenClasseDeAssociation(null);
     }
     
-    public void endElement_GenClasseParents(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenClasseParents(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenClasse().setGenClasseParents(enCours.getGenClasseParents());
+    	enCours.getGen_GenClasses_GenClasse().setGenClasseParents(enCours.getGen_GenClasses_GenClasse_GenClasseParents());
+    	enCours.setGen_GenClasses_GenClasse_GenClasseParents(null);
     }
     
-    public void endElement_GenClasseParent(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenClasseParents() == null) {
-    		enCours.setGenClasseParents(new GenClasseParentsBean());
+    	if(enCours.getGen_GenClasses_GenClasse_GenClasseParents() == null) {
+    		enCours.setGen_GenClasses_GenClasse_GenClasseParents(new GenClasseParentsBean());
     	}
-    	enCours.getGenClasseParents().addGenClasseParent(enCours.getGenClasseParent());
+    	enCours.getGen_GenClasses_GenClasse_GenClasseParents().addGenClasseParent(enCours.getGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent());
+    	enCours.setGen_GenClasses_GenClasse_GenClasseParents_GenClasseParent(null);
     }
     
-    public void endElement_GenGenererGroupe(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGen().setGenGenererGroupe(enCours.getGenGenererGroupe());
+    	enCours.getGen().setGenGenerate(enCours.getGen_GenGenerate());
+    	enCours.setGen_GenGenerate(null);
     }
     
-    public void endElement_GenGenererParClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererGroupe().setGenGenererParClasses(enCours.getGenGenererParClasses());
+    	enCours.getGen_GenGenerate().setGenGenererParClasses(enCours.getGen_GenGenerate_GenGenererParClasses());
+    	enCours.setGen_GenGenerate_GenGenererParClasses(null);
     }
     
-    public void endElement_GenGenererParClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenGenererParClasses() == null) {
-    		enCours.setGenGenererParClasses(new GenGenererParClassesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParClasses() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParClasses(new GenGenererParClassesBean());
     	}
-    	enCours.getGenGenererParClasses().addGenGenererParClasse(enCours.getGenGenererParClasse());
+    	enCours.getGen_GenGenerate_GenGenererParClasses().addGenGenererParClasse(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse());
+    	enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse(null);
     }
     
-    public void endElement_GenClasseRefPourGenererParClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererParClasse().setGenClasseRefPourGenererParClasses(enCours.getGenClasseRefPourGenererParClasses());
+    	enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse().setGenClasseRefPourGenererParClasses(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses());
+    	enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(null);
     }
     
-    public void endElement_GenClasseRefPourGenererParClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenClasseRefPourGenererParClasses() == null) {
-    		enCours.setGenClasseRefPourGenererParClasses(new GenClasseRefPourGenererParClassesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses(new GenClasseRefPourGenererParClassesBean());
     	}
-    	enCours.getGenClasseRefPourGenererParClasses().addGenClasseRefPourGenererParClasse(enCours.getGenClasseRefPourGenererParClasse());
+    	enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses().addGenClasseRefPourGenererParClasse(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse());
+    	enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenClasseRefPourGenererParClasses_GenClasseRefPourGenererParClasse(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParClasses(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererParClasse().setGenTemplateGroupeRefPourGenererParClasses(enCours.getGenTemplateGroupeRefPourGenererParClasses());
+    	enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse().setGenTemplateGroupeRefPourGenererParClasses(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses());
+    	enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParClasse(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplateGroupeRefPourGenererParClasses() == null) {
-    		enCours.setGenTemplateGroupeRefPourGenererParClasses(new GenTemplateGroupeRefPourGenererParClassesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses(new GenTemplateGroupeRefPourGenererParClassesBean());
     	}
-    	enCours.getGenTemplateGroupeRefPourGenererParClasses().addGenTemplateGroupeRefPourGenererParClasse(enCours.getGenTemplateGroupeRefPourGenererParClasse());
+    	enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses().addGenTemplateGroupeRefPourGenererParClasse(enCours.getGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse());
+    	enCours.setGen_GenGenerate_GenGenererParClasses_GenGenererParClasse_GenTemplateGroupeRefPourGenererParClasses_GenTemplateGroupeRefPourGenererParClasse(null);
     }
     
-    public void endElement_GenGenererParTemplates(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererGroupe().setGenGenererParTemplates(enCours.getGenGenererParTemplates());
+    	enCours.getGen_GenGenerate().setGenGenererParTemplates(enCours.getGen_GenGenerate_GenGenererParTemplates());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates(null);
     }
     
-    public void endElement_GenGenererParTemplate(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenGenererParTemplates() == null) {
-    		enCours.setGenGenererParTemplates(new GenGenererParTemplatesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParTemplates() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParTemplates(new GenGenererParTemplatesBean());
     	}
-    	enCours.getGenGenererParTemplates().addGenGenererParTemplate(enCours.getGenGenererParTemplate());
+    	enCours.getGen_GenGenerate_GenGenererParTemplates().addGenGenererParTemplate(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParTemplates(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererParTemplate().setGenTemplateGroupeRefPourGenererParTemplates(enCours.getGenTemplateGroupeRefPourGenererParTemplates());
+    	enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate().setGenTemplateGroupeRefPourGenererParTemplates(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParTemplate(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplateGroupeRefPourGenererParTemplates() == null) {
-    		enCours.setGenTemplateGroupeRefPourGenererParTemplates(new GenTemplateGroupeRefPourGenererParTemplatesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates(new GenTemplateGroupeRefPourGenererParTemplatesBean());
     	}
-    	enCours.getGenTemplateGroupeRefPourGenererParTemplates().addGenTemplateGroupeRefPourGenererParTemplate(enCours.getGenTemplateGroupeRefPourGenererParTemplate());
+    	enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates().addGenTemplateGroupeRefPourGenererParTemplate(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate(null);
     }
     
-    public void endElement_GenStereotypeRefPourGenererParTemplates(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenTemplateGroupeRefPourGenererParTemplate().setGenStereotypeRefPourGenererParTemplates(enCours.getGenStereotypeRefPourGenererParTemplates());
+    	enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate().setGenStereotypeRefPourGenererParTemplates(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(null);
     }
     
-    public void endElement_GenStereotypeRefPourGenererParTemplate(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypeRefPourGenererParTemplates() == null) {
-    		enCours.setGenStereotypeRefPourGenererParTemplates(new GenStereotypeRefPourGenererParTemplatesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates(new GenStereotypeRefPourGenererParTemplatesBean());
     	}
-    	enCours.getGenStereotypeRefPourGenererParTemplates().addGenStereotypeRefPourGenererParTemplate(enCours.getGenStereotypeRefPourGenererParTemplate());
+    	enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates().addGenStereotypeRefPourGenererParTemplate(enCours.getGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate());
+    	enCours.setGen_GenGenerate_GenGenererParTemplates_GenGenererParTemplate_GenTemplateGroupeRefPourGenererParTemplates_GenTemplateGroupeRefPourGenererParTemplate_GenStereotypeRefPourGenererParTemplates_GenStereotypeRefPourGenererParTemplate(null);
     }
     
-    public void endElement_GenGenererParStereotypes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererGroupe().setGenGenererParStereotypes(enCours.getGenGenererParStereotypes());
+    	enCours.getGen_GenGenerate().setGenGenererParStereotypes(enCours.getGen_GenGenerate_GenGenererParStereotypes());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes(null);
     }
     
-    public void endElement_GenGenererParStereotype(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenGenererParStereotypes() == null) {
-    		enCours.setGenGenererParStereotypes(new GenGenererParStereotypesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParStereotypes() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParStereotypes(new GenGenererParStereotypesBean());
     	}
-    	enCours.getGenGenererParStereotypes().addGenGenererParStereotype(enCours.getGenGenererParStereotype());
+    	enCours.getGen_GenGenerate_GenGenererParStereotypes().addGenGenererParStereotype(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype(null);
     }
     
-    public void endElement_GenStereotypeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenGenererParStereotype().setGenStereotypeRefPourGenererParStereotypes(enCours.getGenStereotypeRefPourGenererParStereotypes());
+    	enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype().setGenStereotypeRefPourGenererParStereotypes(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(null);
     }
     
-    public void endElement_GenStereotypeRefPourGenererParStereotype(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenStereotypeRefPourGenererParStereotypes() == null) {
-    		enCours.setGenStereotypeRefPourGenererParStereotypes(new GenStereotypeRefPourGenererParStereotypesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes(new GenStereotypeRefPourGenererParStereotypesBean());
     	}
-    	enCours.getGenStereotypeRefPourGenererParStereotypes().addGenStereotypeRefPourGenererParStereotype(enCours.getGenStereotypeRefPourGenererParStereotype());
+    	enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes().addGenStereotypeRefPourGenererParStereotype(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	enCours.getGenStereotypeRefPourGenererParStereotype().setGenTemplateGroupeRefPourGenererParStereotypes(enCours.getGenTemplateGroupeRefPourGenererParStereotypes());
+    	enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype().setGenTemplateGroupeRefPourGenererParStereotypes(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(null);
     }
     
-    public void endElement_GenTemplateGroupeRefPourGenererParStereotype(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(String namespaceURI, String localName, String qName)
     throws SAXException {
-    	if(enCours.getGenTemplateGroupeRefPourGenererParStereotypes() == null) {
-    		enCours.setGenTemplateGroupeRefPourGenererParStereotypes(new GenTemplateGroupeRefPourGenererParStereotypesBean());
+    	if(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes() == null) {
+    		enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes(new GenTemplateGroupeRefPourGenererParStereotypesBean());
     	}
-    	enCours.getGenTemplateGroupeRefPourGenererParStereotypes().addGenTemplateGroupeRefPourGenererParStereotype(enCours.getGenTemplateGroupeRefPourGenererParStereotype());
+    	enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes().addGenTemplateGroupeRefPourGenererParStereotype(enCours.getGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype());
+    	enCours.setGen_GenGenerate_GenGenererParStereotypes_GenGenererParStereotype_GenStereotypeRefPourGenererParStereotypes_GenStereotypeRefPourGenererParStereotype_GenTemplateGroupeRefPourGenererParStereotypes_GenTemplateGroupeRefPourGenererParStereotype(null);
     }
     
 	    

@@ -15,6 +15,7 @@ public interface GenClasseRefPourGenererParClasses
 	/** Récupération des éléments fils */
 	
     public GenClasseRefPourGenererParClasse getGenClasseRefPourGenererParClasseForClasseGenId(String classeGenId);
+    public List<GenClasseRefPourGenererParClasse> getGenClasseRefPourGenererParClassesByClasseGenId(String classeGenId);
     public void addGenClasseRefPourGenererParClasse(GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse);
     public List<GenClasseRefPourGenererParClasse> getGenClasseRefPourGenererParClasses();
     public void setGenClasseRefPourGenererParClasses(List<GenClasseRefPourGenererParClasse> genClasseRefPourGenererParClasse);

@@ -15,6 +15,7 @@ public interface GenStereotypeMethodes
 	/** Récupération des éléments fils */
 	
     public GenStereotypeMethode getGenStereotypeMethodeForNom(String nom);
+    public List<GenStereotypeMethode> getGenStereotypeMethodesByNom(String nom);
     public void addGenStereotypeMethode(GenStereotypeMethode genStereotypeMethode);
     public List<GenStereotypeMethode> getGenStereotypeMethodes();
     public void setGenStereotypeMethodes(List<GenStereotypeMethode> genStereotypeMethode);

@@ -36,6 +36,17 @@ public class AbstractGenTemplateGroupeRefPourGenererParStereotypesBean implement
         }
         throw new IllegalStateException("La genTemplateGroupeRefPourGenererParStereotype n'est pas définie : templateGroupeNom de genTemplateGroupeRefPourGenererParStereotype = "+templateGroupeNom);
     }
+
+    public List<GenTemplateGroupeRefPourGenererParStereotype> getGenTemplateGroupeRefPourGenererParStereotypesByTemplateGroupeNom(String templateGroupeNom) {
+        List<GenTemplateGroupeRefPourGenererParStereotype> result = new ArrayList<GenTemplateGroupeRefPourGenererParStereotype>();
+        for(GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype : genTemplateGroupeRefPourGenererParStereotypes) {
+            if(genTemplateGroupeRefPourGenererParStereotype.getTemplateGroupeNom().equalsIgnoreCase(templateGroupeNom)) {
+                result.add(genTemplateGroupeRefPourGenererParStereotype);
+            }
+        }
+        return result;
+    }
+
     public void addGenTemplateGroupeRefPourGenererParStereotype(GenTemplateGroupeRefPourGenererParStereotype genTemplateGroupeRefPourGenererParStereotype) {
     	genTemplateGroupeRefPourGenererParStereotype.setReferenceGenTemplateGroupeRefPourGenererParStereotypes(this);
         genTemplateGroupeRefPourGenererParStereotypes.add(genTemplateGroupeRefPourGenererParStereotype);

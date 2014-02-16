@@ -36,6 +36,17 @@ public class AbstractGenTemplateGroupeRefPourGenererParTemplatesBean implements 
         }
         throw new IllegalStateException("La genTemplateGroupeRefPourGenererParTemplate n'est pas définie : templateGroupeNom de genTemplateGroupeRefPourGenererParTemplate = "+templateGroupeNom);
     }
+
+    public List<GenTemplateGroupeRefPourGenererParTemplate> getGenTemplateGroupeRefPourGenererParTemplatesByTemplateGroupeNom(String templateGroupeNom) {
+        List<GenTemplateGroupeRefPourGenererParTemplate> result = new ArrayList<GenTemplateGroupeRefPourGenererParTemplate>();
+        for(GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate : genTemplateGroupeRefPourGenererParTemplates) {
+            if(genTemplateGroupeRefPourGenererParTemplate.getTemplateGroupeNom().equalsIgnoreCase(templateGroupeNom)) {
+                result.add(genTemplateGroupeRefPourGenererParTemplate);
+            }
+        }
+        return result;
+    }
+
     public void addGenTemplateGroupeRefPourGenererParTemplate(GenTemplateGroupeRefPourGenererParTemplate genTemplateGroupeRefPourGenererParTemplate) {
     	genTemplateGroupeRefPourGenererParTemplate.setReferenceGenTemplateGroupeRefPourGenererParTemplates(this);
         genTemplateGroupeRefPourGenererParTemplates.add(genTemplateGroupeRefPourGenererParTemplate);

@@ -15,6 +15,7 @@ public interface GenTemplateGroupeRefPourGenererParClasses
 	/** Récupération des éléments fils */
 	
     public GenTemplateGroupeRefPourGenererParClasse getGenTemplateGroupeRefPourGenererParClasseForTemplateGroupeNom(String templateGroupeNom);
+    public List<GenTemplateGroupeRefPourGenererParClasse> getGenTemplateGroupeRefPourGenererParClassesByTemplateGroupeNom(String templateGroupeNom);
     public void addGenTemplateGroupeRefPourGenererParClasse(GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse);
     public List<GenTemplateGroupeRefPourGenererParClasse> getGenTemplateGroupeRefPourGenererParClasses();
     public void setGenTemplateGroupeRefPourGenererParClasses(List<GenTemplateGroupeRefPourGenererParClasse> genTemplateGroupeRefPourGenererParClasse);

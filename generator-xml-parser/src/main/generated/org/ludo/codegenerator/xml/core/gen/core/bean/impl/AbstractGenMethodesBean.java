@@ -36,6 +36,17 @@ public class AbstractGenMethodesBean implements GenMethodes {
         }
         throw new IllegalStateException("La genMethode n'est pas définie : genId de genMethode = "+genId);
     }
+
+    public List<GenMethode> getGenMethodesByGenId(String genId) {
+        List<GenMethode> result = new ArrayList<GenMethode>();
+        for(GenMethode genMethode : genMethodes) {
+            if(genMethode.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genMethode);
+            }
+        }
+        return result;
+    }
+
     public GenMethode getGenMethodeForNomJava(String nomJava) {
         for(GenMethode genMethode : genMethodes) {
             if(genMethode.getNomJava().equalsIgnoreCase(nomJava)) {
@@ -44,6 +55,17 @@ public class AbstractGenMethodesBean implements GenMethodes {
         }
         throw new IllegalStateException("La genMethode n'est pas définie : nomJava de genMethode = "+nomJava);
     }
+
+    public List<GenMethode> getGenMethodesByNomJava(String nomJava) {
+        List<GenMethode> result = new ArrayList<GenMethode>();
+        for(GenMethode genMethode : genMethodes) {
+            if(genMethode.getNomJava().equalsIgnoreCase(nomJava)) {
+                result.add(genMethode);
+            }
+        }
+        return result;
+    }
+
     public GenMethode getGenMethodeForRetourType(String retourType) {
         for(GenMethode genMethode : genMethodes) {
             if(genMethode.getRetourType().equalsIgnoreCase(retourType)) {
@@ -52,6 +74,17 @@ public class AbstractGenMethodesBean implements GenMethodes {
         }
         throw new IllegalStateException("La genMethode n'est pas définie : retourType de genMethode = "+retourType);
     }
+
+    public List<GenMethode> getGenMethodesByRetourType(String retourType) {
+        List<GenMethode> result = new ArrayList<GenMethode>();
+        for(GenMethode genMethode : genMethodes) {
+            if(genMethode.getRetourType().equalsIgnoreCase(retourType)) {
+                result.add(genMethode);
+            }
+        }
+        return result;
+    }
+
     public GenMethode getGenMethodeForDescription(String description) {
         for(GenMethode genMethode : genMethodes) {
             if(genMethode.getDescription().equalsIgnoreCase(description)) {
@@ -60,6 +93,17 @@ public class AbstractGenMethodesBean implements GenMethodes {
         }
         throw new IllegalStateException("La genMethode n'est pas définie : description de genMethode = "+description);
     }
+
+    public List<GenMethode> getGenMethodesByDescription(String description) {
+        List<GenMethode> result = new ArrayList<GenMethode>();
+        for(GenMethode genMethode : genMethodes) {
+            if(genMethode.getDescription().equalsIgnoreCase(description)) {
+                result.add(genMethode);
+            }
+        }
+        return result;
+    }
+
     public void addGenMethode(GenMethode genMethode) {
     	genMethode.setReferenceGenMethodes(this);
         genMethodes.add(genMethode);

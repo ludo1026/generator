@@ -36,6 +36,17 @@ public class AbstractGenProprieteAttributsBean implements GenProprieteAttributs 
         }
         throw new IllegalStateException("La genProprieteAttribut n'est pas définie : nom de genProprieteAttribut = "+nom);
     }
+
+    public List<GenProprieteAttribut> getGenProprieteAttributsByNom(String nom) {
+        List<GenProprieteAttribut> result = new ArrayList<GenProprieteAttribut>();
+        for(GenProprieteAttribut genProprieteAttribut : genProprieteAttributs) {
+            if(genProprieteAttribut.getNom().equalsIgnoreCase(nom)) {
+                result.add(genProprieteAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenProprieteAttribut getGenProprieteAttributForValeur(String valeur) {
         for(GenProprieteAttribut genProprieteAttribut : genProprieteAttributs) {
             if(genProprieteAttribut.getValeur().equalsIgnoreCase(valeur)) {
@@ -44,6 +55,17 @@ public class AbstractGenProprieteAttributsBean implements GenProprieteAttributs 
         }
         throw new IllegalStateException("La genProprieteAttribut n'est pas définie : valeur de genProprieteAttribut = "+valeur);
     }
+
+    public List<GenProprieteAttribut> getGenProprieteAttributsByValeur(String valeur) {
+        List<GenProprieteAttribut> result = new ArrayList<GenProprieteAttribut>();
+        for(GenProprieteAttribut genProprieteAttribut : genProprieteAttributs) {
+            if(genProprieteAttribut.getValeur().equalsIgnoreCase(valeur)) {
+                result.add(genProprieteAttribut);
+            }
+        }
+        return result;
+    }
+
     public void addGenProprieteAttribut(GenProprieteAttribut genProprieteAttribut) {
     	genProprieteAttribut.setReferenceGenProprieteAttributs(this);
         genProprieteAttributs.add(genProprieteAttribut);

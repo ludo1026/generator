@@ -36,6 +36,17 @@ public class AbstractGenStereotypeMethodesBean implements GenStereotypeMethodes 
         }
         throw new IllegalStateException("La genStereotypeMethode n'est pas définie : nom de genStereotypeMethode = "+nom);
     }
+
+    public List<GenStereotypeMethode> getGenStereotypeMethodesByNom(String nom) {
+        List<GenStereotypeMethode> result = new ArrayList<GenStereotypeMethode>();
+        for(GenStereotypeMethode genStereotypeMethode : genStereotypeMethodes) {
+            if(genStereotypeMethode.getNom().equalsIgnoreCase(nom)) {
+                result.add(genStereotypeMethode);
+            }
+        }
+        return result;
+    }
+
     public void addGenStereotypeMethode(GenStereotypeMethode genStereotypeMethode) {
     	genStereotypeMethode.setReferenceGenStereotypeMethodes(this);
         genStereotypeMethodes.add(genStereotypeMethode);

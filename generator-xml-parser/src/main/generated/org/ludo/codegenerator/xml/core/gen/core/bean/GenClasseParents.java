@@ -15,6 +15,7 @@ public interface GenClasseParents
 	/** Récupération des éléments fils */
 	
     public GenClasseParent getGenClasseParentForClasseGenId(String classeGenId);
+    public List<GenClasseParent> getGenClasseParentsByClasseGenId(String classeGenId);
     public void addGenClasseParent(GenClasseParent genClasseParent);
     public List<GenClasseParent> getGenClasseParents();
     public void setGenClasseParents(List<GenClasseParent> genClasseParent);

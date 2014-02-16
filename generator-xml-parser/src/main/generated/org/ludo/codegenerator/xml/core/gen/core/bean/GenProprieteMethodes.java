@@ -15,7 +15,9 @@ public interface GenProprieteMethodes
 	/** Récupération des éléments fils */
 	
     public GenProprieteMethode getGenProprieteMethodeForNom(String nom);
+    public List<GenProprieteMethode> getGenProprieteMethodesByNom(String nom);
     public GenProprieteMethode getGenProprieteMethodeForValeur(String valeur);
+    public List<GenProprieteMethode> getGenProprieteMethodesByValeur(String valeur);
     public void addGenProprieteMethode(GenProprieteMethode genProprieteMethode);
     public List<GenProprieteMethode> getGenProprieteMethodes();
     public void setGenProprieteMethodes(List<GenProprieteMethode> genProprieteMethode);

@@ -15,11 +15,17 @@ public interface GenClasses
 	/** Récupération des éléments fils */
 	
     public GenClasse getGenClasseForGenId(String genId);
+    public List<GenClasse> getGenClassesByGenId(String genId);
     public GenClasse getGenClasseForNomJava(String nomJava);
+    public List<GenClasse> getGenClassesByNomJava(String nomJava);
     public GenClasse getGenClasseForPackageJava(String packageJava);
+    public List<GenClasse> getGenClassesByPackageJava(String packageJava);
     public GenClasse getGenClasseForNomTable(String nomTable);
+    public List<GenClasse> getGenClassesByNomTable(String nomTable);
     public GenClasse getGenClasseForNomVue(String nomVue);
+    public List<GenClasse> getGenClassesByNomVue(String nomVue);
     public GenClasse getGenClasseForDescription(String description);
+    public List<GenClasse> getGenClassesByDescription(String description);
     public void addGenClasse(GenClasse genClasse);
     public List<GenClasse> getGenClasses();
     public void setGenClasses(List<GenClasse> genClasse);

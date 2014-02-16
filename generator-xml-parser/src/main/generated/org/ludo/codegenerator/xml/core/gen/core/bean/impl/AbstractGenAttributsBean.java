@@ -36,6 +36,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : genId de genAttribut = "+genId);
     }
+
+    public List<GenAttribut> getGenAttributsByGenId(String genId) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getGenId().equalsIgnoreCase(genId)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForNomJava(String nomJava) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getNomJava().equalsIgnoreCase(nomJava)) {
@@ -44,6 +55,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : nomJava de genAttribut = "+nomJava);
     }
+
+    public List<GenAttribut> getGenAttributsByNomJava(String nomJava) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getNomJava().equalsIgnoreCase(nomJava)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForType(String type) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getType().equalsIgnoreCase(type)) {
@@ -52,6 +74,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : type de genAttribut = "+type);
     }
+
+    public List<GenAttribut> getGenAttributsByType(String type) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getType().equalsIgnoreCase(type)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForNbMin(String nbMin) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getNbMin().equalsIgnoreCase(nbMin)) {
@@ -60,6 +93,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : nbMin de genAttribut = "+nbMin);
     }
+
+    public List<GenAttribut> getGenAttributsByNbMin(String nbMin) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getNbMin().equalsIgnoreCase(nbMin)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForNbMax(String nbMax) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getNbMax().equalsIgnoreCase(nbMax)) {
@@ -68,6 +112,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : nbMax de genAttribut = "+nbMax);
     }
+
+    public List<GenAttribut> getGenAttributsByNbMax(String nbMax) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getNbMax().equalsIgnoreCase(nbMax)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForNomSQL(String nomSQL) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getNomSQL().equalsIgnoreCase(nomSQL)) {
@@ -76,6 +131,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : nomSQL de genAttribut = "+nomSQL);
     }
+
+    public List<GenAttribut> getGenAttributsByNomSQL(String nomSQL) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getNomSQL().equalsIgnoreCase(nomSQL)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForTypeSQL(String typeSQL) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getTypeSQL().equalsIgnoreCase(typeSQL)) {
@@ -84,6 +150,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : typeSQL de genAttribut = "+typeSQL);
     }
+
+    public List<GenAttribut> getGenAttributsByTypeSQL(String typeSQL) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getTypeSQL().equalsIgnoreCase(typeSQL)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForEstDansTable(String estDansTable) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getEstDansTable().equalsIgnoreCase(estDansTable)) {
@@ -92,6 +169,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : estDansTable de genAttribut = "+estDansTable);
     }
+
+    public List<GenAttribut> getGenAttributsByEstDansTable(String estDansTable) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getEstDansTable().equalsIgnoreCase(estDansTable)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForSize(String size) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getSize().equalsIgnoreCase(size)) {
@@ -100,6 +188,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : size de genAttribut = "+size);
     }
+
+    public List<GenAttribut> getGenAttributsBySize(String size) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getSize().equalsIgnoreCase(size)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForEstClePrimaire(String estClePrimaire) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getEstClePrimaire().equalsIgnoreCase(estClePrimaire)) {
@@ -108,6 +207,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : estClePrimaire de genAttribut = "+estClePrimaire);
     }
+
+    public List<GenAttribut> getGenAttributsByEstClePrimaire(String estClePrimaire) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getEstClePrimaire().equalsIgnoreCase(estClePrimaire)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForEstCleIncrementee(String estCleIncrementee) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getEstCleIncrementee().equalsIgnoreCase(estCleIncrementee)) {
@@ -116,6 +226,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : estCleIncrementee de genAttribut = "+estCleIncrementee);
     }
+
+    public List<GenAttribut> getGenAttributsByEstCleIncrementee(String estCleIncrementee) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getEstCleIncrementee().equalsIgnoreCase(estCleIncrementee)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForAssociationId(String associationId) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getAssociationId().equalsIgnoreCase(associationId)) {
@@ -124,6 +245,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : associationId de genAttribut = "+associationId);
     }
+
+    public List<GenAttribut> getGenAttributsByAssociationId(String associationId) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getAssociationId().equalsIgnoreCase(associationId)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public GenAttribut getGenAttributForDescription(String description) {
         for(GenAttribut genAttribut : genAttributs) {
             if(genAttribut.getDescription().equalsIgnoreCase(description)) {
@@ -132,6 +264,17 @@ public class AbstractGenAttributsBean implements GenAttributs {
         }
         throw new IllegalStateException("La genAttribut n'est pas définie : description de genAttribut = "+description);
     }
+
+    public List<GenAttribut> getGenAttributsByDescription(String description) {
+        List<GenAttribut> result = new ArrayList<GenAttribut>();
+        for(GenAttribut genAttribut : genAttributs) {
+            if(genAttribut.getDescription().equalsIgnoreCase(description)) {
+                result.add(genAttribut);
+            }
+        }
+        return result;
+    }
+
     public void addGenAttribut(GenAttribut genAttribut) {
     	genAttribut.setReferenceGenAttributs(this);
         genAttributs.add(genAttribut);

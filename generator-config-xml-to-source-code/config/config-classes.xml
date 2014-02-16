@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gen xmlns="http://generator/gen/schemas">
-  <classes packageBase="com.bnpparibas.phenics">
+  <classes packageBase="com.glougloubar">
     <classe xmlns="" genId="lienBarBoisson" nomJava="lienBarBoisson" nomTable="lien_bar_boisson">
       <stereotypeClasses>
         <stereotypeClasse nom="bean" />

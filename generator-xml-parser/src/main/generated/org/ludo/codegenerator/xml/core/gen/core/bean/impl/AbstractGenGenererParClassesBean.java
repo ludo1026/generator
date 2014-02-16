@@ -1,7 +1,7 @@
 package org.ludo.codegenerator.xml.core.gen.core.bean.impl;
 
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasse;
 
 import java.util.ArrayList;
@@ -14,14 +14,14 @@ public class AbstractGenGenererParClassesBean implements GenGenererParClasses {
 	
 	/** Récupération de l'élément parent */
 	
-	private GenGenererGroupe referenceGenGenererGroupe;
+	private GenGenerate referenceGenGenerate;
 	
-	public GenGenererGroupe getReferenceGenGenererGroupe() {
-		return referenceGenGenererGroupe;
+	public GenGenerate getReferenceGenGenerate() {
+		return referenceGenGenerate;
 	}
 	
-	public void setReferenceGenGenererGroupe(GenGenererGroupe referenceGenGenererGroupe) {
-		this.referenceGenGenererGroupe = referenceGenGenererGroupe;
+	public void setReferenceGenGenerate(GenGenerate referenceGenGenerate) {
+		this.referenceGenGenerate = referenceGenGenerate;
 	}
 	
 	/** Récupération des éléments fils */

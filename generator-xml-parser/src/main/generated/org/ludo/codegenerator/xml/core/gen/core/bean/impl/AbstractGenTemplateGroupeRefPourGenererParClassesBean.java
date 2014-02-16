@@ -36,6 +36,17 @@ public class AbstractGenTemplateGroupeRefPourGenererParClassesBean implements Ge
         }
         throw new IllegalStateException("La genTemplateGroupeRefPourGenererParClasse n'est pas définie : templateGroupeNom de genTemplateGroupeRefPourGenererParClasse = "+templateGroupeNom);
     }
+
+    public List<GenTemplateGroupeRefPourGenererParClasse> getGenTemplateGroupeRefPourGenererParClassesByTemplateGroupeNom(String templateGroupeNom) {
+        List<GenTemplateGroupeRefPourGenererParClasse> result = new ArrayList<GenTemplateGroupeRefPourGenererParClasse>();
+        for(GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse : genTemplateGroupeRefPourGenererParClasses) {
+            if(genTemplateGroupeRefPourGenererParClasse.getTemplateGroupeNom().equalsIgnoreCase(templateGroupeNom)) {
+                result.add(genTemplateGroupeRefPourGenererParClasse);
+            }
+        }
+        return result;
+    }
+
     public void addGenTemplateGroupeRefPourGenererParClasse(GenTemplateGroupeRefPourGenererParClasse genTemplateGroupeRefPourGenererParClasse) {
     	genTemplateGroupeRefPourGenererParClasse.setReferenceGenTemplateGroupeRefPourGenererParClasses(this);
         genTemplateGroupeRefPourGenererParClasses.add(genTemplateGroupeRefPourGenererParClasse);

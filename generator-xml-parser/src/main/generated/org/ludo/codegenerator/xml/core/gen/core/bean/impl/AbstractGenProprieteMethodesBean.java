@@ -36,6 +36,17 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
         }
         throw new IllegalStateException("La genProprieteMethode n'est pas définie : nom de genProprieteMethode = "+nom);
     }
+
+    public List<GenProprieteMethode> getGenProprieteMethodesByNom(String nom) {
+        List<GenProprieteMethode> result = new ArrayList<GenProprieteMethode>();
+        for(GenProprieteMethode genProprieteMethode : genProprieteMethodes) {
+            if(genProprieteMethode.getNom().equalsIgnoreCase(nom)) {
+                result.add(genProprieteMethode);
+            }
+        }
+        return result;
+    }
+
     public GenProprieteMethode getGenProprieteMethodeForValeur(String valeur) {
         for(GenProprieteMethode genProprieteMethode : genProprieteMethodes) {
             if(genProprieteMethode.getValeur().equalsIgnoreCase(valeur)) {
@@ -44,6 +55,17 @@ public class AbstractGenProprieteMethodesBean implements GenProprieteMethodes {
         }
         throw new IllegalStateException("La genProprieteMethode n'est pas définie : valeur de genProprieteMethode = "+valeur);
     }
+
+    public List<GenProprieteMethode> getGenProprieteMethodesByValeur(String valeur) {
+        List<GenProprieteMethode> result = new ArrayList<GenProprieteMethode>();
+        for(GenProprieteMethode genProprieteMethode : genProprieteMethodes) {
+            if(genProprieteMethode.getValeur().equalsIgnoreCase(valeur)) {
+                result.add(genProprieteMethode);
+            }
+        }
+        return result;
+    }
+
     public void addGenProprieteMethode(GenProprieteMethode genProprieteMethode) {
     	genProprieteMethode.setReferenceGenProprieteMethodes(this);
         genProprieteMethodes.add(genProprieteMethode);

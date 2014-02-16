@@ -36,6 +36,17 @@ public class AbstractGenClasseRefPourGenererParClassesBean implements GenClasseR
         }
         throw new IllegalStateException("La genClasseRefPourGenererParClasse n'est pas définie : classeGenId de genClasseRefPourGenererParClasse = "+classeGenId);
     }
+
+    public List<GenClasseRefPourGenererParClasse> getGenClasseRefPourGenererParClassesByClasseGenId(String classeGenId) {
+        List<GenClasseRefPourGenererParClasse> result = new ArrayList<GenClasseRefPourGenererParClasse>();
+        for(GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse : genClasseRefPourGenererParClasses) {
+            if(genClasseRefPourGenererParClasse.getClasseGenId().equalsIgnoreCase(classeGenId)) {
+                result.add(genClasseRefPourGenererParClasse);
+            }
+        }
+        return result;
+    }
+
     public void addGenClasseRefPourGenererParClasse(GenClasseRefPourGenererParClasse genClasseRefPourGenererParClasse) {
     	genClasseRefPourGenererParClasse.setReferenceGenClasseRefPourGenererParClasses(this);
         genClasseRefPourGenererParClasses.add(genClasseRefPourGenererParClasse);

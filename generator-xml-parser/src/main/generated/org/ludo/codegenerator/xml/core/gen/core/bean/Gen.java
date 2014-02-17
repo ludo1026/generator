@@ -5,9 +5,9 @@ import java.util.List;
 public interface Gen 
 {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 
     public GenTemplates getGenTemplates();
     
@@ -34,9 +34,9 @@ public interface Gen
     public void setGenGenerate(GenGenerate genGenerate);
 	
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 }

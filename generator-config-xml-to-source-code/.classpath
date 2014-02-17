@@ -57,5 +57,10 @@
 	<classpathentry kind="lib" path="/generator/lib/xml-apis.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/generator-common"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/generator-config-xml-parser"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

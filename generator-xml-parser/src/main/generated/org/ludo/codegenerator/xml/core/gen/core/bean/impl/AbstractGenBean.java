@@ -15,9 +15,9 @@ import java.util.ListIterator;
 
 public class AbstractGenBean implements Gen {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 
     private GenTemplates genTemplates = new GenTemplatesBean();
     
@@ -79,10 +79,10 @@ public class AbstractGenBean implements Gen {
     }
 	
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 
 }

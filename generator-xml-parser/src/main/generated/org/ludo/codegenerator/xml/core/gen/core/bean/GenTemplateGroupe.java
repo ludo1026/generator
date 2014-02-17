@@ -3,30 +3,30 @@ package org.ludo.codegenerator.xml.core.gen.core.bean;
 import java.util.List;
 
 public interface GenTemplateGroupe 
-	extends List<GenTemplateRef>
+	extends List<GenTemplateGroupeTemplate>
 {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	public GenTemplateGroupes getReferenceGenTemplateGroupes();
 	
 	public void setReferenceGenTemplateGroupes(GenTemplateGroupes referenceGenTemplateGroupes);
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
-    public GenTemplateRef getGenTemplateRefForNom(String nom);
-    public List<GenTemplateRef> getGenTemplateRefsByNom(String nom);
-    public void addGenTemplateRef(GenTemplateRef genTemplateRef);
-    public List<GenTemplateRef> getGenTemplateRefs();
-    public void setGenTemplateRefs(List<GenTemplateRef> genTemplateRef);
+    public GenTemplateGroupeTemplate getGenTemplateGroupeTemplateForNom(String nom);
+    public List<GenTemplateGroupeTemplate> getGenTemplateGroupeTemplatesByNom(String nom);
+    public void addGenTemplateGroupeTemplate(GenTemplateGroupeTemplate genTemplateGroupeTemplate);
+    public List<GenTemplateGroupeTemplate> getGenTemplateGroupeTemplates();
+    public void setGenTemplateGroupeTemplates(List<GenTemplateGroupeTemplate> genTemplateGroupeTemplate);
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getNomAsString();
 	public void setNomAsString(String nomAsString);
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 
 	public String getNom();

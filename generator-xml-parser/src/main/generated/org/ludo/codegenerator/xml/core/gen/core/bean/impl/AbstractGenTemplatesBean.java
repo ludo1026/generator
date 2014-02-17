@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplatesBean implements GenTemplates {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	private Gen referenceGen;
 	
@@ -24,7 +24,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
 		this.referenceGen = referenceGen;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
     private List<GenTemplate> genTemplates = new ArrayList<GenTemplate>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : nom de genTemplate = "+nom);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : nom de genTemplate = "+nom);
     }
 
     public List<GenTemplate> getGenTemplatesByNom(String nom) {
@@ -53,7 +53,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : file de genTemplate = "+file);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : file de genTemplate = "+file);
     }
 
     public List<GenTemplate> getGenTemplatesByFile(String file) {
@@ -72,7 +72,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : outDir de genTemplate = "+outDir);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : outDir de genTemplate = "+outDir);
     }
 
     public List<GenTemplate> getGenTemplatesByOutDir(String outDir) {
@@ -91,7 +91,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : outFile de genTemplate = "+outFile);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : outFile de genTemplate = "+outFile);
     }
 
     public List<GenTemplate> getGenTemplatesByOutFile(String outFile) {
@@ -110,7 +110,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : packageJava de genTemplate = "+packageJava);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : packageJava de genTemplate = "+packageJava);
     }
 
     public List<GenTemplate> getGenTemplatesByPackageJava(String packageJava) {
@@ -129,7 +129,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
                 return genTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplate n'est pas définie : nomElementGenere de genTemplate = "+nomElementGenere);
+        throw new IllegalStateException("La genTemplate n'est pas dÃ©finie : nomElementGenere de genTemplate = "+nomElementGenere);
     }
 
     public List<GenTemplate> getGenTemplatesByNomElementGenere(String nomElementGenere) {
@@ -153,7 +153,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         this.genTemplates = genTemplates;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 
 	public String getInDirAsString() {
@@ -177,7 +177,7 @@ public class AbstractGenTemplatesBean implements GenTemplates {
 		this.packageJavaBase = packageJavaBaseAsString;
 	}
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 	private String inDir = null;
 	private String outDir = null;

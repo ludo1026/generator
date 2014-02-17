@@ -1,4 +1,4 @@
-#set( $bean = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{classe.getGenId()})} )
+#set( $bean = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{classe.getGenClasseId()})} )
 package $!{bean.getNomPackage()};
 
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.util.Date;
 import java.math.BigDecimal;
 
 #set( $listImport = false )
-#foreach( $association in $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenClasseAssociations() )
 #set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )
 #if( "1" != $!{association.getNbMax()} )
 #if( ! $listImport )
@@ -23,7 +23,7 @@ import $!{bean2.getPackage()}.$!{bean2.getNom()};
  */
 public class $!{bean.getNom()} implements Serializable 
 {
-#foreach( $attribut in $classe.getGenAttributs() )
+#foreach( $attribut in $classe.getGenClasseAttributs() )
 #if( ! $attribut.getAssociationId() )
 #if( $attribut.getDescription() )
 	/** $!{SU.capitalize($!{attribut.getDescription()})} */
@@ -31,7 +31,7 @@ public class $!{bean.getNom()} implements Serializable
 	private $!{attribut.getType()} $!{SU.uncapitalize($!{attribut.getNomJava()})};
 #end
 #end
-#foreach( $association in $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenClasseAssociations() )
 #set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )
 #if( $association.getDescription() )
 	/** $!{SU.capitalize($!{association.getDescription()})} */
@@ -44,7 +44,7 @@ public class $!{bean.getNom()} implements Serializable
 #end
 #end
 
-#foreach( $attribut in $classe.getGenAttributs() )
+#foreach( $attribut in $classe.getGenClasseAttributs() )
 #if( ! $attribut.getAssociationId() )
     public $!{attribut.getType()} get$!{SU.capitalize($!{attribut.getNomJava()})}() {
         return $!{SU.uncapitalize($!{attribut.getNomJava()})};
@@ -56,7 +56,7 @@ public class $!{bean.getNom()} implements Serializable
 	
 #end
 #end
-#foreach( $association in $classe.getGenAssociations() )
+#foreach( $association in $classe.getGenClasseAssociations() )
 #set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )
 #if( "1" == $!{association.getNbMax()} )
     public $!{bean2.getNom()} get$!{SU.capitalize($!{association.getNomJava()})}() {

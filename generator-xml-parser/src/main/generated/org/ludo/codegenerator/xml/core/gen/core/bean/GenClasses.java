@@ -6,13 +6,13 @@ public interface GenClasses
 	extends List<GenClasse>
 {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	public Gen getReferenceGen();
 	
 	public void setReferenceGen(Gen referenceGen);
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
     public GenClasse getGenClasseForGenId(String genId);
     public List<GenClasse> getGenClassesByGenId(String genId);
@@ -30,13 +30,13 @@ public interface GenClasses
     public List<GenClasse> getGenClasses();
     public void setGenClasses(List<GenClasse> genClasse);
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getPackageBaseAsString();
 	public void setPackageBaseAsString(String packageBaseAsString);
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 
 	public String getPackageBase();

@@ -67,13 +67,23 @@ public class XmlConfigHandler extends DefaultHandler {
         log.info("startElement : noeud = "+localName);
         // CrÃ©er un noeud
         Noeud noeud = new Noeud();
-        // DÃ©finir son nom
-        noeud.setNomXml(localName);
-        if( enCours.xml == null || enCours.xml.getNoeud() == null ) {
-        	noeud.setNom(localName);
+        
+        // Ajouter ce nouveau noeud
+        if(enCours.noeud == null) {
+        	enCours.xml.setNoeud(noeud);
         } else {
-        	noeud.setNom(enCours.xml.getNoeud().getNomSansMajuscule()+StringUtils.capitalize(localName));
+        	Noeud noeudParent = ((Noeud)enCours.pileNoeud.peek());
+        	noeudParent.addNoeud(noeud);
+            // Define parent node
+            noeud.setNoeudParent(noeudParent);
         }
+        // Le dÃ©finir comme noeud courant
+        enCours.pileNoeud.push(noeud);
+        enCours.noeud = noeud;
+
+        // Définir le nom de variable pour le parser SAX qui sera généré
+        defineNom(noeud, localName);
+       	
         // Ajouter les attributs du noeud
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
@@ -98,36 +108,30 @@ public class XmlConfigHandler extends DefaultHandler {
             	noeud.addAttribut(attribut);
             }
         }
-        // Ajouter ce nouveau noeud
-        if(enCours.noeud == null) {
-        	enCours.xml.setNoeud(noeud);
-        } else {
-        	Noeud noeudParent = ((Noeud)enCours.pileNoeud.peek());
-        	noeudParent.addNoeud(noeud);
-            // Define parent node
-            noeud.setNoeudParent(noeudParent);
-        }
-        // Le dÃ©finir comme noeud courant
-        enCours.pileNoeud.push(noeud);
-        enCours.noeud = noeud;
-
-        // Définir le nom de variable pour le parser SAX qui sera généré
-        defineNomPourParserSAX(noeud);
     }
     
-    private void defineNomPourParserSAX(Noeud noeud) {
-    	StringBuffer nom = new StringBuffer("");
-    	Stack<Noeud> noeuds = new Stack<Noeud>();
-    	Noeud noeudCourant = noeud;
-    	while(noeudCourant != null) {
-    		noeuds.push(noeudCourant);
-    		noeudCourant = noeudCourant.getNoeudParent();
+	/**
+	 * Ne pas reprendre le nom du parent s'il correspond à celui de l'enfant plus un 's', prendre alors celui de son grand-parent
+	 * @param noeud Noeud à nommer
+	 */
+    private void defineNom(Noeud noeud, String localName) {
+        // DÃ©finir son nom XML
+        noeud.setNomXml(localName);
+
+        if(noeud.getNoeudParent() == null) {
+    		noeud.setNom(localName);
     	}
-    	while(noeuds.size()!=0) {
-    		noeudCourant = noeuds.pop();
-    		nom.append(noeudCourant.getNomAvecMajuscule());
+    	else {
+        	String prefix = null;
+    		if( noeud.getNoeudParent().getNoeudParent() != null
+    		 && noeud.getNoeudParent().getNomXml() != null
+    		 && noeud.getNoeudParent().getNomXml().equals(noeud.getNomXml()+"s")) {
+    			prefix = noeud.getNoeudParent().getNoeudParent().getNomSansMajuscule();
+    		} else {
+    			prefix = noeud.getNoeudParent().getNomSansMajuscule();
+    		}
+    		noeud.setNom(prefix + StringUtils.capitalize(localName));
     	}
-    	noeud.setNomPourParserSAX(nom.toString());
     }
     
     /**

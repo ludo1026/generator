@@ -9,21 +9,20 @@ import org.apache.log4j.Logger;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.ludo.codegenerator.xml.core.gen.core.bean.Gen;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAssociation;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAssociationAttribut;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAssociationAttributs;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttribut;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAssociation;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAssociationAttribut;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAttribut;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAttributPropriete;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAttributStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseParent;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenMethode;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenParametre;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenProprieteAttribut;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenProprieteClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenProprieteMethode;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethode;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethodeParametre;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethodePropriete;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethodeStereotype;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClassePropriete;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeAttribut;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeMethode;
 import org.ludo.codegenerator.xml.core.gen.core.xmlreader.GenXmlNoeud;
 import org.ludo.umlgenerator.xml.utils.Noeud;
 import org.ludo.umlgenerator.xml.utils.XmlUtils;
@@ -159,228 +158,208 @@ public class GenXmlHandler {
 	}
 
 	private void writeListeStereotypeClassePourClasse(final Element elementClasse, final GenClasse genClasse) {
-		if ((genClasse.getGenStereotypeClasses() == null) || CollectionUtils.isEmpty(genClasse.getGenStereotypeClasses())) {
+		if ((genClasse.getGenClasseStereotypes() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseStereotypes())) {
 			return;
 		}
-		final Element elementStereotypesClasseRef = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses);
-		for (final GenStereotypeClasse genStereotypeClasse : genClasse.getGenStereotypeClasses()) {
-			this.writeStereotypeClassePourClasse(elementStereotypesClasseRef, genStereotypeClasse);
+		for (final GenClasseStereotype genClasseStereotype : genClasse.getGenClasseStereotypes()) {
+			this.writeStereotypeClassePourClasse(elementClasse, genClasseStereotype);
 		}
-		elementClasse.addContent(elementStereotypesClasseRef);
 	}
 
-	private void writeStereotypeClassePourClasse(final Element elementStereotypesClasseRef, final GenStereotypeClasse genStereotypeClasse) {
-		final Element elementStereotypeClasse = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse);
-		this.writeAttribute(elementStereotypeClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenStereotypeClasses_GenStereotypeClasse_A_Nom, genStereotypeClasse.getNom());
+	private void writeStereotypeClassePourClasse(final Element elementStereotypesClasseRef, final GenClasseStereotype genClasseStereotype) {
+		final Element elementStereotypeClasse = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype);
+		this.writeAttribute(elementStereotypeClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype_A_Nom, genClasseStereotype.getNom());
 		elementStereotypesClasseRef.addContent(elementStereotypeClasse);
 	}
 
 	private void writeListeProprieteClassePourClasse(final Element elementClasse, final GenClasse genClasse) {
-		if ((genClasse.getGenProprieteClasses() == null) || CollectionUtils.isEmpty(genClasse.getGenProprieteClasses())) {
+		if ((genClasse.getGenClasseProprietes() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseProprietes())) {
 			return;
 		}
-		final Element elementProprietesClasse = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses);
-		for (final GenProprieteClasse genProprieteClasse : genClasse.getGenProprieteClasses()) {
-			this.writeProprieteClassePourClasse(elementProprietesClasse, genProprieteClasse);
+		for (final GenClassePropriete genClassePropriete : genClasse.getGenClasseProprietes()) {
+			this.writeProprieteClassePourClasse(elementClasse, genClassePropriete);
 		}
-		elementClasse.addContent(elementProprietesClasse);
 	}
 
-	private void writeProprieteClassePourClasse(final Element elementProprietesClasse, final GenProprieteClasse genProprieteClasse) {
-		final Element elementProprieteClasse = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse);
-		this.writeAttribute(elementProprieteClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse_A_Nom, genProprieteClasse.getNom());
-		this.writeAttribute(elementProprieteClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenProprieteClasses_GenProprieteClasse_A_Valeur, genProprieteClasse.getValeur());
+	private void writeProprieteClassePourClasse(final Element elementProprietesClasse, final GenClassePropriete genClassePropriete) {
+		final Element elementProprieteClasse = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete);
+		this.writeAttribute(elementProprieteClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete_A_Nom, genClassePropriete.getNom());
+		this.writeAttribute(elementProprieteClasse, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete_A_Valeur, genClassePropriete.getValeur());
 		elementProprietesClasse.addContent(elementProprieteClasse);
 	}
 
 	private void writeListeAttributPourClasse(final Element elementClasse, final GenClasse genClasse) {
-		if ((genClasse.getGenAttributs() == null) || CollectionUtils.isEmpty(genClasse.getGenAttributs())) {
+		if ((genClasse.getGenClasseAttributs() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseAttributs())) {
 			return;
 		}
-		final Element elementAttributs = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs);
-		for (final GenAttribut genAttribut : genClasse.getGenAttributs()) {
-			this.writeAttributPourClasse(elementAttributs, genAttribut);
+		for (final GenClasseAttribut genClasseAttribut : genClasse.getGenClasseAttributs()) {
+			this.writeAttributPourClasse(elementClasse, genClasseAttribut);
 		}
-		elementClasse.addContent(elementAttributs);
 	}
 
-	private void writeAttributPourClasse(final Element elementClasse, final GenAttribut genAttribut) {
-		final Element elementAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut);
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_GenId, genAttribut.getGenId());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NomJava, genAttribut.getNomJava());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_Type, genAttribut.getType());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NomSQL, genAttribut.getNomSQL());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_TypeSQL, genAttribut.getTypeSQL());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_Size, genAttribut.getSize());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_EstClePrimaire, genAttribut.getEstClePrimaire());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_AssociationId, genAttribut.getAssociationId());
-		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_EstDansTable, genAttribut.getEstDansTable());
-		if ((genAttribut.getNbMin() != null) && (genAttribut.getNbMax() != null)) {
-			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMin, genAttribut.getNbMin());
-			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMax, genAttribut.getNbMax());
+	private void writeAttributPourClasse(final Element elementClasse, final GenClasseAttribut genClasseAttribut) {
+		final Element elementAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut);
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_GenId, genClasseAttribut.getGenId());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NomJava, genClasseAttribut.getNomJava());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_Type, genClasseAttribut.getType());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NomSQL, genClasseAttribut.getNomSQL());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_TypeSQL, genClasseAttribut.getTypeSQL());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_Size, genClasseAttribut.getSize());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_EstClePrimaire, genClasseAttribut.getEstClePrimaire());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_AssociationId, genClasseAttribut.getAssociationId());
+		this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_EstDansTable, genClasseAttribut.getEstDansTable());
+		if ((genClasseAttribut.getNbMin() != null) && (genClasseAttribut.getNbMax() != null)) {
+			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMin, genClasseAttribut.getNbMin());
+			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMax, genClasseAttribut.getNbMax());
 		} else {
-			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMin, "1");
-			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_A_NbMax, "1");
+			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMin, "1");
+			this.writeAttribute(elementAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMax, "1");
 		}
-		this.writeListeStereotypeAttributPourAttribut(elementAttribut, genAttribut);
-		this.writeListeProprieteAttributPourAttribut(elementAttribut, genAttribut);
+		this.writeListeStereotypeAttributPourAttribut(elementAttribut, genClasseAttribut);
+		this.writeListeProprieteAttributPourAttribut(elementAttribut, genClasseAttribut);
 		elementClasse.addContent(elementAttribut);
 	}
 
-	private void writeListeStereotypeAttributPourAttribut(final Element elementAttribut, final GenAttribut genAttribut) {
-		if ((genAttribut.getGenStereotypeAttributs() == null) || CollectionUtils.isEmpty(genAttribut.getGenStereotypeAttributs())) {
+	private void writeListeStereotypeAttributPourAttribut(final Element elementAttribut, final GenClasseAttribut genClasseAttribut) {
+		if ((genClasseAttribut.getGenClasseAttributStereotypes() == null) || CollectionUtils.isEmpty(genClasseAttribut.getGenClasseAttributStereotypes())) {
 			return;
 		}
-		final Element elementStereotypeAttributs = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs);
-		for (final GenStereotypeAttribut genStereotypeAttribut : genAttribut.getGenStereotypeAttributs()) {
-			this.writeStereotypeAttributPourAttribut(elementStereotypeAttributs, genStereotypeAttribut);
+		for (final GenClasseAttributStereotype genClasseAttributStereotype : genClasseAttribut.getGenClasseAttributStereotypes()) {
+			this.writeStereotypeAttributPourAttribut(elementAttribut, genClasseAttributStereotype);
 		}
-		elementAttribut.addContent(elementStereotypeAttributs);
+		elementAttribut.addContent(elementAttribut);
 	}
 
-	private void writeStereotypeAttributPourAttribut(final Element elementStereotypesAttributRef, final GenStereotypeAttribut genStereotypeAttribut) {
-		final Element elementStereotypeAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut);
-		this.writeAttribute(elementStereotypeAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenStereotypeAttributs_GenStereotypeAttribut_A_Nom, genStereotypeAttribut.getNom());
+	private void writeStereotypeAttributPourAttribut(final Element elementStereotypesAttributRef, final GenClasseAttributStereotype genClasseAttributStereotype) {
+		final Element elementStereotypeAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype);
+		this.writeAttribute(elementStereotypeAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype_A_Nom, genClasseAttributStereotype.getNom());
 		elementStereotypesAttributRef.addContent(elementStereotypeAttribut);
 	}
 
-	private void writeListeProprieteAttributPourAttribut(final Element elementAttribut, final GenAttribut genAttribut) {
-		if ((genAttribut.getGenProprieteAttributs() == null) || CollectionUtils.isEmpty(genAttribut.getGenProprieteAttributs())) {
+	private void writeListeProprieteAttributPourAttribut(final Element elementAttribut, final GenClasseAttribut genClasseAttribut) {
+		if ((genClasseAttribut.getGenClasseAttributProprietes() == null) || CollectionUtils.isEmpty(genClasseAttribut.getGenClasseAttributProprietes())) {
 			return;
 		}
-		final Element elementProprieteAttributs = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs);
-		for (final GenProprieteAttribut genProprieteAttribut : genAttribut.getGenProprieteAttributs()) {
-			this.writeProprieteAttributPourAttribut(elementProprieteAttributs, genProprieteAttribut);
+		for (final GenClasseAttributPropriete genClasseAttributPropriete : genClasseAttribut.getGenClasseAttributProprietes()) {
+			this.writeProprieteAttributPourAttribut(elementAttribut, genClasseAttributPropriete);
 		}
-		elementAttribut.addContent(elementProprieteAttributs);
 	}
 
-	private void writeProprieteAttributPourAttribut(final Element elementProprietesAttribut, final GenProprieteAttribut genProprieteAttribut) {
-		final Element elementProprieteAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut);
-		this.writeAttribute(elementProprieteAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut_A_Nom, genProprieteAttribut.getNom());
-		this.writeAttribute(elementProprieteAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAttributs_GenAttribut_GenProprieteAttributs_GenProprieteAttribut_A_Valeur, genProprieteAttribut.getValeur());
+	private void writeProprieteAttributPourAttribut(final Element elementProprietesAttribut, final GenClasseAttributPropriete genClasseAttributPropriete) {
+		final Element elementProprieteAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete);
+		this.writeAttribute(elementProprieteAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete_A_Nom, genClasseAttributPropriete.getNom());
+		this.writeAttribute(elementProprieteAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete_A_Valeur, genClasseAttributPropriete.getValeur());
 		elementProprietesAttribut.addContent(elementProprieteAttribut);
 	}
 
 	private void writeListeMethodePourClasse(final Element elementClasse, final GenClasse genClasse) {
-		if ((genClasse.getGenMethodes() == null) || CollectionUtils.isEmpty(genClasse.getGenMethodes())) {
+		if ((genClasse.getGenClasseMethodes() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseMethodes())) {
 			return;
 		}
-		final Element elementMethodes = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes);
-		for (final GenMethode genMethode : genClasse.getGenMethodes()) {
-			this.writeMethodePourClasse(elementMethodes, genMethode);
+		for (final GenClasseMethode genClasseMethode : genClasse.getGenClasseMethodes()) {
+			this.writeMethodePourClasse(elementClasse, genClasseMethode);
 		}
-		elementClasse.addContent(elementMethodes);
 	}
 
-	private void writeMethodePourClasse(final Element elementClasse, final GenMethode genMethode) {
-		final Element elementMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode);
-		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_GenId, genMethode.getGenId());
-		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_NomJava, genMethode.getNomJava());
-		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_A_RetourType, genMethode.getRetourType());
-		this.writeListeParametrePourMethode(elementMethode, genMethode);
-		this.writeListeStereotypeMethodePourMethode(elementMethode, genMethode);
-		this.writeListeProprieteMethodePourMethode(elementMethode, genMethode);
+	private void writeMethodePourClasse(final Element elementClasse, final GenClasseMethode genClasseMethode) {
+		final Element elementMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode);
+		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_GenId, genClasseMethode.getGenId());
+		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_NomJava, genClasseMethode.getNomJava());
+		this.writeAttribute(elementMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_RetourType, genClasseMethode.getRetourType());
+		this.writeListeParametrePourMethode(elementMethode, genClasseMethode);
+		this.writeListeStereotypeMethodePourMethode(elementMethode, genClasseMethode);
+		this.writeListeProprieteMethodePourMethode(elementMethode, genClasseMethode);
 		elementClasse.addContent(elementMethode);
 	}
 
-	private void writeListeParametrePourMethode(final Element elementMethode, final GenMethode genMethode) {
-		if ((genMethode.getGenParametres() == null) || CollectionUtils.isEmpty(genMethode.getGenParametres())) {
+	private void writeListeParametrePourMethode(final Element elementMethode, final GenClasseMethode genClasseMethode) {
+		if ((genClasseMethode.getGenClasseMethodeParametres() == null) || CollectionUtils.isEmpty(genClasseMethode.getGenClasseMethodeParametres())) {
 			return;
 		}
-		final Element elementProprieteMethodes = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres);
-		for (final GenParametre genParametre : genMethode.getGenParametres()) {
-			this.writeParametrePourMethode(elementProprieteMethodes, genParametre);
+		for (final GenClasseMethodeParametre genClasseMethodeParametre : genClasseMethode.getGenClasseMethodeParametres()) {
+			this.writeParametrePourMethode(elementMethode, genClasseMethodeParametre);
 		}
-		elementMethode.addContent(elementProprieteMethodes);
+		elementMethode.addContent(elementMethode);
 	}
 
-	private void writeParametrePourMethode(final Element elementMethode, final GenParametre genParametre) {
-		final Element elementParametre = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre);
-		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_GenId, genParametre.getGenId());
-		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_NomJava, genParametre.getNomJava());
-		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenParametres_GenParametre_A_Type, genParametre.getType());
+	private void writeParametrePourMethode(final Element elementMethode, final GenClasseMethodeParametre genClasseMethodeParametre) {
+		final Element elementParametre = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre);
+		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_GenId, genClasseMethodeParametre.getGenId());
+		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_NomJava, genClasseMethodeParametre.getNomJava());
+		this.writeAttribute(elementParametre, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_Type, genClasseMethodeParametre.getType());
 		elementMethode.addContent(elementParametre);
 	}
 
-	private void writeListeStereotypeMethodePourMethode(final Element elementMethode, final GenMethode genMethode) {
-		if ((genMethode.getGenStereotypeMethodes() == null) || CollectionUtils.isEmpty(genMethode.getGenStereotypeMethodes())) {
+	private void writeListeStereotypeMethodePourMethode(final Element elementMethode, final GenClasseMethode genClasseMethode) {
+		if ((genClasseMethode.getGenClasseMethodeStereotypes() == null) || CollectionUtils.isEmpty(genClasseMethode.getGenClasseMethodeStereotypes())) {
 			return;
 		}
-		final Element elementStereotypeMethodes = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes);
-		for (final GenStereotypeMethode genStereotypeMethode : genMethode.getGenStereotypeMethodes()) {
-			this.writeStereotypeMethodePourMethode(elementStereotypeMethodes, genStereotypeMethode);
+		for (final GenClasseMethodeStereotype genStereotypeMethode : genClasseMethode.getGenClasseMethodeStereotypes()) {
+			this.writeStereotypeMethodePourMethode(elementMethode, genStereotypeMethode);
 		}
-		elementMethode.addContent(elementStereotypeMethodes);
 	}
 
-	private void writeStereotypeMethodePourMethode(final Element elementStereotypesMethodeRef, final GenStereotypeMethode genStereotypeMethode) {
-		final Element elementStereotypeMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode);
-		this.writeAttribute(elementStereotypeMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenStereotypeMethodes_GenStereotypeMethode_A_Nom, genStereotypeMethode.getNom());
+	private void writeStereotypeMethodePourMethode(final Element elementStereotypesMethodeRef, final GenClasseMethodeStereotype genStereotypeMethode) {
+		final Element elementStereotypeMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype);
+		this.writeAttribute(elementStereotypeMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype_A_Nom, genStereotypeMethode.getNom());
 		elementStereotypesMethodeRef.addContent(elementStereotypeMethode);
 	}
 
-	private void writeListeProprieteMethodePourMethode(final Element elementMethode, final GenMethode genMethode) {
-		if ((genMethode.getGenProprieteMethodes() == null) || CollectionUtils.isEmpty(genMethode.getGenProprieteMethodes())) {
+	private void writeListeProprieteMethodePourMethode(final Element elementMethode, final GenClasseMethode genClasseMethode) {
+		if ((genClasseMethode.getGenClasseMethodeProprietes() == null) || CollectionUtils.isEmpty(genClasseMethode.getGenClasseMethodeProprietes())) {
 			return;
 		}
-		final Element elementProprieteMethodes = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes);
-		for (final GenProprieteMethode genProprieteMethode : genMethode.getGenProprieteMethodes()) {
-			this.writeProprieteMethodePourMethode(elementProprieteMethodes, genProprieteMethode);
+		for (final GenClasseMethodePropriete genClasseMethodePropriete : genClasseMethode.getGenClasseMethodeProprietes()) {
+			this.writeProprieteMethodePourMethode(elementMethode, genClasseMethodePropriete);
 		}
-		elementMethode.addContent(elementProprieteMethodes);
 	}
 
-	private void writeProprieteMethodePourMethode(final Element elementProprietesMethode, final GenProprieteMethode genProprieteMethode) {
-		final Element elementProprieteMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode);
-		this.writeAttribute(elementProprieteMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode_A_Nom, genProprieteMethode.getNom());
-		this.writeAttribute(elementProprieteMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenMethodes_GenMethode_GenProprieteMethodes_GenProprieteMethode_A_Valeur, genProprieteMethode.getValeur());
+	private void writeProprieteMethodePourMethode(final Element elementProprietesMethode, final GenClasseMethodePropriete genClasseMethodePropriete) {
+		final Element elementProprieteMethode = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete);
+		this.writeAttribute(elementProprieteMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete_A_Nom, genClasseMethodePropriete.getNom());
+		this.writeAttribute(elementProprieteMethode, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete_A_Valeur, genClasseMethodePropriete.getValeur());
 		elementProprietesMethode.addContent(elementProprieteMethode);
 	}
 
 	private void writeListeAssociationPourClasse(final Element elementClasse, final GenClasse genClasse) {
-		if ((genClasse.getGenAssociations() == null) || CollectionUtils.isEmpty(genClasse.getGenAssociations())) {
+		if ((genClasse.getGenClasseAssociations() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseAssociations())) {
 			return;
 		}
-		final Element elementAssociations = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations);
-		for (final GenAssociation genAssociation : genClasse.getGenAssociations()) {
-			this.writeAssociationEndPourClasse(elementAssociations, genAssociation);
+		for (final GenClasseAssociation genClasseAssociation : genClasse.getGenClasseAssociations()) {
+			this.writeAssociationEndPourClasse(elementClasse, genClasseAssociation);
 		}
-		elementClasse.addContent(elementAssociations);
 	}
 
-	private void writeAssociationEndPourClasse(final Element elementClasse, final GenAssociation genAssociation) {
-		final Element elementAssociation = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation);
-		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_GenId, genAssociation.getGenId());
-		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NomJava, genAssociation.getNomJava());
-		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_ClasseGenId, genAssociation.getClasseGenId());
-		if ((genAssociation.getNbMin() != null) && (genAssociation.getNbMax() != null)) {
-			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMin, genAssociation.getNbMin());
-			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMax, genAssociation.getNbMax());
+	private void writeAssociationEndPourClasse(final Element elementClasse, final GenClasseAssociation genClasseAssociation) {
+		final Element elementAssociation = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation);
+		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_GenId, genClasseAssociation.getGenId());
+		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NomJava, genClasseAssociation.getNomJava());
+		this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_ClasseGenId, genClasseAssociation.getClasseGenId());
+		if ((genClasseAssociation.getNbMin() != null) && (genClasseAssociation.getNbMax() != null)) {
+			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMin, genClasseAssociation.getNbMin());
+			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMax, genClasseAssociation.getNbMax());
 		} else {
-			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMin, "1");
-			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_A_NbMax, "1");
+			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMin, "1");
+			this.writeAttribute(elementAssociation, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMax, "1");
 		}
-		this.writeAssociationAttributsPourAssociation(elementAssociation, genAssociation.getGenAssociationAttributs());
+		this.writeAssociationAttributsPourAssociation(elementAssociation, genClasseAssociation);
 		elementClasse.addContent(elementAssociation);
 	}
 
-	private void writeAssociationAttributsPourAssociation(final Element elementAssociation, final GenAssociationAttributs genAssociationAttributs) {
-		if ((genAssociationAttributs == null) || CollectionUtils.isEmpty(genAssociationAttributs)) {
+	private void writeAssociationAttributsPourAssociation(final Element elementClasseAssociation, final GenClasseAssociation genClasseAssociation) {
+		if (genClasseAssociation == null) {
 			return;
 		}
-		final Element elementAssociationAttributs = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs);
-		if (genAssociationAttributs.getGenAssociationAttributs() != null) {
-			for (final GenAssociationAttribut genAssociationAttribut : genAssociationAttributs.getGenAssociationAttributs()) {
-				this.writeAssociationAttribut(elementAssociationAttributs, genAssociationAttribut);
+		if (genClasseAssociation.getGenClasseAssociationAttributs() != null) {
+			for (final GenClasseAssociationAttribut genClasseAssociationAttribut : genClasseAssociation.getGenClasseAssociationAttributs()) {
+				this.writeAssociationAttribut(elementClasseAssociation, genClasseAssociationAttribut);
 			}
 		}
-		elementAssociation.addContent(elementAssociationAttributs);
 	}
 
-	private void writeAssociationAttribut(final Element elementAssociation, final GenAssociationAttribut genAssociationAttribut) {
-		final Element elementAssociationAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut);
-		this.writeAttribute(elementAssociationAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenAssociations_GenAssociation_GenAssociationAttributs_GenAssociationAttribut_A_GenId, genAssociationAttribut.getGenId());
+	private void writeAssociationAttribut(final Element elementAssociation, final GenClasseAssociationAttribut genClasseAssociationAttribut) {
+		final Element elementAssociationAttribut = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut);
+		this.writeAttribute(elementAssociationAttribut, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut_A_GenId, genClasseAssociationAttribut.getGenId());
 		elementAssociation.addContent(elementAssociationAttribut);
 	}
 
@@ -392,16 +371,14 @@ public class GenXmlHandler {
 		if ((genClasse.getGenClasseParents() == null) || CollectionUtils.isEmpty(genClasse.getGenClasseParents())) {
 			return;
 		}
-		final Element elementClasseParent = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents);
 		for (final GenClasseParent genClasseParent : genClasse.getGenClasseParents()) {
-			this.writeClasseParentPourClasse(elementClasseParent, genClasseParent);
+			this.writeClasseParentPourClasse(elementClasse, genClasseParent);
 		}
-		elementClasse.addContent(elementClasseParent);
 	}
 
 	private void writeClasseParentPourClasse(final Element elementClasse, final GenClasseParent genClasseParent) {
-		final Element elementClasseParent = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent);
-		this.writeAttribute(elementClasseParent, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParents_GenClasseParent_A_ClasseGenId, genClasseParent.getClasseGenId());
+		final Element elementClasseParent = new Element(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent);
+		this.writeAttribute(elementClasseParent, GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent_A_ClasseGenId, genClasseParent.getClasseGenId());
 		elementClasse.addContent(elementClasseParent);
 	}
 

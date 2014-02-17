@@ -36,34 +36,22 @@ import org.ludo.codegenerator.core.gen.bean.ITemplateGeneration;
 import org.ludo.codegenerator.core.gen.bean.impl.TemplateGenerationBean;
 import org.ludo.codegenerator.core.gen.manager.TemplateGenerationMap;
 import org.ludo.codegenerator.xml.core.gen.core.bean.Gen;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttribut;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseRefPourGenererParClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseRefPourGenererParClasses;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAttribut;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethode;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasses;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParStereotypes;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParTemplate;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParTemplates;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenMethode;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasse;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasseTemplateGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotype;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotypeTemplateGroup;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupeStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeRefPourGenererParStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeRefPourGenererParStereotypes;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeRefPourGenererParTemplate;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeRefPourGenererParTemplates;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupe;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParStereotypes;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParTemplate;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeRefPourGenererParTemplates;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateRef;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeTemplate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplates;
 import org.ludo.codegenerator.xml.core.gen.core.utils.GenUtils;
 import org.ludo.codegenerator.xml.core.gen.core.xmlreader.GenXmlReaderManager;
@@ -120,72 +108,40 @@ public class ProcessManager {
 			this.definirGenIdPourAttributEtMethode(this.gen.getGenClasses());
 			/** Fin Post Gen Process */
 			// Par Classes
-			final GenGenererParClasses genererParClasses = genererGroupe.getGenGenererParClasses();
-			if (genererParClasses != null) {
-				for (final Object element : genererParClasses.getGenGenererParClasses()) {
-					final GenGenererParClasse genererParClasse = (GenGenererParClasse) element;
-					final GenClasseRefPourGenererParClasses classeRefPourGenererParClasses = genererParClasse.getGenClasseRefPourGenererParClasses();
-					for (final Object element2 : classeRefPourGenererParClasses.getGenClasseRefPourGenererParClasses()) {
-						final GenClasseRefPourGenererParClasse classeRefPourGenererParClasse = (GenClasseRefPourGenererParClasse) element2;
-						final GenClasse classe = classes.getGenClasseForGenId(classeRefPourGenererParClasse.getClasseGenId());
-						final GenTemplateGroupeRefPourGenererParClasses templateGroupeRefPourGenererParClasses = genererParClasse.getGenTemplateGroupeRefPourGenererParClasses();
-						if ((classe != null) && (templateGroupeRefPourGenererParClasses != null)) {
-							for (final Object element3 : templateGroupeRefPourGenererParClasses.getGenTemplateGroupeRefPourGenererParClasses()) {
-								final GenTemplateGroupeRefPourGenererParClasse templateGroupeRefPourClasse = (GenTemplateGroupeRefPourGenererParClasse) element3;
-								final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(templateGroupeRefPourClasse.getTemplateGroupeNom());
-								if (templateGroupe != null) {
-									this.genererFichierParClasse(templateGroupe, classe);
-								}
-							}
+			for (final GenGenerateByClasse genGenerateByClasse : genererGroupe.getGenGenerateByClasses()) {
+				final GenClasse classe = classes.getGenClasseForGenId(genGenerateByClasse.getClasseGenId());
+				if (classe != null) {
+					for (GenGenerateByClasseTemplateGroupe genGenerateByClasseTemplateGroupe : genGenerateByClasse.getGenGenerateByClasseTemplateGroupes()) {
+						final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(genGenerateByClasseTemplateGroupe.getTemplateGroupe());
+						if (templateGroupe != null) {
+							this.genererFichierParClasse(templateGroupe, classe);
 						}
 					}
 				}
 			}
 
-			final GenGenererParTemplates genererParTemplates = genererGroupe.getGenGenererParTemplates();
-			if (genererParTemplates != null) {
-				for (final GenGenererParTemplate genererParTemplate : genererParTemplates.getGenGenererParTemplates()) {
-					final GenTemplateGroupeRefPourGenererParTemplates templateGroupeRefPourGenererParTemplates = genererParTemplate.getGenTemplateGroupeRefPourGenererParTemplates();
-					if (templateGroupeRefPourGenererParTemplates != null) {
-						for (final GenTemplateGroupeRefPourGenererParTemplate templateGroupeRefPourParTemplate : templateGroupeRefPourGenererParTemplates
-								.getGenTemplateGroupeRefPourGenererParTemplates()) {
-							final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(templateGroupeRefPourParTemplate.getTemplateGroupeNom());
-							if (templateGroupe != null) {
-								final GenStereotypeRefPourGenererParTemplates genStereotypeRefPourGenererParTemplates = templateGroupeRefPourParTemplate.getGenStereotypeRefPourGenererParTemplates();
-								final List<GenStereotype> listeStereotype = new ArrayList<GenStereotype>();
-								for (final GenStereotypeRefPourGenererParTemplate stereotypeRefPourGenererParTemplate : genStereotypeRefPourGenererParTemplates
-										.getGenStereotypeRefPourGenererParTemplates()) {
-									final GenStereotype stereotype = this.gen.getGenStereotypes().getGenStereotypeForNom(stereotypeRefPourGenererParTemplate.getStereotypeNom());
-									if (stereotype != null) {
-										listeStereotype.add(stereotype);
-									}
-								}
-								this.genererFichierParTemplate(templateGroupe, listeStereotype);
-							}
-						}
+			for (final GenGenerateByTemplateGroupe genGenerateByTemplateGroupe : genererGroupe.getGenGenerateByTemplateGroupes()) {
+				final List<GenStereotype> listeStereotype = new ArrayList<GenStereotype>();
+				for (final GenGenerateByTemplateGroupeStereotype genGenerateByTemplateGroupeStereotype : genGenerateByTemplateGroupe.getGenGenerateByTemplateGroupeStereotypes()) {
+					final GenStereotype stereotype = this.gen.getGenStereotypes().getGenStereotypeForNom(genGenerateByTemplateGroupeStereotype.getStereotype());
+					if (stereotype != null) {
+						listeStereotype.add(stereotype);
 					}
+				}
+				final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(genGenerateByTemplateGroupe.getTemplateGroupe());
+				if (templateGroupe != null) {
+					this.genererFichierParTemplate(templateGroupe, listeStereotype);
 				}
 			}
 
-			final GenGenererParStereotypes genererParStereotypes = genererGroupe.getGenGenererParStereotypes();
-			if (genererParStereotypes != null) {
-				for (final GenGenererParStereotype genererParStereotype : genererParStereotypes.getGenGenererParStereotypes()) {
-					final GenStereotypeRefPourGenererParStereotypes genStereotypeRefPourGenererParStereotypes = genererParStereotype.getGenStereotypeRefPourGenererParStereotypes();
-					for (final GenStereotypeRefPourGenererParStereotype stereotypeRefPourGenererParStereotype : genStereotypeRefPourGenererParStereotypes
-							.getGenStereotypeRefPourGenererParStereotypes()) {
-						final GenStereotype stereotype = this.gen.getGenStereotypes().getGenStereotypeForNom(stereotypeRefPourGenererParStereotype.getStereotypeNom());
-						if (stereotype != null) {
-							final GenTemplateGroupeRefPourGenererParStereotypes templateGroupeRefPourGenererParStereotypes = stereotypeRefPourGenererParStereotype
-									.getGenTemplateGroupeRefPourGenererParStereotypes();
-							if (templateGroupeRefPourGenererParStereotypes != null) {
-								for (final GenTemplateGroupeRefPourGenererParStereotype templateGroupeRefPourStereotype : templateGroupeRefPourGenererParStereotypes
-										.getGenTemplateGroupeRefPourGenererParStereotypes()) {
-									final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(templateGroupeRefPourStereotype.getTemplateGroupeNom());
-									if (templateGroupe != null) {
-										this.genererFichierParStereotype(templateGroupe, stereotype);
-									}
-								}
-							}
+			for (final GenGenerateByStereotype genGenerateByStereotype : genererGroupe.getGenGenerateByStereotypes()) {
+				final GenStereotype stereotype = this.gen.getGenStereotypes().getGenStereotypeForNom(genGenerateByStereotype.getStereotype());
+				if (stereotype != null) {
+					for (final GenGenerateByStereotypeTemplateGroup genGenerateByStereotypeTemplateGroup : genGenerateByStereotype
+								.getGenGenerateByStereotypeTemplateGroups()) {
+						final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(genGenerateByStereotypeTemplateGroup.getTemplateGroup());
+						if (templateGroupe != null) {
+							this.genererFichierParStereotype(templateGroupe, stereotype);
 						}
 					}
 				}
@@ -225,19 +181,19 @@ public class ProcessManager {
 	private void definirGenIdPourAttributEtMethode(final GenClasses genClasses) {
 		for (final GenClasse genClasse : genClasses.getGenClasses()) {
 			final String genIdClasse = genClasse.getGenId();
-			for (final GenAttribut genAttribut : genClasse.getGenAttributs()) {
-				genAttribut.setGenId(genIdClasse + "." + genAttribut.getGenId());
+			for (final GenClasseAttribut genClasseAttribut : genClasse.getGenClasseAttributs()) {
+				genClasseAttribut.setGenId(genIdClasse + "." + genClasseAttribut.getGenId());
 			}
-			for (final GenMethode genMethode : genClasse.getGenMethodes()) {
-				genMethode.setGenId(genIdClasse + "." + genMethode.getGenId());
+			for (final GenClasseMethode genClasseMethode : genClasse.getGenClasseMethodes()) {
+				genClasseMethode.setGenId(genIdClasse + "." + genClasseMethode.getGenId());
 			}
 		}
 	}
 
 	private void genererFichierParClasse(final GenTemplateGroupe templateGroupe, final GenClasse classe) {
-		for (final Object element : templateGroupe.getGenTemplateRefs()) {
-			final GenTemplateRef templateRef = (GenTemplateRef) element;
-			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(templateRef.getNom());
+		for (final Object element : templateGroupe.getGenTemplateGroupeTemplates()) {
+			final GenTemplateGroupeTemplate genTemplateGroupeTemplate = (GenTemplateGroupeTemplate) element;
+			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(genTemplateGroupeTemplate.getNom());
 			if (template != null) {
 				this.genererFichierParClasse(template, classe);
 			}
@@ -279,11 +235,9 @@ public class ProcessManager {
 		for (final GenStereotype stereotype : listeStereotype) {
 			final ListeClasseParStereotype listeClasseParStereotype = new ListeClasseParStereotype(stereotype);
 			for (final GenClasse classe : this.gen.getGenClasses().getGenClasses()) {
-				if ((classe.getGenStereotypeClasses() != null) && (classe.getGenStereotypeClasses().getGenStereotypeClasses() != null)) {
-					for (final GenStereotypeClasse stereotypeClasse : classe.getGenStereotypeClasses()) {
-						if (listeClasseParStereotype.getStereotypeNom().equals(stereotypeClasse.getNom())) {
-							listeClasseParStereotype.addClasse(classe);
-						}
+				for (final GenClasseStereotype stereotypeClasse : classe.getGenClasseStereotypes()) {
+					if (listeClasseParStereotype.getStereotypeNom().equals(stereotypeClasse.getNom())) {
+						listeClasseParStereotype.addClasse(classe);
 					}
 				}
 			}
@@ -295,8 +249,8 @@ public class ProcessManager {
 	}
 
 	private void genererFichierParTemplate(final GenTemplateGroupe templateGroupe, final Map<String, ListeClasseParStereotype> mapListeClasseParStereotype) {
-		for (final GenTemplateRef templateRef : templateGroupe.getGenTemplateRefs()) {
-			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(templateRef.getNom());
+		for (final GenTemplateGroupeTemplate genTemplateGroupeTemplate : templateGroupe.getGenTemplateGroupeTemplates()) {
+			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(genTemplateGroupeTemplate.getNom());
 			if (template != null) {
 				this.genererFichierParTemplate(template, mapListeClasseParStereotype);
 			}
@@ -337,11 +291,9 @@ public class ProcessManager {
 		// TODO Rechercher les classes
 		final List<GenClasse> listeClasse = new ArrayList<GenClasse>();
 		for (final GenClasse classe : this.gen.getGenClasses().getGenClasses()) {
-			if ((classe.getGenStereotypeClasses() != null) && (classe.getGenStereotypeClasses().getGenStereotypeClasses() != null)) {
-				for (final GenStereotypeClasse stereotypeClasse : classe.getGenStereotypeClasses()) {
-					if (stereotype.getNom().equals(stereotypeClasse.getNom())) {
-						listeClasse.add(classe);
-					}
+			for (final GenClasseStereotype stereotypeClasse : classe.getGenClasseStereotypes()) {
+				if (stereotype.getNom().equals(stereotypeClasse.getNom())) {
+					listeClasse.add(classe);
 				}
 			}
 		}
@@ -351,8 +303,8 @@ public class ProcessManager {
 	}
 
 	private void genererFichierParStereotype(final GenTemplateGroupe templateGroupe, final GenStereotype stereotype, final GenClasse classe) {
-		for (final GenTemplateRef templateRef : templateGroupe.getGenTemplateRefs()) {
-			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(templateRef.getNom());
+		for (final GenTemplateGroupeTemplate genTemplateGroupeTemplate : templateGroupe.getGenTemplateGroupeTemplates()) {
+			final GenTemplate template = this.gen.getGenTemplates().getGenTemplateForNom(genTemplateGroupeTemplate.getNom());
 			if (template != null) {
 				this.genererFichierParStereotype(template, stereotype, classe);
 			}

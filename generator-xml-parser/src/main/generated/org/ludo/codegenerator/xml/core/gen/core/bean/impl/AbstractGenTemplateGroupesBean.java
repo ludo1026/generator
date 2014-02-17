@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	private Gen referenceGen;
 	
@@ -24,7 +24,7 @@ public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
 		this.referenceGen = referenceGen;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
     private List<GenTemplateGroupe> genTemplateGroupes = new ArrayList<GenTemplateGroupe>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
                 return genTemplateGroupe;
             }
         }
-        throw new IllegalStateException("La genTemplateGroupe n'est pas définie : nom de genTemplateGroupe = "+nom);
+        throw new IllegalStateException("La genTemplateGroupe n'est pas dÃ©finie : nom de genTemplateGroupe = "+nom);
     }
 
     public List<GenTemplateGroupe> getGenTemplateGroupesByNom(String nom) {
@@ -58,10 +58,10 @@ public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
         this.genTemplateGroupes = genTemplateGroupes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 
 	@Override

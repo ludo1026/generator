@@ -2,7 +2,7 @@ package org.ludo.codegenerator.xml.core.gen.core.bean.impl;
 
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupe;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupes;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateRef;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplateGroupeTemplate;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	private GenTemplateGroupes referenceGenTemplateGroupes;
 	
@@ -24,41 +24,41 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 		this.referenceGenTemplateGroupes = referenceGenTemplateGroupes;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
-    private List<GenTemplateRef> genTemplateRefs = new ArrayList<GenTemplateRef>();
+    private List<GenTemplateGroupeTemplate> genTemplateGroupeTemplates = new ArrayList<GenTemplateGroupeTemplate>();
 	
-    public GenTemplateRef getGenTemplateRefForNom(String nom) {
-        for(GenTemplateRef genTemplateRef : genTemplateRefs) {
-            if(genTemplateRef.getNom().equalsIgnoreCase(nom)) {
-                return genTemplateRef;
+    public GenTemplateGroupeTemplate getGenTemplateGroupeTemplateForNom(String nom) {
+        for(GenTemplateGroupeTemplate genTemplateGroupeTemplate : genTemplateGroupeTemplates) {
+            if(genTemplateGroupeTemplate.getNom().equalsIgnoreCase(nom)) {
+                return genTemplateGroupeTemplate;
             }
         }
-        throw new IllegalStateException("La genTemplateRef n'est pas définie : nom de genTemplateRef = "+nom);
+        throw new IllegalStateException("La genTemplateGroupeTemplate n'est pas dÃ©finie : nom de genTemplateGroupeTemplate = "+nom);
     }
 
-    public List<GenTemplateRef> getGenTemplateRefsByNom(String nom) {
-        List<GenTemplateRef> result = new ArrayList<GenTemplateRef>();
-        for(GenTemplateRef genTemplateRef : genTemplateRefs) {
-            if(genTemplateRef.getNom().equalsIgnoreCase(nom)) {
-                result.add(genTemplateRef);
+    public List<GenTemplateGroupeTemplate> getGenTemplateGroupeTemplatesByNom(String nom) {
+        List<GenTemplateGroupeTemplate> result = new ArrayList<GenTemplateGroupeTemplate>();
+        for(GenTemplateGroupeTemplate genTemplateGroupeTemplate : genTemplateGroupeTemplates) {
+            if(genTemplateGroupeTemplate.getNom().equalsIgnoreCase(nom)) {
+                result.add(genTemplateGroupeTemplate);
             }
         }
         return result;
     }
 
-    public void addGenTemplateRef(GenTemplateRef genTemplateRef) {
-    	genTemplateRef.setReferenceGenTemplateGroupe(this);
-        genTemplateRefs.add(genTemplateRef);
+    public void addGenTemplateGroupeTemplate(GenTemplateGroupeTemplate genTemplateGroupeTemplate) {
+    	genTemplateGroupeTemplate.setReferenceGenTemplateGroupe(this);
+        genTemplateGroupeTemplates.add(genTemplateGroupeTemplate);
     }
-    public List<GenTemplateRef> getGenTemplateRefs() {
-        return genTemplateRefs;
+    public List<GenTemplateGroupeTemplate> getGenTemplateGroupeTemplates() {
+        return genTemplateGroupeTemplates;
     }
-    public void setGenTemplateRefs(List<GenTemplateRef> genTemplateRefs) {
-        this.genTemplateRefs = genTemplateRefs;
+    public void setGenTemplateGroupeTemplates(List<GenTemplateGroupeTemplate> genTemplateGroupeTemplates) {
+        this.genTemplateGroupeTemplates = genTemplateGroupeTemplates;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 
 	public String getNomAsString() {
@@ -68,7 +68,7 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 		this.nom = nomAsString;
 	}
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 	private String nom = null;
 
@@ -81,116 +81,116 @@ public class AbstractGenTemplateGroupeBean implements GenTemplateGroupe {
 
 	@Override
 	public int size() {
-		return this.genTemplateRefs.size();
+		return this.genTemplateGroupeTemplates.size();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		return this.genTemplateRefs.isEmpty();
+		return this.genTemplateGroupeTemplates.isEmpty();
 	}
 
 	@Override
 	public boolean contains(final Object o) {
-		return this.genTemplateRefs.contains(o);
+		return this.genTemplateGroupeTemplates.contains(o);
 	}
 
 	@Override
-	public Iterator<GenTemplateRef> iterator() {
-		return this.genTemplateRefs.iterator();
+	public Iterator<GenTemplateGroupeTemplate> iterator() {
+		return this.genTemplateGroupeTemplates.iterator();
 	}
 
 	@Override
 	public Object[] toArray() {
-		return this.genTemplateRefs.toArray();
+		return this.genTemplateGroupeTemplates.toArray();
 	}
 
 	@Override
 	public <T> T[] toArray(final T[] a) {
-		return this.genTemplateRefs.toArray(a);
+		return this.genTemplateGroupeTemplates.toArray(a);
 	}
 
 	@Override
-	public boolean add(final GenTemplateRef e) {
-		return this.genTemplateRefs.add(e);
+	public boolean add(final GenTemplateGroupeTemplate e) {
+		return this.genTemplateGroupeTemplates.add(e);
 	}
 
 	@Override
 	public boolean remove(final Object o) {
-		return this.genTemplateRefs.remove(o);
+		return this.genTemplateGroupeTemplates.remove(o);
 	}
 
 	@Override
 	public boolean containsAll(final Collection<?> c) {
-		return this.genTemplateRefs.containsAll(c);
+		return this.genTemplateGroupeTemplates.containsAll(c);
 	}
 
 	@Override
-	public boolean addAll(final Collection<? extends GenTemplateRef> c) {
-		return this.genTemplateRefs.addAll(c);
+	public boolean addAll(final Collection<? extends GenTemplateGroupeTemplate> c) {
+		return this.genTemplateGroupeTemplates.addAll(c);
 	}
 
 	@Override
-	public boolean addAll(final int index, final Collection<? extends GenTemplateRef> c) {
-		return this.genTemplateRefs.addAll(index, c);
+	public boolean addAll(final int index, final Collection<? extends GenTemplateGroupeTemplate> c) {
+		return this.genTemplateGroupeTemplates.addAll(index, c);
 	}
 
 	@Override
 	public boolean removeAll(final Collection<?> c) {
-		return this.genTemplateRefs.removeAll(c);
+		return this.genTemplateGroupeTemplates.removeAll(c);
 	}
 
 	@Override
 	public boolean retainAll(final Collection<?> c) {
-		return this.genTemplateRefs.retainAll(c);
+		return this.genTemplateGroupeTemplates.retainAll(c);
 	}
 
 	@Override
 	public void clear() {
-		this.genTemplateRefs.clear();
+		this.genTemplateGroupeTemplates.clear();
 	}
 
 	@Override
-	public GenTemplateRef get(final int index) {
-		return this.genTemplateRefs.get(index);
+	public GenTemplateGroupeTemplate get(final int index) {
+		return this.genTemplateGroupeTemplates.get(index);
 	}
 
 	@Override
-	public GenTemplateRef set(final int index, final GenTemplateRef element) {
-		return this.genTemplateRefs.set(index, element);
+	public GenTemplateGroupeTemplate set(final int index, final GenTemplateGroupeTemplate element) {
+		return this.genTemplateGroupeTemplates.set(index, element);
 	}
 
 	@Override
-	public void add(final int index, final GenTemplateRef element) {
-		this.genTemplateRefs.add(index, element);
+	public void add(final int index, final GenTemplateGroupeTemplate element) {
+		this.genTemplateGroupeTemplates.add(index, element);
 	}
 
 	@Override
-	public GenTemplateRef remove(final int index) {
-		return this.genTemplateRefs.remove(index);
+	public GenTemplateGroupeTemplate remove(final int index) {
+		return this.genTemplateGroupeTemplates.remove(index);
 	}
 
 	@Override
 	public int indexOf(final Object o) {
-		return this.genTemplateRefs.indexOf(o);
+		return this.genTemplateGroupeTemplates.indexOf(o);
 	}
 
 	@Override
 	public int lastIndexOf(final Object o) {
-		return this.genTemplateRefs.lastIndexOf(o);
+		return this.genTemplateGroupeTemplates.lastIndexOf(o);
 	}
 
 	@Override
-	public ListIterator<GenTemplateRef> listIterator() {
-		return this.genTemplateRefs.listIterator();
+	public ListIterator<GenTemplateGroupeTemplate> listIterator() {
+		return this.genTemplateGroupeTemplates.listIterator();
 	}
 
 	@Override
-	public ListIterator<GenTemplateRef> listIterator(final int index) {
-		return this.genTemplateRefs.listIterator(index);
+	public ListIterator<GenTemplateGroupeTemplate> listIterator(final int index) {
+		return this.genTemplateGroupeTemplates.listIterator(index);
 	}
 
 	@Override
-	public List<GenTemplateRef> subList(final int fromIndex, final int toIndex) {
-		return this.genTemplateRefs.subList(fromIndex, toIndex);
+	public List<GenTemplateGroupeTemplate> subList(final int fromIndex, final int toIndex) {
+		return this.genTemplateGroupeTemplates.subList(fromIndex, toIndex);
 	}
 }

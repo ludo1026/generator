@@ -1,53 +1,427 @@
-Sun Dec 08 18:12:40 CET 2013  [debug] AvalonLogChute initialized using file 'velocity.log'
-Sun Dec 08 18:12:40 CET 2013  [trace] *******************************************************************
-Sun Dec 08 18:12:40 CET 2013  [debug] Starting Jakarta Velocity v1.5-SNAPSHOT (compiled: 2006-07-21 06:25:35)
-Sun Dec 08 18:12:40 CET 2013  [trace] RuntimeInstance initializing.
-Sun Dec 08 18:12:40 CET 2013  [debug] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-Sun Dec 08 18:12:40 CET 2013  [debug] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
-Sun Dec 08 18:12:40 CET 2013  [debug] Using logger class org.apache.velocity.runtime.log.AvalonLogChute
-Sun Dec 08 18:12:40 CET 2013  [debug] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [trace] FileResourceLoader : initialization starting.
-Sun Dec 08 18:12:40 CET 2013   [info] FileResourceLoader : adding path '.'
-Sun Dec 08 18:12:40 CET 2013  [trace] FileResourceLoader : initialization complete.
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
-Sun Dec 08 18:12:40 CET 2013  [trace] Default ResourceManager initialization complete.
-Sun Dec 08 18:12:40 CET 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-Sun Dec 08 18:12:40 CET 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-Sun Dec 08 18:12:40 CET 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-Sun Dec 08 18:12:40 CET 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Include
-Sun Dec 08 18:12:40 CET 2013  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-Sun Dec 08 18:12:40 CET 2013  [debug] Created '20' parsers.
-Sun Dec 08 18:12:40 CET 2013  [trace] Velocimacro : initialization starting.
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : Default library not found.
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : allowInline = true : VMs can be defined inline in templates
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
-Sun Dec 08 18:12:40 CET 2013  [debug] Velocimacro : autoload off : VM system will not automatically reload global library macros
-Sun Dec 08 18:12:40 CET 2013  [trace] Velocimacro : initialization complete.
-Sun Dec 08 18:12:40 CET 2013  [trace] RuntimeInstance successfully initialized.
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/spring_jspx_index.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/spring_jspx_index.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Sun Dec 08 18:12:40 CET 2013  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014  [debug] AvalonLogChute initialized using file 'velocity.log'
+Mon Feb 17 08:32:27 CET 2014  [trace] *******************************************************************
+Mon Feb 17 08:32:27 CET 2014  [debug] Starting Jakarta Velocity v1.5-SNAPSHOT (compiled: 2006-07-21 06:25:35)
+Mon Feb 17 08:32:27 CET 2014  [trace] RuntimeInstance initializing.
+Mon Feb 17 08:32:27 CET 2014  [debug] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Mon Feb 17 08:32:27 CET 2014  [debug] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+Mon Feb 17 08:32:27 CET 2014  [debug] Using logger class org.apache.velocity.runtime.log.AvalonLogChute
+Mon Feb 17 08:32:27 CET 2014  [debug] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014  [trace] FileResourceLoader : initialization starting.
+Mon Feb 17 08:32:27 CET 2014   [info] FileResourceLoader : adding path '.'
+Mon Feb 17 08:32:27 CET 2014  [trace] FileResourceLoader : initialization complete.
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Mon Feb 17 08:32:27 CET 2014  [trace] Default ResourceManager initialization complete.
+Mon Feb 17 08:32:27 CET 2014  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Mon Feb 17 08:32:27 CET 2014  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Mon Feb 17 08:32:27 CET 2014  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Mon Feb 17 08:32:27 CET 2014  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Mon Feb 17 08:32:27 CET 2014  [debug] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Mon Feb 17 08:32:27 CET 2014  [debug] Created '20' parsers.
+Mon Feb 17 08:32:27 CET 2014  [trace] Velocimacro : initialization starting.
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : Default library not found.
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+Mon Feb 17 08:32:27 CET 2014  [debug] Velocimacro : autoload off : VM system will not automatically reload global library macros
+Mon Feb 17 08:32:27 CET 2014  [trace] Velocimacro : initialization complete.
+Mon Feb 17 08:32:27 CET 2014  [trace] RuntimeInstance successfully initialized.
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/spring_jspx_index.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/spring_jspx_index.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:27 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:27 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/bean_template.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/bean_template.vm [line 1, column 1]
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014  [debug] ResourceManager : found config/templates/jpa_bean_with_links.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Feb 17 08:32:28 CET 2014  [error] Left side ($bean.getGenAttributs().getGenAttributsByEstClePrimaire("true").size()) of '>' operation has null value. Operation not possible. config/templates/jpa_bean_with_links.vm [line 2, column 78]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 7, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 10, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] RHS of #set statement is null. Context will not be modified. config/templates/jpa_bean_with_links.vm [line 12, column 1]
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 15] : $today.date cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 15, column 34] : $today.time cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 17] : $generator.name cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 16, column 43] : $generator.version cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 49, column 49] : ${entity.databaseTable} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 55, column 1] : $jpa.entityAnnotations(0, $entity) cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 23] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 58, column 83] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 60, column 14] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 116, column 12] : ${entity.name} cannot be resolved.
+Mon Feb 17 08:32:28 CET 2014   [info] Null reference [template 'config/templates/jpa_bean_with_links.vm', line 209, column 1] : $java.toStringMethod($entity, $dataFields, "compositePrimaryKey", 4) cannot be resolved.

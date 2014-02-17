@@ -12,7 +12,7 @@ import java.util.ListIterator;
 
 public class AbstractGenClassesBean implements GenClasses {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	private Gen referenceGen;
 	
@@ -24,7 +24,7 @@ public class AbstractGenClassesBean implements GenClasses {
 		this.referenceGen = referenceGen;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
     private List<GenClasse> genClasses = new ArrayList<GenClasse>();
 	
@@ -34,7 +34,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : genId de genClasse = "+genId);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : genId de genClasse = "+genId);
     }
 
     public List<GenClasse> getGenClassesByGenId(String genId) {
@@ -53,7 +53,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : nomJava de genClasse = "+nomJava);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : nomJava de genClasse = "+nomJava);
     }
 
     public List<GenClasse> getGenClassesByNomJava(String nomJava) {
@@ -72,7 +72,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : packageJava de genClasse = "+packageJava);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : packageJava de genClasse = "+packageJava);
     }
 
     public List<GenClasse> getGenClassesByPackageJava(String packageJava) {
@@ -91,7 +91,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : nomTable de genClasse = "+nomTable);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : nomTable de genClasse = "+nomTable);
     }
 
     public List<GenClasse> getGenClassesByNomTable(String nomTable) {
@@ -110,7 +110,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : nomVue de genClasse = "+nomVue);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : nomVue de genClasse = "+nomVue);
     }
 
     public List<GenClasse> getGenClassesByNomVue(String nomVue) {
@@ -129,7 +129,7 @@ public class AbstractGenClassesBean implements GenClasses {
                 return genClasse;
             }
         }
-        throw new IllegalStateException("La genClasse n'est pas définie : description de genClasse = "+description);
+        throw new IllegalStateException("La genClasse n'est pas dÃ©finie : description de genClasse = "+description);
     }
 
     public List<GenClasse> getGenClassesByDescription(String description) {
@@ -153,7 +153,7 @@ public class AbstractGenClassesBean implements GenClasses {
         this.genClasses = genClasses;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 
 	public String getPackageBaseAsString() {
@@ -163,7 +163,7 @@ public class AbstractGenClassesBean implements GenClasses {
 		this.packageBase = packageBaseAsString;
 	}
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 	private String packageBase = null;
 

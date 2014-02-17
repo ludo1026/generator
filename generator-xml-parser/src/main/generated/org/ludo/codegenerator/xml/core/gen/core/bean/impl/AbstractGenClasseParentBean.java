@@ -1,7 +1,7 @@
 package org.ludo.codegenerator.xml.core.gen.core.bean.impl;
 
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseParent;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseParents;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,21 +11,21 @@ import java.util.ListIterator;
 
 public class AbstractGenClasseParentBean implements GenClasseParent {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
-	private GenClasseParents referenceGenClasseParents;
+	private GenClasse referenceGenClasse;
 	
-	public GenClasseParents getReferenceGenClasseParents() {
-		return referenceGenClasseParents;
+	public GenClasse getReferenceGenClasse() {
+		return referenceGenClasse;
 	}
 	
-	public void setReferenceGenClasseParents(GenClasseParents referenceGenClasseParents) {
-		this.referenceGenClasseParents = referenceGenClasseParents;
+	public void setReferenceGenClasse(GenClasse referenceGenClasse) {
+		this.referenceGenClasse = referenceGenClasse;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 
 	public String getClasseGenIdAsString() {
@@ -35,7 +35,7 @@ public class AbstractGenClasseParentBean implements GenClasseParent {
 		this.classeGenId = classeGenIdAsString;
 	}
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 	private String classeGenId = null;
 

@@ -6,37 +6,26 @@
   </stereotypes>
 
   <generate>
-    <genererParStereotypes>
-      <genererParStereotype>
-        <stereotypeRefPourGenererParStereotypes>
-          <stereotypeRefPourGenererParStereotype stereotypeNom="bean">
-            <templateGroupeRefPourGenererParStereotypes>
-              <templateGroupeRefPourGenererParStereotype templateGroupeNom="beanGroupe" />
-            </templateGroupeRefPourGenererParStereotypes>
-          </stereotypeRefPourGenererParStereotype>
-        </stereotypeRefPourGenererParStereotypes>
-      </genererParStereotype>
-    </genererParStereotypes>
-    <genererParTemplates>
-      <genererParTemplate>
-        <templateGroupeRefPourGenererParTemplates>
-          <templateGroupeRefPourGenererParTemplate templateGroupeNom="uniqueGroupe">
-            <stereotypeRefPourGenererParTemplates>
-              <stereotypeRefPourGenererParTemplate stereotypeNom="bean" />
-            </stereotypeRefPourGenererParTemplates>
-          </templateGroupeRefPourGenererParTemplate>
-        </templateGroupeRefPourGenererParTemplates>
-      </genererParTemplate>
-    </genererParTemplates>
+     <byStereotype stereotype="bean">
+        <templateGroup templateGroup="beanGroupe" />
+     </byStereotype>
+     <byTemplateGroupe templateGroupe="uniqueGroupe">
+       <stereotype stereotype="bean" />
+     </byTemplateGroupe>
+     <byStereotype stereotype="bean">
+        <templateGroup templateGroup="jpaGroupe" />
+     </byStereotype>
   </generate>
 
   <templateGroupes>
     <templateGroupe nom="beanGroupe">
-      <templateRef nom="bean_template" />
-      <templateRef nom="jpa_bean_template" />
+      <template nom="bean_template" />
+    </templateGroupe>
+    <templateGroupe nom="jpaGroupe">
+      <template nom="jpa_bean_template" />
     </templateGroupe>
     <templateGroupe nom="uniqueGroupe">
-      <templateRef nom="spring_jspx_index" />
+      <template nom="spring_jspx_index" />
     </templateGroupe>
   </templateGroupes>
 

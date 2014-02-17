@@ -2,9 +2,9 @@ package org.ludo.codegenerator.xml.core.gen.core.bean.impl;
 
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.Gen;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParTemplates;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenererParStereotypes;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasse;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupe;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotype;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,7 +14,7 @@ import java.util.ListIterator;
 
 public class AbstractGenGenerateBean implements GenGenerate {
 	
-	/** RÈcupÈration de l'ÈlÈment parent */
+	/** R√©cup√©ration de l'√©l√©ment parent */
 	
 	private Gen referenceGen;
 	
@@ -26,48 +26,108 @@ public class AbstractGenGenerateBean implements GenGenerate {
 		this.referenceGen = referenceGen;
 	}
 	
-	/** RÈcupÈration des ÈlÈments fils */
+	/** R√©cup√©ration des √©l√©ments fils */
+	
+    private List<GenGenerateByClasse> genGenerateByClasses = new ArrayList<GenGenerateByClasse>();
+	
+    public GenGenerateByClasse getGenGenerateByClasseForClasseGenId(String classeGenId) {
+        for(GenGenerateByClasse genGenerateByClasse : genGenerateByClasses) {
+            if(genGenerateByClasse.getClasseGenId().equalsIgnoreCase(classeGenId)) {
+                return genGenerateByClasse;
+            }
+        }
+        throw new IllegalStateException("La genGenerateByClasse n'est pas d√©finie : classeGenId de genGenerateByClasse = "+classeGenId);
+    }
 
-    private GenGenererParClasses genGenererParClasses = new GenGenererParClassesBean();
-    
-    public GenGenererParClasses getGenGenererParClasses() {
-    	return this.genGenererParClasses;
+    public List<GenGenerateByClasse> getGenGenerateByClassesByClasseGenId(String classeGenId) {
+        List<GenGenerateByClasse> result = new ArrayList<GenGenerateByClasse>();
+        for(GenGenerateByClasse genGenerateByClasse : genGenerateByClasses) {
+            if(genGenerateByClasse.getClasseGenId().equalsIgnoreCase(classeGenId)) {
+                result.add(genGenerateByClasse);
+            }
+        }
+        return result;
     }
-    
-    public void setGenGenererParClasses(GenGenererParClasses genGenererParClasses) {
-    	genGenererParClasses.setReferenceGenGenerate(this);
-    	this.genGenererParClasses = genGenererParClasses;
-    }
-	
 
-    private GenGenererParTemplates genGenererParTemplates = new GenGenererParTemplatesBean();
-    
-    public GenGenererParTemplates getGenGenererParTemplates() {
-    	return this.genGenererParTemplates;
+    public void addGenGenerateByClasse(GenGenerateByClasse genGenerateByClasse) {
+    	genGenerateByClasse.setReferenceGenGenerate(this);
+        genGenerateByClasses.add(genGenerateByClasse);
     }
-    
-    public void setGenGenererParTemplates(GenGenererParTemplates genGenererParTemplates) {
-    	genGenererParTemplates.setReferenceGenGenerate(this);
-    	this.genGenererParTemplates = genGenererParTemplates;
+    public List<GenGenerateByClasse> getGenGenerateByClasses() {
+        return genGenerateByClasses;
+    }
+    public void setGenGenerateByClasses(List<GenGenerateByClasse> genGenerateByClasses) {
+        this.genGenerateByClasses = genGenerateByClasses;
     }
 	
+    private List<GenGenerateByTemplateGroupe> genGenerateByTemplateGroupes = new ArrayList<GenGenerateByTemplateGroupe>();
+	
+    public GenGenerateByTemplateGroupe getGenGenerateByTemplateGroupeForTemplateGroupe(String templateGroupe) {
+        for(GenGenerateByTemplateGroupe genGenerateByTemplateGroupe : genGenerateByTemplateGroupes) {
+            if(genGenerateByTemplateGroupe.getTemplateGroupe().equalsIgnoreCase(templateGroupe)) {
+                return genGenerateByTemplateGroupe;
+            }
+        }
+        throw new IllegalStateException("La genGenerateByTemplateGroupe n'est pas d√©finie : templateGroupe de genGenerateByTemplateGroupe = "+templateGroupe);
+    }
 
-    private GenGenererParStereotypes genGenererParStereotypes = new GenGenererParStereotypesBean();
-    
-    public GenGenererParStereotypes getGenGenererParStereotypes() {
-    	return this.genGenererParStereotypes;
+    public List<GenGenerateByTemplateGroupe> getGenGenerateByTemplateGroupesByTemplateGroupe(String templateGroupe) {
+        List<GenGenerateByTemplateGroupe> result = new ArrayList<GenGenerateByTemplateGroupe>();
+        for(GenGenerateByTemplateGroupe genGenerateByTemplateGroupe : genGenerateByTemplateGroupes) {
+            if(genGenerateByTemplateGroupe.getTemplateGroupe().equalsIgnoreCase(templateGroupe)) {
+                result.add(genGenerateByTemplateGroupe);
+            }
+        }
+        return result;
     }
-    
-    public void setGenGenererParStereotypes(GenGenererParStereotypes genGenererParStereotypes) {
-    	genGenererParStereotypes.setReferenceGenGenerate(this);
-    	this.genGenererParStereotypes = genGenererParStereotypes;
+
+    public void addGenGenerateByTemplateGroupe(GenGenerateByTemplateGroupe genGenerateByTemplateGroupe) {
+    	genGenerateByTemplateGroupe.setReferenceGenGenerate(this);
+        genGenerateByTemplateGroupes.add(genGenerateByTemplateGroupe);
+    }
+    public List<GenGenerateByTemplateGroupe> getGenGenerateByTemplateGroupes() {
+        return genGenerateByTemplateGroupes;
+    }
+    public void setGenGenerateByTemplateGroupes(List<GenGenerateByTemplateGroupe> genGenerateByTemplateGroupes) {
+        this.genGenerateByTemplateGroupes = genGenerateByTemplateGroupes;
     }
 	
+    private List<GenGenerateByStereotype> genGenerateByStereotypes = new ArrayList<GenGenerateByStereotype>();
 	
-	/** RÈcupÈration des attributs de l'objet de base sans transtypage */
+    public GenGenerateByStereotype getGenGenerateByStereotypeForStereotype(String stereotype) {
+        for(GenGenerateByStereotype genGenerateByStereotype : genGenerateByStereotypes) {
+            if(genGenerateByStereotype.getStereotype().equalsIgnoreCase(stereotype)) {
+                return genGenerateByStereotype;
+            }
+        }
+        throw new IllegalStateException("La genGenerateByStereotype n'est pas d√©finie : stereotype de genGenerateByStereotype = "+stereotype);
+    }
+
+    public List<GenGenerateByStereotype> getGenGenerateByStereotypesByStereotype(String stereotype) {
+        List<GenGenerateByStereotype> result = new ArrayList<GenGenerateByStereotype>();
+        for(GenGenerateByStereotype genGenerateByStereotype : genGenerateByStereotypes) {
+            if(genGenerateByStereotype.getStereotype().equalsIgnoreCase(stereotype)) {
+                result.add(genGenerateByStereotype);
+            }
+        }
+        return result;
+    }
+
+    public void addGenGenerateByStereotype(GenGenerateByStereotype genGenerateByStereotype) {
+    	genGenerateByStereotype.setReferenceGenGenerate(this);
+        genGenerateByStereotypes.add(genGenerateByStereotype);
+    }
+    public List<GenGenerateByStereotype> getGenGenerateByStereotypes() {
+        return genGenerateByStereotypes;
+    }
+    public void setGenGenerateByStereotypes(List<GenGenerateByStereotype> genGenerateByStereotypes) {
+        this.genGenerateByStereotypes = genGenerateByStereotypes;
+    }
+	
+	/** R√©cup√©ration des attributs de l'objet de base sans transtypage */
 	
 	
-	/** RÈcupÈration des attributs de l'objet de base avec transtypage */
+	/** R√©cup√©ration des attributs de l'objet de base avec transtypage */
 	
 
 }

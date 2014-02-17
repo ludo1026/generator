@@ -11,7 +11,7 @@ import java.util.ListIterator;
 
 public class AbstractGenStereotypeBean implements GenStereotype {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	private GenStereotypes referenceGenStereotypes;
 	
@@ -23,9 +23,9 @@ public class AbstractGenStereotypeBean implements GenStereotype {
 		this.referenceGenStereotypes = referenceGenStereotypes;
 	}
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 
 	public String getNomAsString() {
@@ -35,7 +35,7 @@ public class AbstractGenStereotypeBean implements GenStereotype {
 		this.nom = nomAsString;
 	}
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 	private String nom = null;
 

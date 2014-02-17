@@ -5,15 +5,15 @@ import java.util.List;
 public interface GenTemplate 
 {
 	
-	/** Récupération de l'élément parent */
+	/** RÃ©cupÃ©ration de l'Ã©lÃ©ment parent */
 	
 	public GenTemplates getReferenceGenTemplates();
 	
 	public void setReferenceGenTemplates(GenTemplates referenceGenTemplates);
 	
-	/** Récupération des éléments fils */
+	/** RÃ©cupÃ©ration des Ã©lÃ©ments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base sans transtypage */
 	
 	
 	public String getNomAsString();
@@ -34,7 +34,7 @@ public interface GenTemplate
 	public String getNomElementGenereAsString();
 	public void setNomElementGenereAsString(String nomElementGenereAsString);
 	
-	/** Récupération des attributs de l'objet de base avec transtypage */
+	/** RÃ©cupÃ©ration des attributs de l'objet de base avec transtypage */
 	
 
 	public String getNom();

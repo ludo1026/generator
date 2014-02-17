@@ -9,12 +9,12 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenAttribut;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasse;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseAttribut;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseMethode;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClassePropriete;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasseStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenClasses;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenMethode;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenProprieteClasse;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotypeClasse;
 import org.ludo.utils.AssertHelper;
 
 /**
@@ -63,10 +63,10 @@ public class GenClasseManager {
 		for (final GenClasse GenClasse : listeClasse) {
 			final GenClasse classe = GenClasse;
 			AssertHelper.assertNotNull(classe, "méthode");
-			final List<GenStereotypeClasse> listeStereotypeClasse = classe.getGenStereotypeClasses();
+			final List<GenClasseStereotype> listeStereotypeClasse = classe.getGenClasseStereotypes();
 			boolean estAjoute = false;
-			for (final Iterator<GenStereotypeClasse> iterStereotypeClasse = listeStereotypeClasse.iterator(); !estAjoute && iterStereotypeClasse.hasNext();) {
-				final GenStereotypeClasse stereotypeClasse = iterStereotypeClasse.next();
+			for (final Iterator<GenClasseStereotype> iterStereotypeClasse = listeStereotypeClasse.iterator(); !estAjoute && iterStereotypeClasse.hasNext();) {
+				final GenClasseStereotype stereotypeClasse = iterStereotypeClasse.next();
 				AssertHelper.assertNotNull(stereotypeClasse, "stereotypeClasse");
 				AssertHelper.assertDefined(stereotypeClasse.getNom(), "nom du stéréotypeClasseRef");
 				if (StringUtils.equals(stereotypeClasse.getNom(), nomStereotype)) {
@@ -78,25 +78,25 @@ public class GenClasseManager {
 		return listeClassePourStereotypeRef;
 	}
 
-	public static List<GenAttribut> getListeGenAttributForGenStereotype(final GenClasse genClasse, final String nomStereotype) {
-		final List<GenAttribut> listeGenAttribut = GenAttributManager.getListeGenAttributByGenStereotype(genClasse.getGenAttributs(), nomStereotype);
+	public static List<GenClasseAttribut> getListeGenClasseAttributForGenStereotype(final GenClasse genClasse, final String nomStereotype) {
+		final List<GenClasseAttribut> listeGenAttribut = GenClasseAttributManager.getListeGenClasseAttributByGenStereotype(genClasse.getGenClasseAttributs(), nomStereotype);
 		AssertHelper.assertNotNull(listeGenAttribut, "liste des méthodes par stéréotype ('" + nomStereotype + "')");
 		return listeGenAttribut;
 	}
 
-	public static List<GenMethode> getListeGenMethodeForGenStereotype(final GenClasse genClasse, final String nomStereotype) {
-		final List<GenMethode> listeGenMethode = GenMethodeManager.getListeGenMethodeByGenStereotype(genClasse.getGenMethodes(), nomStereotype);
+	public static List<GenClasseMethode> getListeGenClasseMethodeForGenStereotype(final GenClasse genClasse, final String nomStereotype) {
+		final List<GenClasseMethode> listeGenMethode = GenClasseMethodeManager.getListeGenClasseMethodeByGenStereotype(genClasse.getGenClasseMethodes(), nomStereotype);
 		AssertHelper.assertNotNull(listeGenMethode, "liste des méthodes par stéréotype ('" + nomStereotype + "')");
 		return listeGenMethode;
 	}
 
-	public static String getProprieteValeur(final GenClasse genClasse, final String nom) {
-		return GenClasseManager.getGenPropriete(genClasse, nom).getValeur();
+	public static String getClasseProprieteValeur(final GenClasse genClasse, final String nom) {
+		return GenClasseManager.getGenClassePropriete(genClasse, nom).getValeur();
 	}
 
-	public static GenProprieteClasse getGenPropriete(final GenClasse genClasse, final String nom) {
-		final GenProprieteClasse genProprieteClasse = genClasse.getGenProprieteClasses().getGenProprieteClasseForNom(nom);
-		AssertHelper.assertNotNull(genProprieteClasse, "propriété de classe");
-		return genProprieteClasse;
+	public static GenClassePropriete getGenClassePropriete(final GenClasse genClasse, final String nom) {
+		final GenClassePropriete genClassePropriete = genClasse.getGenClasseProprieteForNom(nom);
+		AssertHelper.assertNotNull(genClassePropriete, "propriété de classe");
+		return genClassePropriete;
 	}
 }

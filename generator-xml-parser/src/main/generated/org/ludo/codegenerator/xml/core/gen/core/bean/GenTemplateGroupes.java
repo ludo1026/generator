@@ -19,10 +19,4 @@ public interface GenTemplateGroupes
     public void addGenTemplateGroupe(GenTemplateGroupe genTemplateGroupe);
     public List<GenTemplateGroupe> getGenTemplateGroupes();
     public void setGenTemplateGroupes(List<GenTemplateGroupe> genTemplateGroupe);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 }

@@ -19,15 +19,6 @@ public interface GenTemplateGroupe
     public void addGenTemplateGroupeTemplate(GenTemplateGroupeTemplate genTemplateGroupeTemplate);
     public List<GenTemplateGroupeTemplate> getGenTemplateGroupeTemplates();
     public void setGenTemplateGroupeTemplates(List<GenTemplateGroupeTemplate> genTemplateGroupeTemplate);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getNomAsString();
-	public void setNomAsString(String nomAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getNom();
 	public void setNom(String nom);

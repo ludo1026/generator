@@ -26,51 +26,6 @@ public interface GenClasseAttribut
     public void addGenClasseAttributStereotype(GenClasseAttributStereotype genClasseAttributStereotype);
     public List<GenClasseAttributStereotype> getGenClasseAttributStereotypes();
     public void setGenClasseAttributStereotypes(List<GenClasseAttributStereotype> genClasseAttributStereotype);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getGenIdAsString();
-	public void setGenIdAsString(String genIdAsString);
-	
-	public String getNomJavaAsString();
-	public void setNomJavaAsString(String nomJavaAsString);
-	
-	public String getTypeAsString();
-	public void setTypeAsString(String typeAsString);
-	
-	public String getNbMinAsString();
-	public void setNbMinAsString(String nbMinAsString);
-	
-	public String getNbMaxAsString();
-	public void setNbMaxAsString(String nbMaxAsString);
-	
-	public String getNomSQLAsString();
-	public void setNomSQLAsString(String nomSQLAsString);
-	
-	public String getTypeSQLAsString();
-	public void setTypeSQLAsString(String typeSQLAsString);
-	
-	public String getEstDansTableAsString();
-	public void setEstDansTableAsString(String estDansTableAsString);
-	
-	public String getSizeAsString();
-	public void setSizeAsString(String sizeAsString);
-	
-	public String getEstClePrimaireAsString();
-	public void setEstClePrimaireAsString(String estClePrimaireAsString);
-	
-	public String getEstCleIncrementeeAsString();
-	public void setEstCleIncrementeeAsString(String estCleIncrementeeAsString);
-	
-	public String getAssociationIdAsString();
-	public void setAssociationIdAsString(String associationIdAsString);
-	
-	public String getDescriptionAsString();
-	public void setDescriptionAsString(String descriptionAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getGenId();
 	public void setGenId(String genId);

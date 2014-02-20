@@ -23,30 +23,6 @@ public interface GenClasseAssociation
     
     public void setGenClasseAssociationClasseDeAssociation(GenClasseAssociationClasseDeAssociation genClasseAssociationClasseDeAssociation);
 	
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getGenIdAsString();
-	public void setGenIdAsString(String genIdAsString);
-	
-	public String getNomJavaAsString();
-	public void setNomJavaAsString(String nomJavaAsString);
-	
-	public String getClasseGenIdAsString();
-	public void setClasseGenIdAsString(String classeGenIdAsString);
-	
-	public String getNbMinAsString();
-	public void setNbMinAsString(String nbMinAsString);
-	
-	public String getNbMaxAsString();
-	public void setNbMaxAsString(String nbMaxAsString);
-	
-	public String getDescriptionAsString();
-	public void setDescriptionAsString(String descriptionAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getGenId();
 	public void setGenId(String genId);

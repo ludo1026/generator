@@ -7,14 +7,14 @@
 
   <generate>
      <byStereotype stereotype="bean">
-        <templateGroup templateGroup="beanGroupe" />
+        <templateGroupe templateGroupe="beanGroupe" />
      </byStereotype>
      <byTemplateGroupe templateGroupe="uniqueGroupe">
        <stereotype stereotype="bean" />
      </byTemplateGroupe>
-     <byStereotype stereotype="bean">
-        <templateGroup templateGroup="jpaGroupe" />
-     </byStereotype>
+<!--      <byStereotype stereotype="bean"> -->
+<!--         <templateGroupe templateGroupe="jpaGroupe" /> -->
+<!--      </byStereotype> -->
   </generate>
 
   <templateGroupes>

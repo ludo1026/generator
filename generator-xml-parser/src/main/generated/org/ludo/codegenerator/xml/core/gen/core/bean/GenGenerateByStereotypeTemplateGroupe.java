@@ -2,14 +2,14 @@ package org.ludo.codegenerator.xml.core.gen.core.bean;
 
 import java.util.List;
 
-public interface GenGenerateByClasseTemplateGroupe 
+public interface GenGenerateByStereotypeTemplateGroupe 
 {
 	
 	/** Récupération de l'élément parent */
 	
-	public GenGenerateByClasse getReferenceGenGenerateByClasse();
+	public GenGenerateByStereotype getReferenceGenGenerateByStereotype();
 	
-	public void setReferenceGenGenerateByClasse(GenGenerateByClasse referenceGenGenerateByClasse);
+	public void setReferenceGenGenerateByStereotype(GenGenerateByStereotype referenceGenGenerateByStereotype);
 	
 	/** Récupération des éléments fils */
 

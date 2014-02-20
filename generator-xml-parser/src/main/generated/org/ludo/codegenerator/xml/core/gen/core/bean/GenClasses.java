@@ -29,15 +29,6 @@ public interface GenClasses
     public void addGenClasse(GenClasse genClasse);
     public List<GenClasse> getGenClasses();
     public void setGenClasses(List<GenClasse> genClasse);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getPackageBaseAsString();
-	public void setPackageBaseAsString(String packageBaseAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getPackageBase();
 	public void setPackageBase(String packageBase);

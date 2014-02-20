@@ -3,7 +3,7 @@ package org.ludo.codegenerator.xml.core.gen.core.bean;
 import java.util.List;
 
 public interface GenGenerateByStereotype 
-	extends List<GenGenerateByStereotypeTemplateGroup>
+	extends List<GenGenerateByStereotypeTemplateGroupe>
 {
 	
 	/** Récupération de l'élément parent */
@@ -14,20 +14,11 @@ public interface GenGenerateByStereotype
 	
 	/** Récupération des éléments fils */
 	
-    public GenGenerateByStereotypeTemplateGroup getGenGenerateByStereotypeTemplateGroupForTemplateGroup(String templateGroup);
-    public List<GenGenerateByStereotypeTemplateGroup> getGenGenerateByStereotypeTemplateGroupsByTemplateGroup(String templateGroup);
-    public void addGenGenerateByStereotypeTemplateGroup(GenGenerateByStereotypeTemplateGroup genGenerateByStereotypeTemplateGroup);
-    public List<GenGenerateByStereotypeTemplateGroup> getGenGenerateByStereotypeTemplateGroups();
-    public void setGenGenerateByStereotypeTemplateGroups(List<GenGenerateByStereotypeTemplateGroup> genGenerateByStereotypeTemplateGroup);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getStereotypeAsString();
-	public void setStereotypeAsString(String stereotypeAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
+    public GenGenerateByStereotypeTemplateGroupe getGenGenerateByStereotypeTemplateGroupeForTemplateGroupe(String templateGroupe);
+    public List<GenGenerateByStereotypeTemplateGroupe> getGenGenerateByStereotypeTemplateGroupesByTemplateGroupe(String templateGroupe);
+    public void addGenGenerateByStereotypeTemplateGroupe(GenGenerateByStereotypeTemplateGroupe genGenerateByStereotypeTemplateGroupe);
+    public List<GenGenerateByStereotypeTemplateGroupe> getGenGenerateByStereotypeTemplateGroupes();
+    public void setGenGenerateByStereotypeTemplateGroupes(List<GenGenerateByStereotypeTemplateGroupe> genGenerateByStereotypeTemplateGroupe);
 
 	public String getStereotype();
 	public void setStereotype(String stereotype);

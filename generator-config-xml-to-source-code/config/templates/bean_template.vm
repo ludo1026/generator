@@ -1,4 +1,4 @@
-#set( $bean = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{classe.getGenClasseId()})} )
+#set( $bean = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{classe.getGenId()})} )
 package $!{bean.getNomPackage()};
 
 import java.io.Serializable;
@@ -19,17 +19,15 @@ import $!{bean2.getPackage()}.$!{bean2.getNom()};
 #end
 
 /**
- * $!{classe.getDescription()}.
+ * ${bean.getNom()}
  */
 public class $!{bean.getNom()} implements Serializable 
 {
 #foreach( $attribut in $classe.getGenClasseAttributs() )
-#if( ! $attribut.getAssociationId() )
 #if( $attribut.getDescription() )
 	/** $!{SU.capitalize($!{attribut.getDescription()})} */
 #end
-	private $!{attribut.getType()} $!{SU.uncapitalize($!{attribut.getNomJava()})};
-#end
+    private ${attribut.getType()} ${SU.uncapitalize(${attribut.getNomJava()})};
 #end
 #foreach( $association in $classe.getGenClasseAssociations() )
 #set( $bean2 = $!{templateGenerationMap.getByClasseGenId("bean_template",$!{association.getClasseGenId()})} )

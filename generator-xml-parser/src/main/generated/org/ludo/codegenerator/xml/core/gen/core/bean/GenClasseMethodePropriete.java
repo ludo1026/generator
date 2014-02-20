@@ -12,18 +12,6 @@ public interface GenClasseMethodePropriete
 	public void setReferenceGenClasseMethode(GenClasseMethode referenceGenClasseMethode);
 	
 	/** Récupération des éléments fils */
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getNomAsString();
-	public void setNomAsString(String nomAsString);
-	
-	public String getValeurAsString();
-	public void setValeurAsString(String valeurAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getNom();
 	public void setNom(String nom);

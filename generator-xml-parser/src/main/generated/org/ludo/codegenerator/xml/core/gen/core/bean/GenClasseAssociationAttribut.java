@@ -12,15 +12,6 @@ public interface GenClasseAssociationAttribut
 	public void setReferenceGenClasseAssociation(GenClasseAssociation referenceGenClasseAssociation);
 	
 	/** Récupération des éléments fils */
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getGenIdAsString();
-	public void setGenIdAsString(String genIdAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getGenId();
 	public void setGenId(String genId);

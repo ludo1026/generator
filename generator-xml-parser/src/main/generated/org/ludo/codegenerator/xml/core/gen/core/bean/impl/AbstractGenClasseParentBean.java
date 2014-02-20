@@ -25,18 +25,6 @@ public class AbstractGenClasseParentBean implements GenClasseParent {
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getClasseGenIdAsString() {
-		return this.classeGenId;
-	}
-	public void setClasseGenIdAsString(String classeGenIdAsString) {
-		this.classeGenId = classeGenIdAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String classeGenId = null;
 
 	public String getClasseGenId() {

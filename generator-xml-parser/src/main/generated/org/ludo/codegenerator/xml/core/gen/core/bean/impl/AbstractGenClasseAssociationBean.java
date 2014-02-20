@@ -71,53 +71,6 @@ public class AbstractGenClasseAssociationBean implements GenClasseAssociation {
     }
 	
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getGenIdAsString() {
-		return this.genId;
-	}
-	public void setGenIdAsString(String genIdAsString) {
-		this.genId = genIdAsString;
-	}
-
-	public String getNomJavaAsString() {
-		return this.nomJava;
-	}
-	public void setNomJavaAsString(String nomJavaAsString) {
-		this.nomJava = nomJavaAsString;
-	}
-
-	public String getClasseGenIdAsString() {
-		return this.classeGenId;
-	}
-	public void setClasseGenIdAsString(String classeGenIdAsString) {
-		this.classeGenId = classeGenIdAsString;
-	}
-
-	public String getNbMinAsString() {
-		return this.nbMin;
-	}
-	public void setNbMinAsString(String nbMinAsString) {
-		this.nbMin = nbMinAsString;
-	}
-
-	public String getNbMaxAsString() {
-		return this.nbMax;
-	}
-	public void setNbMaxAsString(String nbMaxAsString) {
-		this.nbMax = nbMaxAsString;
-	}
-
-	public String getDescriptionAsString() {
-		return this.description;
-	}
-	public void setDescriptionAsString(String descriptionAsString) {
-		this.description = descriptionAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String genId = null;
 	private String nomJava = null;
 	private String classeGenId = null;

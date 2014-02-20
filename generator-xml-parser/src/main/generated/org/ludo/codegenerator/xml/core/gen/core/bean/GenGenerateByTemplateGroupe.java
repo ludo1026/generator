@@ -19,15 +19,6 @@ public interface GenGenerateByTemplateGroupe
     public void addGenGenerateByTemplateGroupeStereotype(GenGenerateByTemplateGroupeStereotype genGenerateByTemplateGroupeStereotype);
     public List<GenGenerateByTemplateGroupeStereotype> getGenGenerateByTemplateGroupeStereotypes();
     public void setGenGenerateByTemplateGroupeStereotypes(List<GenGenerateByTemplateGroupeStereotype> genGenerateByTemplateGroupeStereotype);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getTemplateGroupeAsString();
-	public void setTemplateGroupeAsString(String templateGroupeAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getTemplateGroupe();
 	public void setTemplateGroupe(String templateGroupe);

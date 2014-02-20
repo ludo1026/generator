@@ -25,18 +25,6 @@ public class AbstractGenGenerateByTemplateGroupeStereotypeBean implements GenGen
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getStereotypeAsString() {
-		return this.stereotype;
-	}
-	public void setStereotypeAsString(String stereotypeAsString) {
-		this.stereotype = stereotypeAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String stereotype = null;
 
 	public String getStereotype() {

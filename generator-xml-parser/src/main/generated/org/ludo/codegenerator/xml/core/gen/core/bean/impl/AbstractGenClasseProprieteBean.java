@@ -25,25 +25,6 @@ public class AbstractGenClasseProprieteBean implements GenClassePropriete {
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getNomAsString() {
-		return this.nom;
-	}
-	public void setNomAsString(String nomAsString) {
-		this.nom = nomAsString;
-	}
-
-	public String getValeurAsString() {
-		return this.valeur;
-	}
-	public void setValeurAsString(String valeurAsString) {
-		this.valeur = valeurAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String nom = null;
 	private String valeur = null;
 

@@ -58,11 +58,6 @@ public class AbstractGenTemplateGroupesBean implements GenTemplateGroupes {
         this.genTemplateGroupes = genTemplateGroupes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	@Override
 	public int size() {

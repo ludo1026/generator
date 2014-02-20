@@ -29,7 +29,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByClasseTem
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByTemplateGroupeBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByTemplateGroupeStereotypeBean;
 import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByStereotypeBean;
-import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByStereotypeTemplateGroupBean;
+import org.ludo.codegenerator.xml.core.gen.core.bean.impl.GenGenerateByStereotypeTemplateGroupeBean;
 
 import org.ludo.codegenerator.xml.core.gen.core.bean.Gen;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenTemplates;
@@ -60,7 +60,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasseTemplate
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupe;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupeStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotypeTemplateGroup;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotypeTemplateGroupe;
 
 import org.apache.log4j.Logger;
 import org.xml.sax.Attributes;
@@ -115,7 +115,7 @@ public class GenXmlHandler extends DefaultHandler {
         private GenGenerateByTemplateGroupe Gen_GenGenerate_GenGenerateByTemplateGroupe = null;
         private GenGenerateByTemplateGroupeStereotype Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype = null;
         private GenGenerateByStereotype Gen_GenGenerate_GenGenerateByStereotype = null;
-        private GenGenerateByStereotypeTemplateGroup Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup = null;
+        private GenGenerateByStereotypeTemplateGroupe Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe = null;
         
         public int posCompteur = 0;
         public int posGen = 0;
@@ -147,7 +147,7 @@ public class GenXmlHandler extends DefaultHandler {
         public int posGen_GenGenerate_GenGenerateByTemplateGroupe = 0;
         public int posGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype = 0;
         public int posGen_GenGenerate_GenGenerateByStereotype = 0;
-        public int posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup = 0;
+        public int posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe = 0;
 
         public void definePosGen() { posGen = ++ posCompteur; }
         public void definePosGen_GenTemplates() { posGen_GenTemplates = ++ posCompteur; }
@@ -178,7 +178,7 @@ public class GenXmlHandler extends DefaultHandler {
         public void definePosGen_GenGenerate_GenGenerateByTemplateGroupe() { posGen_GenGenerate_GenGenerateByTemplateGroupe = ++ posCompteur; }
         public void definePosGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype() { posGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype = ++ posCompteur; }
         public void definePosGen_GenGenerate_GenGenerateByStereotype() { posGen_GenGenerate_GenGenerateByStereotype = ++ posCompteur; }
-        public void definePosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup() { posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup = ++ posCompteur; }
+        public void definePosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe() { posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe = ++ posCompteur; }
 
         public int getPosGen() { return posGen; }
         public int getPosGen_GenTemplates() { return posGen_GenTemplates; }
@@ -209,7 +209,7 @@ public class GenXmlHandler extends DefaultHandler {
         public int getPosGen_GenGenerate_GenGenerateByTemplateGroupe() { return posGen_GenGenerate_GenGenerateByTemplateGroupe; }
         public int getPosGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype() { return posGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype; }
         public int getPosGen_GenGenerate_GenGenerateByStereotype() { return posGen_GenGenerate_GenGenerateByStereotype; }
-        public int getPosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup() { return posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup; }
+        public int getPosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe() { return posGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe; }
         
 		public final Gen getGen() { return Gen; }
 		public final GenTemplates getGen_GenTemplates() { return Gen_GenTemplates; }
@@ -240,7 +240,7 @@ public class GenXmlHandler extends DefaultHandler {
 		public final GenGenerateByTemplateGroupe getGen_GenGenerate_GenGenerateByTemplateGroupe() { return Gen_GenGenerate_GenGenerateByTemplateGroupe; }
 		public final GenGenerateByTemplateGroupeStereotype getGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype() { return Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype; }
 		public final GenGenerateByStereotype getGen_GenGenerate_GenGenerateByStereotype() { return Gen_GenGenerate_GenGenerateByStereotype; }
-		public final GenGenerateByStereotypeTemplateGroup getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup() { return Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup; }
+		public final GenGenerateByStereotypeTemplateGroupe getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe() { return Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe; }
 		
 		public final void setGen(Gen Gen) {
 			this.definePosGen();
@@ -358,9 +358,9 @@ public class GenXmlHandler extends DefaultHandler {
 			this.definePosGen_GenGenerate_GenGenerateByStereotype();
 			this.Gen_GenGenerate_GenGenerateByStereotype = Gen_GenGenerate_GenGenerateByStereotype;
 		}
-		public final void setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(GenGenerateByStereotypeTemplateGroup Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup) {
-			this.definePosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup();
-			this.Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup = Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup;
+		public final void setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(GenGenerateByStereotypeTemplateGroupe Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe) {
+			this.definePosGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe();
+			this.Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe = Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe;
 		}
     };
     
@@ -378,124 +378,154 @@ public class GenXmlHandler extends DefaultHandler {
      */
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
-        if (GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
-            startElement_Gen(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
-            startElement_Gen_GenTemplates(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenTemplates() != null
-         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
-            startElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
-            startElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenTemplateGroupes() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
-            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate.equalsIgnoreCase(localName)){
-            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
-            startElement_Gen_GenStereotypes(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenStereotypes() != null
-         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
-            startElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClassePropriete(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseMethode(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseStereotype(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent.equalsIgnoreCase(localName)){
-            startElement_Gen_GenClasses_GenClasse_GenClasseParent(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenGenerate() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate_GenGenerateByClasse(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByClasse() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenGenerate() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate_GenGenerateByTemplateGroupe(namespaceURI, localName, qName, atts);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenerateByStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(namespaceURI, localName, qName, atts);
+            return;
         }
         if (enCours.getGen_GenGenerate() != null
          && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype.equalsIgnoreCase(localName)){
             startElement_Gen_GenGenerate_GenGenerateByStereotype(namespaceURI, localName, qName, atts);
+            return;
         }
-        if (enCours.getGen_GenGenerate_GenGenerateByStereotype() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup.equalsIgnoreCase(localName)){
-            startElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(namespaceURI, localName, qName, atts);
+        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenerateByTemplateGroupe(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenGenerate_GenGenerateByClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate_GenGenerateByClasse(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenGenerate(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseParent(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAssociation(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseStereotype(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseMethode(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClasseAttribut(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse_GenClassePropriete(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
+            startElement_Gen_GenClasses(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
+            startElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenStereotypes(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenTemplateGroupes() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen_GenTemplates() != null
+         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
+            startElement_Gen_GenTemplates(namespaceURI, localName, qName, atts);
+            return;
+        }
+        if (GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
+            startElement_Gen(namespaceURI, localName, qName, atts);
+            return;
         }
     }
 
@@ -514,13 +544,13 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenTemplates_A_InDir.equalsIgnoreCase(attName)) {
-            	genTemplates.setInDirAsString(atts.getValue(i));
+            	genTemplates.setInDir(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_A_OutDir.equalsIgnoreCase(attName)) {
-            	genTemplates.setOutDirAsString(atts.getValue(i));
+            	genTemplates.setOutDir(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_A_PackageJavaBase.equalsIgnoreCase(attName)) {
-            	genTemplates.setPackageJavaBaseAsString(atts.getValue(i));
+            	genTemplates.setPackageJavaBase(atts.getValue(i));
             }
         }
         enCours.setGen_GenTemplates( genTemplates );
@@ -532,22 +562,22 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_Nom.equalsIgnoreCase(attName)) {
-            	genTemplate.setNomAsString(atts.getValue(i));
+            	genTemplate.setNom(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_File.equalsIgnoreCase(attName)) {
-            	genTemplate.setFileAsString(atts.getValue(i));
+            	genTemplate.setFile(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_OutDir.equalsIgnoreCase(attName)) {
-            	genTemplate.setOutDirAsString(atts.getValue(i));
+            	genTemplate.setOutDir(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_OutFile.equalsIgnoreCase(attName)) {
-            	genTemplate.setOutFileAsString(atts.getValue(i));
+            	genTemplate.setOutFile(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_PackageJava.equalsIgnoreCase(attName)) {
-            	genTemplate.setPackageJavaAsString(atts.getValue(i));
+            	genTemplate.setPackageJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenTemplates_GenTemplate_A_NomElementGenere.equalsIgnoreCase(attName)) {
-            	genTemplate.setNomElementGenereAsString(atts.getValue(i));
+            	genTemplate.setNomElementGenere(atts.getValue(i));
             }
         }
         enCours.setGen_GenTemplates_GenTemplate( genTemplate );
@@ -568,7 +598,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_A_Nom.equalsIgnoreCase(attName)) {
-            	genTemplateGroupe.setNomAsString(atts.getValue(i));
+            	genTemplateGroupe.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenTemplateGroupes_GenTemplateGroupe( genTemplateGroupe );
@@ -580,7 +610,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate_A_Nom.equalsIgnoreCase(attName)) {
-            	genTemplateGroupeTemplate.setNomAsString(atts.getValue(i));
+            	genTemplateGroupeTemplate.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate( genTemplateGroupeTemplate );
@@ -601,7 +631,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype_A_Nom.equalsIgnoreCase(attName)) {
-            	genStereotype.setNomAsString(atts.getValue(i));
+            	genStereotype.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenStereotypes_GenStereotype( genStereotype );
@@ -613,7 +643,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_A_PackageBase.equalsIgnoreCase(attName)) {
-            	genClasses.setPackageBaseAsString(atts.getValue(i));
+            	genClasses.setPackageBase(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses( genClasses );
@@ -625,22 +655,22 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasse.setGenIdAsString(atts.getValue(i));
+            	genClasse.setGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomJava.equalsIgnoreCase(attName)) {
-            	genClasse.setNomJavaAsString(atts.getValue(i));
+            	genClasse.setNomJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_PackageJava.equalsIgnoreCase(attName)) {
-            	genClasse.setPackageJavaAsString(atts.getValue(i));
+            	genClasse.setPackageJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomTable.equalsIgnoreCase(attName)) {
-            	genClasse.setNomTableAsString(atts.getValue(i));
+            	genClasse.setNomTable(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_NomVue.equalsIgnoreCase(attName)) {
-            	genClasse.setNomVueAsString(atts.getValue(i));
+            	genClasse.setNomVue(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_A_Description.equalsIgnoreCase(attName)) {
-            	genClasse.setDescriptionAsString(atts.getValue(i));
+            	genClasse.setDescription(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse( genClasse );
@@ -652,10 +682,10 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete_A_Nom.equalsIgnoreCase(attName)) {
-            	genClassePropriete.setNomAsString(atts.getValue(i));
+            	genClassePropriete.setNom(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete_A_Valeur.equalsIgnoreCase(attName)) {
-            	genClassePropriete.setValeurAsString(atts.getValue(i));
+            	genClassePropriete.setValeur(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClassePropriete( genClassePropriete );
@@ -667,43 +697,43 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setGenIdAsString(atts.getValue(i));
+            	genClasseAttribut.setGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NomJava.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setNomJavaAsString(atts.getValue(i));
+            	genClasseAttribut.setNomJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_Type.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setTypeAsString(atts.getValue(i));
+            	genClasseAttribut.setType(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMin.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setNbMinAsString(atts.getValue(i));
+            	genClasseAttribut.setNbMin(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NbMax.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setNbMaxAsString(atts.getValue(i));
+            	genClasseAttribut.setNbMax(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_NomSQL.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setNomSQLAsString(atts.getValue(i));
+            	genClasseAttribut.setNomSQL(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_TypeSQL.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setTypeSQLAsString(atts.getValue(i));
+            	genClasseAttribut.setTypeSQL(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_EstDansTable.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setEstDansTableAsString(atts.getValue(i));
+            	genClasseAttribut.setEstDansTable(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_Size.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setSizeAsString(atts.getValue(i));
+            	genClasseAttribut.setSize(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_EstClePrimaire.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setEstClePrimaireAsString(atts.getValue(i));
+            	genClasseAttribut.setEstClePrimaire(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_EstCleIncrementee.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setEstCleIncrementeeAsString(atts.getValue(i));
+            	genClasseAttribut.setEstCleIncrementee(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_AssociationId.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setAssociationIdAsString(atts.getValue(i));
+            	genClasseAttribut.setAssociationId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_A_Description.equalsIgnoreCase(attName)) {
-            	genClasseAttribut.setDescriptionAsString(atts.getValue(i));
+            	genClasseAttribut.setDescription(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAttribut( genClasseAttribut );
@@ -715,10 +745,10 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete_A_Nom.equalsIgnoreCase(attName)) {
-            	genClasseAttributPropriete.setNomAsString(atts.getValue(i));
+            	genClasseAttributPropriete.setNom(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete_A_Valeur.equalsIgnoreCase(attName)) {
-            	genClasseAttributPropriete.setValeurAsString(atts.getValue(i));
+            	genClasseAttributPropriete.setValeur(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete( genClasseAttributPropriete );
@@ -730,7 +760,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype_A_Nom.equalsIgnoreCase(attName)) {
-            	genClasseAttributStereotype.setNomAsString(atts.getValue(i));
+            	genClasseAttributStereotype.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype( genClasseAttributStereotype );
@@ -742,16 +772,16 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasseMethode.setGenIdAsString(atts.getValue(i));
+            	genClasseMethode.setGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_NomJava.equalsIgnoreCase(attName)) {
-            	genClasseMethode.setNomJavaAsString(atts.getValue(i));
+            	genClasseMethode.setNomJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_RetourType.equalsIgnoreCase(attName)) {
-            	genClasseMethode.setRetourTypeAsString(atts.getValue(i));
+            	genClasseMethode.setRetourType(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_A_Description.equalsIgnoreCase(attName)) {
-            	genClasseMethode.setDescriptionAsString(atts.getValue(i));
+            	genClasseMethode.setDescription(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseMethode( genClasseMethode );
@@ -763,10 +793,10 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete_A_Nom.equalsIgnoreCase(attName)) {
-            	genClasseMethodePropriete.setNomAsString(atts.getValue(i));
+            	genClasseMethodePropriete.setNom(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete_A_Valeur.equalsIgnoreCase(attName)) {
-            	genClasseMethodePropriete.setValeurAsString(atts.getValue(i));
+            	genClasseMethodePropriete.setValeur(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete( genClasseMethodePropriete );
@@ -778,16 +808,16 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasseMethodeParametre.setGenIdAsString(atts.getValue(i));
+            	genClasseMethodeParametre.setGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_NomJava.equalsIgnoreCase(attName)) {
-            	genClasseMethodeParametre.setNomJavaAsString(atts.getValue(i));
+            	genClasseMethodeParametre.setNomJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_Type.equalsIgnoreCase(attName)) {
-            	genClasseMethodeParametre.setTypeAsString(atts.getValue(i));
+            	genClasseMethodeParametre.setType(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre_A_Description.equalsIgnoreCase(attName)) {
-            	genClasseMethodeParametre.setDescriptionAsString(atts.getValue(i));
+            	genClasseMethodeParametre.setDescription(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre( genClasseMethodeParametre );
@@ -799,7 +829,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype_A_Nom.equalsIgnoreCase(attName)) {
-            	genClasseMethodeStereotype.setNomAsString(atts.getValue(i));
+            	genClasseMethodeStereotype.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype( genClasseMethodeStereotype );
@@ -811,7 +841,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype_A_Nom.equalsIgnoreCase(attName)) {
-            	genClasseStereotype.setNomAsString(atts.getValue(i));
+            	genClasseStereotype.setNom(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseStereotype( genClasseStereotype );
@@ -823,22 +853,22 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setGenIdAsString(atts.getValue(i));
+            	genClasseAssociation.setGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NomJava.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setNomJavaAsString(atts.getValue(i));
+            	genClasseAssociation.setNomJava(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_ClasseGenId.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setClasseGenIdAsString(atts.getValue(i));
+            	genClasseAssociation.setClasseGenId(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMin.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setNbMinAsString(atts.getValue(i));
+            	genClasseAssociation.setNbMin(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_NbMax.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setNbMaxAsString(atts.getValue(i));
+            	genClasseAssociation.setNbMax(atts.getValue(i));
             }
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_A_Description.equalsIgnoreCase(attName)) {
-            	genClasseAssociation.setDescriptionAsString(atts.getValue(i));
+            	genClasseAssociation.setDescription(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAssociation( genClasseAssociation );
@@ -850,7 +880,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut_A_GenId.equalsIgnoreCase(attName)) {
-            	genClasseAssociationAttribut.setGenIdAsString(atts.getValue(i));
+            	genClasseAssociationAttribut.setGenId(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut( genClasseAssociationAttribut );
@@ -862,7 +892,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation_A__type.equalsIgnoreCase(attName)) {
-            	genClasseAssociationClasseDeAssociation.set_typeAsString(atts.getValue(i));
+            	genClasseAssociationClasseDeAssociation.set_type(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation( genClasseAssociationClasseDeAssociation );
@@ -874,7 +904,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent_A_ClasseGenId.equalsIgnoreCase(attName)) {
-            	genClasseParent.setClasseGenIdAsString(atts.getValue(i));
+            	genClasseParent.setClasseGenId(atts.getValue(i));
             }
         }
         enCours.setGen_GenClasses_GenClasse_GenClasseParent( genClasseParent );
@@ -895,7 +925,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_A_ClasseGenId.equalsIgnoreCase(attName)) {
-            	genGenerateByClasse.setClasseGenIdAsString(atts.getValue(i));
+            	genGenerateByClasse.setClasseGenId(atts.getValue(i));
             }
         }
         enCours.setGen_GenGenerate_GenGenerateByClasse( genGenerateByClasse );
@@ -907,7 +937,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe_A_TemplateGroupe.equalsIgnoreCase(attName)) {
-            	genGenerateByClasseTemplateGroupe.setTemplateGroupeAsString(atts.getValue(i));
+            	genGenerateByClasseTemplateGroupe.setTemplateGroupe(atts.getValue(i));
             }
         }
         enCours.setGen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe( genGenerateByClasseTemplateGroupe );
@@ -919,7 +949,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_A_TemplateGroupe.equalsIgnoreCase(attName)) {
-            	genGenerateByTemplateGroupe.setTemplateGroupeAsString(atts.getValue(i));
+            	genGenerateByTemplateGroupe.setTemplateGroupe(atts.getValue(i));
             }
         }
         enCours.setGen_GenGenerate_GenGenerateByTemplateGroupe( genGenerateByTemplateGroupe );
@@ -931,7 +961,7 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype_A_Stereotype.equalsIgnoreCase(attName)) {
-            	genGenerateByTemplateGroupeStereotype.setStereotypeAsString(atts.getValue(i));
+            	genGenerateByTemplateGroupeStereotype.setStereotype(atts.getValue(i));
             }
         }
         enCours.setGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype( genGenerateByTemplateGroupeStereotype );
@@ -943,22 +973,22 @@ public class GenXmlHandler extends DefaultHandler {
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
             if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_A_Stereotype.equalsIgnoreCase(attName)) {
-            	genGenerateByStereotype.setStereotypeAsString(atts.getValue(i));
+            	genGenerateByStereotype.setStereotype(atts.getValue(i));
             }
         }
         enCours.setGen_GenGenerate_GenGenerateByStereotype( genGenerateByStereotype );
     }
     
-    public void startElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(String namespaceURI, String localName, String qName, Attributes atts)
+    public void startElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(String namespaceURI, String localName, String qName, Attributes atts)
     throws SAXException {
-    	GenGenerateByStereotypeTemplateGroup genGenerateByStereotypeTemplateGroup = new GenGenerateByStereotypeTemplateGroupBean();
+    	GenGenerateByStereotypeTemplateGroupe genGenerateByStereotypeTemplateGroupe = new GenGenerateByStereotypeTemplateGroupeBean();
         for(int i=0; i<atts.getLength(); i++) {
             String attName = atts.getQName(i);
-            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup_A_TemplateGroup.equalsIgnoreCase(attName)) {
-            	genGenerateByStereotypeTemplateGroup.setTemplateGroupAsString(atts.getValue(i));
+            if(GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe_A_TemplateGroupe.equalsIgnoreCase(attName)) {
+            	genGenerateByStereotypeTemplateGroupe.setTemplateGroupe(atts.getValue(i));
             }
         }
-        enCours.setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup( genGenerateByStereotypeTemplateGroup );
+        enCours.setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe( genGenerateByStereotypeTemplateGroupe );
     }
     
     
@@ -984,125 +1014,155 @@ public class GenXmlHandler extends DefaultHandler {
      */
     public void endElement(String namespaceURI, String localName, String qName)
     throws SAXException {
-        if (enCours.getGen() != null
-         && GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
-            endElement_Gen(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenTemplates() != null
-         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
-            endElement_Gen_GenTemplates(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenTemplates_GenTemplate() != null
-         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
-            endElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenTemplateGroupes() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
-            endElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
-            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate() != null
-         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate.equalsIgnoreCase(localName)){
-            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenStereotypes() != null
-         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
-            endElement_Gen_GenStereotypes(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenStereotypes_GenStereotype() != null
-         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
-            endElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses() != null
-         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClassePropriete() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClassePropriete(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseMethode(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseStereotype() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseStereotype(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenClasses_GenClasse_GenClasseParent() != null
-         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent.equalsIgnoreCase(localName)){
-            endElement_Gen_GenClasses_GenClasse_GenClasseParent(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenGenerate() != null
-         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByClasse() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate_GenGenerateByClasse(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate_GenGenerateByTemplateGroupe(namespaceURI, localName, qName);
-        }
-        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(namespaceURI, localName, qName);
+            return;
         }
         if (enCours.getGen_GenGenerate_GenGenerateByStereotype() != null
          && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype.equalsIgnoreCase(localName)){
             endElement_Gen_GenGenerate_GenGenerateByStereotype(namespaceURI, localName, qName);
+            return;
         }
-        if (enCours.getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup() != null
-         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup.equalsIgnoreCase(localName)){
-            endElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(namespaceURI, localName, qName);
+        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenerateByTemplateGroupe_GenGenerateByTemplateGroupeStereotype(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenGenerate_GenGenerateByTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByTemplateGroupe.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenerateByTemplateGroupe(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenerateByClasse_GenGenerateByClasseTemplateGroupe(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenGenerate_GenGenerateByClasse() != null
+         && GenXmlNoeud.N_Gen_GenGenerate_GenGenerateByClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate_GenGenerateByClasse(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenGenerate() != null
+         && GenXmlNoeud.N_Gen_GenGenerate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenGenerate(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseParent() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseParent.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseParent(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationClasseDeAssociation(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation_GenClasseAssociationAttribut(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAssociation() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAssociation.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAssociation(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseStereotype() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseStereotype(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeStereotype(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodeParametre(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseMethode_GenClasseMethodePropriete(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseMethode() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseMethode.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseMethode(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributStereotype(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut_GenClasseAttributPropriete(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClasseAttribut() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClasseAttribut.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClasseAttribut(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse_GenClassePropriete() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse_GenClassePropriete.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse_GenClassePropriete(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses_GenClasse() != null
+         && GenXmlNoeud.N_Gen_GenClasses_GenClasse.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses_GenClasse(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenClasses() != null
+         && GenXmlNoeud.N_Gen_GenClasses.equalsIgnoreCase(localName)){
+            endElement_Gen_GenClasses(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenStereotypes_GenStereotype() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes_GenStereotype.equalsIgnoreCase(localName)){
+            endElement_Gen_GenStereotypes_GenStereotype(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenStereotypes() != null
+         && GenXmlNoeud.N_Gen_GenStereotypes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenStereotypes(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe_GenTemplateGroupeTemplate(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenTemplateGroupes_GenTemplateGroupe() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes_GenTemplateGroupe.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes_GenTemplateGroupe(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenTemplateGroupes() != null
+         && GenXmlNoeud.N_Gen_GenTemplateGroupes.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplateGroupes(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenTemplates_GenTemplate() != null
+         && GenXmlNoeud.N_Gen_GenTemplates_GenTemplate.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplates_GenTemplate(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen_GenTemplates() != null
+         && GenXmlNoeud.N_Gen_GenTemplates.equalsIgnoreCase(localName)){
+            endElement_Gen_GenTemplates(namespaceURI, localName, qName);
+            return;
+        }
+        if (enCours.getGen() != null
+         && GenXmlNoeud.N_Gen.equalsIgnoreCase(localName)){
+            endElement_Gen(namespaceURI, localName, qName);
+            return;
         }
     }
 
@@ -1345,13 +1405,13 @@ public class GenXmlHandler extends DefaultHandler {
     	enCours.setGen_GenGenerate_GenGenerateByStereotype(null);
     }
     
-    public void endElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(String namespaceURI, String localName, String qName)
+    public void endElement_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(String namespaceURI, String localName, String qName)
     throws SAXException {
     	if(enCours.getGen_GenGenerate_GenGenerateByStereotype() == null) {
     		enCours.setGen_GenGenerate_GenGenerateByStereotype(new GenGenerateByStereotypeBean());
     	}
-    	enCours.getGen_GenGenerate_GenGenerateByStereotype().addGenGenerateByStereotypeTemplateGroup(enCours.getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup());
-    	enCours.setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup(null);
+    	enCours.getGen_GenGenerate_GenGenerateByStereotype().addGenGenerateByStereotypeTemplateGroupe(enCours.getGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe());
+    	enCours.setGen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe(null);
     }
     
 	    

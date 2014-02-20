@@ -25,18 +25,6 @@ public class AbstractGenClasseAssociationAttributBean implements GenClasseAssoci
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getGenIdAsString() {
-		return this.genId;
-	}
-	public void setGenIdAsString(String genIdAsString) {
-		this.genId = genIdAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String genId = null;
 
 	public String getGenId() {

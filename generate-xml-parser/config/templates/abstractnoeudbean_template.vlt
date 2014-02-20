@@ -96,20 +96,6 @@ public class ${noeud.getNomAbstract()} implements ${noeud.getNomInterface()} {
 #end
 #end
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-#foreach( $attributNoeud in $noeud.getListeAttribut() )
-
-	public String get${attributNoeud.getNomAvecMajuscule()}AsString() {
-		return this.${attributNoeud.getNomSansMajuscule()};
-	}
-	public void set${attributNoeud.getNomAvecMajuscule()}AsString(String ${attributNoeud.getNomSansMajuscule()}AsString) {
-		this.${attributNoeud.getNomSansMajuscule()} = ${attributNoeud.getNomSansMajuscule()}AsString;
-	}
-#end
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 #foreach( $attributNoeud in $noeud.getListeAttribut() )
 	private String ${attributNoeud.getNomSansMajuscule()} = null;
 #end

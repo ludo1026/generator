@@ -44,17 +44,6 @@ public interface ${noeud.getNomInterface()}
     public void set${noeudFils.getNomAvecMajuscule()}s(List<${noeudFils.getNomInterface()}> ${noeudFils.getNomSansMajuscule()});
 #end
 #end
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-#foreach( $attributNoeud in $noeud.getListeAttribut() )
-	
-	public String get${attributNoeud.getNomAvecMajuscule()}AsString();
-	public void set${attributNoeud.getNomAvecMajuscule()}AsString(String ${attributNoeud.getNomSansMajuscule()}AsString);
-#end
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 #foreach( $attributNoeud in $noeud.getListeAttribut() )
 
 	public String get${attributNoeud.getNomAvecMajuscule()}();

@@ -79,10 +79,5 @@ public class AbstractGenBean implements Gen {
     }
 	
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 }

@@ -12,30 +12,6 @@ public interface GenTemplate
 	public void setReferenceGenTemplates(GenTemplates referenceGenTemplates);
 	
 	/** Récupération des éléments fils */
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getNomAsString();
-	public void setNomAsString(String nomAsString);
-	
-	public String getFileAsString();
-	public void setFileAsString(String fileAsString);
-	
-	public String getOutDirAsString();
-	public void setOutDirAsString(String outDirAsString);
-	
-	public String getOutFileAsString();
-	public void setOutFileAsString(String outFileAsString);
-	
-	public String getPackageJavaAsString();
-	public void setPackageJavaAsString(String packageJavaAsString);
-	
-	public String getNomElementGenereAsString();
-	public void setNomElementGenereAsString(String nomElementGenereAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getNom();
 	public void setNom(String nom);

@@ -45,7 +45,7 @@ import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerate;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasse;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByClasseTemplateGroupe;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotype;
-import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotypeTemplateGroup;
+import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByStereotypeTemplateGroupe;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupe;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenGenerateByTemplateGroupeStereotype;
 import org.ludo.codegenerator.xml.core.gen.core.bean.GenStereotype;
@@ -137,9 +137,9 @@ public class ProcessManager {
 			for (final GenGenerateByStereotype genGenerateByStereotype : genererGroupe.getGenGenerateByStereotypes()) {
 				final GenStereotype stereotype = this.gen.getGenStereotypes().getGenStereotypeForNom(genGenerateByStereotype.getStereotype());
 				if (stereotype != null) {
-					for (final GenGenerateByStereotypeTemplateGroup genGenerateByStereotypeTemplateGroup : genGenerateByStereotype
-								.getGenGenerateByStereotypeTemplateGroups()) {
-						final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(genGenerateByStereotypeTemplateGroup.getTemplateGroup());
+					for (final GenGenerateByStereotypeTemplateGroupe genGenerateByStereotypeTemplateGroupe : genGenerateByStereotype
+								.getGenGenerateByStereotypeTemplateGroupes()) {
+						final GenTemplateGroupe templateGroupe = this.gen.getGenTemplateGroupes().getGenTemplateGroupeForNom(genGenerateByStereotypeTemplateGroupe.getTemplateGroupe());
 						if (templateGroupe != null) {
 							this.genererFichierParStereotype(templateGroupe, stereotype);
 						}
@@ -206,7 +206,9 @@ public class ProcessManager {
 		final String nomPackage =
 		// gen.getGenTemplates().getPackageJavaBase()
 		// + "." +
-		template.getPackageJava().replaceAll("PPP", classe.getPackageJava()).replaceAll("XXX", StringUtils.lowerCase(classe.getNomJava()));
+				template.getPackageJava()
+					.replaceAll("PPP", gen.getGenTemplates().getPackageJavaBase())
+					.replaceAll("XXX", StringUtils.lowerCase(classe.getNomJava()));
 		ProcessManager.log.debug("nomPackage = " + nomPackage);
 		final String nomRepertoireSortie =
 		// gen.getGenTemplates().getOutDir()
@@ -315,9 +317,11 @@ public class ProcessManager {
 		final String nomFichierTemplate = this.gen.getGenTemplates().getInDir() + "/" + template.getFile();
 		ProcessManager.log.debug("nomFichierTemplate = " + nomFichierTemplate);
 		final String nomPackage =
-		// gen.getGenTemplates().getPackageJavaBase()
+		// gen.getGenTemplates().getPackageJavaBase();
 		// + "." +
-		template.getPackageJava().replaceAll("PPP", classe.getPackageJava()).replaceAll("XXX", StringUtils.lowerCase(classe.getNomJava()));
+				template.getPackageJava()
+					.replaceAll("PPP", gen.getGenTemplates().getPackageJavaBase())
+					.replaceAll("XXX", StringUtils.lowerCase(classe.getNomJava()));
 		ProcessManager.log.debug("nomPackage = " + nomPackage);
 		final String nomRepertoireSortie =
 		// gen.getGenTemplates().getOutDir()

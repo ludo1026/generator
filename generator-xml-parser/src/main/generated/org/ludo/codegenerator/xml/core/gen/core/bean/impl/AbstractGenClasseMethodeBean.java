@@ -200,39 +200,6 @@ public class AbstractGenClasseMethodeBean implements GenClasseMethode {
         this.genClasseMethodeStereotypes = genClasseMethodeStereotypes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getGenIdAsString() {
-		return this.genId;
-	}
-	public void setGenIdAsString(String genIdAsString) {
-		this.genId = genIdAsString;
-	}
-
-	public String getNomJavaAsString() {
-		return this.nomJava;
-	}
-	public void setNomJavaAsString(String nomJavaAsString) {
-		this.nomJava = nomJavaAsString;
-	}
-
-	public String getRetourTypeAsString() {
-		return this.retourType;
-	}
-	public void setRetourTypeAsString(String retourTypeAsString) {
-		this.retourType = retourTypeAsString;
-	}
-
-	public String getDescriptionAsString() {
-		return this.description;
-	}
-	public void setDescriptionAsString(String descriptionAsString) {
-		this.description = descriptionAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String genId = null;
 	private String nomJava = null;
 	private String retourType = null;

@@ -25,18 +25,6 @@ public class AbstractGenClasseAssociationClasseDeAssociationBean implements GenC
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String get_typeAsString() {
-		return this._type;
-	}
-	public void set_typeAsString(String _typeAsString) {
-		this._type = _typeAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String _type = null;
 
 	public String get_type() {

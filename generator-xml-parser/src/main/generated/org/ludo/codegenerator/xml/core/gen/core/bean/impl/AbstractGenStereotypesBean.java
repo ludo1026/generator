@@ -58,11 +58,6 @@ public class AbstractGenStereotypesBean implements GenStereotypes {
         this.genStereotypes = genStereotypes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	@Override
 	public int size() {

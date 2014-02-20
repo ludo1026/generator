@@ -153,32 +153,6 @@ public class AbstractGenTemplatesBean implements GenTemplates {
         this.genTemplates = genTemplates;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getInDirAsString() {
-		return this.inDir;
-	}
-	public void setInDirAsString(String inDirAsString) {
-		this.inDir = inDirAsString;
-	}
-
-	public String getOutDirAsString() {
-		return this.outDir;
-	}
-	public void setOutDirAsString(String outDirAsString) {
-		this.outDir = outDirAsString;
-	}
-
-	public String getPackageJavaBaseAsString() {
-		return this.packageJavaBase;
-	}
-	public void setPackageJavaBaseAsString(String packageJavaBaseAsString) {
-		this.packageJavaBase = packageJavaBaseAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String inDir = null;
 	private String outDir = null;
 	private String packageJavaBase = null;

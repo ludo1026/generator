@@ -19,15 +19,6 @@ public interface GenGenerateByClasse
     public void addGenGenerateByClasseTemplateGroupe(GenGenerateByClasseTemplateGroupe genGenerateByClasseTemplateGroupe);
     public List<GenGenerateByClasseTemplateGroupe> getGenGenerateByClasseTemplateGroupes();
     public void setGenGenerateByClasseTemplateGroupes(List<GenGenerateByClasseTemplateGroupe> genGenerateByClasseTemplateGroupe);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getClasseGenIdAsString();
-	public void setClasseGenIdAsString(String classeGenIdAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getClasseGenId();
 	public void setClasseGenId(String classeGenId);

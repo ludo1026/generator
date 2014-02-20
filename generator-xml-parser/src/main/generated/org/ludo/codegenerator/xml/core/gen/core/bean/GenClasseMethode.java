@@ -38,24 +38,6 @@ public interface GenClasseMethode
     public void addGenClasseMethodeStereotype(GenClasseMethodeStereotype genClasseMethodeStereotype);
     public List<GenClasseMethodeStereotype> getGenClasseMethodeStereotypes();
     public void setGenClasseMethodeStereotypes(List<GenClasseMethodeStereotype> genClasseMethodeStereotype);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getGenIdAsString();
-	public void setGenIdAsString(String genIdAsString);
-	
-	public String getNomJavaAsString();
-	public void setNomJavaAsString(String nomJavaAsString);
-	
-	public String getRetourTypeAsString();
-	public void setRetourTypeAsString(String retourTypeAsString);
-	
-	public String getDescriptionAsString();
-	public void setDescriptionAsString(String descriptionAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getGenId();
 	public void setGenId(String genId);

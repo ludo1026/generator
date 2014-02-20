@@ -29,21 +29,6 @@ public interface GenTemplates
     public void addGenTemplate(GenTemplate genTemplate);
     public List<GenTemplate> getGenTemplates();
     public void setGenTemplates(List<GenTemplate> genTemplate);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getInDirAsString();
-	public void setInDirAsString(String inDirAsString);
-	
-	public String getOutDirAsString();
-	public void setOutDirAsString(String outDirAsString);
-	
-	public String getPackageJavaBaseAsString();
-	public void setPackageJavaBaseAsString(String packageJavaBaseAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getInDir();
 	public void setInDir(String inDir);

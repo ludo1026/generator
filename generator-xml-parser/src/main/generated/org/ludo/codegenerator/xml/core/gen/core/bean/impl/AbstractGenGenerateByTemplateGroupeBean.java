@@ -58,18 +58,6 @@ public class AbstractGenGenerateByTemplateGroupeBean implements GenGenerateByTem
         this.genGenerateByTemplateGroupeStereotypes = genGenerateByTemplateGroupeStereotypes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getTemplateGroupeAsString() {
-		return this.templateGroupe;
-	}
-	public void setTemplateGroupeAsString(String templateGroupeAsString) {
-		this.templateGroupe = templateGroupeAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String templateGroupe = null;
 
 	public String getTemplateGroupe() {

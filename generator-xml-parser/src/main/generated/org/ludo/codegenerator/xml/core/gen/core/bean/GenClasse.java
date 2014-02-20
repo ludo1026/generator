@@ -90,30 +90,6 @@ public interface GenClasse
     public void addGenClasseParent(GenClasseParent genClasseParent);
     public List<GenClasseParent> getGenClasseParents();
     public void setGenClasseParents(List<GenClasseParent> genClasseParent);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	public String getGenIdAsString();
-	public void setGenIdAsString(String genIdAsString);
-	
-	public String getNomJavaAsString();
-	public void setNomJavaAsString(String nomJavaAsString);
-	
-	public String getPackageJavaAsString();
-	public void setPackageJavaAsString(String packageJavaAsString);
-	
-	public String getNomTableAsString();
-	public void setNomTableAsString(String nomTableAsString);
-	
-	public String getNomVueAsString();
-	public void setNomVueAsString(String nomVueAsString);
-	
-	public String getDescriptionAsString();
-	public void setDescriptionAsString(String descriptionAsString);
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 	public String getGenId();
 	public void setGenId(String genId);

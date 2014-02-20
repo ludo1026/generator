@@ -153,18 +153,6 @@ public class AbstractGenClassesBean implements GenClasses {
         this.genClasses = genClasses;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getPackageBaseAsString() {
-		return this.packageBase;
-	}
-	public void setPackageBaseAsString(String packageBaseAsString) {
-		this.packageBase = packageBaseAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String packageBase = null;
 
 	public String getPackageBase() {

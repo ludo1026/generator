@@ -30,10 +30,4 @@ public interface GenGenerate
     public void addGenGenerateByStereotype(GenGenerateByStereotype genGenerateByStereotype);
     public List<GenGenerateByStereotype> getGenGenerateByStereotypes();
     public void setGenGenerateByStereotypes(List<GenGenerateByStereotype> genGenerateByStereotype);
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 }

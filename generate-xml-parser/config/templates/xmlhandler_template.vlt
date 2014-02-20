@@ -164,14 +164,9 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
 #set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
 #set( $nomParent = $nomNoeuds.peek() )
 #end
-#if( $nomParent == "" )
-        if (${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
-#else
-        if (enCours.get${nomParent}() != null
-         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
-#end
-            startElement_${nomNoeud}(namespaceURI, localName, qName, atts);
-        }
+#set( $_ = ${counts.add(1)} )
+#set( $_ = ${nomNoeudInverses.push($nomNoeud)} )
+#set( $_ = ${nomParentInverses.push($nomParent)} )
 #set( $_ = ${nomNoeuds.push($nomNoeud)} )
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callstartelt( $noeudFils )
@@ -179,7 +174,24 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
 #set( $_ = ${nomNoeuds.pop()} )
 #end
 #set( $nomNoeuds = $stackFactory.newStack() )
+#set( $counts = [] )
+#set( $nomNoeudInverses = $stackFactory.newStack() )
+#set( $nomParentInverses = $stackFactory.newStack() )
 #callstartelt( $noeud )
+## inverse
+#foreach( $count in $counts )
+#set( $nomNoeud = $nomNoeudInverses.pop() )
+#set( $nomParent = $nomParentInverses.pop() )
+#if( $nomParent == "" )
+        if (${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+#else
+        if (enCours.get${nomParent}() != null
+         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+#end
+            startElement_${nomNoeud}(namespaceURI, localName, qName, atts);
+            return;
+        }
+#end
     }
 
 #macro( callstarteltfnc $noeud )
@@ -196,7 +208,7 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
             String attName = atts.getQName(i);
 #foreach( $attributNoeud in $noeud.getListeAttribut() )
             if(${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}_A_${attributNoeud.getNomAvecMajuscule()}.equalsIgnoreCase(attName)) {
-            	${noeud.getNomSansMajuscule()}.set${attributNoeud.getNomAvecMajuscule()}AsString(atts.getValue(i));
+            	${noeud.getNomSansMajuscule()}.set${attributNoeud.getNomAvecMajuscule()}(atts.getValue(i));
             }
 #end
         }
@@ -239,10 +251,9 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
 #else
 #set( $nomNoeud = $nomNoeuds.peek() + "_" + ${noeud.getNomAvecMajuscule()} )
 #end
-        if (enCours.get${nomNoeud}() != null
-         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
-            endElement_${nomNoeud}(namespaceURI, localName, qName);
-        }
+#set( $_ = ${counts.add(1)} )
+#set( $_ = ${nomNoeudInverses.push($nomNoeud)} )
+#set( $_ = ${nomParentInverses.push($nomParent)} )
 #set( $_ = ${nomNoeuds.push($nomNoeud)} )
 #foreach( $noeudFils in $noeud.getListeNoeud() )
 #callendelt( $noeudFils )
@@ -250,7 +261,20 @@ public class ${noeud.getNomAvecMajuscule()}XmlHandler extends DefaultHandler {
 #set( $_ = ${nomNoeuds.pop()} )
 #end
 #set( $nomNoeuds = $stackFactory.newStack() )
+#set( $counts = [] )
+#set( $nomNoeudInverses = $stackFactory.newStack() )
+#set( $nomParentInverses = $stackFactory.newStack() )
 #callendelt( $noeud )
+## inverse
+#foreach( $count in $counts )
+#set( $nomNoeud = $nomNoeudInverses.pop() )
+#set( $nomParent = $nomParentInverses.pop() )
+        if (enCours.get${nomNoeud}() != null
+         && ${nomNoeudPrincipal}XmlNoeud.N_${nomNoeud}.equalsIgnoreCase(localName)){
+            endElement_${nomNoeud}(namespaceURI, localName, qName);
+            return;
+        }
+#end
     }
 
     public void endElement_${noeud.getNomAvecMajuscule()}(String namespaceURI, String localName, String qName)

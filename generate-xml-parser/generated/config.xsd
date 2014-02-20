@@ -142,15 +142,11 @@
   </xs:element>
   <xs:element name="byStereotype">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="schemas:templateGroup"/>
-      </xs:sequence>
-      <xs:attribute name="stereotype" use="required" type="xs:NCName"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="templateGroup">
-    <xs:complexType>
-      <xs:attribute name="templateGroup" use="required" type="xs:NCName"/>
+      <xs:complexContent>
+        <xs:extension base="schemas:templateGroupe">
+          <xs:attribute name="stereotype" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:complexContent>
     </xs:complexType>
   </xs:element>
   <xs:element name="template">

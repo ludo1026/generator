@@ -33,10 +33,4 @@ public interface Gen
     
     public void setGenGenerate(GenGenerate genGenerate);
 	
-	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 }

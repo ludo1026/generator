@@ -25,53 +25,6 @@ public class AbstractGenTemplateBean implements GenTemplate {
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getNomAsString() {
-		return this.nom;
-	}
-	public void setNomAsString(String nomAsString) {
-		this.nom = nomAsString;
-	}
-
-	public String getFileAsString() {
-		return this.file;
-	}
-	public void setFileAsString(String fileAsString) {
-		this.file = fileAsString;
-	}
-
-	public String getOutDirAsString() {
-		return this.outDir;
-	}
-	public void setOutDirAsString(String outDirAsString) {
-		this.outDir = outDirAsString;
-	}
-
-	public String getOutFileAsString() {
-		return this.outFile;
-	}
-	public void setOutFileAsString(String outFileAsString) {
-		this.outFile = outFileAsString;
-	}
-
-	public String getPackageJavaAsString() {
-		return this.packageJava;
-	}
-	public void setPackageJavaAsString(String packageJavaAsString) {
-		this.packageJava = packageJavaAsString;
-	}
-
-	public String getNomElementGenereAsString() {
-		return this.nomElementGenere;
-	}
-	public void setNomElementGenereAsString(String nomElementGenereAsString) {
-		this.nomElementGenere = nomElementGenereAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String nom = null;
 	private String file = null;
 	private String outDir = null;

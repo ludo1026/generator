@@ -116,7 +116,7 @@
       <stereotype stereotype = "stereotype" />
     </byTemplateGroupe>
 	<byStereotype stereotype = "stereotype">
-	    <templateGroup templateGroup = "templateGroup" />
+	    <templateGroupe templateGroupe = "templateGroupe" />
     </byStereotype>
   </generate>
   

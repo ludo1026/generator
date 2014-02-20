@@ -124,8 +124,8 @@ public interface GenXmlNoeud {
     public final String N_Gen_GenGenerate_GenGenerateByStereotype = "byStereotype";
     public final String N_Gen_GenGenerate_GenGenerateByStereotype_A_Stereotype = "stereotype";
 
-    public final String N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup = "templateGroup";
-    public final String N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroup_A_TemplateGroup = "templateGroup";
+    public final String N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe = "templateGroupe";
+    public final String N_Gen_GenGenerate_GenGenerateByStereotype_GenGenerateByStereotypeTemplateGroupe_A_TemplateGroupe = "templateGroupe";
 
 	    
 }

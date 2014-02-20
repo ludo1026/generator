@@ -124,10 +124,5 @@ public class AbstractGenGenerateBean implements GenGenerate {
         this.genGenerateByStereotypes = genGenerateByStereotypes;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 
 }

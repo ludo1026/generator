@@ -622,53 +622,6 @@ public class AbstractGenClasseBean implements GenClasse {
         this.genClasseParents = genClasseParents;
     }
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getGenIdAsString() {
-		return this.genId;
-	}
-	public void setGenIdAsString(String genIdAsString) {
-		this.genId = genIdAsString;
-	}
-
-	public String getNomJavaAsString() {
-		return this.nomJava;
-	}
-	public void setNomJavaAsString(String nomJavaAsString) {
-		this.nomJava = nomJavaAsString;
-	}
-
-	public String getPackageJavaAsString() {
-		return this.packageJava;
-	}
-	public void setPackageJavaAsString(String packageJavaAsString) {
-		this.packageJava = packageJavaAsString;
-	}
-
-	public String getNomTableAsString() {
-		return this.nomTable;
-	}
-	public void setNomTableAsString(String nomTableAsString) {
-		this.nomTable = nomTableAsString;
-	}
-
-	public String getNomVueAsString() {
-		return this.nomVue;
-	}
-	public void setNomVueAsString(String nomVueAsString) {
-		this.nomVue = nomVueAsString;
-	}
-
-	public String getDescriptionAsString() {
-		return this.description;
-	}
-	public void setDescriptionAsString(String descriptionAsString) {
-		this.description = descriptionAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String genId = null;
 	private String nomJava = null;
 	private String packageJava = null;

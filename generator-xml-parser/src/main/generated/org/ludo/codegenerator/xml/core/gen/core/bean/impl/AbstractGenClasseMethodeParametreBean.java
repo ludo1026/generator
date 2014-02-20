@@ -25,39 +25,6 @@ public class AbstractGenClasseMethodeParametreBean implements GenClasseMethodePa
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getGenIdAsString() {
-		return this.genId;
-	}
-	public void setGenIdAsString(String genIdAsString) {
-		this.genId = genIdAsString;
-	}
-
-	public String getNomJavaAsString() {
-		return this.nomJava;
-	}
-	public void setNomJavaAsString(String nomJavaAsString) {
-		this.nomJava = nomJavaAsString;
-	}
-
-	public String getTypeAsString() {
-		return this.type;
-	}
-	public void setTypeAsString(String typeAsString) {
-		this.type = typeAsString;
-	}
-
-	public String getDescriptionAsString() {
-		return this.description;
-	}
-	public void setDescriptionAsString(String descriptionAsString) {
-		this.description = descriptionAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String genId = null;
 	private String nomJava = null;
 	private String type = null;

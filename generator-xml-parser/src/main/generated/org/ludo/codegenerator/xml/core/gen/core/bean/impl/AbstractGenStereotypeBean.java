@@ -25,18 +25,6 @@ public class AbstractGenStereotypeBean implements GenStereotype {
 	
 	/** Récupération des éléments fils */
 	
-	/** Récupération des attributs de l'objet de base sans transtypage */
-	
-
-	public String getNomAsString() {
-		return this.nom;
-	}
-	public void setNomAsString(String nomAsString) {
-		this.nom = nomAsString;
-	}
-	
-	/** Récupération des attributs de l'objet de base avec transtypage */
-	
 	private String nom = null;
 
 	public String getNom() {
